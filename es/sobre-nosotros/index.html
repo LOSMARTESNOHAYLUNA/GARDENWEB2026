@@ -207,24 +207,7 @@ img{max-width:100%;height:auto;display:block;}
   .cta-btns{flex-direction:column;align-items:center;}
 }
 
-/* ===== DROPDOWN SERVICIOS ===== */
-.has-dd { position:static; }
-.has-dd > a { display:flex; align-items:center; gap:5px; }
-.has-dd > a::after { content:'▾'; font-size:10px; opacity:0.55; }
-.dd-menu {
-  position:absolute; top:100%; left:50%;
-  transform:translateX(-50%) translateY(6px);
-  background:var(--paper); border:1px solid var(--line-soft);
-  box-shadow:0 24px 60px rgba(15,15,13,0.13);
-  padding:24px 0; z-index:200; width:700px;
-  display:grid; grid-template-columns:repeat(5,1fr);
-  opacity:0; pointer-events:none;
-  transition:opacity 0.2s ease, transform 0.2s ease;
-}
-.dd-menu.dd-open {
-  opacity:1; pointer-events:all;
-  transform:translateX(-50%) translateY(0);
-}
+
 .dd-col { padding:0 18px; border-right:1px solid var(--line-soft); }
 .dd-col:last-child { border-right:none; }
 .dd-label {
@@ -242,6 +225,26 @@ img{max-width:100%;height:auto;display:block;}
 .dd-menu a:hover { color:var(--green); }
 @media(max-width:968px) { .dd-menu { display:none !important; } }
 
+/* ===== DROPDOWN SERVICIOS ===== */
+.has-dd { position:relative; }
+.has-dd > a::after { content:'▾'; font-size:10px; opacity:0.55; margin-left:3px; }
+.dd-menu {
+  position:fixed;
+  top:64px; left:50%;
+  transform:translateX(-50%) translateY(8px);
+  background:var(--paper); border:1px solid var(--line-soft);
+  box-shadow:0 24px 60px rgba(15,15,13,0.13);
+  padding:28px 0; z-index:9999; width:720px;
+  display:grid; grid-template-columns:repeat(5,1fr);
+  opacity:0; pointer-events:none;
+  transition:opacity 0.2s ease, transform 0.2s ease;
+}
+.has-dd:hover .dd-menu,
+.dd-menu:hover {
+  opacity:1; pointer-events:all;
+  transform:translateX(-50%) translateY(0);
+}
+@media(max-width:968px){ .dd-menu{ display:none !important; } }
 </style>
 </head>
 <body>
@@ -417,14 +420,14 @@ img{max-width:100%;height:auto;display:block;}
 
     <div class="certs-grid">
       <div class="cert-card fu">
-        <div class="cert-icon">📋</div>
+        <div class="cert-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg></div>
         <div class="cert-info">
           <h3>Carnet fitosanitario oficial</h3>
           <p>Habilitación legal para aplicar productos fitosanitarios regulados, incluyendo los tratamientos de endoterapia para el picudo rojo. Un requisito imprescindible para este tipo de intervenciones que no todos los servicios de jardinería tienen.</p>
         </div>
       </div>
       <div class="cert-card fu">
-        <div class="cert-icon">🏊</div>
+        <div class="cert-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20"/><path d="M2 16c2-.8 4-.8 6 0s4 .8 6 0 4-.8 6 0"/><path d="M2 20c2-.8 4-.8 6 0s4 .8 6 0 4-.8 6 0"/><path d="M6 8v4M18 8v4M6 4v4M18 4v4"/></svg></div>
         <div class="cert-info">
           <h3>Carnet de piscinas</h3>
           <p>Certificación oficial para el mantenimiento de instalaciones acuáticas. Permite gestionar el cuidado integral de propiedades que incluyen piscina, sin necesidad de contratar un servicio adicional.</p>
@@ -443,17 +446,17 @@ img{max-width:100%;height:auto;display:block;}
 
     <div class="idiomas-grid">
       <div class="idioma-card fu">
-        <div class="idioma-flag">🇪🇸</div>
+        <div class="idioma-flag"><svg width="44" height="44" viewBox="0 0 44 44"><rect width="44" height="44" rx="22" fill="#c60b1e"/><rect y="11" width="44" height="22" fill="#f1bf00"/><rect y="11" width="44" height="5" fill="#c60b1e"/><rect y="28" width="44" height="5" fill="#c60b1e"/></svg></div>
         <h3>Español</h3>
         <p>Idioma principal del equipo. Atención completa en castellano para propietarios residentes y clientes nacionales.</p>
       </div>
       <div class="idioma-card fu">
-        <div class="idioma-flag">🇬🇧</div>
+        <div class="idioma-flag"><svg width="44" height="44" viewBox="0 0 44 44"><rect width="44" height="44" rx="22" fill="#012169"/><line x1="0" y1="0" x2="44" y2="44" stroke="white" stroke-width="6"/><line x1="44" y1="0" x2="0" y2="44" stroke="white" stroke-width="6"/><line x1="22" y1="0" x2="22" y2="44" stroke="white" stroke-width="8"/><line x1="0" y1="22" x2="44" y2="22" stroke="white" stroke-width="8"/><line x1="22" y1="0" x2="22" y2="44" stroke="#C8102E" stroke-width="4"/><line x1="0" y1="22" x2="44" y2="22" stroke="#C8102E" stroke-width="4"/><line x1="0" y1="0" x2="44" y2="44" stroke="#C8102E" stroke-width="2.5"/><line x1="44" y1="0" x2="0" y2="44" stroke="#C8102E" stroke-width="2.5"/><circle cx="22" cy="22" r="22" fill="none" stroke="#012169" stroke-width="0"/><clipPath id="c"><circle cx="22" cy="22" r="22"/></clipPath></svg></div>
         <h3>English</h3>
         <p>Full service in English for British, Irish and international villa owners across the island.</p>
       </div>
       <div class="idioma-card fu">
-        <div class="idioma-flag">🇩🇪</div>
+        <div class="idioma-flag"><svg width="44" height="44" viewBox="0 0 44 44"><rect width="44" height="44" rx="22" fill="#000"/><rect y="14.7" width="44" height="14.7" fill="#D00"/><rect y="29.4" width="44" height="14.7" fill="#FFCE00"/></svg></div>
         <h3>Deutsch</h3>
         <p>Vollständige Betreuung auf Deutsch für deutschsprachige Villenbesitzer auf Mallorca.</p>
       </div>
@@ -578,25 +581,7 @@ window.addEventListener('scroll',()=>{
 </script>
 
 
-// Dropdown servicios — hover con retardo para evitar cierre al mover el ratón
-(function(){
-  var trigger = document.querySelector('.has-dd');
-  var menu    = document.querySelector('.dd-menu');
-  if(!trigger || !menu) return;
-  var t;
-  function show(){ clearTimeout(t); menu.classList.add('dd-open'); }
-  function hide(){ t = setTimeout(function(){ menu.classList.remove('dd-open'); }, 180); }
-  trigger.addEventListener('mouseenter', show);
-  trigger.addEventListener('mouseleave', hide);
-  menu.addEventListener('mouseenter', show);
-  menu.addEventListener('mouseleave', hide);
-  // Cerrar al pulsar fuera
-  document.addEventListener('click', function(e){
-    if(!trigger.contains(e.target) && !menu.contains(e.target)){
-      menu.classList.remove('dd-open');
-    }
-  });
-})();
+
 
 </body>
 </html>

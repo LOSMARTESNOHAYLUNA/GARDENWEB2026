@@ -390,24 +390,7 @@ a.zona-tag:hover { border-color:var(--green); color:var(--green); background:rgb
   .cta-btns { flex-direction:column; align-items:center; }
 }
 
-/* ===== DROPDOWN SERVICIOS ===== */
-.has-dd { position:static; }
-.has-dd > a { display:flex; align-items:center; gap:5px; }
-.has-dd > a::after { content:'▾'; font-size:10px; opacity:0.55; }
-.dd-menu {
-  position:absolute; top:100%; left:50%;
-  transform:translateX(-50%) translateY(6px);
-  background:var(--paper); border:1px solid var(--line-soft);
-  box-shadow:0 24px 60px rgba(15,15,13,0.13);
-  padding:24px 0; z-index:200; width:700px;
-  display:grid; grid-template-columns:repeat(5,1fr);
-  opacity:0; pointer-events:none;
-  transition:opacity 0.2s ease, transform 0.2s ease;
-}
-.dd-menu.dd-open {
-  opacity:1; pointer-events:all;
-  transform:translateX(-50%) translateY(0);
-}
+
 .dd-col { padding:0 18px; border-right:1px solid var(--line-soft); }
 .dd-col:last-child { border-right:none; }
 .dd-label {
@@ -425,6 +408,26 @@ a.zona-tag:hover { border-color:var(--green); color:var(--green); background:rgb
 .dd-menu a:hover { color:var(--green); }
 @media(max-width:968px) { .dd-menu { display:none !important; } }
 
+/* ===== DROPDOWN SERVICIOS ===== */
+.has-dd { position:relative; }
+.has-dd > a::after { content:'▾'; font-size:10px; opacity:0.55; margin-left:3px; }
+.dd-menu {
+  position:fixed;
+  top:64px; left:50%;
+  transform:translateX(-50%) translateY(8px);
+  background:var(--paper); border:1px solid var(--line-soft);
+  box-shadow:0 24px 60px rgba(15,15,13,0.13);
+  padding:28px 0; z-index:9999; width:720px;
+  display:grid; grid-template-columns:repeat(5,1fr);
+  opacity:0; pointer-events:none;
+  transition:opacity 0.2s ease, transform 0.2s ease;
+}
+.has-dd:hover .dd-menu,
+.dd-menu:hover {
+  opacity:1; pointer-events:all;
+  transform:translateX(-50%) translateY(0);
+}
+@media(max-width:968px){ .dd-menu{ display:none !important; } }
 </style>
 </head>
 <body>
@@ -602,17 +605,17 @@ a.zona-tag:hover { border-color:var(--green); color:var(--green); background:rgb
     <h2 class="h2-center">Lo que nos <span class="it">diferencia</span></h2>
     <div class="why-grid">
       <div class="why-item fu">
-        <div class="why-icon">✂️</div>
+        <div class="why-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" x2="8.12" y1="4" y2="15.88"/><line x1="14.47" x2="20" y1="14.48" y2="20"/><line x1="8.12" x2="12" y1="8.12" y2="12"/></svg></div>
         <h3>Poda técnica, no de corte</h3>
         <p>Cada corte tiene un motivo: salud del árbol, forma o seguridad. No cortamos por cortar. La poda mal hecha daña al árbol más que no podar.</p>
       </div>
       <div class="why-item fu">
-        <div class="why-icon">🌲</div>
+        <div class="why-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2-7 9h14Z"/><path d="m12 9-5 7h10Z"/><line x1="12" y1="16" x2="12" y2="22"/></svg></div>
         <h3>Conocemos las especies de Mallorca</h3>
         <p>10 años trabajando con pinos, olivos, algarrobos, cipreses y árboles ornamentales de la isla. Sabemos cuándo, cómo y cuánto podar cada uno.</p>
       </div>
       <div class="why-item fu">
-        <div class="why-icon">🧹</div>
+        <div class="why-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m11 8-2 2-4 1 1 4 2 2"/><path d="M14 6 C18 4 22 4 21 8 C20 12 16 13 12 11"/><line x1="9" y1="15" x2="5" y2="21"/></svg></div>
         <h3>Dejamos la zona limpia</h3>
         <p>Recogemos y retiramos todos los restos vegetales generados en la poda. Tu jardín queda ordenado desde el primer momento.</p>
       </div>
@@ -990,25 +993,7 @@ window.addEventListener('scroll', () => {
 </script>
 
 
-// Dropdown servicios — hover con retardo para evitar cierre al mover el ratón
-(function(){
-  var trigger = document.querySelector('.has-dd');
-  var menu    = document.querySelector('.dd-menu');
-  if(!trigger || !menu) return;
-  var t;
-  function show(){ clearTimeout(t); menu.classList.add('dd-open'); }
-  function hide(){ t = setTimeout(function(){ menu.classList.remove('dd-open'); }, 180); }
-  trigger.addEventListener('mouseenter', show);
-  trigger.addEventListener('mouseleave', hide);
-  menu.addEventListener('mouseenter', show);
-  menu.addEventListener('mouseleave', hide);
-  // Cerrar al pulsar fuera
-  document.addEventListener('click', function(e){
-    if(!trigger.contains(e.target) && !menu.contains(e.target)){
-      menu.classList.remove('dd-open');
-    }
-  });
-})();
+
 
 </body>
 </html>

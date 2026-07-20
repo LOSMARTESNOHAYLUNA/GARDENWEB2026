@@ -238,24 +238,7 @@ img{max-width:100%;height:auto;display:block;}
 @media(max-width:968px) {.blog-grid{grid-template-columns:1fr 1fr;}}
 @media(max-width:640px) {.blog-grid{grid-template-columns:1fr;}}
 
-/* ===== DROPDOWN SERVICIOS ===== */
-.has-dd { position:static; }
-.has-dd > a { display:flex; align-items:center; gap:5px; }
-.has-dd > a::after { content:'▾'; font-size:10px; opacity:0.55; }
-.dd-menu {
-  position:absolute; top:100%; left:50%;
-  transform:translateX(-50%) translateY(6px);
-  background:var(--paper); border:1px solid var(--line-soft);
-  box-shadow:0 24px 60px rgba(15,15,13,0.13);
-  padding:24px 0; z-index:200; width:700px;
-  display:grid; grid-template-columns:repeat(5,1fr);
-  opacity:0; pointer-events:none;
-  transition:opacity 0.2s ease, transform 0.2s ease;
-}
-.dd-menu.dd-open {
-  opacity:1; pointer-events:all;
-  transform:translateX(-50%) translateY(0);
-}
+
 .dd-col { padding:0 18px; border-right:1px solid var(--line-soft); }
 .dd-col:last-child { border-right:none; }
 .dd-label {
@@ -273,6 +256,26 @@ img{max-width:100%;height:auto;display:block;}
 .dd-menu a:hover { color:var(--green); }
 @media(max-width:968px) { .dd-menu { display:none !important; } }
 
+/* ===== DROPDOWN SERVICIOS ===== */
+.has-dd { position:relative; }
+.has-dd > a::after { content:'▾'; font-size:10px; opacity:0.55; margin-left:3px; }
+.dd-menu {
+  position:fixed;
+  top:64px; left:50%;
+  transform:translateX(-50%) translateY(8px);
+  background:var(--paper); border:1px solid var(--line-soft);
+  box-shadow:0 24px 60px rgba(15,15,13,0.13);
+  padding:28px 0; z-index:9999; width:720px;
+  display:grid; grid-template-columns:repeat(5,1fr);
+  opacity:0; pointer-events:none;
+  transition:opacity 0.2s ease, transform 0.2s ease;
+}
+.has-dd:hover .dd-menu,
+.dd-menu:hover {
+  opacity:1; pointer-events:all;
+  transform:translateX(-50%) translateY(0);
+}
+@media(max-width:968px){ .dd-menu{ display:none !important; } }
 </style>
 </head>
 <body>
@@ -374,24 +377,6 @@ img{max-width:100%;height:auto;display:block;}
 <footer class="footer"><div class="wrap"><div class="footer-grid"><div><div class="logo-footer">Garden <span class="it">Solution</span></div><p>Empresa de jardinería en Mallorca.</p><br><p><strong style="color:var(--paper);">Garden Solution Mallorca SL</strong><br>NIF: B21650155<br>Camí de Jesús 44, Naves M/25<br>07011 Palma · Illes Balears</p></div><div><h4>Servicios</h4><ul><li><a href="/es/paisajismo-diseno-jardines/">Paisajismo</a></li><li><a href="/es/mantenimiento-jardines-particulares/">Mantenimiento</a></li><li><a href="/es/poda-arboles-setos/">Poda</a></li><li><a href="/es/poda-palmeras/">Palmeras</a></li><li><a href="/es/endoterapia/">Endoterapia</a></li><li><a href="/es/riego-automatico/">Riego</a></li></ul></div><div><h4>Zonas</h4><ul><li><a href="/es/jardineria-palma/">Palma</a></li><li><a href="/es/jardineria-llucmajor/">Llucmajor</a></li><li><a href="/es/jardineria-marratxi/">Marratxí</a></li><li><a href="/es/jardineria-calvia/">Calvià</a></li><li><a href="/es/jardineria-alcudia/">Alcúdia</a></li></ul></div><div><h4>Contacto</h4><ul><li><a href="tel:+34621493977">621 49 39 77</a></li><li><a href="tel:+34971967413">971 96 74 13</a></li><li><a href="mailto:info@mallorcagardensolution.com">info@mallorcagardensolution.com</a></li></ul></div></div><div class="footer-bottom"><div>© 2026 Garden Solution Mallorca SL</div><div class="footer-legal"><a href="/es/aviso-legal/">Aviso legal</a><a href="/es/politica-privacidad/">Privacidad</a><a href="/es/politica-cookies/">Cookies</a></div></div></div></footer>
 <script>const hdr=document.querySelector('.header');window.addEventListener('scroll',()=>{hdr.style.boxShadow=window.scrollY>20?'0 4px 20px rgba(15,15,13,0.06)':'none';},{passive:true});</script>
 
-// Dropdown servicios — hover con retardo para evitar cierre al mover el ratón
-(function(){
-  var trigger = document.querySelector('.has-dd');
-  var menu    = document.querySelector('.dd-menu');
-  if(!trigger || !menu) return;
-  var t;
-  function show(){ clearTimeout(t); menu.classList.add('dd-open'); }
-  function hide(){ t = setTimeout(function(){ menu.classList.remove('dd-open'); }, 180); }
-  trigger.addEventListener('mouseenter', show);
-  trigger.addEventListener('mouseleave', hide);
-  menu.addEventListener('mouseenter', show);
-  menu.addEventListener('mouseleave', hide);
-  // Cerrar al pulsar fuera
-  document.addEventListener('click', function(e){
-    if(!trigger.contains(e.target) && !menu.contains(e.target)){
-      menu.classList.remove('dd-open');
-    }
-  });
-})();
+
 
 </body></html>

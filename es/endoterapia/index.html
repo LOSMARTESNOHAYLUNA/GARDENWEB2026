@@ -392,24 +392,7 @@ a.zona-tag:hover { border-color:var(--green); color:var(--green); background:rgb
   .cta-btns { flex-direction:column; align-items:center; }
 }
 
-/* ===== DROPDOWN SERVICIOS ===== */
-.has-dd { position:static; }
-.has-dd > a { display:flex; align-items:center; gap:5px; }
-.has-dd > a::after { content:'▾'; font-size:10px; opacity:0.55; }
-.dd-menu {
-  position:absolute; top:100%; left:50%;
-  transform:translateX(-50%) translateY(6px);
-  background:var(--paper); border:1px solid var(--line-soft);
-  box-shadow:0 24px 60px rgba(15,15,13,0.13);
-  padding:24px 0; z-index:200; width:700px;
-  display:grid; grid-template-columns:repeat(5,1fr);
-  opacity:0; pointer-events:none;
-  transition:opacity 0.2s ease, transform 0.2s ease;
-}
-.dd-menu.dd-open {
-  opacity:1; pointer-events:all;
-  transform:translateX(-50%) translateY(0);
-}
+
 .dd-col { padding:0 18px; border-right:1px solid var(--line-soft); }
 .dd-col:last-child { border-right:none; }
 .dd-label {
@@ -427,6 +410,26 @@ a.zona-tag:hover { border-color:var(--green); color:var(--green); background:rgb
 .dd-menu a:hover { color:var(--green); }
 @media(max-width:968px) { .dd-menu { display:none !important; } }
 
+/* ===== DROPDOWN SERVICIOS ===== */
+.has-dd { position:relative; }
+.has-dd > a::after { content:'▾'; font-size:10px; opacity:0.55; margin-left:3px; }
+.dd-menu {
+  position:fixed;
+  top:64px; left:50%;
+  transform:translateX(-50%) translateY(8px);
+  background:var(--paper); border:1px solid var(--line-soft);
+  box-shadow:0 24px 60px rgba(15,15,13,0.13);
+  padding:28px 0; z-index:9999; width:720px;
+  display:grid; grid-template-columns:repeat(5,1fr);
+  opacity:0; pointer-events:none;
+  transition:opacity 0.2s ease, transform 0.2s ease;
+}
+.has-dd:hover .dd-menu,
+.dd-menu:hover {
+  opacity:1; pointer-events:all;
+  transform:translateX(-50%) translateY(0);
+}
+@media(max-width:968px){ .dd-menu{ display:none !important; } }
 </style>
 </head>
 <body>
@@ -594,7 +597,7 @@ a.zona-tag:hover { border-color:var(--green); color:var(--green); background:rgb
 <div class="cert-banner">
   <div class="wrap">
     <div class="cert-inner">
-      <div class="cert-icon">📋</div>
+      <div class="cert-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg></div>
       <div class="cert-text">
         <h2>Carnet fitosanitario <span class="it">oficial</span></h2>
         <p>Disponemos de carnet fitosanitario oficial, que nos habilita para aplicar productos fitosanitarios regulados de forma legal y segura en toda Mallorca. No todos los servicios de jardinería tienen esta certificación — pregunta siempre antes de contratar un tratamiento de picudo rojo.</p>
@@ -610,17 +613,17 @@ a.zona-tag:hover { border-color:var(--green); color:var(--green); background:rgb
     <h2 class="h2-center">Lo que nos <span class="it">diferencia</span></h2>
     <div class="why-grid">
       <div class="why-item fu">
-        <div class="why-icon">🏅</div>
+        <div class="why-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="14" r="6"/><path d="M9.17 5.6 8 3H5l2 4"/><path d="M14.83 5.6 16 3h3l-2 4"/><path d="M12 9v5"/><path d="m9 12 3 3 3-3"/></svg></div>
         <h3>Habilitación legal garantizada</h3>
         <p>Carnet fitosanitario oficial. Aplicamos solo los productos autorizados, en las dosis correctas y dentro del marco legal. Tu palmera tratada correctamente, sin riesgos.</p>
       </div>
       <div class="why-item fu">
-        <div class="why-icon">🔍</div>
+        <div class="why-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" x2="16.65" y1="21" y2="16.65"/></svg></div>
         <h3>Diagnóstico antes del tratamiento</h3>
         <p>Primero evaluamos el estado real de la palmera. No aplicamos tratamientos innecesarios ni vendemos protocolos genéricos. Cada caso se analiza en visita técnica gratuita.</p>
       </div>
       <div class="why-item fu">
-        <div class="why-icon">🌴</div>
+        <div class="why-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 C11 6 9 8 6 8"/><path d="M13 2 C15 6 17 8 20 8"/><path d="M13 2 C13 6 14 10 14 14"/><path d="M11 14 C10 17 9 19 8 22"/><line x1="13" y1="2" x2="11" y2="22"/></svg></div>
         <h3>Equipo con experiencia en palmeras</h3>
         <p>10 años tratando palmeras en Mallorca. El picudo rojo es uno de los servicios más solicitados por propietarios de villas y fincas en toda la isla.</p>
       </div>
@@ -994,25 +997,7 @@ window.addEventListener('scroll', () => {
 </script>
 
 
-// Dropdown servicios — hover con retardo para evitar cierre al mover el ratón
-(function(){
-  var trigger = document.querySelector('.has-dd');
-  var menu    = document.querySelector('.dd-menu');
-  if(!trigger || !menu) return;
-  var t;
-  function show(){ clearTimeout(t); menu.classList.add('dd-open'); }
-  function hide(){ t = setTimeout(function(){ menu.classList.remove('dd-open'); }, 180); }
-  trigger.addEventListener('mouseenter', show);
-  trigger.addEventListener('mouseleave', hide);
-  menu.addEventListener('mouseenter', show);
-  menu.addEventListener('mouseleave', hide);
-  // Cerrar al pulsar fuera
-  document.addEventListener('click', function(e){
-    if(!trigger.contains(e.target) && !menu.contains(e.target)){
-      menu.classList.remove('dd-open');
-    }
-  });
-})();
+
 
 </body>
 </html>

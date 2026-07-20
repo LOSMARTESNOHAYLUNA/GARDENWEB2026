@@ -244,24 +244,7 @@ img{max-width:100%;height:auto;display:block;}
 .sin-clavos-text p { font-family:'Manrope'; font-size:16px; font-weight:300; color:var(--ink-soft); line-height:1.75; }
 @media(max-width:768px) { .precios-grid{grid-template-columns:1fr;} .sin-clavos-inner{flex-direction:column;gap:30px;} }
 
-/* ===== DROPDOWN SERVICIOS ===== */
-.has-dd { position:static; }
-.has-dd > a { display:flex; align-items:center; gap:5px; }
-.has-dd > a::after { content:'▾'; font-size:10px; opacity:0.55; }
-.dd-menu {
-  position:absolute; top:100%; left:50%;
-  transform:translateX(-50%) translateY(6px);
-  background:var(--paper); border:1px solid var(--line-soft);
-  box-shadow:0 24px 60px rgba(15,15,13,0.13);
-  padding:24px 0; z-index:200; width:700px;
-  display:grid; grid-template-columns:repeat(5,1fr);
-  opacity:0; pointer-events:none;
-  transition:opacity 0.2s ease, transform 0.2s ease;
-}
-.dd-menu.dd-open {
-  opacity:1; pointer-events:all;
-  transform:translateX(-50%) translateY(0);
-}
+
 .dd-col { padding:0 18px; border-right:1px solid var(--line-soft); }
 .dd-col:last-child { border-right:none; }
 .dd-label {
@@ -279,6 +262,26 @@ img{max-width:100%;height:auto;display:block;}
 .dd-menu a:hover { color:var(--green); }
 @media(max-width:968px) { .dd-menu { display:none !important; } }
 
+/* ===== DROPDOWN SERVICIOS ===== */
+.has-dd { position:relative; }
+.has-dd > a::after { content:'▾'; font-size:10px; opacity:0.55; margin-left:3px; }
+.dd-menu {
+  position:fixed;
+  top:64px; left:50%;
+  transform:translateX(-50%) translateY(8px);
+  background:var(--paper); border:1px solid var(--line-soft);
+  box-shadow:0 24px 60px rgba(15,15,13,0.13);
+  padding:28px 0; z-index:9999; width:720px;
+  display:grid; grid-template-columns:repeat(5,1fr);
+  opacity:0; pointer-events:none;
+  transition:opacity 0.2s ease, transform 0.2s ease;
+}
+.has-dd:hover .dd-menu,
+.dd-menu:hover {
+  opacity:1; pointer-events:all;
+  transform:translateX(-50%) translateY(0);
+}
+@media(max-width:968px){ .dd-menu{ display:none !important; } }
 </style>
 </head>
 <body>
@@ -373,7 +376,7 @@ img{max-width:100%;height:auto;display:block;}
 <div class="sin-clavos">
   <div class="wrap">
     <div class="sin-clavos-inner">
-      <div class="sin-clavos-icon">🚫</div>
+      <div class="sin-clavos-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="4.93" x2="19.07" y1="4.93" y2="19.07"/></svg></div>
       <div class="sin-clavos-text">
         <h2>Nunca usamos <span class="it">clavos en las palmeras</span></h2>
         <p>Los clavos para trepar crean heridas en el tronco que son vías de entrada directas para el picudo rojo y otras enfermedades. Es una práctica que deteriora la palmera a largo plazo aunque a corto parezca inocua. Utilizamos equipos de escalada específicos para arboricultura que no dañan el árbol — coste algo mayor, beneficio muy superior para la palmera.</p>
@@ -536,25 +539,7 @@ document.querySelectorAll('.faq-trigger').forEach(btn=>{btn.addEventListener('cl
 const hdr=document.querySelector('.header');window.addEventListener('scroll',()=>{hdr.style.boxShadow=window.scrollY>20?'0 4px 20px rgba(15,15,13,0.06)':'none';},{passive:true});
 </script>
 
-// Dropdown servicios — hover con retardo para evitar cierre al mover el ratón
-(function(){
-  var trigger = document.querySelector('.has-dd');
-  var menu    = document.querySelector('.dd-menu');
-  if(!trigger || !menu) return;
-  var t;
-  function show(){ clearTimeout(t); menu.classList.add('dd-open'); }
-  function hide(){ t = setTimeout(function(){ menu.classList.remove('dd-open'); }, 180); }
-  trigger.addEventListener('mouseenter', show);
-  trigger.addEventListener('mouseleave', hide);
-  menu.addEventListener('mouseenter', show);
-  menu.addEventListener('mouseleave', hide);
-  // Cerrar al pulsar fuera
-  document.addEventListener('click', function(e){
-    if(!trigger.contains(e.target) && !menu.contains(e.target)){
-      menu.classList.remove('dd-open');
-    }
-  });
-})();
+
 
 </body>
 </html>
