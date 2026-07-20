@@ -234,7 +234,7 @@ img{max-width:100%;height:auto;display:block;}
   transition:opacity 0.2s ease, transform 0.2s ease;
   transform:translateY(-8px);
 }
-.has-dd:hover .dd-menu, .dd-menu:hover {
+.dd-menu.dd-open {
   opacity:1; pointer-events:all; transform:translateY(0);
 }
 .dd-inner { display:grid; grid-template-columns:repeat(5,190px); padding:28px 0; }
@@ -460,4 +460,20 @@ const hdr=document.querySelector('.header');window.addEventListener('scroll',()=
 
 
 
+<script>
+/* Mega menú — hover con retardo para que no desaparezca al mover el ratón */
+(function(){
+  var t, tr = document.querySelector('.has-dd'), m = document.querySelector('.dd-menu');
+  if(!tr || !m) return;
+  function show(){ clearTimeout(t); m.classList.add('dd-open'); }
+  function hide(ms){ t = setTimeout(function(){ m.classList.remove('dd-open'); }, ms); }
+  tr.addEventListener('mouseenter', show);
+  tr.addEventListener('mouseleave', function(){ hide(350); });
+  m.addEventListener('mouseenter', show);
+  m.addEventListener('mouseleave', function(){ hide(150); });
+  document.addEventListener('click', function(e){
+    if(!tr.contains(e.target) && !m.contains(e.target)) m.classList.remove('dd-open');
+  });
+})();
+</script>
 </body></html>
