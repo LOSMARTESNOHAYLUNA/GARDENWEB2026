@@ -520,6 +520,44 @@ a.zona-tag:hover { border-color:var(--green); color:var(--green); background:rgb
   .footer-legal { justify-content:center; }
   .cta-btns { flex-direction:column; align-items:center; }
 }
+
+/* ===== DROPDOWN SERVICIOS ===== */
+.has-dd { position:relative; }
+.has-dd > a { display:flex; align-items:center; gap:5px; }
+.has-dd > a::after { content:'▾'; font-size:10px; opacity:0.55; }
+.dd-menu {
+  position:absolute; top:calc(100% + 14px); left:50%;
+  transform:translateX(-50%);
+  background:var(--paper); border:1px solid var(--line-soft);
+  box-shadow:0 24px 60px rgba(15,15,13,0.13);
+  padding:24px 0; z-index:200; width:680px;
+  display:grid; grid-template-columns:repeat(5,1fr);
+  opacity:0; pointer-events:none;
+  transition:opacity 0.2s ease, transform 0.2s ease;
+  transform:translateX(-50%) translateY(6px);
+}
+.has-dd:hover .dd-menu,
+.has-dd:focus-within .dd-menu {
+  opacity:1; pointer-events:all;
+  transform:translateX(-50%) translateY(0);
+}
+.dd-col { padding:0 18px; border-right:1px solid var(--line-soft); }
+.dd-col:last-child { border-right:none; }
+.dd-label {
+  font-family:'Manrope'; font-size:9px; letter-spacing:0.25em;
+  text-transform:uppercase; color:var(--gold); margin-bottom:12px;
+  font-weight:600; display:block; padding-bottom:8px;
+  border-bottom:1px solid var(--line-soft);
+}
+.dd-menu a {
+  display:block; font-family:'Manrope'; font-size:13px; font-weight:300;
+  color:var(--ink-soft); padding:5px 0; transition:color 0.2s;
+  text-decoration:none; border-bottom:none !important;
+  letter-spacing:0.01em; white-space:nowrap;
+}
+.dd-menu a:hover { color:var(--green); }
+@media(max-width:968px) { .dd-menu { display:none !important; } }
+
 </style>
 </head>
 <body>
@@ -530,7 +568,41 @@ a.zona-tag:hover { border-color:var(--green); color:var(--green); background:rgb
     <a href="/es/" class="logo">Garden <span class="it">Solution</span></a>
     <nav class="nav">
       <ul>
-        <li><a href="/es/#servicios">Servicios</a></li>
+        <li class="has-dd">
+          <a href="/es/#servicios">Servicios</a>
+          <div class="dd-menu">
+            <div class="dd-col">
+              <span class="dd-label">Mantenimiento</span>
+              <a href="/es/mantenimiento-jardines-particulares/">Jardines particulares</a>
+              <a href="/es/mantenimiento-comunidades/">Comunidades</a>
+              <a href="/es/mantenimiento-piscinas/">Piscinas</a>
+            </div>
+            <div class="dd-col">
+              <span class="dd-label">Poda</span>
+              <a href="/es/poda-arboles-setos/">Árboles y setos</a>
+              <a href="/es/poda-palmeras/">Palmeras</a>
+              <a href="/es/poda-en-altura/">En altura</a>
+            </div>
+            <div class="dd-col">
+              <span class="dd-label">Diseño e instalación</span>
+              <a href="/es/paisajismo-diseno-jardines/">Paisajismo</a>
+              <a href="/es/riego-automatico/">Riego automático</a>
+              <a href="/es/cesped-artificial/">Césped artificial</a>
+              <a href="/es/cesped-natural/">Césped natural</a>
+            </div>
+            <div class="dd-col">
+              <span class="dd-label">Fitosanidad</span>
+              <a href="/es/endoterapia/">Endoterapia</a>
+              <a href="/es/picudo-rojo/">Picudo rojo</a>
+              <a href="/es/controles-fitosanitarios/">Controles fitosanitarios</a>
+            </div>
+            <div class="dd-col">
+              <span class="dd-label">Fincas</span>
+              <a href="/es/limpieza-fincas/">Limpieza de fincas</a>
+              <a href="/es/silvicultura-preventiva/">Silvicultura preventiva</a>
+            </div>
+          </div>
+        </li>
         <li><a href="/es/#zonas">Zonas</a></li>
         <li><a href="/es/sobre-nosotros/">Nosotros</a></li>
         <li><a href="/es/preguntas-frecuentes/">FAQ</a></li>
