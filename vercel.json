@@ -1,6 +1,6 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false,
+  "trailingSlash": true,
   "redirects": [
     { "source": "/mantenimiento-de-jardines-particulares", "destination": "/es/mantenimiento-jardines-particulares/", "permanent": true },
     { "source": "/mantenimiento-de-comunidades",           "destination": "/es/mantenimiento-comunidades/",           "permanent": true },
@@ -10,7 +10,7 @@
     { "source": "/poda-en-altura",                         "destination": "/es/poda-en-altura/",                      "permanent": true },
     { "source": "/cesped-artificial",                      "destination": "/es/cesped-artificial/",                   "permanent": true },
     { "source": "/cesped-natural",                         "destination": "/es/cesped-natural/",                      "permanent": true },
-    { "source": "/riego-automatico",                       "destination": "/es/riego-automatico/",                   "permanent": true },
+    { "source": "/riego-automatico",                       "destination": "/es/riego-automatico/",                    "permanent": true },
     { "source": "/picudo-rojo",                            "destination": "/es/picudo-rojo/",                         "permanent": true },
     { "source": "/controles-fitosanitarios",               "destination": "/es/controles-fitosanitarios/",            "permanent": true },
     { "source": "/limpieza-fincas",                        "destination": "/es/limpieza-fincas/",                     "permanent": true },
@@ -20,10 +20,10 @@
     { "source": "/sobre-nosotros",                         "destination": "/es/sobre-nosotros/",                      "permanent": true },
     { "source": "/faq",                                    "destination": "/es/preguntas-frecuentes/",                "permanent": true },
     { "source": "/blog",                                   "destination": "/es/blog/",                                "permanent": true },
-    { "source": "/cuidados-de-una-palmera-exterior",       "destination": "/es/blog/cuidados-palmera-exterior-mallorca/", "permanent": true },
-    { "source": "/cuando-se-podan-las-palmeras",           "destination": "/es/blog/cuando-podar-palmeras/",          "permanent": true },
-    { "source": "/como-podar-una-palmera-paso-a-paso",     "destination": "/es/blog/como-podar-palmera-paso-a-paso/", "permanent": true },
-    { "source": "/cuando-es-la-epoca-de-la-procesionaria", "destination": "/es/blog/epoca-procesionaria-mallorca/",  "permanent": true },
+    { "source": "/cuidados-de-una-palmera-exterior",       "destination": "/es/blog/picudo-rojo-mallorca/",           "permanent": true },
+    { "source": "/cuando-se-podan-las-palmeras",           "destination": "/es/poda-palmeras/",                       "permanent": true },
+    { "source": "/como-podar-una-palmera-paso-a-paso",     "destination": "/es/poda-palmeras/",                       "permanent": true },
+    { "source": "/cuando-es-la-epoca-de-la-procesionaria", "destination": "/es/blog/calendario-poda-mallorca/",       "permanent": true },
     { "source": "/personalizar-cookies",                   "destination": "/es/",                                     "permanent": true }
   ]
 }
