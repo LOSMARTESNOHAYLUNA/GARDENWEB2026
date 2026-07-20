@@ -231,22 +231,20 @@ img{max-width:100%;height:auto;display:block;}
 }
 
 /* ===== DROPDOWN SERVICIOS ===== */
-.has-dd { position:relative; }
+.has-dd { position:static; }
 .has-dd > a { display:flex; align-items:center; gap:5px; }
 .has-dd > a::after { content:'▾'; font-size:10px; opacity:0.55; }
 .dd-menu {
-  position:absolute; top:calc(100% + 14px); left:50%;
-  transform:translateX(-50%);
+  position:absolute; top:100%; left:50%;
+  transform:translateX(-50%) translateY(6px);
   background:var(--paper); border:1px solid var(--line-soft);
   box-shadow:0 24px 60px rgba(15,15,13,0.13);
-  padding:24px 0; z-index:200; width:680px;
+  padding:24px 0; z-index:200; width:700px;
   display:grid; grid-template-columns:repeat(5,1fr);
   opacity:0; pointer-events:none;
   transition:opacity 0.2s ease, transform 0.2s ease;
-  transform:translateX(-50%) translateY(6px);
 }
-.has-dd:hover .dd-menu,
-.has-dd:focus-within .dd-menu {
+.dd-menu.dd-open {
   opacity:1; pointer-events:all;
   transform:translateX(-50%) translateY(0);
 }
@@ -525,6 +523,27 @@ fuEls.forEach(el=>fuObs.observe(el));
 const hdr=document.querySelector('.header');
 window.addEventListener('scroll',()=>{hdr.style.boxShadow=window.scrollY>20?'0 4px 20px rgba(15,15,13,0.06)':'none';},{passive:true});
 </script>
+
+
+// Dropdown servicios — hover con retardo para evitar cierre al mover el ratón
+(function(){
+  var trigger = document.querySelector('.has-dd');
+  var menu    = document.querySelector('.dd-menu');
+  if(!trigger || !menu) return;
+  var t;
+  function show(){ clearTimeout(t); menu.classList.add('dd-open'); }
+  function hide(){ t = setTimeout(function(){ menu.classList.remove('dd-open'); }, 180); }
+  trigger.addEventListener('mouseenter', show);
+  trigger.addEventListener('mouseleave', hide);
+  menu.addEventListener('mouseenter', show);
+  menu.addEventListener('mouseleave', hide);
+  // Cerrar al pulsar fuera
+  document.addEventListener('click', function(e){
+    if(!trigger.contains(e.target) && !menu.contains(e.target)){
+      menu.classList.remove('dd-open');
+    }
+  });
+})();
 
 </body>
 </html>
