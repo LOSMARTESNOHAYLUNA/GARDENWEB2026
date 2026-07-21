@@ -472,7 +472,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* ===== FOOTER ===== */
 .footer { background: var(--ink); color: rgba(251,248,242,0.75); padding: 80px 0 30px; }
-.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 60px; margin-bottom: 60px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 60px; }
 .footer h4 { color: var(--paper); font-size: 22px; margin-bottom: 24px;
   font-family: 'Cormorant Garamond'; }
 .footer .logo-footer { font-family: 'Cormorant Garamond'; font-size: 28px;
@@ -541,6 +541,16 @@ img { max-width: 100%; height: auto; display: block; }
 .dd-menu a { display:block; font-family:'Manrope'; font-size:13px; font-weight:300; color:var(--ink-soft); padding:5px 0; transition:color 0.2s; text-decoration:none !important; border-bottom:none !important; }
 .dd-menu a:hover { color:var(--green); }
 @media(max-width:968px){ .dd-menu{ display:none !important; } }
+
+/* === SERVICIOS POR CATEGORÍA === */
+.servicios-cats { display:flex; flex-direction:column; gap:44px; }
+.cat-group {}
+.cat-header { display:flex; align-items:center; gap:12px; margin-bottom:18px; padding-bottom:12px; border-bottom:2px solid var(--green); }
+.cat-header svg { flex-shrink:0; }
+.cat-header span { font-family:'Cormorant Garamond'; font-size:22px; font-weight:500; color:var(--green); }
+.cat-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+@media(max-width:968px){ .cat-cards{ grid-template-columns:1fr 1fr; } }
+@media(max-width:480px){ .cat-cards{ grid-template-columns:1fr 1fr; } }
 </style>
 </head>
 <body>
@@ -623,15 +633,15 @@ img { max-width: 100%; height: auto; display: block; }
   <div class="wrap">
     <div class="counters-grid">
       <div class="counter-item">
-        <div class="counter-num" data-target="10">0</div>
+        <div class="counter-num">10<span style="font-size:0.6em">+</span></div>
         <div class="counter-label">Años cuidando jardines</div>
       </div>
       <div class="counter-item">
-        <div class="counter-num" data-target="40">0</div>
+        <div class="counter-num">40<span style="font-size:0.6em">+</span></div>
         <div class="counter-label">Clientes recurrentes</div>
       </div>
       <div class="counter-item">
-        <div class="counter-num" data-target="5">0</div>
+        <div class="counter-num">5</div>
         <div class="counter-label">Municipios de cobertura</div>
       </div>
       <div class="counter-item">
@@ -649,62 +659,48 @@ img { max-width: 100%; height: auto; display: block; }
     <h2 class="section-title">Servicios <span class="it">de jardinería</span></h2>
     <p class="section-intro">Del diseño integral al cuidado semanal. Un equipo propio con carnet fitosanitario que se ocupa de todo, para que tú solo tengas que disfrutar del jardín.</p>
 
-    <div class="servicios-grid">
-      <a href="/es/paisajismo-diseno-jardines/" class="servicio-card">
-        <div class="servicio-num">01</div>
-        <h3>Paisajismo</h3>
-        <p>Diseño y construcción de jardines desde cero: conceptualización, plantación, riego automático y elementos decorativos.</p>
-        <span class="servicio-link">Ver servicio</span>
-      </a>
-      <a href="/es/mantenimiento-jardines-particulares/" class="servicio-card">
-        <div class="servicio-num">02</div>
-        <h3>Mantenimiento recurrente</h3>
-        <p>Cuidado periódico para villas, fincas y comunidades. Un equipo que conoce tu jardín y se anticipa a sus necesidades.</p>
-        <span class="servicio-link">Ver servicio</span>
-      </a>
-      <a href="/es/poda-arboles-setos/" class="servicio-card">
-        <div class="servicio-num">03</div>
-        <h3>Poda de árboles y setos</h3>
-        <p>Poda técnica de árboles, setos y arbustos. Trabajos en altura con equipo especializado.</p>
-        <span class="servicio-link">Ver servicio</span>
-      </a>
-      <a href="/es/poda-palmeras/" class="servicio-card">
-        <div class="servicio-num">04</div>
-        <h3>Poda y tala de palmeras</h3>
-        <p>Especialistas en poda anual, saneamiento y tala de palmeras. Precios orientativos disponibles.</p>
-        <span class="servicio-link">Ver servicio</span>
-      </a>
-      <a href="/es/endoterapia/" class="servicio-card">
-        <div class="servicio-num">05</div>
-        <h3>Endoterapia vegetal</h3>
-        <p>Tratamiento inyectable directo al árbol. Eficaz, sin pulverización y respetuoso con el entorno.</p>
-        <span class="servicio-link">Ver servicio</span>
-      </a>
-      <a href="/es/picudo-rojo/" class="servicio-card">
-        <div class="servicio-num">06</div>
-        <h3>Tratamiento picudo rojo</h3>
-        <p>Protocolo preventivo y curativo contra el picudo rojo con carnet fitosanitario oficial.</p>
-        <span class="servicio-link">Ver servicio</span>
-      </a>
-      <a href="/es/riego-automatico/" class="servicio-card">
-        <div class="servicio-num">07</div>
-        <h3>Riego automático</h3>
-        <p>Diseño, instalación y mantenimiento de sistemas de riego eficientes adaptados a jardín mediterráneo.</p>
-        <span class="servicio-link">Ver servicio</span>
-      </a>
-      <a href="/es/silvicultura-preventiva/" class="servicio-card">
-        <div class="servicio-num">08</div>
-        <h3>Silvicultura preventiva</h3>
-        <p>Limpieza de parcelas y prevención de incendios según normativa balear.</p>
-        <span class="servicio-link">Ver servicio</span>
-      </a>
-      <a href="/es/poda-en-altura/" class="servicio-card">
-        <div class="servicio-num">09</div>
-        <h3>Tala de árboles</h3>
-        <p>Tala controlada con equipo profesional, gestión de residuos vegetales incluida.</p>
-        <span class="servicio-link">Ver servicio</span>
-      </a>
+    <div class="servicios-cats">
+  <div class="cat-group">
+    <div class="cat-header"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg><span>Mantenimiento</span></div>
+    <div class="cat-cards">
+      <a href="/es/mantenimiento-jardines-particulares/" class="servicio-card"><h3>Jardines particulares</h3><p>Cuidado periódico de villas y fincas con equipo propio y visitas programadas.</p><span class="servicio-link">Ver servicio</span></a>
+      <a href="/es/mantenimiento-comunidades/" class="servicio-card"><h3>Comunidades de vecinos</h3><p>Mantenimiento de zonas verdes comunitarias con calendario fijo y comunicación directa.</p><span class="servicio-link">Ver servicio</span></a>
+      <a href="/es/mantenimiento-piscinas/" class="servicio-card"><h3>Piscinas</h3><p>Control del agua, limpieza y tratamientos con carnet de piscinas oficial.</p><span class="servicio-link">Ver servicio</span></a>
     </div>
+  </div>
+  <div class="cat-group">
+    <div class="cat-header"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" x2="8.12" y1="4" y2="15.88"/><line x1="14.47" x2="20" y1="14.48" y2="20"/><line x1="8.12" x2="12" y1="8.12" y2="12"/></svg><span>Poda</span></div>
+    <div class="cat-cards">
+      <a href="/es/poda-arboles-setos/" class="servicio-card"><h3>Árboles y setos</h3><p>Poda técnica de árboles ornamentales, frutales, cipreses y setos.</p><span class="servicio-link">Ver servicio</span></a>
+      <a href="/es/poda-palmeras/" class="servicio-card"><h3>Palmeras</h3><p>Especialistas en poda anual. Sin clavos. Precios orientativos disponibles.</p><span class="servicio-link">Ver servicio</span></a>
+      <a href="/es/poda-en-altura/" class="servicio-card"><h3>Poda en altura</h3><p>Trabajos verticales con equipo de arboricultura para árboles de gran porte.</p><span class="servicio-link">Ver servicio</span></a>
+    </div>
+  </div>
+  <div class="cat-group">
+    <div class="cat-header"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5Z"/><polyline points="14 2 14 8 20 8"/></svg><span>Diseño e Instalación</span></div>
+    <div class="cat-cards">
+      <a href="/es/paisajismo-diseno-jardines/" class="servicio-card"><h3>Paisajismo y diseño</h3><p>Jardines desde cero: conceptualización, plantación, riego y elementos decorativos.</p><span class="servicio-link">Ver servicio</span></a>
+      <a href="/es/riego-automatico/" class="servicio-card"><h3>Riego automático</h3><p>Diseño e instalación de sistemas de riego eficientes para jardín mediterráneo.</p><span class="servicio-link">Ver servicio</span></a>
+      <a href="/es/cesped-artificial/" class="servicio-card"><h3>Césped artificial</h3><p>Verde todo el año sin riego. Instalación sobre tierra, hormigón o madera.</p><span class="servicio-link">Ver servicio</span></a>
+      <a href="/es/cesped-natural/" class="servicio-card"><h3>Césped natural</h3><p>Siembra, preparación del suelo y mantenimiento de césped natural en Mallorca.</p><span class="servicio-link">Ver servicio</span></a>
+    </div>
+  </div>
+  <div class="cat-group">
+    <div class="cat-header"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Fitosanidad</span></div>
+    <div class="cat-cards">
+      <a href="/es/picudo-rojo/" class="servicio-card"><h3>Picudo rojo</h3><p>Tratamiento y prevención del picudo rojo con carnet fitosanitario oficial.</p><span class="servicio-link">Ver servicio</span></a>
+      <a href="/es/endoterapia/" class="servicio-card"><h3>Endoterapia vegetal</h3><p>Tratamiento inyectable directo al árbol. Eficaz, sin pulverización exterior.</p><span class="servicio-link">Ver servicio</span></a>
+      <a href="/es/controles-fitosanitarios/" class="servicio-card"><h3>Controles fitosanitarios</h3><p>Inspecciones periódicas para detectar plagas y enfermedades a tiempo.</p><span class="servicio-link">Ver servicio</span></a>
+    </div>
+  </div>
+  <div class="cat-group">
+    <div class="cat-header"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span>Fincas</span></div>
+    <div class="cat-cards">
+      <a href="/es/limpieza-fincas/" class="servicio-card"><h3>Limpieza de fincas</h3><p>Desbroce y eliminación de maleza en parcelas rurales de cualquier tamaño.</p><span class="servicio-link">Ver servicio</span></a>
+      <a href="/es/silvicultura-preventiva/" class="servicio-card"><h3>Silvicultura preventiva</h3><p>Gestión de biomasa para prevención de incendios según normativa balear.</p><span class="servicio-link">Ver servicio</span></a>
+    </div>
+  </div>
+</div>
   </div>
 </section>
 
@@ -832,23 +828,23 @@ img { max-width: 100%; height: auto; display: block; }
   <div class="wrap">
     <div class="section-eyebrow">Lo que dicen de nosotros</div>
     <h2 class="section-title">Reseñas <span class="it">verificadas</span></h2>
-    <p class="section-intro">74 clientes han valorado nuestro trabajo en Google. Estas son solo algunas de las reseñas reales que hemos recibido.</p>
+    <p class="section-intro">74 clientes han valorado nuestro trabajo en Google con una puntuación de 5,0 estrellas. Estas son algunas de las reseñas reales de la ficha de Google Business Profile.</p>
 
     <div class="resenas-grid">
       <div class="resena-card">
         <div class="resena-stars">★★★★★</div>
-        <p class="resena-text">"Trabajo impecable, equipo puntual y muy profesional. Nuestro jardín no ha estado nunca mejor cuidado."</p>
-        <p class="resena-author">Cliente verificado · Google</p>
+        <p class="resena-text">«Quiero agradecer a Garden Solution SL por el excelente trabajo realizado al cortarnos un árbol. Han demostrado ser grandes profesionales, trabajando con rapidez, seguridad y mucho cuidado. Fueron puntuales, muy amables y dejaron todo perfectamente limpio al terminar. Sin duda, volveríamos a contar con ellos y los recomendamos totalmente.»</p>
+        <p class="resena-author">Biel · Google</p>
       </div>
       <div class="resena-card">
         <div class="resena-stars">★★★★★</div>
-        <p class="resena-text">"Contratamos el mantenimiento recurrente y estamos encantados. Se anticipan a todo, siempre atentos."</p>
-        <p class="resena-author">Cliente verificado · Google</p>
+        <p class="resena-text">«Excelente servicio de jardinería. Desde el primer contacto fueron muy profesionales y puntuales. Dejan el jardín impecable, cuidando cada detalle y respetando las plantas existentes. Se nota la experiencia y el amor por su trabajo. Sin duda los recomiendo, son una gran empresa.»</p>
+        <p class="resena-author">Cliente de Google · Mallorca</p>
       </div>
       <div class="resena-card">
         <div class="resena-stars">★★★★★</div>
-        <p class="resena-text">"Hicieron el diseño completo de nuestro jardín y superó las expectativas. Muy recomendables."</p>
-        <p class="resena-author">Cliente verificado · Google</p>
+        <p class="resena-text">«Contacté con Mallorca Garden Solutions para la poda anual de dos palmeras. Desde el primer momento, muy atentos y formales. Me ofrecieron un presupuesto y enseguida pude concertar cita. Vinieron el día y hora indicados y realizaron muy buen trabajo. Sin duda, les volveremos a llamar el año que viene.»</p>
+        <p class="resena-author">Cliente de Google · Mallorca</p>
       </div>
     </div>
 
@@ -946,12 +942,12 @@ img { max-width: 100%; height: auto; display: block; }
     <div class="contacto-info">
       <div class="section-eyebrow">Contacta con nosotros</div>
       <h2>Hablemos de <span class="it">tu jardín</span></h2>
-      <p>Rellena el formulario y te respondemos en 24h. También puedes llamarnos directamente al 621 49 39 77.</p>
+      <p>Rellena el formulario y te respondemos en 24h. También puedes llamarnos directamente al <a href="tel:+34621493977" style="color:var(--green);">621 49 39 77</a>.</p>
 
       <ul class="contacto-datos">
-        <li><strong>Móvil</strong> 621 49 39 77</li>
-        <li><strong>Fijo</strong> 971 96 74 13</li>
-        <li><strong>Email</strong> info@mallorcagardensolution.com</li>
+        <li><strong>Móvil</strong> <a href="tel:+34621493977">621 49 39 77</a></li>
+        <li><strong>Fijo</strong> <a href="tel:+34971967413">971 96 74 13</a></li>
+        <li><strong>Email</strong> <a href="mailto:info@mallorcagardensolution.com">info@mallorcagardensolution.com</a></li>
         <li><strong>Dirección</strong> Camí de Jesús 44, Naves M/25 · 07011 Palma</li>
         <li><strong>Horario</strong> Lun-Vie · 08:00 - 18:00</li>
       </ul>
@@ -982,9 +978,17 @@ img { max-width: 100%; height: auto; display: block; }
 
         <div class="form-row">
           <div class="form-field">
-            <label for="zona">Zona / municipio</label>
-            <input type="text" id="zona" name="zona" placeholder="Ej. Calvià, Palma...">
-          </div>
+                <label for="municipio">Municipio*</label>
+                <select id="municipio" name="municipio" required>
+                  <option value="">Selecciona tu municipio</option>
+                  <option>Palma</option>
+                  <option>Llucmajor</option>
+                  <option>Marratxí</option>
+                  <option>Calvià</option>
+                  <option>Alcúdia</option>
+                  <option>Otro municipio de Mallorca</option>
+                </select>
+              </div>
           <div class="form-field">
             <label for="servicio">Servicio de interés</label>
             <select id="servicio" name="servicio">
@@ -1070,12 +1074,16 @@ img { max-width: 100%; height: auto; display: block; }
       <div>
         <h4>Servicios</h4>
         <ul>
-          <li><a href="/es/paisajismo-diseno-jardines/">Paisajismo</a></li>
-          <li><a href="/es/mantenimiento-jardines-particulares/">Mantenimiento</a></li>
-          <li><a href="/es/poda-arboles-setos/">Poda</a></li>
-          <li><a href="/es/poda-palmeras/">Palmeras</a></li>
+          <li><a href="/es/paisajismo-diseno-jardines/">Paisajismo y diseño</a></li>
+          <li><a href="/es/mantenimiento-jardines-particulares/">Mantenimiento jardines</a></li>
+          <li><a href="/es/poda-palmeras/">Poda de palmeras</a></li>
           <li><a href="/es/endoterapia/">Endoterapia</a></li>
-          <li><a href="/es/riego-automatico/">Riego</a></li>
+          <li><a href="/es/picudo-rojo/">Picudo rojo</a></li>
+          <li><a href="/es/riego-automatico/">Riego automático</a></li>
+          <li><a href="/es/mantenimiento-piscinas/">Mantenimiento piscinas</a></li>
+          <li><a href="/es/limpieza-fincas/">Limpieza de fincas</a></li>
+          <li><a href="/es/silvicultura-preventiva/">Silvicultura preventiva</a></li>
+          <li style="margin-top:8px;"><a href="/es/#servicios" style="color:var(--gold-soft);font-weight:500;">Ver todos →</a></li>
         </ul>
       </div>
 
@@ -1087,6 +1095,17 @@ img { max-width: 100%; height: auto; display: block; }
           <li><a href="/es/jardineria-marratxi/">Marratxí</a></li>
           <li><a href="/es/jardineria-calvia/">Calvià</a></li>
           <li><a href="/es/jardineria-alcudia/">Alcúdia</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Blog</h4>
+        <ul>
+          <li><a href="/es/blog/">Blog de jardinería</a></li>
+          <li><a href="/es/blog/picudo-rojo-mallorca/">Picudo rojo</a></li>
+          <li><a href="/es/blog/riego-automatico-mediterraneo/">Riego automático</a></li>
+          <li><a href="/es/blog/calendario-poda-mallorca/">Calendario de poda</a></li>
+          <li><a href="/es/preguntas-frecuentes/">Preguntas frecuentes</a></li>
         </ul>
       </div>
 

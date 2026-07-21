@@ -48,6 +48,7 @@
     "@id": "https://mallorcagardensolution.com/#business",
     "name": "Garden Solution Mallorca SL",
     "telephone": "+34621493977",
+  "aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"74","bestRating":"5","worstRating":"1"},
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Camí de Jesús 44, Naves M/25, Local 3, Can Valer",
@@ -818,8 +819,16 @@ a.zona-tag:hover { border-color:var(--green); color:var(--green); background:rgb
 
             <div class="form-row">
               <div class="form-field">
-                <label for="zona">Zona / municipio</label>
-                <input type="text" id="zona" name="zona" placeholder="Ej. Calvià, Llucmajor...">
+                <label for="municipio">Municipio*</label>
+                <select id="municipio" name="municipio" required>
+                  <option value="">Selecciona tu municipio</option>
+                  <option>Palma</option>
+                  <option>Llucmajor</option>
+                  <option>Marratxí</option>
+                  <option>Calvià</option>
+                  <option>Alcúdia</option>
+                  <option>Otro municipio de Mallorca</option>
+                </select>
               </div>
               <div class="form-field">
                 <label for="servicio">Servicio de interés</label>

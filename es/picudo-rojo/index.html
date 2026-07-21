@@ -240,7 +240,23 @@ img{max-width:100%;height:auto;display:block;}
 .dd-menu a { display:block; font-family:'Manrope'; font-size:13px; font-weight:300; color:var(--ink-soft); padding:5px 0; transition:color 0.2s; text-decoration:none !important; border-bottom:none !important; }
 .dd-menu a:hover { color:var(--green); }
 @media(max-width:968px){ .dd-menu{ display:none !important; } }
+
+/* === ZONAS TAGS === */
+.zonas-tags { display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin:30px 0 16px; }
+.zona-tag { font-family:'Manrope'; font-size:13px; padding:8px 20px; border:1px solid var(--line); color:var(--green); text-decoration:none; border-radius:100px; transition:all 0.3s; }
+.zona-tag:hover,.zona-tag[href]:hover { background:var(--green); color:var(--paper); }
+.zonas-nota { font-family:'Manrope'; font-size:13px; color:var(--gray-soft); text-align:center; }
+/* === SERVICIOS RELACIONADOS === */
+.rel-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:48px; }
+.rel-card { background:var(--paper); border:1px solid var(--line-soft); padding:28px; display:flex; flex-direction:column; text-decoration:none; transition:transform 0.3s,box-shadow 0.3s; }
+.rel-card:hover { transform:translateY(-3px); box-shadow:0 12px 30px rgba(30,73,52,0.08); }
+.rel-card h3 { font-family:'Cormorant Garamond'; font-size:22px; color:var(--green); margin-bottom:8px; }
+.rel-card p { font-family:'Manrope'; font-size:14px; font-weight:300; color:var(--gray-soft); line-height:1.65; flex-grow:1; }
+.rel-link { font-family:'Manrope'; font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:var(--green); font-weight:600; margin-top:16px; display:inline-flex; align-items:center; gap:6px; }
+.rel-link::after { content:'→'; }
+@media(max-width:640px){ .rel-grid{ grid-template-columns:1fr; } }
 </style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Garden Solution Mallorca SL","telephone":"+34621493977","aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"74","bestRating":"5","worstRating":"1"}}</script>
 </head>
 <body>
 <header class="header"><div class="wrap"><a href="/es/" class="logo">Garden <span class="it">Solution</span></a><nav class="nav"><ul><li class="has-dd">
@@ -324,6 +340,35 @@ img{max-width:100%;height:auto;display:block;}
 <div class="faq-item"><button class="faq-trigger" aria-expanded="false"><h3>¿Necesitáis autorización para aplicar el tratamiento?</h3><span class="faq-icon">+</span></button><div class="faq-body"><p>Sí, y la tenemos. Disponemos de carnet fitosanitario oficial que nos habilita para aplicar los productos regulados necesarios para el tratamiento del picudo rojo. No todos los servicios de jardinería tienen esta habilitación.</p></div></div>
 <div class="faq-item"><button class="faq-trigger" aria-expanded="false"><h3>¿En qué zonas de Mallorca tratáis el picudo rojo?</h3><span class="faq-icon">+</span></button><div class="faq-body"><p>Tratamos el picudo rojo en toda la isla de Mallorca. Las zonas con mayor incidencia son las costeras: Calvià, Alcúdia, Palma litoral y Llucmajor costa. También realizamos protocolos preventivos en zonas de alto riesgo.</p></div></div></div></div></section>
 
+
+<section class="section bg-white">
+  <div class="wrap">
+    <div class="eyebrow-c">Cobertura</div>
+    <h2 class="h2-c">Dónde realizamos <span class="it">este servicio</span> en Mallorca</h2>
+    <p class="lead-c">Realizamos este servicio en toda Mallorca: Palma, Llucmajor, Marratxí, Calvià y Alcúdia. También en Esporles, Valldemossa y Caimari. Consulta disponibilidad para tu municipio.</p>
+    <div class="zonas-tags">
+      <a href="/es/jardineria-palma/" class="zona-tag">Palma</a>
+      <a href="/es/jardineria-llucmajor/" class="zona-tag">Llucmajor</a>
+      <a href="/es/jardineria-marratxi/" class="zona-tag">Marratxí</a>
+      <a href="/es/jardineria-calvia/" class="zona-tag">Calvià</a>
+      <a href="/es/jardineria-alcudia/" class="zona-tag">Alcúdia</a>
+      <span class="zona-tag">Esporles</span>
+      <span class="zona-tag">Valldemossa</span>
+      <span class="zona-tag">Caimari</span>
+    </div>
+    <p class="zonas-nota">Y cualquier municipio de Mallorca — consulta disponibilidad</p>
+  </div>
+</section>
+
+<section class="section bg-soft">
+  <div class="wrap">
+    <div class="eyebrow-c">También te puede interesar</div>
+    <h2 class="h2-c">Servicios <span class="it">complementarios</span></h2>
+    <div class="rel-grid"><a href="/es/endoterapia/" class="rel-card"><h3>Endoterapia</h3><p>La técnica más eficaz para tratar el picudo rojo desde el interior de la palmera.</p><span class="rel-link">Ver servicio</span></a>
+<a href="/es/controles-fitosanitarios/" class="rel-card"><h3>Controles fitosanitarios</h3><p>Inspecciones periódicas para detectar el picudo rojo a tiempo.</p><span class="rel-link">Ver servicio</span></a>
+<a href="/es/poda-palmeras/" class="rel-card"><h3>Poda de palmeras</h3><p>La poda y el tratamiento preventivo van de la mano en el cuidado integral de palmeras.</p><span class="rel-link">Ver servicio</span></a></div>
+  </div>
+</section>
 <section class="cta-banner"><div class="wrap"><h2>¿Tu palmera tiene <span class="it">síntomas de picudo rojo?</span></h2><p>Visita técnica gratuita · Presupuesto en 24 horas · Sin compromiso</p><div class="cta-btns"><a href="tel:+34621493977" class="btn btn-gold">Llamar · 621 49 39 77</a><a href="#contacto" class="btn btn-outline-w">Enviar mensaje</a></div></div></section>
 
 
@@ -346,7 +391,18 @@ img{max-width:100%;height:auto;display:block;}
               <div class="form-field full"><label for="email">Email*</label><input type="email" id="email" name="email" required></div>
             </div>
             <div class="form-row">
-              <div class="form-field"><label for="zona">Zona / barrio</label><input type="text" id="zona" name="zona" placeholder="Picudo Rojo..."></div>
+              <div class="form-field">
+                <label for="municipio">Municipio*</label>
+                <select id="municipio" name="municipio" required>
+                  <option value="">Selecciona tu municipio</option>
+                  <option>Palma</option>
+                  <option>Llucmajor</option>
+                  <option>Marratxí</option>
+                  <option>Calvià</option>
+                  <option>Alcúdia</option>
+                  <option>Otro municipio de Mallorca</option>
+                </select>
+              </div>
               <div class="form-field"><label for="servicio">Servicio</label>
                 <select id="servicio" name="servicio">
                   <option>Mantenimiento recurrente</option>
@@ -378,7 +434,13 @@ img{max-width:100%;height:auto;display:block;}
   </div>
 </section>
 
-<footer class="footer"><div class="wrap"><div class="footer-grid"><div><div class="logo-footer">Garden <span class="it">Solution</span></div><p>Empresa de jardinería en Mallorca.</p><br><p><strong style="color:var(--paper);">Garden Solution Mallorca SL</strong><br>NIF: B21650155<br>Camí de Jesús 44, Naves M/25<br>07011 Palma · Illes Balears</p></div><div><h4>Servicios</h4><ul><li><a href="/es/paisajismo-diseno-jardines/">Paisajismo</a></li><li><a href="/es/mantenimiento-jardines-particulares/">Mantenimiento</a></li><li><a href="/es/poda-arboles-setos/">Poda</a></li><li><a href="/es/poda-palmeras/">Palmeras</a></li><li><a href="/es/endoterapia/">Endoterapia</a></li><li><a href="/es/riego-automatico/">Riego</a></li></ul></div><div><h4>Zonas</h4><ul><li><a href="/es/jardineria-palma/">Palma</a></li><li><a href="/es/jardineria-llucmajor/">Llucmajor</a></li><li><a href="/es/jardineria-marratxi/">Marratxí</a></li><li><a href="/es/jardineria-calvia/">Calvià</a></li><li><a href="/es/jardineria-alcudia/">Alcúdia</a></li></ul></div><div><h4>Contacto</h4><ul><li><a href="tel:+34621493977">621 49 39 77</a></li><li><a href="tel:+34971967413">971 96 74 13</a></li><li><a href="mailto:info@mallorcagardensolution.com">info@mallorcagardensolution.com</a></li></ul></div></div><div class="footer-bottom"><div>© 2026 Garden Solution Mallorca SL</div><div class="footer-legal"><a href="/es/aviso-legal/">Aviso legal</a><a href="/es/politica-privacidad/">Privacidad</a><a href="/es/politica-cookies/">Cookies</a></div><div class="lang-switch"><a href="https://mallorcagardensolution.com/es/picudo-rojo/" class="active">ES</a><a href="/en/">EN</a><a href="/de/">DE</a></div></div></div></footer>
+<footer class="footer"><div class="wrap"><div class="footer-grid"><div><div class="logo-footer">Garden <span class="it">Solution</span></div><p>Empresa de jardinería en Mallorca.</p><br><p><strong style="color:var(--paper);">Garden Solution Mallorca SL</strong><br>NIF: B21650155<br>Camí de Jesús 44, Naves M/25<br>07011 Palma · Illes Balears</p></div><div><h4>Servicios</h4><ul><li><a href="/es/paisajismo-diseno-jardines/">Paisajismo</a></li><li><a href="/es/mantenimiento-jardines-particulares/">Mantenimiento</a></li><li><a href="/es/poda-arboles-setos/">Poda</a></li><li><a href="/es/poda-palmeras/">Palmeras</a></li><li><a href="/es/endoterapia/">Endoterapia</a></li><li><a href="/es/riego-automatico/">Riego</a></li></ul></div><div><h4>Zonas</h4><ul><li><a href="/es/jardineria-palma/">Palma</a></li><li><a href="/es/jardineria-llucmajor/">Llucmajor</a></li><li><a href="/es/jardineria-marratxi/">Marratxí</a></li><li><a href="/es/jardineria-calvia/">Calvià</a></li><li><a href="/es/jardineria-alcudia/">Alcúdia</a></li></ul></div><div><h4>Blog</h4><ul>
+        <li><a href="/es/blog/">Blog de jardinería</a></li>
+        <li><a href="/es/blog/picudo-rojo-mallorca/">Picudo rojo en Mallorca</a></li>
+        <li><a href="/es/blog/riego-automatico-mediterraneo/">Riego automático</a></li>
+        <li><a href="/es/blog/calendario-poda-mallorca/">Calendario de poda</a></li>
+      </ul></div>
+      <div><h4>Contacto</h4><ul><li><a href="tel:+34621493977">621 49 39 77</a></li><li><a href="tel:+34971967413">971 96 74 13</a></li><li><a href="mailto:info@mallorcagardensolution.com">info@mallorcagardensolution.com</a></li></ul></div></div><div class="footer-bottom"><div>© 2026 Garden Solution Mallorca SL</div><div class="footer-legal"><a href="/es/aviso-legal/">Aviso legal</a><a href="/es/politica-privacidad/">Privacidad</a><a href="/es/politica-cookies/">Cookies</a></div><div class="lang-switch"><a href="https://mallorcagardensolution.com/es/picudo-rojo/" class="active">ES</a><a href="/en/">EN</a><a href="/de/">DE</a></div></div></div></footer>
 
 <script>
 document.querySelectorAll('.faq-trigger').forEach(btn=>{btn.addEventListener('click',()=>{const item=btn.closest('.faq-item');const isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(el=>{el.classList.remove('open');el.querySelector('.faq-trigger').setAttribute('aria-expanded','false');});if(!isOpen){item.classList.add('open');btn.setAttribute('aria-expanded','true');}});});

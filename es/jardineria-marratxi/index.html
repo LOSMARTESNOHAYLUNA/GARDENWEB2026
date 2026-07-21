@@ -27,6 +27,7 @@
   "name":"Garden Solution Mallorca SL",
   "description":"Jardinería en Marratxí: mantenimiento de jardines en chalets y comunidades de vecinos. Riego automático, paisajismo y poda profesional. Equipo propio. Presupuesto gratuito.",
   "telephone":"+34621493977",
+  "aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"74","bestRating":"5","worstRating":"1"},
   "url":"https://mallorcagardensolution.com/es/jardineria-marratxi/",
   "address":{"@type":"PostalAddress","streetAddress":"Camí de Jesús 44, Naves M/25, Local 3","addressLocality":"Palma","addressRegion":"Illes Balears","postalCode":"07011","addressCountry":"ES"},
   "areaServed":{"@type":"City","name":"Marratxí","postalCode":"07141"},
@@ -441,7 +442,18 @@ img{max-width:100%;height:auto;display:block;}
               <div class="form-field full"><label for="email">Email*</label><input type="email" id="email" name="email" required></div>
             </div>
             <div class="form-row">
-              <div class="form-field"><label for="zona">Zona / barrio</label><input type="text" id="zona" name="zona" placeholder="Marratxí..."></div>
+              <div class="form-field">
+                <label for="municipio">Municipio*</label>
+                <select id="municipio" name="municipio" required>
+                  <option value="">Selecciona tu municipio</option>
+                  <option>Palma</option>
+                  <option>Llucmajor</option>
+                  <option>Marratxí</option>
+                  <option>Calvià</option>
+                  <option>Alcúdia</option>
+                  <option>Otro municipio de Mallorca</option>
+                </select>
+              </div>
               <div class="form-field"><label for="servicio">Servicio</label>
                 <select id="servicio" name="servicio">
                   <option>Mantenimiento recurrente</option>
@@ -482,12 +494,16 @@ img{max-width:100%;height:auto;display:block;}
         <p><strong style="color:var(--paper);">Garden Solution Mallorca SL</strong><br>NIF: B21650155<br>Camí de Jesús 44, Naves M/25<br>07011 Palma · Illes Balears</p>
       </div>
       <div><h4>Servicios</h4><ul>
-        <li><a href="/es/paisajismo-diseno-jardines/">Paisajismo</a></li>
-        <li><a href="/es/mantenimiento-jardines-particulares/">Mantenimiento</a></li>
-        <li><a href="/es/poda-arboles-setos/">Poda</a></li>
-        <li><a href="/es/poda-palmeras/">Palmeras</a></li>
+        <li><a href="/es/paisajismo-diseno-jardines/">Paisajismo y diseño</a></li>
+        <li><a href="/es/mantenimiento-jardines-particulares/">Mantenimiento jardines</a></li>
+        <li><a href="/es/poda-palmeras/">Poda de palmeras</a></li>
         <li><a href="/es/endoterapia/">Endoterapia</a></li>
-        <li><a href="/es/riego-automatico/">Riego</a></li>
+        <li><a href="/es/picudo-rojo/">Picudo rojo</a></li>
+        <li><a href="/es/riego-automatico/">Riego automático</a></li>
+        <li><a href="/es/mantenimiento-piscinas/">Mantenimiento piscinas</a></li>
+        <li><a href="/es/limpieza-fincas/">Limpieza de fincas</a></li>
+        <li><a href="/es/silvicultura-preventiva/">Silvicultura preventiva</a></li>
+        <li style="margin-top:10px;"><a href="/es/#servicios" style="color:var(--gold-soft);font-weight:500;">Ver todos los servicios →</a></li>
       </ul></div>
       <div><h4>Zonas</h4><ul>
         <li><a href="/es/jardineria-palma/">Palma</a></li>
@@ -495,6 +511,12 @@ img{max-width:100%;height:auto;display:block;}
         <li><a href="/es/jardineria-marratxi/">Marratxí</a></li>
         <li><a href="/es/jardineria-calvia/">Calvià</a></li>
         <li><a href="/es/jardineria-alcudia/">Alcúdia</a></li>
+      </ul></div>
+      <div><h4>Blog</h4><ul>
+        <li><a href="/es/blog/">Blog de jardinería</a></li>
+        <li><a href="/es/blog/picudo-rojo-mallorca/">Picudo rojo en Mallorca</a></li>
+        <li><a href="/es/blog/riego-automatico-mediterraneo/">Riego automático</a></li>
+        <li><a href="/es/blog/calendario-poda-mallorca/">Calendario de poda</a></li>
       </ul></div>
       <div><h4>Contacto</h4><ul>
         <li><a href="tel:+34621493977">621 49 39 77</a></li>
