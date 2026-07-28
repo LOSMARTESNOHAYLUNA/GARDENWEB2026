@@ -24,7 +24,8 @@
 <!-- Fuentes -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Manrope:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Manrope:wght@200;300;400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Manrope:wght@200;300;400;500;600;700&display=swap"></noscript>
 
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQFTLP9XSD"></script>
@@ -622,7 +623,11 @@ img { max-width: 100%; height: auto; display: block; }
 <!-- HERO -->
 <section class="hero">
   <div class="hero-video-wrap">
+    <picture>
+    <source media="(max-width: 768px)" srcset="/img/banner-mobile.webp">
+    <source media="(min-width: 769px)" srcset="/img/banner-home-garden.webp">
     <img src="/img/banner-home-garden.webp" alt="Jardinería y paisajismo en Mallorca — Garden Solution" loading="eager" fetchpriority="high">
+  </picture>
   </div>
   <div class="hero-overlay"></div>
   <div class="wrap" style="position:relative;z-index:2;">
