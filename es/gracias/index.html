@@ -91,6 +91,7 @@ h1 .it { font-style:italic; color:var(--gold); }
 .dd-menu a:hover { color:var(--green); }
 @media(max-width:968px){ .dd-menu{ display:none !important; } }
 
+
 /* ===== MENÚ MÓVIL ===== */
 @media(max-width:968px){
   .nav ul {
@@ -111,15 +112,30 @@ h1 .it { font-style:italic; color:var(--gold); }
   .nav a { padding:14px 0; display:block; font-size:16px; font-weight:400; }
   .has-dd > a::after { display:none; }
   .menu-toggle { display:block !important; }
-  /* Columnas responsive */
-  .rel-grid { grid-template-columns:1fr 1fr !important; }
+  /* Todas las grillas → 1 columna en tablet/móvil */
+  .cat-cards { grid-template-columns:1fr !important; }
+  .rel-grid { grid-template-columns:1fr !important; }
+  .svcs-grid { grid-template-columns:1fr !important; }
+  .two-col { grid-template-columns:1fr !important; }
+  .hero-local .wrap { grid-template-columns:1fr !important; }
+  .hero-nosotros .wrap { grid-template-columns:1fr !important; }
+  .contacto-grid { grid-template-columns:1fr !important; }
   .counters-grid { grid-template-columns:1fr 1fr !important; }
-  .footer-grid { grid-template-columns:1fr 1fr !important; }
+  .certs-grid { grid-template-columns:1fr !important; }
+  .idiomas-grid { grid-template-columns:1fr 1fr !important; }
+  /* Footer en móvil: 2 columnas para links */
+  .footer-grid { grid-template-columns:1fr 1fr !important; gap:32px !important; }
+  /* La primera columna (logo+NAP) ocupa todo el ancho */
+  .footer-grid > div:first-child { grid-column:1 / -1; }
 }
 @media(max-width:640px){
-  .rel-grid { grid-template-columns:1fr !important; }
-  .footer-grid { grid-template-columns:1fr !important; gap:32px !important; }
+  .footer-grid { grid-template-columns:1fr 1fr !important; }
+  .footer-grid > div:first-child { grid-column:1 / -1; }
+  .counters-grid { grid-template-columns:1fr 1fr !important; }
+  .precios-grid { grid-template-columns:1fr !important; }
   .dd-inner { display:none !important; }
+  .cta-btns { flex-direction:column; align-items:center; }
+  .hero-ctas { flex-direction:column; }
 }
 
 </style>
