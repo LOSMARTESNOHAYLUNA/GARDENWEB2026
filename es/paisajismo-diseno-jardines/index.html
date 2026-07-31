@@ -25,7 +25,8 @@
 <!-- Fuentes -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Manrope:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Manrope:wght@200;300;400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Manrope:wght@200;300;400;500;600;700&display=swap"></noscript>
 
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQFTLP9XSD"></script>
@@ -561,6 +562,38 @@ a.zona-tag:hover { border-color:var(--green); color:var(--green); background:rgb
 .dd-menu a { display:block; font-family:'Manrope'; font-size:13px; font-weight:300; color:var(--ink-soft); padding:5px 0; transition:color 0.2s; text-decoration:none !important; border-bottom:none !important; }
 .dd-menu a:hover { color:var(--green); }
 @media(max-width:968px){ .dd-menu{ display:none !important; } }
+
+/* ===== MENÚ MÓVIL ===== */
+@media(max-width:968px){
+  .nav ul {
+    display:none;
+    position:fixed;
+    top:64px; left:0; right:0;
+    background:var(--paper);
+    border-bottom:1px solid var(--line-soft);
+    box-shadow:0 8px 30px rgba(15,15,13,0.1);
+    flex-direction:column;
+    padding:16px 24px 24px;
+    gap:0;
+    z-index:9998;
+  }
+  .nav.open ul { display:flex !important; }
+  .nav ul li { border-bottom:1px solid var(--line-soft); }
+  .nav ul li:last-child { border-bottom:none; }
+  .nav a { padding:14px 0; display:block; font-size:16px; font-weight:400; }
+  .has-dd > a::after { display:none; }
+  .menu-toggle { display:block !important; }
+  /* Columnas responsive */
+  .rel-grid { grid-template-columns:1fr 1fr !important; }
+  .counters-grid { grid-template-columns:1fr 1fr !important; }
+  .footer-grid { grid-template-columns:1fr 1fr !important; }
+}
+@media(max-width:640px){
+  .rel-grid { grid-template-columns:1fr !important; }
+  .footer-grid { grid-template-columns:1fr !important; gap:32px !important; }
+  .dd-inner { display:none !important; }
+}
+
 </style>
 </head>
 <body>
@@ -1153,6 +1186,27 @@ window.addEventListener('scroll', () => {
   m.addEventListener('mouseleave', function(){ hide(150); });
   document.addEventListener('click', function(e){
     if(!tr.contains(e.target) && !m.contains(e.target)) m.classList.remove('dd-open');
+  });
+})();
+</script>
+<script>
+/* Hamburger menu */
+(function(){
+  var toggle = document.querySelector('.menu-toggle');
+  var nav    = document.querySelector('.nav');
+  if(!toggle || !nav) return;
+  toggle.addEventListener('click', function(e){
+    e.stopPropagation();
+    var open = nav.classList.toggle('open');
+    toggle.textContent = open ? '✕' : '☰';
+    toggle.setAttribute('aria-expanded', open);
+  });
+  document.addEventListener('click', function(e){
+    if(nav.classList.contains('open') && !nav.contains(e.target) && !toggle.contains(e.target)){
+      nav.classList.remove('open');
+      toggle.textContent = '☰';
+      toggle.setAttribute('aria-expanded', 'false');
+    }
   });
 })();
 </script>

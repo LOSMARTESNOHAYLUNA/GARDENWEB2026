@@ -151,8 +151,8 @@
   --green:        #1E4934;
   --green-soft:   #2E6B4D;
   --green-light:  #8FAE85;
-  --gold:         #B8954A;
-  --gold-soft:    #D6BC8A;
+  --gold:         #9A7A35;
+  --gold-soft:    #B89A55;
 }
 
 * { margin:0; padding:0; box-sizing:border-box; }
@@ -560,6 +560,38 @@ img { max-width: 100%; height: auto; display: block; }
 .cat-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
 @media(max-width:968px){ .cat-cards{ grid-template-columns:1fr 1fr; } }
 @media(max-width:480px){ .cat-cards{ grid-template-columns:1fr 1fr; } }
+
+/* ===== MENÚ MÓVIL ===== */
+@media(max-width:968px){
+  .nav ul {
+    display:none;
+    position:fixed;
+    top:64px; left:0; right:0;
+    background:var(--paper);
+    border-bottom:1px solid var(--line-soft);
+    box-shadow:0 8px 30px rgba(15,15,13,0.1);
+    flex-direction:column;
+    padding:16px 24px 24px;
+    gap:0;
+    z-index:9998;
+  }
+  .nav.open ul { display:flex !important; }
+  .nav ul li { border-bottom:1px solid var(--line-soft); }
+  .nav ul li:last-child { border-bottom:none; }
+  .nav a { padding:14px 0; display:block; font-size:16px; font-weight:400; }
+  .has-dd > a::after { display:none; }
+  .menu-toggle { display:block !important; }
+  /* Columnas responsive */
+  .rel-grid { grid-template-columns:1fr 1fr !important; }
+  .counters-grid { grid-template-columns:1fr 1fr !important; }
+  .footer-grid { grid-template-columns:1fr 1fr !important; }
+}
+@media(max-width:640px){
+  .rel-grid { grid-template-columns:1fr !important; }
+  .footer-grid { grid-template-columns:1fr !important; gap:32px !important; }
+  .dd-inner { display:none !important; }
+}
+
 </style>
 </head>
 <body>
@@ -632,7 +664,7 @@ img { max-width: 100%; height: auto; display: block; }
   <div class="hero-overlay"></div>
   <div class="wrap" style="position:relative;z-index:2;">
     <div class="hero-eyebrow">Jardinería premium en Mallorca</div>
-    <h1>Cuidamos tu jardín <br><span class="it">como si fuera nuestro</span></h1>
+    <h1>Empresa de Jardinería en Mallorca · <span class="it">Especialistas en villas y fincas</span></h1>
     <p class="hero-sub">Más de 10 años diseñando, cuidando y dando vida a villas, fincas y comunidades en toda Mallorca. Paisajismo, mantenimiento recurrente y poda profesional.</p>
     <div class="hero-cta">
       <a href="#contacto" class="btn btn-gold">Solicita presupuesto gratuito</a>
@@ -881,12 +913,12 @@ img { max-width: 100%; height: auto; display: block; }
     <div class="cert-grid">
       <div class="cert-item">
         <div class="cert-icon">✓</div>
-        <h4>Carnet fitosanitario</h4>
+        <h3>Carnet fitosanitario</h3>
         <p>Autorización oficial para aplicación de productos químicos</p>
       </div>
       <div class="cert-item">
         <div class="cert-icon">✓</div>
-        <h4>Carnet de piscinas</h4>
+        <h3>Carnet de piscinas</h3>
         <p>Mantenimiento profesional de piscinas certificado</p>
       </div>
     </div>
@@ -955,7 +987,7 @@ img { max-width: 100%; height: auto; display: block; }
     <div class="contacto-info">
       <div class="section-eyebrow">Contacta con nosotros</div>
       <h2>Hablemos de <span class="it">tu jardín</span></h2>
-      <p>Rellena el formulario y te respondemos en 24h. También puedes llamarnos directamente al <a href="tel:+34621493977" style="color:var(--green);">621 49 39 77</a>.</p>
+      <p>Rellena el formulario y te respondemos en 24h. También puedes llamarnos directamente al <a href="tel:+34621493977" style="color:var(--green);text-decoration:underline;">621 49 39 77</a>.</p>
 
       <ul class="contacto-datos">
         <li><strong>Móvil</strong> <a href="tel:+34621493977">621 49 39 77</a></li>
@@ -1204,6 +1236,27 @@ window.addEventListener('scroll', () => {
   m.addEventListener('mouseleave', function(){ hide(150); });
   document.addEventListener('click', function(e){
     if(!tr.contains(e.target) && !m.contains(e.target)) m.classList.remove('dd-open');
+  });
+})();
+</script>
+<script>
+/* Hamburger menu */
+(function(){
+  var toggle = document.querySelector('.menu-toggle');
+  var nav    = document.querySelector('.nav');
+  if(!toggle || !nav) return;
+  toggle.addEventListener('click', function(e){
+    e.stopPropagation();
+    var open = nav.classList.toggle('open');
+    toggle.textContent = open ? '✕' : '☰';
+    toggle.setAttribute('aria-expanded', open);
+  });
+  document.addEventListener('click', function(e){
+    if(nav.classList.contains('open') && !nav.contains(e.target) && !toggle.contains(e.target)){
+      nav.classList.remove('open');
+      toggle.textContent = '☰';
+      toggle.setAttribute('aria-expanded', 'false');
+    }
   });
 })();
 </script>
