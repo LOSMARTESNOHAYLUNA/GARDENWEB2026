@@ -261,6 +261,11 @@
       "source": "/es/blog/picudo-rojo-senales-alarma/",
       "destination": "/es/blog/picudo-rojo-mallorca/",
       "permanent": true
+    },
+    {
+      "source": "/trabaja-con-nosotros",
+      "destination": "/es/trabaja-con-nosotros/",
+      "permanent": true
     }
   ]
 }
