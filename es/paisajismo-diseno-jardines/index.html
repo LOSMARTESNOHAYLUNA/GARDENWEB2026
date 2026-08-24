@@ -647,6 +647,97 @@ a.zona-tag:hover { border-color:var(--green); color:var(--green); background:rgb
   .eu-banner img { width:80% !important; }
 }
 
+
+/* === TARJETAS DE PROYECTO CON DOSSIER === */
+.proyectos-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+  margin-top:48px;
+}
+.proyecto-card {
+  background:var(--paper);
+  border:1px solid var(--line-soft);
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  transition:transform 0.3s, box-shadow 0.3s;
+}
+.proyecto-card:hover {
+  transform:translateY(-4px);
+  box-shadow:0 16px 40px rgba(30,73,52,0.10);
+}
+.proyecto-card-img {
+  position:relative;
+  aspect-ratio:4/3;
+  overflow:hidden;
+  background:var(--paper-warm);
+}
+.proyecto-card-img img {
+  width:100%;height:100%;
+  object-fit:cover;
+  transition:transform 0.6s ease;
+}
+.proyecto-card:hover .proyecto-card-img img {
+  transform:scale(1.05);
+}
+.proyecto-card-body {
+  padding:24px;
+  flex-grow:1;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+.proyecto-card-zona {
+  font-family:'Manrope';
+  font-size:10px;
+  letter-spacing:0.25em;
+  text-transform:uppercase;
+  color:var(--gold);
+  font-weight:600;
+}
+.proyecto-card-nombre {
+  font-family:'Cormorant Garamond';
+  font-size:22px;
+  font-weight:500;
+  color:var(--green);
+  line-height:1.2;
+}
+.proyecto-card-desc {
+  font-family:'Manrope';
+  font-size:13px;
+  font-weight:300;
+  color:var(--gray-soft);
+  line-height:1.6;
+  flex-grow:1;
+  margin-bottom:4px;
+}
+.btn-dossier {
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-family:'Manrope';
+  font-size:12px;
+  font-weight:600;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  color:var(--green);
+  padding:11px 20px;
+  border:1px solid var(--green);
+  background:transparent;
+  text-decoration:none;
+  transition:background 0.3s, color 0.3s;
+  margin-top:8px;
+  align-self:flex-start;
+}
+.btn-dossier:hover {
+  background:var(--green);
+  color:var(--paper);
+}
+.btn-dossier svg { flex-shrink:0; }
+@media(max-width:968px){ .proyectos-grid{ grid-template-columns:1fr 1fr; } }
+@media(max-width:640px){ .proyectos-grid{ grid-template-columns:1fr; } }
+
 </style>
 </head>
 <body>
@@ -841,42 +932,67 @@ a.zona-tag:hover { border-color:var(--green); color:var(--green); background:rgb
     <h2 class="h2-center">Jardines <span class="it">diseñados</span> en Mallorca</h2>
     <p class="lead-center">Una selección de proyectos de paisajismo ejecutados en villas y fincas de toda la isla, incluyendo Esporles, Valldemossa y Caimari.</p>
 
-    <div class="gal-grid">
-      <div class="gal-item">
-        <img src="/img/proyecto-paisajismo-sometimes-1.webp"
-          alt="Proyecto de paisajismo en villa de Mallorca — jardín mediterráneo"
-          loading="lazy" width="560" height="420">
-        <div class="gal-overlay"><span class="gal-label">Villa · Mallorca</span></div>
-      </div>
-      <div class="gal-item">
-        <img src="/img/proyecto-paisajismo-sometimes-2.webp"
-          alt="Diseño de jardín con especies mediterráneas en finca de Mallorca"
-          loading="lazy" width="560" height="420">
-        <div class="gal-overlay"><span class="gal-label">Finca · Mallorca</span></div>
-      </div>
-      <div class="gal-item">
-        <img src="/img/proyecto-paisajismo-sometimes-3.webp"
-          alt="Paisajismo integral en villa privada de Mallorca"
-          loading="lazy" width="560" height="420">
-        <div class="gal-overlay"><span class="gal-label">Villa · Mallorca</span></div>
-      </div>
-      <div class="gal-item">
-        <img src="/img/proyecto-esporlas.webp"
-          alt="Proyecto de paisajismo en finca de Esporles, Mallorca"
-          loading="lazy" width="560" height="420">
-        <div class="gal-overlay"><span class="gal-label">Finca · Esporles</span></div>
-      </div>
-      <div class="gal-item">
-        <img src="/img/proyecto-sa-llimonera.webp"
-          alt="Diseño y construcción de jardín en Sa Llimonera, Mallorca"
-          loading="lazy" width="560" height="420">
-        <div class="gal-overlay"><span class="gal-label">Sa Llimonera · Mallorca</span></div>
-      </div>
-      <div class="gal-item">
-        <img src="/img/proyecto-paisajismo-sometimes-4.webp"
-          alt="Jardín diseñado con riego automático integrado en villa de Mallorca"
-          loading="lazy" width="560" height="420">
-        <div class="gal-overlay"><span class="gal-label">Villa · Mallorca</span></div>
+    <div class="proyectos-grid">
+      <div class="proyecto-card">
+        <div class="proyecto-card-img">
+          <img src="/img/proyecto-sa-llimonera.jpg" alt="Proyecto de paisajismo en Sa Llimonera, Mallorca" loading="lazy" width="480" height="360">
+        </div>
+        <div class="proyecto-card-body">
+          <span class="proyecto-card-zona">Sa Llimonera · Palma</span>
+          <div class="proyecto-card-nombre">Proyecto Llimonera</div>
+          <p class="proyecto-card-desc">Diseño y construcción de jardín mediterráneo en villa privada. Paisajismo integral con especies autóctonas y sistema de riego automatizado.</p>
+          <a href="/docs/DOSSIER_LORENA_LLIMONERA_9_compressed.pdf" target="_blank" rel="noopener" class="btn-dossier">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg> Ver dossier del proyecto
+          </a>
+        </div>
+      </div>      <div class="proyecto-card">
+        <div class="proyecto-card-img">
+          <img src="/img/proyecto-sometimes.jpg" alt="Proyecto Paraíso Sometimes — jardín de villa en Mallorca" loading="lazy" width="480" height="360">
+        </div>
+        <div class="proyecto-card-body">
+          <span class="proyecto-card-zona">Mallorca</span>
+          <div class="proyecto-card-nombre">Paraíso Sometimes</div>
+          <p class="proyecto-card-desc">Jardín de villa con diseño orgánico, integración de zonas de descanso y vegetación mediterránea de bajo mantenimiento.</p>
+          <a href="/docs/DOSSIER_PARAISO_SOMETIMES-01_compressed.pdf" target="_blank" rel="noopener" class="btn-dossier">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg> Ver dossier del proyecto
+          </a>
+        </div>
+      </div>      <div class="proyecto-card">
+        <div class="proyecto-card-img">
+          <img src="/img/proyecto-marratxi.jpg" alt="Proyecto de paisajismo en Marratxí, Mallorca" loading="lazy" width="480" height="360">
+        </div>
+        <div class="proyecto-card-body">
+          <span class="proyecto-card-zona">Marratxí</span>
+          <div class="proyecto-card-nombre">Proyecto Marratxí</div>
+          <p class="proyecto-card-desc">Transformación completa de jardín en chalet de nueva construcción. Diseño funcional con césped, setos y zona de piscina.</p>
+          <a href="/docs/260306_Maria_Jose_Garden_compressed.pdf" target="_blank" rel="noopener" class="btn-dossier">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg> Ver dossier del proyecto
+          </a>
+        </div>
+      </div>      <div class="proyecto-card">
+        <div class="proyecto-card-img">
+          <img src="/img/proyecto-can-elio.jpg" alt="Proyecto Can Elio — finca en Valldemossa, Mallorca" loading="lazy" width="480" height="360">
+        </div>
+        <div class="proyecto-card-body">
+          <span class="proyecto-card-zona">Valldemossa</span>
+          <div class="proyecto-card-nombre">Can Elio Valldemossa</div>
+          <p class="proyecto-card-desc">Jardín rústico en finca de Valldemossa. Integración del paisaje natural con zonas de jardín formal y huerto mediterráneo.</p>
+          <a href="/docs/260325_Can-Elio_Garden_compressed.pdf" target="_blank" rel="noopener" class="btn-dossier">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg> Ver dossier del proyecto
+          </a>
+        </div>
+      </div>      <div class="proyecto-card">
+        <div class="proyecto-card-img">
+          <img src="/img/proyecto-esporlas.jpg" alt="Proyecto de paisajismo en Esporles, Mallorca" loading="lazy" width="480" height="360">
+        </div>
+        <div class="proyecto-card-body">
+          <span class="proyecto-card-zona">Esporles</span>
+          <div class="proyecto-card-nombre">Proyecto Esporlas</div>
+          <p class="proyecto-card-desc">Diseño paisajístico en finca de Esporles con aprovechamiento del desnivel natural y selección de especies resistentes a la sequía.</p>
+          <a href="/docs/11_251117_Adams_Jardin.pdf" target="_blank" rel="noopener" class="btn-dossier">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg> Ver dossier del proyecto
+          </a>
+        </div>
       </div>
     </div>
   </div>
