@@ -5,335 +5,67 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mensaje enviado · Garden Solution Mallorca</title>
 <meta name="robots" content="noindex, nofollow">
-<link rel="canonical" href="https://mallorcagardensolution.com/es/gracias/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Manrope:wght@200;300;400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Manrope:wght@300;400;500;600&display=swap"></noscript>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Manrope:wght@200;300;400;500;600;700&display=swap"></noscript>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQFTLP9XSD"></script>
 <script>
   window.dataLayer=window.dataLayer||[];
   function gtag(){dataLayer.push(arguments);}
   gtag('js',new Date());
   gtag('config','G-PQFTLP9XSD');
-  // Evento de conversión
-  gtag('event','conversion_form_submit',{
-    'event_category':'formulario',
-    'event_label':'presupuesto_enviado'
-  });
+  gtag('event','conversion_form_submit',{'event_category':'formulario','event_label':'contacto_enviado'});
 </script>
 <style>
-:root { --paper:#FBF8F2; --paper-soft:#F4EFE4; --green:#1E4934; --gold:#B8954A; --gold-soft:#D6BC8A; --ink:#0F0F0D; --ink-soft:#2E2C28; --gray-soft:#6B6862; --line-soft:#EAE3D2; }
-* { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior:smooth; }
-body { font-family:'Manrope',sans-serif; font-weight:300; color:var(--ink); background:var(--paper); min-height:100vh; display:flex; flex-direction:column; }
-.header { padding:20px 32px; background:rgba(251,248,242,0.96); border-bottom:1px solid var(--line-soft); display:flex; align-items:center; justify-content:space-between; }
-.logo { font-family:'Montserrat'; font-size:24px; color:var(--green); font-weight:500; text-decoration:none; }
-.logo .it { font-style:italic; color:var(--gold); }
-.main { flex:1; display:flex; align-items:center; justify-content:center; padding:60px 24px; }
-.card { max-width:560px; text-align:center; }
-.check-circle {
-  width:80px; height:80px; border-radius:50%;
-  background:var(--green); display:flex; align-items:center; justify-content:center;
-  margin:0 auto 32px; font-size:36px;
-}
-h1 { font-family:'Montserrat'; font-size:clamp(32px,5vw,48px); color:var(--green); margin-bottom:16px; line-height:1.1; }
-h1 .it { font-style:italic; color:var(--gold); }
-.sub { font-family:'Manrope'; font-size:17px; font-weight:300; color:var(--ink-soft); line-height:1.7; margin-bottom:36px; }
-.sub strong { font-weight:600; color:var(--green); }
-.actions { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
-.btn { font-family:'Manrope'; font-weight:600; font-size:13px; letter-spacing:0.06em; text-transform:uppercase; padding:15px 30px; border-radius:100px; text-decoration:none; display:inline-flex; align-items:center; gap:8px; transition:transform 0.3s, box-shadow 0.3s; }
-.btn-green { background:var(--green); color:var(--paper); }
-.btn-green:hover { transform:translateY(-2px); box-shadow:0 10px 25px rgba(30,73,52,0.25); }
-.btn-ghost { background:transparent; color:var(--green); border:1px solid #DDD5C3; }
-.btn-ghost:hover { border-color:var(--green); }
-.footer-note { padding:30px; text-align:center; font-family:'Manrope'; font-size:13px; color:var(--gray-soft); border-top:1px solid var(--line-soft); }
-.footer-note a { color:var(--green); }
-@media(max-width:480px) { .actions{flex-direction:column;align-items:center;} }
-
-
-
-
-
-
-
-@media(max-width:968px) {  }
-
-
-
-
-
-
-@media(max-width:968px){  }
-
-/* === MEGA MENÚ SERVICIOS === */
-.has-dd { position:static; }
-.has-dd > a::after { content:' ▾'; font-size:10px; opacity:0.6; }
-.dd-menu {
-  position:fixed; left:0; right:0; top:64px;
-  width:100%; display:flex; justify-content:center;
-  background:var(--paper);
-  border-top:1px solid var(--line-soft);
-  border-bottom:1px solid var(--line-soft);
-  box-shadow:0 16px 48px rgba(15,15,13,0.10);
-  z-index:9999; opacity:0; pointer-events:none;
-  transition:opacity 0.2s ease, transform 0.2s ease;
-  transform:translateY(-8px);
-}
-.dd-menu.dd-open {
-  opacity:1; pointer-events:all; transform:translateY(0);
-}
-.dd-inner { display:grid; grid-template-columns:repeat(5,190px); padding:28px 0; }
-.dd-col { padding:0 20px; border-right:1px solid var(--line-soft); }
-.dd-col:last-child { border-right:none; }
-.dd-label { font-family:'Manrope'; font-size:9px; letter-spacing:0.25em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; font-weight:600; display:block; padding-bottom:8px; border-bottom:1px solid var(--line-soft); }
-.dd-menu a { display:block; font-family:'Manrope'; font-size:13px; font-weight:300; color:var(--ink-soft); padding:5px 0; transition:color 0.2s; text-decoration:none !important; border-bottom:none !important; }
-.dd-menu a:hover { color:var(--green); }
-@media(max-width:968px){ .dd-menu{ display:none !important; } }
-
-
-
-/* ===== MENÚ MÓVIL ===== */
-@media(max-width:968px){
-  .nav ul {
-    display:none;
-    position:fixed;
-    top:64px; left:0; right:0;
-    background:var(--paper);
-    border-bottom:1px solid var(--line-soft);
-    box-shadow:0 8px 30px rgba(15,15,13,0.1);
-    flex-direction:column;
-    padding:16px 24px 24px;
-    gap:0;
-    z-index:9998;
-  }
-  .nav.open ul { display:flex !important; }
-  .nav ul li { border-bottom:1px solid var(--line-soft); }
-  .nav ul li:last-child { border-bottom:none; }
-  .nav a { padding:14px 0; display:block; font-size:16px; font-weight:400; }
-  .has-dd > a::after { display:none; }
-  .menu-toggle { display:block !important; }
-  /* Todas las grillas → 1 columna */
-  .cat-cards { grid-template-columns:1fr !important; }
-  .rel-grid { grid-template-columns:1fr !important; }
-  .svcs-grid { grid-template-columns:1fr 1fr !important; }
-  .two-col { grid-template-columns:1fr !important; gap:40px !important; }
-  .hero-local .wrap { grid-template-columns:1fr !important; }
-  .hero-nosotros .wrap { grid-template-columns:1fr !important; }
-  .contacto-grid { grid-template-columns:1fr !important; }
-  .counters-grid { grid-template-columns:1fr 1fr !important; }
-  .certs-grid { grid-template-columns:1fr !important; }
-  .idiomas-grid { grid-template-columns:1fr 1fr !important; }
-  /* Footer: cada sección en 1 columna */
-  .footer-grid { grid-template-columns:1fr !important; gap:24px !important; }
-  /* Items de servicios, zonas y blog en 2 columnas */
-  .footer ul { columns:2; column-gap:16px; }
-  .footer ul li { break-inside:avoid; padding:3px 0; }
-  /* Contacto: 1 columna (último div) */
-  .footer-grid > div:last-child ul { columns:1; }
-  /* Bottom bar */
-  .footer-bottom { flex-direction:column; align-items:center; text-align:center; gap:12px; }
-  .footer-legal { justify-content:center; }
-}
-@media(max-width:640px){
-  .precios-grid { grid-template-columns:1fr !important; }
-  .cta-btns { flex-direction:column; align-items:center; }
-  .hero-ctas { flex-direction:column; }
-  .dd-inner { display:none !important; }
-}
-
-
-/* === BANNER UE === */
-.eu-banner {
-  background:#fff;
-  border-radius:8px;
-  padding:20px 24px;
-  display:flex;
-  align-items:center;
-  gap:24px;
-  margin-bottom:36px;
-}
-.eu-banner img { width:110px; height:auto; flex-shrink:0; }
-.eu-banner-text strong {
-  display:block;
-  color:#003399;
-  font-family:'Manrope',sans-serif;
-  font-size:14px;
-  font-weight:700;
-  margin-bottom:6px;
-}
-.eu-banner-text p {
-  color:#1a1a1a;
-  font-family:'Manrope',sans-serif;
-  font-size:13px;
-  font-weight:300;
-  line-height:1.6;
-  margin:0;
-}
-@media(max-width:640px){
-  .eu-banner { flex-direction:column; align-items:flex-start; gap:16px; }
-  .eu-banner img { width:90px; }
-}
-
-
-
-.gal-item img,
-.blog-card-img img,
-.proyecto-card-img img,
-.hero-img img,
-.historia-img img,
-.hero-video-wrap img,
-.hero-local .hero-img img,
-.card-img img,
-[class*="card"] img {
-  object-fit: cover;
-  object-position: center center;
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-/* Contenedores de imagen: overflow oculto para que el recorte sea limpio */
-.gal-item,
-.blog-card-img,
-.proyecto-card-img,
-.hero-img,
-.historia-img {
-  overflow: hidden;
-}
-
-
-/* === FIX IMÁGENES CORTADAS — GLOBAL === */
-.proyecto-card { position:relative; overflow:hidden; }
-.proyecto-card > img {
-  position:absolute;
-  top:0; left:0;
-  width:100%; height:100%;
-  object-fit:cover;
-  object-position:center;
-}
-.gal-item { position:relative; overflow:hidden; }
-.gal-item > img {
-  position:absolute;
-  top:0; left:0;
-  width:100%; height:100%;
-  object-fit:cover;
-  object-position:center;
-}
-.blog-card-img { position:relative; overflow:hidden; }
-.blog-card-img > img {
-  position:absolute;
-  top:0; left:0;
-  width:100%; height:100%;
-  object-fit:cover;
-  object-position:center;
-}
-.proyecto-card-img { position:relative; overflow:hidden; }
-.proyecto-card-img > img {
-  position:absolute;
-  top:0; left:0;
-  width:100%; height:100%;
-  object-fit:cover;
-  object-position:center;
-}
-
-
-/* === TIPOGRAFÍA GLOBAL === */
-h1, h2, h3, h4, h5, h6,
-.logo, .logo-footer, .section-title, .h2-center, .h2-c,
-[class*="title"], [class*="nombre"] { font-weight: 700; }
-p, li, .faq-body p, .resena-text, .col-block p,
-.lead, .lead-c, .lead-center,
-.historia-text p, .form-info p,
-.art-content p, .legal-content p,
-.perfil-list li, .valor-item p,
-.cert-info p, .idioma-card p,
-.proyecto-card-desc, .rel-card p,
-.svc-card p, .info-val, .eu-banner-text p,
-.check-list li, .footer p, .footer li {
-  font-size: 17px !important;
-  line-height: 1.75;
-}
-.resena-text { font-style: normal !important; }
-
-.lead, .lead-c, .lead-center,
-.form-field label, .check-list li,
-.historia-text p, .form-info p,
-.art-content p, .legal-content p,
-.perfil-list li, .valor-item p,
-.cert-info p, .idioma-card p,
-.proyecto-card-desc, .rel-card p,
-.svc-card p, .info-val, .eu-banner-text p {
-  font-size: 17px !important;
-  line-height: 1.75;
-}
-.resena-text { font-style: normal !important; }
-
+:root{--paper:#FBF8F2;--green:#1E4934;--gold:#9A7A35;--ink-soft:#2E2C28;--line-soft:#EAE3D2;--gray-soft:#6B6862;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Manrope',sans-serif;background:var(--paper);min-height:100vh;display:flex;flex-direction:column;}
+.header{padding:20px 32px;background:rgba(251,248,242,0.97);border-bottom:1px solid var(--line-soft);display:flex;align-items:center;justify-content:space-between;}
+.logo{font-family:'Montserrat';font-size:22px;color:var(--green);font-weight:600;text-decoration:none;}
+.logo .it{color:var(--gold);font-weight:400;}
+.main{flex:1;display:flex;align-items:center;justify-content:center;padding:60px 24px;}
+.card{max-width:540px;text-align:center;}
+.check{width:72px;height:72px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;margin:0 auto 32px;}
+.check svg{stroke:white;}
+h1{font-family:'Montserrat';font-size:clamp(28px,4vw,42px);color:var(--green);font-weight:600;margin-bottom:16px;}
+h1 .it{color:var(--gold);font-weight:400;}
+.sub{font-size:17px;font-weight:300;color:var(--ink-soft);line-height:1.7;margin-bottom:36px;}
+.sub strong{font-weight:600;color:var(--green);}
+.actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+.btn{font-family:'Manrope';font-weight:600;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;padding:14px 28px;border-radius:100px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:transform 0.3s,box-shadow 0.3s;}
+.btn-green{background:var(--green);color:var(--paper);}
+.btn-green:hover{transform:translateY(-2px);box-shadow:0 10px 25px rgba(30,73,52,0.25);}
+.btn-ghost{background:transparent;color:var(--green);border:1px solid var(--line-soft);}
+.btn-ghost:hover{border-color:var(--green);}
+.footer-note{padding:24px;text-align:center;font-family:'Manrope';font-size:13px;color:var(--gray-soft);border-top:1px solid var(--line-soft);}
+.footer-note a{color:var(--green);}
+@media(max-width:480px){.actions{flex-direction:column;align-items:center;}}
 </style>
 </head>
 <body>
-
 <header class="header">
   <a href="/es/" class="logo">Garden <span class="it">Solution</span></a>
 </header>
-
 <main class="main">
   <div class="card">
-    <div class="check-circle">✓</div>
+    <div class="check">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="20 6 9 17 4 12"/>
+      </svg>
+    </div>
     <h1>Mensaje enviado <span class="it">con éxito</span></h1>
-    <p class="sub">
-      Hemos recibido tu solicitud. <strong>Te responderemos en menos de 24 horas</strong>
-      para confirmar disponibilidad y coordinar la visita técnica gratuita.
-    </p>
+    <p class="sub">Hemos recibido tu solicitud. <strong>Te respondemos en menos de 24 horas</strong> para confirmar disponibilidad y coordinar la visita técnica gratuita.</p>
     <div class="actions">
       <a href="/es/" class="btn btn-green">Volver al inicio</a>
-      <a href="tel:+34621493977" class="btn btn-ghost">Llamar ahora · 621 49 39 77</a>
+      <a href="tel:+34621493977" class="btn btn-ghost">Llamar · 621 49 39 77</a>
     </div>
   </div>
 </main>
-
 <footer class="footer-note">
-  <p>Garden Solution Mallorca SL · <a href="/es/politica-privacidad/">Política de privacidad</a> · <a href="/es/aviso-legal/">Aviso legal</a></p>
+  Garden Solution Mallorca SL ·
+  <a href="/es/politica-privacidad/">Privacidad</a> ·
+  <a href="/es/aviso-legal/">Aviso legal</a>
 </footer>
-
-
-
-
-<script>
-/* Mega menú — hover con retardo para que no desaparezca al mover el ratón */
-(function(){
-  var t, tr = document.querySelector('.has-dd'), m = document.querySelector('.dd-menu');
-  if(!tr || !m) return;
-  function show(){ clearTimeout(t); m.classList.add('dd-open'); }
-  function hide(ms){ t = setTimeout(function(){ m.classList.remove('dd-open'); }, ms); }
-  tr.addEventListener('mouseenter', show);
-  tr.addEventListener('mouseleave', function(){ hide(350); });
-  m.addEventListener('mouseenter', show);
-  m.addEventListener('mouseleave', function(){ hide(150); });
-  document.addEventListener('click', function(e){
-    if(!tr.contains(e.target) && !m.contains(e.target)) m.classList.remove('dd-open');
-  });
-})();
-</script>
-<script>
-/* Hamburger menu */
-(function(){
-  var toggle = document.querySelector('.menu-toggle');
-  var nav    = document.querySelector('.nav');
-  if(!toggle || !nav) return;
-  toggle.addEventListener('click', function(e){
-    e.stopPropagation();
-    var open = nav.classList.toggle('open');
-    toggle.textContent = open ? '✕' : '☰';
-    toggle.setAttribute('aria-expanded', open);
-  });
-  document.addEventListener('click', function(e){
-    if(nav.classList.contains('open') && !nav.contains(e.target) && !toggle.contains(e.target)){
-      nav.classList.remove('open');
-      toggle.textContent = '☰';
-      toggle.setAttribute('aria-expanded', 'false');
-    }
-  });
-})();
-</script>
 </body>
 </html>

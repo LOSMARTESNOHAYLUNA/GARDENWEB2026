@@ -559,9 +559,10 @@ p, li, .faq-body p, .resena-text, .col-block p,
         <h2>Solicita tu <span class="it">presupuesto gratuito</span></h2>
         <p class="sub">Cuéntanos sobre tu jardín en Mantenimiento Piscinas. Te respondemos en menos de 24 horas.</p>
         <div class="form-wrap">
-          <form name="piscinas-presupuesto" method="POST" netlify netlify-honeypot="bot-field" action="/es/gracias/">
-            <input type="hidden" name="form-name" value="piscinas-presupuesto">
-            <p style="display:none;"><input name="bot-field"></p>
+          <form class="w3f-form">
+            <input type="hidden" name="access_key" value="b71a4d2a-d987-48eb-8213-8889b560c0a1">
+            <input type="hidden" name="subject" value="Nuevo contacto desde mantenimiento-piscinas">
+            <input type="checkbox" name="botcheck" style="display:none">
             <div class="form-row">
               <div class="form-field"><label for="nombre">Nombre*</label><input type="text" id="nombre" name="nombre" required></div>
               <div class="form-field"><label for="telefono">Teléfono*</label><input type="tel" id="telefono" name="telefono" required></div>
@@ -597,6 +598,7 @@ p, li, .faq-body p, .resena-text, .col-block p,
               <div class="form-field full"><label for="mensaje">Cuéntanos</label><textarea id="mensaje" name="mensaje" rows="3" placeholder="Tipo de propiedad, superficie, qué necesitas..."></textarea></div>
             </div>
             <label class="form-check"><input type="checkbox" name="rgpd" required><span>He leído y acepto la <a href="/es/politica-privacidad/">política de privacidad</a>.</span></label>
+            <div class="form-result" style="display:none;padding:12px;background:#fce4ec;color:#c62828;margin-top:8px;font-family:Manrope;font-size:14px;"></div>
             <button type="submit" class="btn btn-green" style="width:100%;justify-content:center;margin-top:8px;">Solicitar presupuesto gratuito</button>
           </form>
         </div>
@@ -721,6 +723,31 @@ const hdr=document.querySelector('.header');window.addEventListener('scroll',()=
       toggle.textContent = '☰';
       toggle.setAttribute('aria-expanded', 'false');
     }
+  });
+})();
+</script>
+<script>
+/* Web3Forms submit */
+(function(){
+  document.querySelectorAll('form.w3f-form').forEach(function(form){
+    form.addEventListener('submit', async function(e){
+      e.preventDefault();
+      var btn = form.querySelector('[type=submit]');
+      var result = form.querySelector('.form-result');
+      if(btn) { btn.disabled=true; btn.textContent='Enviando...'; }
+      try{
+        var res = await fetch('https://api.web3forms.com/submit',{method:'POST',body:new FormData(form)});
+        var data = await res.json();
+        if(data.success){
+          window.location.href='/es/gracias/';
+        } else {
+          if(result){ result.style.display='block'; result.textContent='Error al enviar. Llámanos al 621 49 39 77'; }
+        }
+      }catch(err){
+        if(result){ result.style.display='block'; result.textContent='Error de conexión. Llámanos al 621 49 39 77'; }
+      }
+      if(btn){ btn.disabled=false; btn.textContent='Solicitar presupuesto gratuito'; }
+    });
   });
 })();
 </script>

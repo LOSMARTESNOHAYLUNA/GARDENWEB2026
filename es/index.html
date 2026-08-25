@@ -488,7 +488,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* ===== FOOTER ===== */
 .footer { background: var(--ink); color: rgba(251,248,242,0.75); padding: 80px 0 30px; }
-.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 60px; }
+.footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:60px; margin-bottom:36px; }
 .footer h4 { color: var(--paper); font-size: 22px; margin-bottom: 24px;
   font-family: 'Montserrat'; }
 .footer .logo-footer { font-family: 'Montserrat'; font-size: 28px;
@@ -738,6 +738,59 @@ p, li, .faq-body p, .resena-text, .col-block p,
   line-height: 1.75;
 }
 .resena-text { font-style: normal !important; }
+
+
+/* === TIPOGRAFÍA AJUSTES === */
+/* Peso: 700 solo en hero, 500 en el resto */
+.hero h1 { font-weight: 700 !important; }
+h1, h2, h3, h4 { font-weight: 500; }
+/* Sin italic en títulos — solo color dorado */
+h1 .it, h2 .it, h3 .it, h4 .it,
+.section-title .it, .h2-center .it, .h2-c .it,
+.page-hero h1 .it, .hero h1 .it { font-style: normal !important; }
+/* Italic permitido solo en firma y elementos decorativos de texto */
+.resena-text { font-style: normal !important; }
+
+
+/* === SLIDER RESEÑAS === */
+.resenas-slider { position:relative; max-width:780px; margin:0 auto 48px; }
+.resenas-track { overflow:hidden; }
+.resena-slide { display:none; animation:fadeSlide 0.5s ease; }
+.resena-slide.active { display:block; }
+@keyframes fadeSlide { from{opacity:0;transform:translateY(10px);} to{opacity:1;transform:translateY(0);} }
+.resena-slide .resena-card {
+  background:var(--paper);
+  padding:48px 52px;
+  border-left:4px solid var(--gold);
+  position:relative;
+}
+.resena-slide .resena-stars { color:var(--gold); font-size:18px; letter-spacing:5px; margin-bottom:24px; }
+.resena-slide .resena-text {
+  font-family:'Manrope'; font-size:17px; font-weight:300;
+  color:var(--ink-soft); line-height:1.8; margin-bottom:28px;
+  font-style:normal;
+}
+.resena-slide .resena-author {
+  font-family:'Manrope'; font-size:13px; font-weight:600;
+  letter-spacing:0.15em; text-transform:uppercase; color:var(--gold);
+}
+.resenas-controls {
+  display:flex; align-items:center; justify-content:center; gap:20px; margin-top:28px;
+}
+.resenas-dots { display:flex; gap:10px; }
+.resenas-dots button {
+  width:10px; height:10px; border-radius:50%; border:none; cursor:pointer;
+  background:var(--line); transition:background 0.3s, transform 0.3s;
+}
+.resenas-dots button.active { background:var(--gold); transform:scale(1.3); }
+.resena-arrow {
+  background:none; border:1px solid var(--line); color:var(--green);
+  width:40px; height:40px; border-radius:50%; cursor:pointer; font-size:18px;
+  display:flex; align-items:center; justify-content:center;
+  transition:all 0.3s;
+}
+.resena-arrow:hover { background:var(--green); color:var(--paper); border-color:var(--green); }
+@media(max-width:640px){ .resena-slide .resena-card{ padding:32px 24px; } }
 
 </style>
 </head>
@@ -1022,14 +1075,40 @@ p, li, .faq-body p, .resena-text, .col-block p,
     <h2 class="section-title">Reseñas <span class="it">verificadas</span></h2>
     <p class="section-intro">74 clientes han valorado nuestro trabajo en Google con una puntuación de 5,0 estrellas. Estas son algunas de las reseñas reales de la ficha de Google Business Profile.</p>
 
-    <div class="resenas-grid">
-      <div class="resena-card">
-        <div class="resena-stars">★★★★★</div>
-        <p class="resena-text">«Quiero agradecer a Garden Solution SL por el excelente trabajo realizado al cortarnos un árbol. Han demostrado ser grandes profesionales, trabajando con rapidez, seguridad y mucho cuidado. Fueron puntuales, muy amables y dejaron todo perfectamente limpio al terminar. Sin duda, volveríamos a contar con ellos y los recomendamos totalmente.»</p>
-        <p class="resena-author">Biel · Google</p>
+        <div class="resenas-slider">
+      <div class="resenas-track">
+        <div class="resena-slide active">
+          <div class="resena-card">
+            <div class="resena-stars">★★★★★</div>
+            <p class="resena-text">«Quiero agradecer a Garden Solution SL por el excelente trabajo realizado al cortarnos un árbol. Han demostrado ser grandes profesionales, trabajando con rapidez, seguridad y mucho cuidado. Fueron puntuales, muy amables y dejaron todo perfectamente limpio al terminar. Sin duda, volveríamos a contar con ellos y los recomendamos totalmente.»</p>
+            <p class="resena-author">Biel · Google</p>
+          </div>
+        </div>
+        <div class="resena-slide">
+          <div class="resena-card">
+            <div class="resena-stars">★★★★★</div>
+            <p class="resena-text">«Excelente servicio de jardinería. Desde el primer contacto fueron muy profesionales y puntuales. Dejan el jardín impecable, cuidando cada detalle y respetando las plantas existentes. Se nota la experiencia y el amor por su trabajo. Sin duda los recomiendo, son una gran empresa.»</p>
+            <p class="resena-author">Cliente de Google · Mallorca</p>
+          </div>
+        </div>
+        <div class="resena-slide">
+          <div class="resena-card">
+            <div class="resena-stars">★★★★★</div>
+            <p class="resena-text">«Contacté con Mallorca Garden Solutions para la poda anual de dos palmeras. Desde el primer momento, muy atentos y formales. Me ofrecieron un presupuesto y enseguida pude concertar cita. Vinieron el día y hora indicados y realizaron muy buen trabajo. Sin duda, les volveremos a llamar el año que viene.»</p>
+            <p class="resena-author">Cliente de Google · Mallorca</p>
+          </div>
+        </div>
       </div>
-      <div class="resena-card">
-        <div class="resena-stars">★★★★★</div>
+      <div class="resenas-controls">
+        <button class="resena-arrow" id="prev-resena">&#8592;</button>
+        <div class="resenas-dots">
+          <button class="active" data-idx="0"></button>
+          <button data-idx="1"></button>
+          <button data-idx="2"></button>
+        </div>
+        <button class="resena-arrow" id="next-resena">&#8594;</button>
+      </div>
+    </div>
         <p class="resena-text">«Excelente servicio de jardinería. Desde el primer contacto fueron muy profesionales y puntuales. Dejan el jardín impecable, cuidando cada detalle y respetando las plantas existentes. Se nota la experiencia y el amor por su trabajo. Sin duda los recomiendo, son una gran empresa.»</p>
         <p class="resena-author">Cliente de Google · Mallorca</p>
       </div>
@@ -1147,7 +1226,9 @@ p, li, .faq-body p, .resena-text, .col-block p,
 
     <div class="form-wrap">
       <form name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/es/gracias/">
-        <input type="hidden" name="form-name" value="contacto">
+        <input type="hidden" name="access_key" value="b71a4d2a-d987-48eb-8213-8889b560c0a1">
+            <input type="hidden" name="subject" value="Nuevo contacto desde index.html">
+            <input type="checkbox" name="botcheck" style="display:none">
         <p style="display:none;"><label>No rellenar: <input name="bot-field"></label></p>
 
         <div class="form-row">
@@ -1207,7 +1288,8 @@ p, li, .faq-body p, .resena-text, .col-block p,
           <span>He leído y acepto la <a href="/es/politica-privacidad/">política de privacidad</a> y el tratamiento de mis datos para responder a mi consulta.</span>
         </label>
 
-        <button type="submit" class="btn btn-green" style="width:100%;justify-content:center;">Solicitar presupuesto gratuito</button>
+        <div class="form-result" style="display:none;padding:12px;background:#fce4ec;color:#c62828;margin-top:8px;font-family:Manrope;font-size:14px;"></div>
+            <button type="submit" class="btn btn-green" style="width:100%;justify-content:center;">Solicitar presupuesto gratuito</button>
       </form>
     </div>
   </div>
@@ -1390,6 +1472,55 @@ window.addEventListener('scroll', () => {
       toggle.textContent = '☰';
       toggle.setAttribute('aria-expanded', 'false');
     }
+  });
+})();
+</script>
+<script>
+/* Slider reseñas */
+(function(){
+  var slides = document.querySelectorAll('.resena-slide');
+  var dots   = document.querySelectorAll('.resenas-dots button');
+  var prev   = document.getElementById('prev-resena');
+  var next   = document.getElementById('next-resena');
+  if(!slides.length) return;
+  var cur = 0, timer;
+  function go(n){
+    slides[cur].classList.remove('active');
+    dots[cur].classList.remove('active');
+    cur = (n + slides.length) % slides.length;
+    slides[cur].classList.add('active');
+    dots[cur].classList.add('active');
+    reset();
+  }
+  function reset(){ clearInterval(timer); timer = setInterval(function(){ go(cur+1); }, 5000); }
+  prev.addEventListener('click', function(){ go(cur-1); });
+  next.addEventListener('click', function(){ go(cur+1); });
+  dots.forEach(function(d){ d.addEventListener('click', function(){ go(+d.dataset.idx); }); });
+  reset();
+})();
+</script>
+<script>
+/* Web3Forms submit */
+(function(){
+  document.querySelectorAll('form.w3f-form').forEach(function(form){
+    form.addEventListener('submit', async function(e){
+      e.preventDefault();
+      var btn = form.querySelector('[type=submit]');
+      var result = form.querySelector('.form-result');
+      if(btn) { btn.disabled=true; btn.textContent='Enviando...'; }
+      try{
+        var res = await fetch('https://api.web3forms.com/submit',{method:'POST',body:new FormData(form)});
+        var data = await res.json();
+        if(data.success){
+          window.location.href='/es/gracias/';
+        } else {
+          if(result){ result.style.display='block'; result.textContent='Error al enviar. Llámanos al 621 49 39 77'; }
+        }
+      }catch(err){
+        if(result){ result.style.display='block'; result.textContent='Error de conexión. Llámanos al 621 49 39 77'; }
+      }
+      if(btn){ btn.disabled=false; btn.textContent='Solicitar presupuesto gratuito'; }
+    });
   });
 })();
 </script>
