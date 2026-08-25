@@ -708,8 +708,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 
-/* === TIPOGRAFÍA GLOBAL === */
-h1, h2, h3, h4, h5, h6,
+
 .logo, .logo-footer, .section-title, .h2-center, .h2-c,
 [class*="title"], [class*="nombre"] { font-weight: 700; }
 p, li, .faq-body p, .resena-text, .col-block p,
@@ -740,7 +739,7 @@ p, li, .faq-body p, .resena-text, .col-block p,
 .resena-text { font-style: normal !important; }
 
 
-/* === TIPOGRAFÍA AJUSTES === */
+
 /* Peso: 700 solo en hero, 500 en el resto */
 .hero h1 { font-weight: 700 !important; }
 h1, h2, h3, h4 { font-weight: 500; }
@@ -792,6 +791,19 @@ h1 .it, h2 .it, h3 .it, h4 .it,
 .resena-arrow:hover { background:var(--green); color:var(--paper); border-color:var(--green); }
 @media(max-width:640px){ .resena-slide .resena-card{ padding:32px 24px; } }
 
+/* === TIPOGRAFÍA UNIFICADA === */
+h1, h2, h3, h4, h5, h6 { font-weight: 500; }
+.hero h1 { font-weight: 700 !important; }
+h1 .it, h2 .it, h3 .it, h4 .it,
+.section-title .it, .h2-center .it, .h2-c .it { font-style: normal !important; }
+p, li, .faq-body p, .resena-text, .col-block p,
+.lead, .lead-c, .lead-center, .historia-text p,
+.form-info p, .art-content p, .legal-content p,
+.perfil-list li, .valor-item p, .cert-info p,
+.idioma-card p, .proyecto-card-desc, .rel-card p,
+.svc-card p, .info-val, .eu-banner-text p,
+.check-list li { font-size: 17px !important; line-height: 1.75; }
+.resena-text { font-style: normal !important; font-size: 17px !important; }
 </style>
 </head>
 <body>
@@ -1068,14 +1080,13 @@ h1 .it, h2 .it, h3 .it, h4 .it,
   </div>
 </section>
 
-<!-- RESEÑAS -->
 <section class="section resenas">
   <div class="wrap">
     <div class="section-eyebrow">Lo que dicen de nosotros</div>
-    <h2 class="section-title">Reseñas <span class="it">verificadas</span></h2>
+    <h2 class="section-title">Reseñas verificadas</h2>
     <p class="section-intro">74 clientes han valorado nuestro trabajo en Google con una puntuación de 5,0 estrellas. Estas son algunas de las reseñas reales de la ficha de Google Business Profile.</p>
 
-        <div class="resenas-slider">
+    <div class="resenas-slider">
       <div class="resenas-track">
         <div class="resena-slide active">
           <div class="resena-card">
@@ -1107,15 +1118,6 @@ h1 .it, h2 .it, h3 .it, h4 .it,
           <button data-idx="2"></button>
         </div>
         <button class="resena-arrow" id="next-resena">&#8594;</button>
-      </div>
-    </div>
-        <p class="resena-text">«Excelente servicio de jardinería. Desde el primer contacto fueron muy profesionales y puntuales. Dejan el jardín impecable, cuidando cada detalle y respetando las plantas existentes. Se nota la experiencia y el amor por su trabajo. Sin duda los recomiendo, son una gran empresa.»</p>
-        <p class="resena-author">Cliente de Google · Mallorca</p>
-      </div>
-      <div class="resena-card">
-        <div class="resena-stars">★★★★★</div>
-        <p class="resena-text">«Contacté con Mallorca Garden Solutions para la poda anual de dos palmeras. Desde el primer momento, muy atentos y formales. Me ofrecieron un presupuesto y enseguida pude concertar cita. Vinieron el día y hora indicados y realizaron muy buen trabajo. Sin duda, les volveremos a llamar el año que viene.»</p>
-        <p class="resena-author">Cliente de Google · Mallorca</p>
       </div>
     </div>
 
