@@ -325,10 +325,17 @@ img { max-width: 100%; height: auto; display: block; }
 /* ===== PROYECTOS ===== */
 .proyectos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .proyecto-card {
-  position: relative; overflow: hidden; aspect-ratio: 4/3;
+  position: relative; overflow: hidden;
+  padding-bottom: 75%; /* ratio 4:3 cross-browser */
+  height: 0;
   background: var(--paper-warm); cursor: pointer;
 }
-.proyecto-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+.proyecto-card img {
+  position: absolute; top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center;
+  transition: transform 0.6s ease;
+}
 .proyecto-card:hover img { transform: scale(1.06); }
 .proyecto-overlay {
   position: absolute; inset: 0; background: linear-gradient(to top, rgba(15,15,13,0.85) 0%, rgba(15,15,13,0.1) 60%);
@@ -682,13 +689,7 @@ img { max-width: 100%; height: auto; display: block; }
   object-position:center;
 }
 .gal-item { position:relative; overflow:hidden; }
-.gal-item > img {
-  position:absolute;
-  top:0; left:0;
-  width:100%; height:100%;
-  object-fit:cover;
-  object-position:center;
-}
+.gal-item > img { position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; object-position:center; }
 .blog-card-img { position:relative; overflow:hidden; }
 .blog-card-img > img {
   position:absolute;
