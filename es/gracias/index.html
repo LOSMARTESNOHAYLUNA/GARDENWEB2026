@@ -8,7 +8,7 @@
 <link rel="canonical" href="https://mallorcagardensolution.com/es/gracias/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Manrope:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Manrope:wght@200;300;400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Manrope:wght@300;400;500;600&display=swap"></noscript>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQFTLP9XSD"></script>
 <script>
@@ -28,7 +28,7 @@
 html { scroll-behavior:smooth; }
 body { font-family:'Manrope',sans-serif; font-weight:300; color:var(--ink); background:var(--paper); min-height:100vh; display:flex; flex-direction:column; }
 .header { padding:20px 32px; background:rgba(251,248,242,0.96); border-bottom:1px solid var(--line-soft); display:flex; align-items:center; justify-content:space-between; }
-.logo { font-family:'Cormorant Garamond'; font-size:24px; color:var(--green); font-weight:500; text-decoration:none; }
+.logo { font-family:'Montserrat'; font-size:24px; color:var(--green); font-weight:500; text-decoration:none; }
 .logo .it { font-style:italic; color:var(--gold); }
 .main { flex:1; display:flex; align-items:center; justify-content:center; padding:60px 24px; }
 .card { max-width:560px; text-align:center; }
@@ -37,7 +37,7 @@ body { font-family:'Manrope',sans-serif; font-weight:300; color:var(--ink); back
   background:var(--green); display:flex; align-items:center; justify-content:center;
   margin:0 auto 32px; font-size:36px;
 }
-h1 { font-family:'Cormorant Garamond'; font-size:clamp(32px,5vw,48px); color:var(--green); margin-bottom:16px; line-height:1.1; }
+h1 { font-family:'Montserrat'; font-size:clamp(32px,5vw,48px); color:var(--green); margin-bottom:16px; line-height:1.1; }
 h1 .it { font-style:italic; color:var(--gold); }
 .sub { font-family:'Manrope'; font-size:17px; font-weight:300; color:var(--ink-soft); line-height:1.7; margin-bottom:36px; }
 .sub strong { font-weight:600; color:var(--green); }
@@ -238,8 +238,23 @@ h1 .it { font-style:italic; color:var(--gold); }
 
 
 /* === TIPOGRAFÍA GLOBAL === */
-h1, h2, h3, h4, h5, h6 { font-weight: 600; }
+h1, h2, h3, h4, h5, h6,
+.logo, .logo-footer, .section-title, .h2-center, .h2-c,
+[class*="title"], [class*="nombre"] { font-weight: 700; }
 p, li, .faq-body p, .resena-text, .col-block p,
+.lead, .lead-c, .lead-center,
+.historia-text p, .form-info p,
+.art-content p, .legal-content p,
+.perfil-list li, .valor-item p,
+.cert-info p, .idioma-card p,
+.proyecto-card-desc, .rel-card p,
+.svc-card p, .info-val, .eu-banner-text p,
+.check-list li, .footer p, .footer li {
+  font-size: 17px !important;
+  line-height: 1.75;
+}
+.resena-text { font-style: normal !important; }
+
 .lead, .lead-c, .lead-center,
 .form-field label, .check-list li,
 .historia-text p, .form-info p,

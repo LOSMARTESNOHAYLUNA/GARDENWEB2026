@@ -12,7 +12,7 @@
 <link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Manrope:wght@200;300;400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Manrope:wght@200;300;400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Manrope:wght@200;300;400;500;600;700&display=swap"></noscript>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQFTLP9XSD"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-PQFTLP9XSD');</script>
@@ -30,7 +30,7 @@
 * { margin:0; padding:0; box-sizing:border-box; }
 html { scroll-behavior:smooth; }
 body { font-family:'Manrope',sans-serif; font-weight:300; color:var(--ink); background:var(--paper); line-height:1.6; }
-h1,h2,h3 { font-family:'Cormorant Garamond',serif; font-weight:500; line-height:1.15; color:var(--green); }
+h1,h2,h3 { font-family:'Montserrat'; font-weight:500; line-height:1.15; color:var(--green); }
 a { color:var(--green); text-decoration:none; }
 a:hover { color:var(--gold); }
 img { max-width:100%; display:block; }
@@ -38,7 +38,7 @@ img { max-width:100%; display:block; }
 
 .header { position:fixed; top:0; left:0; right:0; z-index:100; background:rgba(251,248,242,0.97); border-bottom:1px solid var(--line-soft); }
 .header .wrap { display:flex; align-items:center; justify-content:space-between; padding:20px 32px; }
-.logo { font-family:'Cormorant Garamond'; font-size:24px; color:var(--green); font-weight:500; letter-spacing:0.02em; }
+.logo { font-family:'Montserrat'; font-size:24px; color:var(--green); font-weight:500; letter-spacing:0.02em; }
 .logo .it { font-style:italic; color:var(--gold); }
 .nav ul { list-style:none; display:flex; gap:34px; }
 .nav a { font-family:'Manrope'; font-weight:400; font-size:14px; color:var(--ink-soft); letter-spacing:0.03em; transition:color 0.3s; }
@@ -69,8 +69,8 @@ img { max-width:100%; display:block; }
 
 .footer { background:var(--ink); color:rgba(251,248,242,0.75); padding:80px 0 30px; }
 .footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:60px; margin-bottom:60px; }
-.footer h4 { color:var(--paper); font-size:20px; margin-bottom:20px; font-family:'Cormorant Garamond'; }
-.logo-footer { font-family:'Cormorant Garamond'; font-size:28px; color:var(--paper); margin-bottom:20px; }
+.footer h4 { color:var(--paper); font-size:20px; margin-bottom:20px; font-family:'Montserrat'; }
+.logo-footer { font-family:'Montserrat'; font-size:28px; color:var(--paper); margin-bottom:20px; }
 .logo-footer .it { font-style:italic; color:var(--gold-soft); }
 .footer p,.footer li { font-family:'Manrope'; font-size:14px; line-height:1.7; font-weight:300; }
 .footer ul { list-style:none; }
@@ -277,8 +277,23 @@ img { max-width:100%; display:block; }
 
 
 /* === TIPOGRAFÍA GLOBAL === */
-h1, h2, h3, h4, h5, h6 { font-weight: 600; }
+h1, h2, h3, h4, h5, h6,
+.logo, .logo-footer, .section-title, .h2-center, .h2-c,
+[class*="title"], [class*="nombre"] { font-weight: 700; }
 p, li, .faq-body p, .resena-text, .col-block p,
+.lead, .lead-c, .lead-center,
+.historia-text p, .form-info p,
+.art-content p, .legal-content p,
+.perfil-list li, .valor-item p,
+.cert-info p, .idioma-card p,
+.proyecto-card-desc, .rel-card p,
+.svc-card p, .info-val, .eu-banner-text p,
+.check-list li, .footer p, .footer li {
+  font-size: 17px !important;
+  line-height: 1.75;
+}
+.resena-text { font-style: normal !important; }
+
 .lead, .lead-c, .lead-center,
 .form-field label, .check-list li,
 .historia-text p, .form-info p,

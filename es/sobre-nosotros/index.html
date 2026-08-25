@@ -25,7 +25,7 @@
 <!-- Fuentes -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Manrope:wght@200;300;400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Manrope:wght@200;300;400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Manrope:wght@200;300;400;500;600;700&display=swap"></noscript>
 
 <!-- Google Analytics -->
@@ -60,7 +60,7 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{font-family:'Manrope',sans-serif;font-weight:300;color:var(--ink);background:var(--paper);line-height:1.6;overflow-x:hidden;}
-h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.15;color:var(--green);}
+h1,h2,h3,h4{font-family:'Montserrat';font-weight:500;line-height:1.15;color:var(--green);}
 a{color:inherit;text-decoration:none;}
 img{max-width:100%;height:auto;display:block;}
 .wrap{max-width:1200px;margin:0 auto;padding:0 32px;}
@@ -68,7 +68,7 @@ img{max-width:100%;height:auto;display:block;}
 /* HEADER */
 .header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(251,248,242,0.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line-soft);transition:box-shadow 0.3s;}
 .header .wrap{display:flex;align-items:center;justify-content:space-between;padding:20px 32px;}
-.logo{font-family:'Cormorant Garamond';font-size:24px;color:var(--green);font-weight:500;letter-spacing:0.02em;}
+.logo{font-family:'Montserrat';font-size:24px;color:var(--green);font-weight:500;letter-spacing:0.02em;}
 .logo .it{font-style:italic;color:var(--gold);}
 .nav ul{list-style:none;display:flex;gap:34px;align-items:center;}
 .nav a{font-family:'Manrope';font-weight:400;font-size:14px;color:var(--ink-soft);letter-spacing:0.03em;transition:color 0.3s;}
@@ -101,7 +101,7 @@ img{max-width:100%;height:auto;display:block;}
 .hero-text h1{font-size:clamp(38px,4.5vw,60px);margin-bottom:24px;}
 .hero-text h1 .it{font-style:italic;color:var(--gold);}
 .hero-text .lead{font-family:'Manrope';font-size:17px;font-weight:300;color:var(--ink-soft);line-height:1.75;margin-bottom:36px;max-width:520px;}
-.hero-text .firma{font-family:'Cormorant Garamond';font-size:20px;font-style:italic;color:var(--green);margin-top:8px;}
+.hero-text .firma{font-family:'Montserrat';font-size:20px;font-style:italic;color:var(--green);margin-top:8px;}
 .hero-img{position:relative;}
 .hero-img img{width:100%;aspect-ratio:4/5;object-fit:cover;}
 .hero-img::after{content:'';position:absolute;inset:-14px 14px 14px -14px;border:1px solid var(--gold-soft);z-index:-1;opacity:0.5;pointer-events:none;}
@@ -128,7 +128,7 @@ img{max-width:100%;height:auto;display:block;}
 .valores-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(30,73,52,0.08);}
 .valor-item{padding:52px 40px;background:var(--paper-soft);transition:background 0.3s;}
 .valor-item:hover{background:var(--paper-warm);}
-.valor-num{font-family:'Cormorant Garamond';font-size:13px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
+.valor-num{font-family:'Montserrat';font-size:13px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
 .valor-item h3{font-size:26px;margin-bottom:14px;}
 .valor-item p{font-family:'Manrope';font-size:15px;font-weight:300;color:var(--ink-soft);line-height:1.75;}
 
@@ -136,7 +136,7 @@ img{max-width:100%;height:auto;display:block;}
 .counters-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:rgba(251,248,242,0.08);}
 .counter-item{padding:52px 36px;background:rgba(30,73,52,0.55);text-align:center;transition:background 0.3s;}
 .counter-item:hover{background:rgba(30,73,52,0.8);}
-.counter-num{font-family:'Cormorant Garamond';font-size:clamp(48px,5vw,72px);font-weight:300;color:var(--paper);line-height:1;margin-bottom:10px;}
+.counter-num{font-family:'Montserrat';font-size:clamp(48px,5vw,72px);font-weight:300;color:var(--paper);line-height:1;margin-bottom:10px;}
 .counter-suffix{color:var(--gold-soft);}
 .counter-label{font-family:'Manrope';font-size:12px;letter-spacing:0.15em;text-transform:uppercase;color:rgba(251,248,242,0.65);}
 
@@ -166,8 +166,8 @@ img{max-width:100%;height:auto;display:block;}
 /* FOOTER */
 .footer{background:var(--ink);color:rgba(251,248,242,0.75);padding:80px 0 30px;}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;margin-bottom:60px;}
-.footer h4{color:var(--paper);font-size:20px;margin-bottom:20px;font-family:'Cormorant Garamond';}
-.logo-footer{font-family:'Cormorant Garamond';font-size:28px;color:var(--paper);margin-bottom:20px;}
+.footer h4{color:var(--paper);font-size:20px;margin-bottom:20px;font-family:'Montserrat';}
+.logo-footer{font-family:'Montserrat';font-size:28px;color:var(--paper);margin-bottom:20px;}
 .logo-footer .it{font-style:italic;color:var(--gold-soft);}
 .footer p,.footer li{font-family:'Manrope';font-size:14px;line-height:1.7;font-weight:300;}
 .footer ul{list-style:none;}
@@ -395,8 +395,23 @@ img{max-width:100%;height:auto;display:block;}
 
 
 /* === TIPOGRAFÍA GLOBAL === */
-h1, h2, h3, h4, h5, h6 { font-weight: 600; }
+h1, h2, h3, h4, h5, h6,
+.logo, .logo-footer, .section-title, .h2-center, .h2-c,
+[class*="title"], [class*="nombre"] { font-weight: 700; }
 p, li, .faq-body p, .resena-text, .col-block p,
+.lead, .lead-c, .lead-center,
+.historia-text p, .form-info p,
+.art-content p, .legal-content p,
+.perfil-list li, .valor-item p,
+.cert-info p, .idioma-card p,
+.proyecto-card-desc, .rel-card p,
+.svc-card p, .info-val, .eu-banner-text p,
+.check-list li, .footer p, .footer li {
+  font-size: 17px !important;
+  line-height: 1.75;
+}
+.resena-text { font-style: normal !important; }
+
 .lead, .lead-c, .lead-center,
 .form-field label, .check-list li,
 .historia-text p, .form-info p,
