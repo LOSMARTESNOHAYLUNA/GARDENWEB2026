@@ -153,6 +153,7 @@
 
 * { margin:0; padding:0; box-sizing:border-box; }
 html { scroll-behavior:smooth; }
+#incluye, #faq, #contacto, #zonas { scroll-margin-top:90px; }
 body {
   font-family:'Manrope', sans-serif;
   font-weight:300;
@@ -175,7 +176,7 @@ img { max-width:100%; height:auto; display:block; }
 }
 .header .wrap { display:flex; align-items:center; justify-content:space-between; padding:20px 32px; }
 .logo { font-family:'Montserrat'; font-size:24px; color:var(--green); font-weight:500; letter-spacing:0.02em; }
-.logo .it { font-style:italic; color:var(--gold); }
+.logo .it { font-weight:800; color:var(--gold); }
 .nav ul { list-style:none; display:flex; gap:34px; align-items:center; }
 .nav a { font-family:'Manrope'; font-weight:400; font-size:14px; color:var(--ink-soft); letter-spacing:0.03em; transition:color 0.3s; }
 .nav a:hover { color:var(--green); }
@@ -222,7 +223,7 @@ img { max-width:100%; height:auto; display:block; }
   text-transform:uppercase; color:var(--gold); margin-bottom:20px;
 }
 .hero-text h1 { font-size:clamp(38px,4.5vw,60px); margin-bottom:24px; }
-.hero-text h1 .it { font-style:italic; color:var(--gold); }
+.hero-text h1 .it { font-weight:800; color:var(--gold); }
 .hero-text .lead {
   font-family:'Manrope'; font-size:17px; font-weight:300;
   color:var(--ink-soft); line-height:1.75; margin-bottom:36px; max-width:500px;
@@ -235,21 +236,118 @@ img { max-width:100%; height:auto; display:block; }
 }
 .trust-bar .dot { color:var(--gold); font-size:20px; line-height:1; }
 
-.hero-img { position:relative; }
-.hero-img img { width:100%; aspect-ratio:4/5; object-fit:cover; }
-.hero-img::after {
+/* ===== HERO CON IMAGEN DE FONDO ===== */
+.hero-bg {
+  position:relative; overflow:hidden;
+  min-height:600px; display:flex; align-items:flex-end;
+  background-size:cover; background-position:center;
+  padding:150px 0 70px;
+}
+.hero-bg-overlay {
+  position:absolute; inset:0;
+  background:linear-gradient(180deg, rgba(15,15,13,0.28) 0%, rgba(15,15,13,0.5) 55%, rgba(15,15,13,0.86) 100%);
+}
+.hero-bg .wrap { position:relative; z-index:1; width:100%; }
+.hero-bg .breadcrumb-inner { color:rgba(251,248,242,0.78); margin-bottom:26px; }
+.hero-bg .breadcrumb-inner a { color:rgba(251,248,242,0.78); }
+.hero-bg .breadcrumb-inner a:hover { color:var(--gold-soft); }
+.hero-bg .breadcrumb-inner .sep { color:rgba(251,248,242,0.4); }
+.hero-bg .breadcrumb-inner .current { color:var(--gold-soft); }
+.hero-bg .eyebrow { color:var(--gold-soft); font-size:11px; letter-spacing:0.4em; text-transform:uppercase; font-family:'Manrope'; margin-bottom:20px; }
+.hero-bg h1 { color:var(--paper); font-size:clamp(38px,4.8vw,64px); margin-bottom:36px; max-width:760px; }
+.hero-bg h1 .it { color:var(--gold-soft); }
+@media (max-width:640px) {
+  .hero-bg { padding:130px 0 50px; min-height:460px; }
+}
+
+/* ===== SEGUNDA SECCIÓN: TEXTO + DATOS + FOTO ===== */
+.intro-service { background:var(--paper); }
+.intro-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
+.intro-text .lead {
+  font-family:'Manrope'; font-size:17px; font-weight:300;
+  color:var(--ink-soft); line-height:1.75; margin-bottom:32px; max-width:520px;
+}
+.intro-img { position:relative; }
+.intro-img img { width:100%; aspect-ratio:4/5; object-fit:cover; }
+.intro-img::after {
   content:''; position:absolute; inset:-14px 14px 14px -14px;
   border:1px solid var(--gold-soft); z-index:-1; opacity:0.5; pointer-events:none;
 }
+@media (max-width:968px) {
+  .intro-grid { grid-template-columns:1fr; gap:50px; }
+  .intro-img { order:-1; }
+  .intro-img::after { display:none; }
+}
+
+/* ===== TARJETA DE CIFRAS (en línea, sin repetir) ===== */
+.hero-stats-float {
+  background:var(--paper); border:1px solid var(--line-soft);
+  box-shadow:0 12px 34px rgba(15,15,13,0.08);
+  padding:24px 28px; display:inline-flex; gap:26px; margin-bottom:32px;
+}
+.hero-stat strong { display:block; font-family:'Montserrat'; font-size:28px; font-weight:700; color:var(--green); line-height:1; }
+.hero-stat span { font-family:'Manrope'; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:var(--gray-soft); }
+.hero-stat + .hero-stat { padding-left:26px; border-left:1px solid var(--line-soft); }
+@media (max-width:640px) {
+  .hero-stats-float { flex-wrap:wrap; gap:16px; padding:20px; width:100%; }
+  .hero-stat + .hero-stat { border-left:none; padding-left:0; }
+}
+
+/* ===== INCLUYE — GRID GRÁFICO DE SERVICIOS ===== */
+.incluye-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:4px; }
+.incluye-card {
+  display:flex; gap:14px; align-items:flex-start;
+  background:var(--paper); border:1px solid var(--line-soft);
+  padding:20px 18px; transition:transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+.incluye-card:hover { transform:translateY(-3px); box-shadow:0 14px 34px rgba(30,73,52,0.1); border-color:var(--gold-soft); }
+.incluye-icon { flex-shrink:0; width:38px; height:38px; display:flex; align-items:center; justify-content:center; background:var(--paper-warm); border-radius:50%; }
+.incluye-card p { font-family:'Manrope'; font-size:14px !important; font-weight:400; color:var(--ink-soft); line-height:1.55 !important; margin:0 !important; }
+.incluye-card--full { grid-column:1 / -1; background:var(--paper-warm); border-color:var(--gold-soft); }
+@media (max-width:640px) { .incluye-grid { grid-template-columns:1fr; } .incluye-card--full { grid-column:auto; } }
+
+/* ===== CÓMO TRABAJAMOS — TIMELINE GRÁFICO ===== */
+.step-list { position:relative; margin-top:8px; }
+.step-item { position:relative; padding-left:56px; padding-bottom:30px; }
+.step-item:last-child { padding-bottom:0; }
+.step-item::before {
+  content:''; position:absolute; left:19px; top:40px; bottom:-4px; width:1px;
+  background:var(--line);
+}
+.step-item:last-child::before { display:none; }
+.step-num {
+  position:absolute; left:0; top:0; width:40px; height:40px; border-radius:50%;
+  background:var(--green); color:var(--paper); font-family:'Montserrat'; font-weight:700; font-size:15px;
+  display:flex; align-items:center; justify-content:center;
+}
+.step-item p { margin-bottom:0 !important; }
+
+/* ===== ICONOS EN SERVICIOS RELACIONADOS ===== */
+.rel-icon { width:44px; height:44px; border-radius:50%; background:var(--paper-warm); display:flex; align-items:center; justify-content:center; margin-bottom:18px; }
+
+/* ===== ICONO EN ZONA-TAG (arriba del nombre, mismo estilo que incluye/rel) ===== */
+.zona-icon { width:38px; height:38px; border-radius:50%; background:var(--paper-warm); display:flex; align-items:center; justify-content:center; transition:background 0.3s; }
+.zona-icon svg { transition:stroke 0.3s; }
+a.zona-tag:hover .zona-icon { background:var(--green); }
+a.zona-tag:hover .zona-icon svg { stroke:var(--paper) !important; }
+
+/* ===== NUMERACIÓN GRÁFICA EN FAQ ===== */
+.faq-list { counter-reset:faq; }
+.faq-item { counter-increment:faq; }
+.faq-trigger h3::before {
+  content:counter(faq, decimal-leading-zero);
+  color:var(--gold-soft); font-family:'Montserrat'; font-weight:700; font-size:14px;
+  margin-right:12px; letter-spacing:0.05em;
+}
 
 /* ===== SECCIONES BASE ===== */
-.section { padding:100px 0; }
+.section { padding:72px 0; }
 .eyebrow-center {
   font-family:'Manrope'; font-size:11px; letter-spacing:0.4em;
   text-transform:uppercase; color:var(--gold); margin-bottom:20px; text-align:center;
 }
 .h2-center { font-size:clamp(36px,4vw,56px); text-align:center; margin-bottom:24px; line-height:1.05; }
-.h2-center .it { font-style:italic; color:var(--gold); }
+.h2-center .it { font-weight:800; color:var(--gold); }
 .lead-center {
   font-family:'Manrope'; font-size:16px; font-weight:300; color:var(--ink-soft);
   text-align:center; max-width:620px; margin:0 auto 60px; line-height:1.7;
@@ -258,8 +356,10 @@ img { max-width:100%; height:auto; display:block; }
 /* ===== CONTENIDO ===== */
 .que-incluye { background:var(--paper-soft); }
 .two-col { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; }
+.two-col .col-block:nth-child(2) { align-self:center; }
+@media (max-width:968px) { .two-col .col-block:nth-child(2) { align-self:start; } }
 .col-block h2 { font-size:clamp(26px,3vw,38px); margin-bottom:20px; line-height:1.15; }
-.col-block h2 .it { font-style:italic; color:var(--gold); }
+.col-block h2 .it { font-weight:800; color:var(--gold); }
 .col-block p {
   font-family:'Manrope'; font-size:16px; font-weight:300;
   color:var(--ink-soft); line-height:1.75; margin-bottom:18px;
@@ -319,14 +419,16 @@ img { max-width:100%; height:auto; display:block; }
 
 /* ===== ZONAS ===== */
 .zonas-s { background:var(--paper); }
-.zonas-tags { display:flex; flex-wrap:wrap; gap:10px; margin-top:40px; justify-content:center; }
+.zonas-tags { display:flex; flex-wrap:wrap; gap:14px; margin-top:40px; justify-content:center; }
 .zona-tag {
   font-family:'Manrope'; font-size:13px; font-weight:400; letter-spacing:0.05em;
-  padding:10px 22px; border:1px solid var(--line); color:var(--ink-soft);
-  transition:all 0.3s; display:inline-block;
+  padding:22px 20px; border:1px solid var(--line); color:var(--ink-soft);
+  transition:all 0.3s;
+  display:flex; flex-direction:column; align-items:center; gap:12px;
+  min-width:112px; text-align:center;
 }
 a.zona-tag:hover { border-color:var(--green); color:var(--green); background:rgba(30,73,52,0.04); }
-.zonas-nota { text-align:center; margin-top:28px; font-family:'Montserrat'; font-style:italic; font-size:19px; color:var(--gray-soft); }
+.zonas-nota { text-align:center; margin-top:28px; font-family:'Montserrat'; font-weight:500; font-size:19px; color:var(--gray-soft); }
 
 /* ===== SERVICIOS RELACIONADOS ===== */
 .relacionados { background:var(--paper-soft); }
@@ -369,7 +471,7 @@ a.zona-tag:hover { border-color:var(--green); color:var(--green); background:rgb
 /* ===== CTA BANNER ===== */
 .cta-banner { background:var(--green); padding:90px 0; text-align:center; }
 .cta-banner h2 { font-size:clamp(30px,4vw,50px); color:var(--paper); margin-bottom:16px; }
-.cta-banner h2 .it { font-style:italic; color:var(--gold-soft); }
+.cta-banner h2 .it { font-weight:800; color:var(--gold-soft); }
 .cta-banner p { font-family:'Manrope'; font-size:17px; font-weight:300; color:rgba(251,248,242,0.8); margin-bottom:44px; line-height:1.6; }
 .cta-btns { display:flex; gap:20px; justify-content:center; flex-wrap:wrap; }
 
@@ -378,27 +480,31 @@ a.zona-tag:hover { border-color:var(--green); color:var(--green); background:rgb
 .contacto-grid { display:grid; grid-template-columns:1.15fr 0.85fr; gap:80px; align-items:start; }
 .form-side .eyebrow-left { font-family:'Manrope'; font-size:11px; letter-spacing:0.4em; text-transform:uppercase; color:var(--gold); margin-bottom:16px; }
 .form-side h2 { font-size:clamp(28px,3vw,42px); margin-bottom:12px; }
-.form-side h2 .it { font-style:italic; color:var(--gold); }
+.form-side h2 .it { font-weight:800; color:var(--gold); }
 .form-side .sub { font-family:'Manrope'; font-size:15px; font-weight:300; color:var(--ink-soft); line-height:1.65; margin-bottom:36px; }
 .form-wrap { background:var(--paper-soft); padding:48px; border:1px solid var(--line-soft); }
 .form-row { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-bottom:18px; }
-.form-field { display:flex; flex-direction:column; }
+.form-field { display:flex; flex-direction:column; position:relative; }
 .form-field.full { grid-column:1/-1; }
-.form-field label { font-family:'Manrope'; font-size:10px; letter-spacing:0.22em; text-transform:uppercase; color:var(--green); margin-bottom:8px; font-weight:500; }
+.form-field label {
+  position:absolute; top:9px; left:17px; z-index:1;
+  font-family:'Manrope'; font-size:9px; letter-spacing:0.15em; text-transform:uppercase;
+  color:var(--green); margin:0; font-weight:600; pointer-events:none;
+}
 .form-field input, .form-field select, .form-field textarea {
-  font-family:'Manrope'; font-size:15px; padding:13px 16px;
+  font-family:'Manrope'; font-size:15px; padding:28px 16px 10px;
   border:1px solid var(--line); background:var(--paper);
   color:var(--ink); transition:border-color 0.3s; font-weight:300; appearance:none;
 }
 .form-field input:focus, .form-field select:focus, .form-field textarea:focus { outline:none; border-color:var(--gold); }
-.form-field textarea { resize:vertical; min-height:110px; }
+.form-field textarea { resize:vertical; min-height:120px; padding-top:30px; }
 .form-check { display:flex; gap:10px; align-items:flex-start; margin:18px 0; font-family:'Manrope'; font-size:12px; color:var(--gray-soft); line-height:1.55; }
 .form-check input { margin-top:3px; flex-shrink:0; }
 .form-check a { color:var(--green); border-bottom:1px solid var(--gold-soft); }
 
 .info-side { padding-top:12px; }
 .info-side h3 { font-size:28px; margin-bottom:28px; }
-.info-side h3 .it { font-style:italic; color:var(--gold); }
+.info-side h3 .it { font-weight:800; color:var(--gold); }
 .info-row { display:flex; gap:16px; align-items:flex-start; padding:18px 0; border-bottom:1px solid var(--line-soft); }
 .info-row:last-of-type { border-bottom:none; }
 .info-label { font-family:'Manrope'; font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); min-width:80px; padding-top:2px; flex-shrink:0; }
@@ -412,7 +518,7 @@ a.zona-tag:hover { border-color:var(--green); color:var(--green); background:rgb
 .footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:60px; margin-bottom:60px; }
 .footer h4 { color:var(--paper); font-size:20px; margin-bottom:20px; font-family:'Montserrat'; }
 .logo-footer { font-family:'Montserrat'; font-size:28px; color:var(--paper); margin-bottom:20px; }
-.logo-footer .it { font-style:italic; color:var(--gold-soft); }
+.logo-footer .it { font-weight:800; color:var(--gold-soft); }
 .footer p, .footer li { font-family:'Manrope'; font-size:14px; line-height:1.7; font-weight:300; }
 .footer ul { list-style:none; }
 .footer ul li { padding:5px 0; }
@@ -663,7 +769,7 @@ p, li, .faq-body p, .resena-text, .col-block p,
 .resena-text { font-style: normal !important; }
 
 .lead, .lead-c, .lead-center,
-.form-field label, .check-list li,
+.check-list li,
 .historia-text p, .form-info p,
 .art-content p, .legal-content p,
 .perfil-list li, .valor-item p,
@@ -735,44 +841,45 @@ p, li, .faq-body p, .resena-text, .col-block p,
   </div>
 </header>
 
-<!-- BREADCRUMB -->
-<div class="breadcrumb">
+<!-- HERO CON IMAGEN DE FONDO -->
+<section class="hero-bg" style="background-image:url('/img/garden-solution-mantenimiento-de-jardines-particulares-1.webp');">
+  <div class="hero-bg-overlay"></div>
   <div class="wrap">
     <div class="breadcrumb-inner">
       <a href="/es/">Inicio</a>
       <span class="sep">›</span>
       <span class="current">Mantenimiento de Jardines</span>
     </div>
+    <div class="eyebrow">Cuidado periódico · Mallorca</div>
+    <h1>Mantenimiento de <span class="it">jardines</span> en Mallorca</h1>
+    <a href="#contacto" class="btn btn-gold">Solicitar presupuesto gratuito</a>
   </div>
-</div>
+</section>
 
-<!-- HERO -->
-<section class="hero-service">
+<!-- TEXTO + CIFRAS + FOTO -->
+<section class="section intro-service">
   <div class="wrap">
-    <div class="hero-text">
-      <div class="eyebrow">Cuidado periódico · Mallorca</div>
-      <h1>Mantenimiento de <span class="it">jardines</span> en Mallorca</h1>
-      <p class="lead">El mantenimiento de jardines en Mallorca consiste en el cuidado periódico y planificado de espacios exteriores para que siempre estén en su mejor estado. En Garden Solution llevamos más de 10 años cuidando jardines de villas y fincas en toda la isla, con un equipo propio que conoce cada propiedad.</p>
-      <div class="hero-ctas">
-        <a href="#contacto" class="btn btn-gold">Solicitar presupuesto gratuito</a>
-        <a href="#incluye" class="btn btn-ghost">Qué incluye</a>
+    <div class="intro-grid">
+      <div class="intro-text">
+        <p class="lead">El mantenimiento de jardines en Mallorca consiste en el cuidado periódico y planificado de espacios exteriores para que siempre estén en su mejor estado. En Garden Solution llevamos más de 10 años cuidando jardines de villas y fincas en toda la isla, con un equipo propio que conoce cada propiedad.</p>
+        <div class="hero-stats-float">
+          <div class="hero-stat"><strong>10</strong><span>Años de experiencia</span></div>
+          <div class="hero-stat"><strong>40+</strong><span>Clientes recurrentes</span></div>
+          <div class="hero-stat"><strong>100%</strong><span>Equipo propio</span></div>
+        </div>
+        <div class="hero-ctas">
+          <a href="#incluye" class="btn btn-green">Qué incluye</a>
+        </div>
       </div>
-      <div class="trust-bar">
-        <span>10 años de experiencia</span>
-        <span class="dot">·</span>
-        <span>40 clientes recurrentes</span>
-        <span class="dot">·</span>
-        <span>Equipo propio</span>
-      </div>
-    </div>
 
-    <div class="hero-img">
-      <img
-        src="/img/mantenimiento-jardines-mallorca.webp"
-        alt="Mantenimiento de jardín en villa de Mallorca — equipo de Garden Solution"
-        width="600" height="750"
-        loading="eager" fetchpriority="high"
-      >
+      <div class="intro-img">
+        <img
+          src="/img/garden-solution-mantenimiento-de-jardines-particulares-2.webp"
+          alt="Mantenimiento de jardín en villa de Mallorca — equipo de Garden Solution"
+          width="600" height="750"
+          loading="lazy"
+        >
+      </div>
     </div>
   </div>
 </section>
@@ -785,21 +892,54 @@ p, li, .faq-body p, .resena-text, .col-block p,
       <div class="col-block">
         <h2>Qué incluye el <span class="it">mantenimiento de jardines</span> en Mallorca</h2>
         <p>Cada jardín tiene sus propias necesidades según el tipo de plantas, el tamaño del espacio y la época del año. El plan de mantenimiento se define en la primera visita técnica gratuita y se adapta a lo largo del tiempo.</p>
-        <ul class="check-list">
-          <li>Visitas periódicas programadas según la estación y el jardín</li>
-          <li>Poda de mantenimiento de plantas, arbustos y setos</li>
-          <li>Control de plagas y enfermedades con tratamientos autorizados</li>
-          <li>Gestión y supervisión del sistema de riego automático</li>
-          <li>Limpieza del jardín y retirada de residuos vegetales</li>
-          <li>Seguimiento estacional y recomendaciones de mejora</li>
-        </ul>
+        <div class="incluye-grid">
+          <div class="incluye-card fu">
+            <span class="incluye-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg></span>
+            <p>Visitas periódicas programadas según la estación y el jardín</p>
+          </div>
+          <div class="incluye-card fu">
+            <span class="incluye-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg></span>
+            <p>Poda de mantenimiento de plantas, arbustos y setos</p>
+          </div>
+          <div class="incluye-card fu">
+            <span class="incluye-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg></span>
+            <p>Control de plagas y enfermedades con tratamientos autorizados</p>
+          </div>
+          <div class="incluye-card fu">
+            <span class="incluye-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69s-5 5.36-5 9.19a5 5 0 0 0 10 0c0-3.83-5-9.19-5-9.19Z"/></svg></span>
+            <p>Gestión y supervisión del sistema de riego automático</p>
+          </div>
+          <div class="incluye-card fu">
+            <span class="incluye-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg></span>
+            <p>Limpieza del jardín y retirada de residuos vegetales</p>
+          </div>
+          <div class="incluye-card fu">
+            <span class="incluye-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg></span>
+            <p>Seguimiento estacional y recomendaciones de mejora</p>
+          </div>
+          <div class="incluye-card incluye-card--full fu">
+            <span class="incluye-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg></span>
+            <p>PDF con informe mensual con fotos y descripción de todos los trabajos realizados en tu jardín. Siempre informado, sin sorpresas.</p>
+          </div>
+        </div>
       </div>
 
       <div class="col-block">
         <h2>Cómo <span class="it">trabajamos</span> en cada propiedad</h2>
-        <p>El equipo que visita tu jardín siempre es el mismo. Eso no es un detalle menor: significa que conocen las plantas, el suelo y el sistema de riego de tu propiedad. Se anticipan a los problemas antes de que aparezcan y no pierden tiempo re-aprendiendo cada visita.</p>
-        <p>La frecuencia de visitas se acuerda al inicio y puede ajustarse según la época del año o cambios en el jardín. En temporada de mayor crecimiento las visitas son más frecuentes; en invierno se adapta el ritmo.</p>
-        <p>Si tu jardín necesita también <a href="/es/poda-arboles-setos/">poda de árboles</a> o <a href="/es/paisajismo-diseno-jardines/">un rediseño completo</a>, el mismo equipo lo gestiona sin que tengas que coordinarte con terceros.</p>
+        <div class="step-list">
+          <div class="step-item fu">
+            <span class="step-num">1</span>
+            <p>El equipo que visita tu jardín siempre es el mismo. Eso no es un detalle menor: significa que conocen las plantas, el suelo y el sistema de riego de tu propiedad. Se anticipan a los problemas antes de que aparezcan y no pierden tiempo re-aprendiendo cada visita.</p>
+          </div>
+          <div class="step-item fu">
+            <span class="step-num">2</span>
+            <p>La frecuencia de visitas se acuerda al inicio y puede ajustarse según la época del año o cambios en el jardín. En temporada de mayor crecimiento las visitas son más frecuentes; en invierno se adapta el ritmo.</p>
+          </div>
+          <div class="step-item fu">
+            <span class="step-num">3</span>
+            <p>Si tu jardín necesita también <a href="/es/poda-arboles-setos/">poda de árboles</a> o <a href="/es/paisajismo-diseno-jardines/">un rediseño completo</a>, el mismo equipo lo gestiona sin que tengas que coordinarte con terceros.</p>
+          </div>
+        </div>
       </div>
 
     </div>
@@ -914,14 +1054,14 @@ p, li, .faq-body p, .resena-text, .col-block p,
     <p class="lead-center">Cubrimos toda la isla de Mallorca. Estas son nuestras principales zonas — si tu propiedad está en otro municipio, consúltanos sin compromiso.</p>
 
     <div class="zonas-tags">
-      <a href="/es/jardineria-palma/" class="zona-tag">Palma</a>
-      <a href="/es/jardineria-llucmajor/" class="zona-tag">Llucmajor</a>
-      <a href="/es/jardineria-marratxi/" class="zona-tag">Marratxí</a>
-      <a href="/es/jardineria-calvia/" class="zona-tag">Calvià</a>
-      <a href="/es/jardineria-alcudia/" class="zona-tag">Alcúdia</a>
-      <span class="zona-tag">Esporles</span>
-      <span class="zona-tag">Valldemossa</span>
-      <span class="zona-tag">Caimari</span>
+      <a href="/es/jardineria-palma/" class="zona-tag"><span class="zona-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>Palma</a>
+      <a href="/es/jardineria-llucmajor/" class="zona-tag"><span class="zona-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>Llucmajor</a>
+      <a href="/es/jardineria-marratxi/" class="zona-tag"><span class="zona-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>Marratxí</a>
+      <a href="/es/jardineria-calvia/" class="zona-tag"><span class="zona-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>Calvià</a>
+      <a href="/es/jardineria-alcudia/" class="zona-tag"><span class="zona-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>Alcúdia</a>
+      <span class="zona-tag"><span class="zona-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>Esporles</span>
+      <span class="zona-tag"><span class="zona-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>Valldemossa</span>
+      <span class="zona-tag"><span class="zona-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>Caimari</span>
     </div>
     <p class="zonas-nota">Y cualquier municipio de Mallorca — consulta disponibilidad</p>
   </div>
@@ -935,16 +1075,19 @@ p, li, .faq-body p, .resena-text, .col-block p,
 
     <div class="rel-grid">
       <a href="/es/paisajismo-diseno-jardines/" class="rel-card">
+        <span class="rel-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span>
         <h3>Paisajismo y diseño</h3>
         <p>¿El jardín necesita empezar desde cero o rediseñarse? Diseñamos y ejecutamos jardines completos que después podemos mantener.</p>
         <span class="rel-link">Ver servicio</span>
       </a>
       <a href="/es/poda-arboles-setos/" class="rel-card">
+        <span class="rel-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg></span>
         <h3>Poda de árboles y setos</h3>
         <p>Poda profesional de árboles grandes, setos y arbustos. Un complemento habitual al mantenimiento periódico del jardín.</p>
         <span class="rel-link">Ver servicio</span>
       </a>
       <a href="/es/riego-automatico/" class="rel-card">
+        <span class="rel-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69s-5 5.36-5 9.19a5 5 0 0 0 10 0c0-3.83-5-9.19-5-9.19Z"/></svg></span>
         <h3>Riego automático</h3>
         <p>Instalación o revisión del sistema de riego para que el jardín esté bien irrigado y el consumo de agua sea el mínimo necesario.</p>
         <span class="rel-link">Ver servicio</span>
@@ -1035,18 +1178,18 @@ p, li, .faq-body p, .resena-text, .col-block p,
             <div class="form-row">
               <div class="form-field">
                 <label for="nombre">Nombre*</label>
-                <input type="text" id="nombre" name="nombre" required>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej. María García" required>
               </div>
               <div class="form-field">
                 <label for="telefono">Teléfono*</label>
-                <input type="tel" id="telefono" name="telefono" required>
+                <input type="tel" id="telefono" name="telefono" placeholder="Ej. 622 123 456" required>
               </div>
             </div>
 
             <div class="form-row">
               <div class="form-field full">
                 <label for="email">Email*</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
               </div>
             </div>
 
