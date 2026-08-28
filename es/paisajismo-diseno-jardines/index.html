@@ -12,7 +12,7 @@
 <meta property="og:description" content="Diseño y construcción de jardines en villas y fincas de Mallorca. Más de 10 años de experiencia. Solicita visita técnica gratuita.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://mallorcagardensolution.com/es/paisajismo-diseno-jardines/">
-<meta property="og:image" content="https://mallorcagardensolution.com/img/paisajismo-hero.webp">
+<meta property="og:image" content="https://mallorcagardensolution.com/img/garden-solution-paisajismo-hero.webp">
 <meta property="og:locale" content="es_ES">
 
 <!-- Canonical + Hreflang -->
@@ -152,30 +152,31 @@
 }
 
 * { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior:smooth; }
+#incluye, #faq, #contacto, #zonas { scroll-margin-top:90px; }
 body {
-  font-family: 'Manrope', sans-serif;
-  font-weight: 300;
-  color: var(--ink);
-  background: var(--paper);
-  line-height: 1.6;
-  overflow-x: hidden;
+  font-family:'Manrope', sans-serif;
+  font-weight:300;
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.6;
+  overflow-x:hidden;
 }
-h1,h2,h3,h4 { font-family: 'Montserrat'; font-weight: 500; line-height: 1.15; color: var(--green); }
-a { color: inherit; text-decoration: none; }
-img { max-width: 100%; height: auto; display: block; }
-.wrap { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
+h1,h2,h3,h4 { font-family:'Montserrat'; font-weight:500; line-height:1.15; color:var(--green); }
+a { color:inherit; text-decoration:none; }
+img { max-width:100%; height:auto; display:block; }
+.wrap { max-width:1200px; margin:0 auto; padding:0 32px; }
 
 /* ===== HEADER ===== */
 .header {
-  position: fixed; top:0; left:0; right:0; z-index:100;
-  background: rgba(251,248,242,0.97);
-  border-bottom: 1px solid var(--line-soft);
-  transition: box-shadow 0.3s ease;
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  background:rgba(251,248,242,0.97);
+  border-bottom:1px solid var(--line-soft);
+  transition:box-shadow 0.3s ease;
 }
 .header .wrap { display:flex; align-items:center; justify-content:space-between; padding:20px 32px; }
 .logo { font-family:'Montserrat'; font-size:24px; color:var(--green); font-weight:500; letter-spacing:0.02em; }
-.logo .it { font-style:italic; color:var(--gold); }
+.logo .it { font-weight:800; color:var(--gold); }
 .nav ul { list-style:none; display:flex; gap:34px; align-items:center; }
 .nav a { font-family:'Manrope'; font-weight:400; font-size:14px; color:var(--ink-soft); letter-spacing:0.03em; transition:color 0.3s; }
 .nav a:hover { color:var(--green); }
@@ -204,7 +205,6 @@ img { max-width: 100%; height: auto; display: block; }
 .btn-outline-w:hover { border-color:var(--paper); background:rgba(251,248,242,0.08); }
 
 /* ===== BREADCRUMB ===== */
-.breadcrumb { padding:100px 0 0; background:var(--paper); }
 .breadcrumb-inner {
   font-family:'Manrope'; font-size:12px; letter-spacing:0.08em; text-transform:uppercase;
   color:var(--gray-soft); display:flex; gap:8px; align-items:center;
@@ -213,56 +213,138 @@ img { max-width: 100%; height: auto; display: block; }
 .breadcrumb-inner .sep { color:var(--line); }
 .breadcrumb-inner .current { color:var(--green); font-weight:500; }
 
-/* ===== HERO SERVICIO ===== */
-.hero-service { padding:50px 0 100px; background:var(--paper); }
-.hero-service .wrap { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
-
-.hero-text .eyebrow {
-  font-family:'Manrope'; font-size:11px; letter-spacing:0.4em;
-  text-transform:uppercase; color:var(--gold); margin-bottom:20px;
+/* ===== HERO CON IMAGEN DE FONDO ===== */
+.hero-bg {
+  position:relative; overflow:hidden;
+  min-height:600px; display:flex; align-items:flex-end;
+  background-size:cover; background-position:center;
+  padding:150px 0 70px;
 }
-.hero-text h1 { font-size:clamp(38px,4.5vw,60px); margin-bottom:24px; }
-.hero-text h1 .it { font-style:italic; color:var(--gold); }
-.hero-text .lead {
+.hero-bg-overlay {
+  position:absolute; inset:0;
+  background:linear-gradient(180deg, rgba(15,15,13,0.48) 0%, rgba(15,15,13,0.58) 45%, rgba(15,15,13,0.88) 100%);
+}
+.hero-bg .wrap { position:relative; z-index:1; width:100%; }
+.hero-bg .breadcrumb-inner { color:rgba(251,248,242,0.9); margin-bottom:26px; text-shadow:0 2px 10px rgba(0,0,0,0.55); }
+.hero-bg .breadcrumb-inner a { color:rgba(251,248,242,0.9); }
+.hero-bg .breadcrumb-inner a:hover { color:var(--gold-soft); }
+.hero-bg .breadcrumb-inner .sep { color:rgba(251,248,242,0.55); }
+.hero-bg .breadcrumb-inner .current { color:var(--gold-soft); }
+.hero-bg .eyebrow {
+  display:inline-flex; align-items:center;
+  background:rgba(15,15,13,0.4); border:1px solid rgba(251,248,242,0.3);
+  padding:9px 20px; border-radius:100px;
+  color:var(--paper); font-weight:700; font-size:11px; letter-spacing:0.25em;
+  text-transform:uppercase; font-family:'Manrope'; margin-bottom:24px;
+}
+.hero-bg h1 { color:var(--paper); font-size:clamp(38px,4.8vw,64px); margin-bottom:36px; max-width:760px; text-shadow:0 2px 14px rgba(0,0,0,0.5); }
+.hero-bg h1 .it { color:var(--gold-soft); }
+@media (max-width:640px) {
+  .hero-bg { padding:130px 0 50px; min-height:460px; }
+}
+
+/* ===== SEGUNDA SECCIÓN: TEXTO + DATOS + FOTO ===== */
+.intro-service { background:var(--paper); }
+.intro-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
+.intro-text .lead {
   font-family:'Manrope'; font-size:17px; font-weight:300;
-  color:var(--ink-soft); line-height:1.75; margin-bottom:36px; max-width:500px;
+  color:var(--ink-soft); line-height:1.75; margin-bottom:32px; max-width:520px;
 }
-.hero-ctas { display:flex; gap:16px; flex-wrap:wrap; margin-bottom:36px; }
-.trust-bar {
-  font-family:'Manrope'; font-size:12px; letter-spacing:0.12em;
-  text-transform:uppercase; color:var(--gray-soft);
-  display:flex; gap:24px; flex-wrap:wrap; align-items:center;
-}
-.trust-bar .dot { color:var(--gold); font-size:20px; line-height:1; }
-
-.hero-img { position:relative; }
-.hero-img img { width:100%; aspect-ratio:4/5; object-fit:cover; }
-.hero-img::after {
+.intro-img { position:relative; }
+.intro-img img { width:100%; aspect-ratio:4/5; object-fit:cover; }
+.intro-img::after {
   content:''; position:absolute; inset:-14px 14px 14px -14px;
-  border:1px solid var(--gold-soft); z-index:-1; opacity:0.5;
-  pointer-events:none;
+  border:1px solid var(--gold-soft); z-index:-1; opacity:0.5; pointer-events:none;
+}
+@media (max-width:968px) {
+  .intro-grid { grid-template-columns:1fr; gap:50px; }
+  .intro-img::after { display:none; }
+}
+
+/* ===== TARJETA DE CIFRAS ===== */
+.hero-stats-float {
+  background:var(--paper); border:1px solid var(--line-soft);
+  box-shadow:0 12px 34px rgba(15,15,13,0.08);
+  padding:24px 28px; display:inline-flex; gap:26px; margin-bottom:32px;
+}
+.hero-stat strong { display:block; font-family:'Montserrat'; font-size:28px; font-weight:700; color:var(--green); line-height:1; }
+.hero-stat span { font-family:'Manrope'; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:var(--gray-soft); }
+.hero-stat + .hero-stat { padding-left:26px; border-left:1px solid var(--line-soft); }
+@media (max-width:640px) {
+  .hero-stats-float { flex-direction:column; align-items:stretch; gap:16px; padding:24px; width:100%; }
+  .hero-stat { display:flex; align-items:center; justify-content:space-between; }
+  .hero-stat strong { font-size:32px; }
+  .hero-stat + .hero-stat { border-left:none; padding-left:0; padding-top:16px; border-top:1px solid var(--line-soft); }
+}
+
+/* ===== INCLUYE — GRID GRÁFICO DE SERVICIOS ===== */
+.incluye-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:4px; }
+.incluye-card {
+  display:flex; gap:14px; align-items:flex-start;
+  background:var(--paper); border:1px solid var(--line-soft);
+  padding:20px 18px; transition:transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+.incluye-card:hover { transform:translateY(-3px); box-shadow:0 14px 34px rgba(30,73,52,0.1); border-color:var(--gold-soft); }
+.incluye-icon { flex-shrink:0; width:38px; height:38px; display:flex; align-items:center; justify-content:center; background:var(--paper-warm); border-radius:50%; }
+.incluye-card p { font-family:'Manrope'; font-size:14px !important; font-weight:400; color:var(--ink-soft); line-height:1.55 !important; margin:0 !important; }
+.incluye-card--full { grid-column:1 / -1; background:var(--paper-warm); border-color:var(--gold-soft); }
+@media (max-width:640px) { .incluye-grid { grid-template-columns:1fr; } .incluye-card--full { grid-column:auto; } }
+
+/* ===== CÓMO TRABAJAMOS — TIMELINE GRÁFICO ===== */
+.step-list { position:relative; margin-top:8px; }
+.step-item { position:relative; padding-left:56px; padding-bottom:30px; }
+.step-item:last-child { padding-bottom:0; }
+.step-item::before {
+  content:''; position:absolute; left:19px; top:40px; bottom:-4px; width:1px;
+  background:var(--line);
+}
+.step-item:last-child::before { display:none; }
+.step-num {
+  position:absolute; left:0; top:0; width:40px; height:40px; border-radius:50%;
+  background:var(--green); color:var(--paper); font-family:'Montserrat'; font-weight:700; font-size:15px;
+  display:flex; align-items:center; justify-content:center;
+}
+.step-item h3 { font-size:17px; margin-bottom:4px; }
+.step-item p { margin-bottom:0 !important; }
+
+/* ===== ICONOS EN SERVICIOS RELACIONADOS ===== */
+.rel-icon { width:44px; height:44px; border-radius:50%; background:var(--paper-warm); display:flex; align-items:center; justify-content:center; margin-bottom:18px; }
+
+/* ===== ICONO EN ZONA-TAG ===== */
+.zona-icon { width:38px; height:38px; border-radius:50%; background:var(--paper-warm); display:flex; align-items:center; justify-content:center; transition:background 0.3s; }
+.zona-icon svg { transition:stroke 0.3s; }
+a.zona-tag:hover .zona-icon { background:var(--green); }
+a.zona-tag:hover .zona-icon svg { stroke:var(--paper) !important; }
+
+/* ===== NUMERACIÓN GRÁFICA EN FAQ ===== */
+.faq-list { counter-reset:faq; }
+.faq-item { counter-increment:faq; }
+.faq-trigger h3::before {
+  content:counter(faq, decimal-leading-zero);
+  color:var(--gold-soft); font-family:'Montserrat'; font-weight:700; font-size:14px;
+  margin-right:12px; letter-spacing:0.05em;
 }
 
 /* ===== SECCIONES BASE ===== */
-.section { padding:100px 0; }
+.section { padding:72px 0; }
 .eyebrow-center {
   font-family:'Manrope'; font-size:11px; letter-spacing:0.4em;
   text-transform:uppercase; color:var(--gold); margin-bottom:20px; text-align:center;
 }
-.h2-center {
-  font-size:clamp(36px,4vw,56px); text-align:center; margin-bottom:24px; line-height:1.05;
-}
-.h2-center .it { font-style:italic; color:var(--gold); }
+.h2-center { font-size:clamp(36px,4vw,56px); text-align:center; margin-bottom:24px; line-height:1.05; }
+.h2-center .it { font-weight:800; color:var(--gold); }
 .lead-center {
   font-family:'Manrope'; font-size:16px; font-weight:300; color:var(--ink-soft);
   text-align:center; max-width:620px; margin:0 auto 60px; line-height:1.7;
 }
 
-/* ===== QUÉ INCLUYE ===== */
+/* ===== CONTENIDO ===== */
 .que-incluye { background:var(--paper-soft); }
 .two-col { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; }
+.two-col .col-block:nth-child(2) { align-self:center; }
+@media (max-width:968px) { .two-col .col-block:nth-child(2) { align-self:start; } }
 .col-block h2 { font-size:clamp(26px,3vw,38px); margin-bottom:20px; line-height:1.15; }
-.col-block h2 .it { font-style:italic; color:var(--gold); }
+.col-block h2 .it { font-weight:800; color:var(--gold); }
 .col-block p {
   font-family:'Manrope'; font-size:16px; font-weight:300;
   color:var(--ink-soft); line-height:1.75; margin-bottom:18px;
@@ -277,23 +359,20 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .check-list li::before { content:'→'; color:var(--gold); flex-shrink:0; margin-top:1px; }
 
-/* ===== PROCESO ===== */
-.proceso { background:var(--paper); }
-.steps { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; margin-top:60px; }
-.step {
-  padding:32px 28px; background:var(--paper-soft);
-  border:1px solid var(--line-soft); border-top:2px solid var(--gold);
-  transition:transform 0.3s, box-shadow 0.3s;
+/* ===== PARA QUIÉN / CUÁNDO CONTRATAR ===== */
+.para-quien { background:var(--paper); }
+.perfiles-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:60px; }
+.perfil-card {
+  padding:40px 32px; border:1px solid var(--line-soft);
+  background:var(--paper-soft); transition:transform 0.3s, box-shadow 0.3s;
+  border-top:2px solid transparent;
 }
-.step:hover { transform:translateY(-4px); box-shadow:0 16px 40px rgba(30,73,52,0.07); }
-.step-n {
-  font-family:'Montserrat'; font-size:52px; font-weight:300;
-  color:var(--gold-soft); line-height:1; margin-bottom:16px;
-}
-.step h3 { font-size:21px; margin-bottom:10px; }
-.step p {
+.perfil-card:hover { transform:translateY(-4px); box-shadow:0 16px 40px rgba(30,73,52,0.08); border-top-color:var(--gold); }
+.perfil-icon { font-size:32px; margin-bottom:20px; }
+.perfil-card h3 { font-size:22px; margin-bottom:12px; }
+.perfil-card p {
   font-family:'Manrope'; font-size:14px; font-weight:300;
-  color:var(--gray-soft); line-height:1.65;
+  color:var(--gray-soft); line-height:1.7;
 }
 
 /* ===== POR QUÉ NOSOTROS ===== */
@@ -302,48 +381,97 @@ img { max-width: 100%; height: auto; display: block; }
 .why .h2-center { color:var(--paper); }
 .why .h2-center .it { color:var(--gold-soft); }
 .why-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2px; margin-top:60px; background:rgba(251,248,242,0.06); }
-.why-item {
-  padding:48px 36px; background:rgba(30,73,52,0.55); transition:background 0.3s;
-}
+.why-item { padding:48px 36px; background:rgba(30,73,52,0.55); transition:background 0.3s; }
 .why-item:hover { background:rgba(30,73,52,0.85); }
 .why-icon { font-size:30px; margin-bottom:18px; }
 .why-item h3 { font-size:22px; color:var(--paper); margin-bottom:12px; }
 .why-item p { font-family:'Manrope'; font-size:14px; font-weight:300; color:rgba(251,248,242,0.75); line-height:1.7; }
 
 /* ===== GALERÍA ===== */
-.galeria { background:var(--paper); }
+.galeria { background:var(--paper-soft); }
 .gal-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
-.gal-item { position:relative; overflow:hidden; aspect-ratio:4/3; background:var(--paper-warm); }
+.gal-item { position:relative; overflow:hidden; aspect-ratio:4/3; background:var(--paper-warm); cursor:pointer; }
 .gal-item img { width:100%; height:100%; object-fit:cover; transition:transform 0.6s ease; }
 .gal-item:hover img { transform:scale(1.06); }
 .gal-overlay {
   position:absolute; inset:0;
-  background:linear-gradient(to top, rgba(30,73,52,0.85) 0%, transparent 55%);
-  display:flex; align-items:flex-end; padding:22px;
+  background:rgba(15,15,13,0.32);
+  display:flex; align-items:center; justify-content:center;
   opacity:0; transition:opacity 0.35s;
 }
 .gal-item:hover .gal-overlay { opacity:1; }
-.gal-label {
-  font-family:'Manrope'; font-size:11px; letter-spacing:0.22em;
-  text-transform:uppercase; color:var(--gold-soft);
+.gal-zoom-icon {
+  width:52px; height:52px; border-radius:50%;
+  background:rgba(251,248,242,0.92); color:var(--green);
+  display:flex; align-items:center; justify-content:center;
+  transform:scale(0.8); transition:transform 0.35s;
 }
+.gal-item:hover .gal-zoom-icon { transform:scale(1); }
+
+/* ===== LIGHTBOX ===== */
+.lightbox {
+  position:fixed; inset:0; z-index:10000;
+  background:rgba(15,15,13,0.92);
+  display:flex; align-items:center; justify-content:center;
+  padding:40px; opacity:0; visibility:hidden;
+  transition:opacity 0.3s ease;
+}
+.lightbox.open { opacity:1; visibility:visible; }
+.lightbox img { max-width:min(90vw,1100px); max-height:88vh; width:auto; height:auto; object-fit:contain; box-shadow:0 30px 80px rgba(0,0,0,0.5); }
+.lightbox-close {
+  position:absolute; top:24px; right:28px;
+  width:44px; height:44px; border-radius:50%;
+  background:rgba(251,248,242,0.12); border:1px solid rgba(251,248,242,0.3);
+  color:var(--paper); display:flex; align-items:center; justify-content:center;
+  cursor:pointer; transition:background 0.3s;
+}
+.lightbox-close:hover { background:rgba(251,248,242,0.22); }
+@media (max-width:640px) {
+  .lightbox { padding:16px; }
+  .lightbox-close { top:14px; right:14px; }
+}
+
+/* ===== DOSSIERS DE PROYECTOS ===== */
+.dossiers-s { background:var(--paper); }
+.dossier-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:48px; }
+.dossier-card {
+  background:var(--paper-soft); border:1px solid var(--line-soft); border-top:2px solid var(--gold);
+  padding:30px 28px; display:flex; flex-direction:column; gap:8px;
+  transition:transform 0.3s, box-shadow 0.3s;
+}
+.dossier-card:hover { transform:translateY(-4px); box-shadow:0 16px 40px rgba(30,73,52,0.10); }
+.dossier-zona {
+  font-family:'Manrope'; font-size:10px; letter-spacing:0.25em; text-transform:uppercase;
+  color:var(--gold); font-weight:600;
+}
+.dossier-nombre { font-family:'Montserrat'; font-size:22px; font-weight:700; color:var(--green); line-height:1.2; }
+.dossier-desc {
+  font-family:'Manrope'; font-size:14px !important; font-weight:300; color:var(--gray-soft);
+  line-height:1.65 !important; flex-grow:1; margin-bottom:4px;
+}
+.btn-dossier {
+  display:inline-flex; align-items:center; gap:8px;
+  font-family:'Manrope'; font-size:12px; font-weight:600; letter-spacing:0.1em; text-transform:uppercase;
+  color:var(--green); padding:11px 20px; border:1px solid var(--green); background:transparent;
+  text-decoration:none; transition:background 0.3s, color 0.3s; margin-top:8px; align-self:flex-start;
+}
+.btn-dossier:hover { background:var(--green); color:var(--paper); }
+.btn-dossier svg { flex-shrink:0; }
+@media (max-width:968px) { .dossier-grid { grid-template-columns:1fr 1fr; } }
+@media (max-width:640px) { .dossier-grid { grid-template-columns:1fr; } }
 
 /* ===== ZONAS ===== */
 .zonas-s { background:var(--paper-soft); }
-.zonas-tags {
-  display:flex; flex-wrap:wrap; gap:10px;
-  margin-top:40px; justify-content:center;
-}
+.zonas-tags { display:flex; flex-wrap:wrap; gap:14px; margin-top:40px; justify-content:center; }
 .zona-tag {
   font-family:'Manrope'; font-size:13px; font-weight:400; letter-spacing:0.05em;
-  padding:10px 22px; border:1px solid var(--line); color:var(--ink-soft);
-  transition:all 0.3s; display:inline-block;
+  padding:22px 20px; border:1px solid var(--line); color:var(--ink-soft);
+  transition:all 0.3s;
+  display:flex; flex-direction:column; align-items:center; gap:12px;
+  min-width:112px; text-align:center;
 }
 a.zona-tag:hover { border-color:var(--green); color:var(--green); background:rgba(30,73,52,0.04); }
-.zonas-nota {
-  text-align:center; margin-top:28px;
-  font-family:'Montserrat'; font-style:italic; font-size:19px; color:var(--gray-soft);
-}
+.zonas-nota { text-align:center; margin-top:28px; font-family:'Montserrat'; font-weight:500; font-size:19px; color:var(--gray-soft); }
 
 /* ===== SERVICIOS RELACIONADOS ===== */
 .relacionados { background:var(--paper); }
@@ -361,15 +489,8 @@ a.zona-tag:hover { border-color:var(--green); color:var(--green); background:rgb
 .rel-card:hover::before { transform:scaleX(1); }
 .rel-card:hover { transform:translateY(-4px); box-shadow:0 16px 40px rgba(30,73,52,0.08); }
 .rel-card h3 { font-size:24px; margin-bottom:12px; }
-.rel-card p {
-  font-family:'Manrope'; font-size:14px; font-weight:300;
-  color:var(--ink-soft); line-height:1.65; flex-grow:1; margin-bottom:22px;
-}
-.rel-link {
-  font-family:'Manrope'; font-size:12px; letter-spacing:0.18em;
-  text-transform:uppercase; color:var(--green); font-weight:600;
-  display:inline-flex; align-items:center; gap:8px;
-}
+.rel-card p { font-family:'Manrope'; font-size:14px; font-weight:300; color:var(--ink-soft); line-height:1.65; flex-grow:1; margin-bottom:22px; }
+.rel-link { font-family:'Manrope'; font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:var(--green); font-weight:600; display:inline-flex; align-items:center; gap:8px; }
 .rel-link::after { content:'→'; transition:transform 0.3s; }
 .rel-card:hover .rel-link::after { transform:translateX(6px); }
 
@@ -383,86 +504,54 @@ a.zona-tag:hover { border-color:var(--green); color:var(--green); background:rgb
   display:flex; justify-content:space-between; align-items:center;
   background:none; border:none; cursor:pointer; text-align:left;
 }
-.faq-trigger h3 {
-  font-family:'Montserrat'; font-size:22px; font-weight:500;
-  color:var(--green); line-height:1.2; padding-right:24px;
-}
-.faq-icon {
-  font-size:28px; color:var(--gold); flex-shrink:0;
-  font-family:'Manrope'; font-weight:300; transition:transform 0.3s;
-  line-height:1;
-}
+.faq-trigger h3 { font-family:'Montserrat'; font-size:22px; font-weight:500; color:var(--green); line-height:1.2; padding-right:24px; }
+.faq-icon { font-size:28px; color:var(--gold); flex-shrink:0; font-family:'Manrope'; font-weight:300; transition:transform 0.3s; line-height:1; }
 .faq-item.open .faq-icon { transform:rotate(45deg); }
 .faq-body { max-height:0; overflow:hidden; transition:max-height 0.4s ease; }
 .faq-item.open .faq-body { max-height:400px; }
-.faq-body p {
-  font-family:'Manrope'; font-size:15px; font-weight:300;
-  color:var(--ink-soft); line-height:1.75; padding-bottom:28px;
-}
+.faq-body p { font-family:'Manrope'; font-size:15px; font-weight:300; color:var(--ink-soft); line-height:1.75; padding-bottom:28px; }
 
 /* ===== CTA BANNER ===== */
 .cta-banner { background:var(--green); padding:90px 0; text-align:center; }
 .cta-banner h2 { font-size:clamp(30px,4vw,50px); color:var(--paper); margin-bottom:16px; }
-.cta-banner h2 .it { font-style:italic; color:var(--gold-soft); }
-.cta-banner p {
-  font-family:'Manrope'; font-size:17px; font-weight:300;
-  color:rgba(251,248,242,0.8); margin-bottom:44px; line-height:1.6;
-}
+.cta-banner h2 .it { font-weight:800; color:var(--gold-soft); }
+.cta-banner p { font-family:'Manrope'; font-size:17px; font-weight:300; color:rgba(251,248,242,0.8); margin-bottom:44px; line-height:1.6; }
 .cta-btns { display:flex; gap:20px; justify-content:center; flex-wrap:wrap; }
 
 /* ===== CONTACTO ===== */
 .contacto-s { background:var(--paper); }
 .contacto-grid { display:grid; grid-template-columns:1.15fr 0.85fr; gap:80px; align-items:start; }
-.form-side .eyebrow-left {
-  font-family:'Manrope'; font-size:11px; letter-spacing:0.4em;
-  text-transform:uppercase; color:var(--gold); margin-bottom:16px;
-}
+.form-side .eyebrow-left { font-family:'Manrope'; font-size:11px; letter-spacing:0.4em; text-transform:uppercase; color:var(--gold); margin-bottom:16px; }
 .form-side h2 { font-size:clamp(28px,3vw,42px); margin-bottom:12px; }
-.form-side h2 .it { font-style:italic; color:var(--gold); }
-.form-side .sub {
-  font-family:'Manrope'; font-size:15px; font-weight:300;
-  color:var(--ink-soft); line-height:1.65; margin-bottom:36px;
-}
+.form-side h2 .it { font-weight:800; color:var(--gold); }
+.form-side .sub { font-family:'Manrope'; font-size:15px; font-weight:300; color:var(--ink-soft); line-height:1.65; margin-bottom:36px; }
 .form-wrap { background:var(--paper-soft); padding:48px; border:1px solid var(--line-soft); }
 .form-row { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-bottom:18px; }
-.form-field { display:flex; flex-direction:column; }
+.form-field { display:flex; flex-direction:column; position:relative; }
 .form-field.full { grid-column:1/-1; }
 .form-field label {
-  font-family:'Manrope'; font-size:10px; letter-spacing:0.22em;
-  text-transform:uppercase; color:var(--green); margin-bottom:8px; font-weight:500;
+  position:absolute; top:9px; left:17px; z-index:1;
+  font-family:'Manrope'; font-size:9px; letter-spacing:0.15em; text-transform:uppercase;
+  color:var(--green); margin:0; font-weight:600; pointer-events:none;
 }
 .form-field input, .form-field select, .form-field textarea {
-  font-family:'Manrope'; font-size:15px; padding:13px 16px;
+  font-family:'Manrope'; font-size:15px; padding:28px 16px 10px;
   border:1px solid var(--line); background:var(--paper);
   color:var(--ink); transition:border-color 0.3s; font-weight:300; appearance:none;
 }
-.form-field input:focus, .form-field select:focus, .form-field textarea:focus {
-  outline:none; border-color:var(--gold);
-}
-.form-field textarea { resize:vertical; min-height:110px; }
-.form-check {
-  display:flex; gap:10px; align-items:flex-start; margin:18px 0;
-  font-family:'Manrope'; font-size:12px; color:var(--gray-soft); line-height:1.55;
-}
+.form-field input:focus, .form-field select:focus, .form-field textarea:focus { outline:none; border-color:var(--gold); }
+.form-field textarea { resize:vertical; min-height:120px; padding-top:30px; }
+.form-check { display:flex; gap:10px; align-items:flex-start; margin:18px 0; font-family:'Manrope'; font-size:12px; color:var(--gray-soft); line-height:1.55; }
 .form-check input { margin-top:3px; flex-shrink:0; }
 .form-check a { color:var(--green); border-bottom:1px solid var(--gold-soft); }
 
-/* Contacto info */
 .info-side { padding-top:12px; }
 .info-side h3 { font-size:28px; margin-bottom:28px; }
-.info-side h3 .it { font-style:italic; color:var(--gold); }
-.info-row {
-  display:flex; gap:16px; align-items:flex-start;
-  padding:18px 0; border-bottom:1px solid var(--line-soft);
-}
+.info-side h3 .it { font-weight:800; color:var(--gold); }
+.info-row { display:flex; gap:16px; align-items:flex-start; padding:18px 0; border-bottom:1px solid var(--line-soft); }
 .info-row:last-of-type { border-bottom:none; }
-.info-label {
-  font-family:'Manrope'; font-size:10px; letter-spacing:0.2em;
-  text-transform:uppercase; color:var(--gold); min-width:80px; padding-top:2px; flex-shrink:0;
-}
-.info-val {
-  font-family:'Manrope'; font-size:15px; font-weight:300; color:var(--ink-soft); line-height:1.6;
-}
+.info-label { font-family:'Manrope'; font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); min-width:80px; padding-top:2px; flex-shrink:0; }
+.info-val { font-family:'Manrope'; font-size:15px; font-weight:300; color:var(--ink-soft); line-height:1.6; }
 .info-val a:hover { color:var(--green); }
 .info-map { margin-top:28px; }
 .info-map iframe { width:100%; border:1px solid var(--line-soft); }
@@ -472,46 +561,37 @@ a.zona-tag:hover { border-color:var(--green); color:var(--green); background:rgb
 .footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:60px; margin-bottom:60px; }
 .footer h4 { color:var(--paper); font-size:20px; margin-bottom:20px; font-family:'Montserrat'; }
 .logo-footer { font-family:'Montserrat'; font-size:28px; color:var(--paper); margin-bottom:20px; }
-.logo-footer .it { font-style:italic; color:var(--gold-soft); }
+.logo-footer .it { font-weight:800; color:var(--gold-soft); }
 .footer p, .footer li { font-family:'Manrope'; font-size:14px; line-height:1.7; font-weight:300; }
 .footer ul { list-style:none; }
 .footer ul li { padding:5px 0; }
 .footer a { transition:color 0.3s; }
 .footer a:hover { color:var(--gold-soft); }
-.footer-bottom {
-  padding-top:30px; border-top:1px solid rgba(251,248,242,0.1);
-  display:flex; justify-content:space-between; flex-wrap:wrap; gap:20px;
-  font-family:'Manrope'; font-size:12px;
-}
+.footer-bottom { padding-top:30px; border-top:1px solid rgba(251,248,242,0.1); display:flex; justify-content:space-between; flex-wrap:wrap; gap:20px; font-family:'Manrope'; font-size:12px; }
 .footer-legal { display:flex; gap:24px; flex-wrap:wrap; }
 .footer .lang-switch a { color:rgba(251,248,242,0.6); }
 .footer .lang-switch a.active { color:var(--gold-soft); font-weight:600; }
 
 /* ===== ANIMACIONES ===== */
-@keyframes fadeUp { from{opacity:0;transform:translateY(24px);} to{opacity:1;transform:translateY(0);} }
 .fu { opacity:0; transform:translateY(22px); transition:opacity 0.7s ease, transform 0.7s ease; }
 .fu.vis { opacity:1; transform:translateY(0); }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 968px) {
-  .hero-service .wrap { grid-template-columns:1fr; gap:50px; }
-  .hero-img { order:-1; }
-  .hero-img::after { display:none; }
+@media (max-width:968px) {
   .two-col { grid-template-columns:1fr; gap:50px; }
-  .steps { grid-template-columns:repeat(2,1fr); }
+  .perfiles-grid { grid-template-columns:1fr 1fr; }
   .why-grid { grid-template-columns:repeat(2,1fr); }
   .gal-grid { grid-template-columns:repeat(2,1fr); }
   .rel-grid { grid-template-columns:repeat(2,1fr); }
   .contacto-grid { grid-template-columns:1fr; gap:50px; }
   .footer-grid { grid-template-columns:1fr 1fr; }
 }
-@media (max-width: 640px) {
+@media (max-width:640px) {
   .wrap { padding:0 24px; }
   .nav ul { display:none; }
   .menu-toggle { display:block; }
   .section { padding:70px 0; }
-  .hero-service { padding:30px 0 70px; }
-  .steps { grid-template-columns:1fr; }
+  .perfiles-grid { grid-template-columns:1fr; }
   .why-grid { grid-template-columns:1fr; }
   .gal-grid { grid-template-columns:1fr; }
   .rel-grid { grid-template-columns:1fr; }
@@ -522,21 +602,6 @@ a.zona-tag:hover { border-color:var(--green); color:var(--green); background:rgb
   .footer-legal { justify-content:center; }
   .cta-btns { flex-direction:column; align-items:center; }
 }
-
-
-
-
-
-
-
-@media(max-width:968px) {  }
-
-
-
-
-
-
-@media(max-width:968px){  }
 
 /* === MEGA MENÚ SERVICIOS === */
 .has-dd { position:static; }
@@ -563,8 +628,6 @@ a.zona-tag:hover { border-color:var(--green); color:var(--green); background:rgb
 .dd-menu a:hover { color:var(--green); }
 @media(max-width:968px){ .dd-menu{ display:none !important; } }
 
-
-
 /* ===== MENÚ MÓVIL ===== */
 @media(max-width:968px){
   .nav ul {
@@ -585,35 +648,25 @@ a.zona-tag:hover { border-color:var(--green); color:var(--green); background:rgb
   .nav a { padding:14px 0; display:block; font-size:16px; font-weight:400; }
   .has-dd > a::after { display:none; }
   .menu-toggle { display:block !important; }
-  /* Todas las grillas → 1 columna */
-  .cat-cards { grid-template-columns:1fr !important; }
   .rel-grid { grid-template-columns:1fr !important; }
-  .svcs-grid { grid-template-columns:1fr 1fr !important; }
   .two-col { grid-template-columns:1fr !important; gap:40px !important; }
-  .hero-local .wrap { grid-template-columns:1fr !important; }
-  .hero-nosotros .wrap { grid-template-columns:1fr !important; }
   .contacto-grid { grid-template-columns:1fr !important; }
-  .counters-grid { grid-template-columns:1fr 1fr !important; }
-  .certs-grid { grid-template-columns:1fr !important; }
-  .idiomas-grid { grid-template-columns:1fr 1fr !important; }
-  /* Footer: cada sección en 1 columna */
+  .dossier-grid { grid-template-columns:1fr 1fr !important; }
   .footer-grid { grid-template-columns:1fr !important; gap:24px !important; }
-  /* Items de servicios, zonas y blog en 2 columnas */
   .footer ul { columns:2; column-gap:16px; }
   .footer ul li { break-inside:avoid; padding:3px 0; }
-  /* Contacto: 1 columna (último div) */
   .footer-grid > div:last-child ul { columns:1; }
-  /* Bottom bar */
   .footer-bottom { flex-direction:column; align-items:center; text-align:center; gap:12px; }
   .footer-legal { justify-content:center; }
 }
 @media(max-width:640px){
-  .precios-grid { grid-template-columns:1fr !important; }
   .cta-btns { flex-direction:column; align-items:center; }
-  .hero-ctas { flex-direction:column; }
+  .hero-ctas { flex-direction:column; align-items:center; }
+  .btn { justify-content:center; text-align:center; }
+  .hero-bg .wrap > a.btn { display:flex; width:max-content; max-width:100%; margin:0 auto; }
   .dd-inner { display:none !important; }
+  .dossier-grid { grid-template-columns:1fr !important; }
 }
-
 
 /* === BANNER UE === */
 .eu-banner {
@@ -647,158 +700,12 @@ a.zona-tag:hover { border-color:var(--green); color:var(--green); background:rgb
   .eu-banner img { width:80% !important; }
 }
 
-
-/* === TARJETAS DE PROYECTO CON DOSSIER === */
-.proyectos-grid {
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:24px;
-  margin-top:48px;
-}
-.proyecto-card {
-  background:var(--paper);
-  border:1px solid var(--line-soft);
-  overflow:hidden;
-  display:flex;
-  flex-direction:column;
-  transition:transform 0.3s, box-shadow 0.3s;
-}
-.proyecto-card:hover {
-  transform:translateY(-4px);
-  box-shadow:0 16px 40px rgba(30,73,52,0.10);
-}
-.proyecto-card-img {
-  position:relative;
-  aspect-ratio:4/3;
-  overflow:hidden;
-  background:var(--paper-warm);
-}
-.proyecto-card-img img {
-  width:100%;height:100%;
-  object-fit:cover;
-  transition:transform 0.6s ease;
-}
-.proyecto-card:hover .proyecto-card-img img {
-  transform:scale(1.05);
-}
-.proyecto-card-body {
-  padding:24px;
-  flex-grow:1;
-  display:flex;
-  flex-direction:column;
-  gap:8px;
-}
-.proyecto-card-zona {
-  font-family:'Manrope';
-  font-size:10px;
-  letter-spacing:0.25em;
-  text-transform:uppercase;
-  color:var(--gold);
-  font-weight:600;
-}
-.proyecto-card-nombre {
-  font-family:'Montserrat';
-  font-size:22px;
-  font-weight:500;
-  color:var(--green);
-  line-height:1.2;
-}
-.proyecto-card-desc {
-  font-family:'Manrope';
-  font-size:13px;
-  font-weight:300;
-  color:var(--gray-soft);
-  line-height:1.6;
-  flex-grow:1;
-  margin-bottom:4px;
-}
-.btn-dossier {
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  font-family:'Manrope';
-  font-size:12px;
-  font-weight:600;
-  letter-spacing:0.1em;
-  text-transform:uppercase;
-  color:var(--green);
-  padding:11px 20px;
-  border:1px solid var(--green);
-  background:transparent;
-  text-decoration:none;
-  transition:background 0.3s, color 0.3s;
-  margin-top:8px;
-  align-self:flex-start;
-}
-.btn-dossier:hover {
-  background:var(--green);
-  color:var(--paper);
-}
-.btn-dossier svg { flex-shrink:0; }
-@media(max-width:968px){ .proyectos-grid{ grid-template-columns:1fr 1fr; } }
-@media(max-width:640px){ .proyectos-grid{ grid-template-columns:1fr; } }
-
-
-
 .gal-item img,
-.blog-card-img img,
-.proyecto-card-img img,
-.hero-img img,
-.historia-img img,
-.hero-video-wrap img,
-.hero-local .hero-img img,
-.card-img img,
-[class*="card"] img {
+.intro-img img,
+.dossier-card img {
   object-fit: cover;
   object-position: center center;
-  width: 100%;
-  height: 100%;
-  display: block;
 }
-/* Contenedores de imagen: overflow oculto para que el recorte sea limpio */
-.gal-item,
-.blog-card-img,
-.proyecto-card-img,
-.hero-img,
-.historia-img {
-  overflow: hidden;
-}
-
-
-/* === FIX IMÁGENES CORTADAS — GLOBAL === */
-.proyecto-card { position:relative; overflow:hidden; }
-.proyecto-card > img {
-  position:absolute;
-  top:0; left:0;
-  width:100%; height:100%;
-  object-fit:cover;
-  object-position:center;
-}
-.gal-item { position:relative; overflow:hidden; }
-.gal-item > img {
-  position:absolute;
-  top:0; left:0;
-  width:100%; height:100%;
-  object-fit:cover;
-  object-position:center;
-}
-.blog-card-img { position:relative; overflow:hidden; }
-.blog-card-img > img {
-  position:absolute;
-  top:0; left:0;
-  width:100%; height:100%;
-  object-fit:cover;
-  object-position:center;
-}
-.proyecto-card-img { position:relative; overflow:hidden; }
-.proyecto-card-img > img {
-  position:absolute;
-  top:0; left:0;
-  width:100%; height:100%;
-  object-fit:cover;
-  object-position:center;
-}
-
 
 /* === TIPOGRAFÍA GLOBAL === */
 h1, h2, h3, h4, h5, h6,
@@ -806,12 +713,8 @@ h1, h2, h3, h4, h5, h6,
 [class*="title"], [class*="nombre"] { font-weight: 700; }
 p, li, .faq-body p, .resena-text, .col-block p,
 .lead, .lead-c, .lead-center,
-.historia-text p, .form-info p,
-.art-content p, .legal-content p,
-.perfil-list li, .valor-item p,
-.cert-info p, .idioma-card p,
-.proyecto-card-desc, .rel-card p,
-.svc-card p, .info-val, .eu-banner-text p,
+.perfil-card p, .dossier-desc, .rel-card p,
+.info-val, .eu-banner-text p,
 .check-list li, .footer p, .footer li {
   font-size: 17px !important;
   line-height: 1.75;
@@ -819,17 +722,12 @@ p, li, .faq-body p, .resena-text, .col-block p,
 .resena-text { font-style: normal !important; }
 
 .lead, .lead-c, .lead-center,
-.form-field label, .check-list li,
-.historia-text p, .form-info p,
-.art-content p, .legal-content p,
-.perfil-list li, .valor-item p,
-.cert-info p, .idioma-card p,
-.proyecto-card-desc, .rel-card p,
-.svc-card p, .info-val, .eu-banner-text p {
+.check-list li,
+.perfil-card p, .dossier-desc, .rel-card p,
+.info-val, .eu-banner-text p {
   font-size: 17px !important;
   line-height: 1.75;
 }
-.resena-text { font-style: normal !important; }
 
 </style>
 </head>
@@ -891,103 +789,133 @@ p, li, .faq-body p, .resena-text, .col-block p,
   </div>
 </header>
 
-<!-- BREADCRUMB -->
-<div class="breadcrumb">
+<!-- HERO CON IMAGEN DE FONDO -->
+<section class="hero-bg" style="background-image:url('/img/garden-solution-paisajismo-hero.webp');">
+  <div class="hero-bg-overlay"></div>
   <div class="wrap">
     <div class="breadcrumb-inner">
       <a href="/es/">Inicio</a>
       <span class="sep">›</span>
       <span class="current">Paisajismo y Diseño de Jardines</span>
     </div>
+    <div class="eyebrow">Diseño de exteriores · Mallorca</div>
+    <h1>Paisajismo y <span class="it">diseño de jardines</span> en Mallorca</h1>
+    <a href="#contacto" class="btn btn-gold">Solicitar presupuesto gratuito</a>
   </div>
-</div>
+</section>
 
-<!-- HERO -->
-<section class="hero-service">
+<!-- TEXTO + CIFRAS + FOTO -->
+<section class="section intro-service">
   <div class="wrap">
-    <div class="hero-text">
-      <div class="eyebrow">Diseño de exteriores · Mallorca</div>
-      <h1>Paisajismo y <span class="it">diseño de jardines</span> en Mallorca</h1>
-      <p class="lead">El paisajismo en Mallorca consiste en diseñar y construir jardines desde cero, adaptados al clima mediterráneo y a cada propiedad. En Garden Solution llevamos más de 10 años transformando espacios exteriores en villas y fincas de toda la isla.</p>
-      <div class="hero-ctas">
-        <a href="#contacto" class="btn btn-gold">Solicitar presupuesto gratuito</a>
-        <a href="#galeria" class="btn btn-ghost">Ver proyectos</a>
+    <div class="intro-grid">
+      <div class="intro-text">
+        <p class="lead">El paisajismo en Mallorca consiste en diseñar y construir jardines desde cero, adaptados al clima mediterráneo y a cada propiedad. En Garden Solution llevamos más de 10 años transformando espacios exteriores en villas y fincas de toda la isla.</p>
+        <div class="hero-stats-float">
+          <div class="hero-stat"><strong>10</strong><span>Años de experiencia</span></div>
+          <div class="hero-stat"><strong>5</strong><span>Proyectos destacados</span></div>
+          <div class="hero-stat"><strong>100%</strong><span>Equipo propio</span></div>
+        </div>
+        <div class="hero-ctas">
+          <a href="#incluye" class="btn btn-green">Qué incluye</a>
+        </div>
       </div>
-      <div class="trust-bar">
-        <span>10 años de experiencia</span>
-        <span class="dot">·</span>
-        <span>Toda Mallorca</span>
-        <span class="dot">·</span>
-        <span>Equipo propio</span>
-      </div>
-    </div>
 
-    <div class="hero-img">
-      <img
-        src="/img/paisajismo-hero.webp"
-        alt="Proyecto de paisajismo y diseño de jardín en villa de Mallorca"
-        width="600" height="750"
-        loading="eager" fetchpriority="high"
-      >
+      <div class="intro-img">
+        <img
+          src="/img/garden-solution-paisajismo.webp"
+          alt="Jardín diseñado por Garden Solution en Sa Llimonera, Mallorca"
+          width="600" height="750"
+          loading="lazy"
+        >
+      </div>
     </div>
   </div>
 </section>
 
-<!-- QUÉ INCLUYE / CUÁNDO CONTRATAR -->
-<section class="section que-incluye">
+<!-- QUÉ INCLUYE / CÓMO TRABAJAMOS -->
+<section class="section que-incluye" id="incluye">
   <div class="wrap">
     <div class="two-col">
 
       <div class="col-block">
         <h2>Qué incluye un proyecto de <span class="it">paisajismo</span> en Mallorca</h2>
         <p>Un proyecto completo abarca desde la primera conversación hasta la última planta colocada. Diseñamos, construimos y ejecutamos cada jardín como si fuera el nuestro, con total coherencia entre el diseño inicial y el resultado final.</p>
-        <ul class="check-list">
-          <li>Diseño personalizado adaptado al estilo de la propiedad y el microclima de la zona</li>
-          <li>Selección de especies mediterráneas adaptadas al suelo y exposición solar</li>
-          <li>Ejecución completa: movimientos de tierra, pavimentación y elementos decorativos</li>
-          <li>Plantación y ajardinamiento con especies de vivero seleccionadas</li>
-          <li>Instalación de sistema de riego automático para minimizar el consumo de agua</li>
-        </ul>
+        <div class="incluye-grid">
+          <div class="incluye-card fu">
+            <span class="incluye-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></span>
+            <p>Diseño personalizado adaptado al estilo de la propiedad y el microclima de la zona</p>
+          </div>
+          <div class="incluye-card fu">
+            <span class="incluye-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></span>
+            <p>Selección de especies mediterráneas adaptadas al suelo y exposición solar</p>
+          </div>
+          <div class="incluye-card fu">
+            <span class="incluye-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 8 4-8 4-8-4Z"/><path d="m4 10 8 4 8-4"/><path d="m4 14 8 4 8-4"/></svg></span>
+            <p>Ejecución completa: movimientos de tierra, pavimentación y elementos decorativos</p>
+          </div>
+          <div class="incluye-card fu">
+            <span class="incluye-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg></span>
+            <p>Plantación y ajardinamiento con especies de vivero seleccionadas</p>
+          </div>
+          <div class="incluye-card fu">
+            <span class="incluye-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69s-5 5.36-5 9.19a5 5 0 0 0 10 0c0-3.83-5-9.19-5-9.19Z"/></svg></span>
+            <p>Instalación de sistema de riego automático para minimizar el consumo de agua</p>
+          </div>
+        </div>
       </div>
 
       <div class="col-block">
-        <h2>Cuándo tiene sentido <span class="it">contratar paisajismo</span></h2>
-        <p>El otoño y la primavera son las épocas ideales en Mallorca para acometer un proyecto de paisajismo: las temperaturas suaves favorecen el arraigo de las plantas. Sin embargo, trabajamos durante todo el año y nos adaptamos a los plazos de cada obra.</p>
-        <p>Un proyecto de paisajismo encaja cuando la propiedad acaba de construirse o reformarse y el jardín parte de cero, cuando el espacio exterior ha perdido coherencia visual, o cuando el propietario quiere un jardín de bajo mantenimiento a largo plazo.</p>
-        <p>Si ya tienes el jardín construido y lo que necesitas es un cuidado continuo, te ofrecemos también nuestro servicio de <a href="/es/mantenimiento-jardines-particulares/">mantenimiento recurrente de jardines</a>.</p>
+        <h2>Cómo <span class="it">trabajamos</span> en cada proyecto</h2>
+        <div class="step-list">
+          <div class="step-item fu">
+            <span class="step-num">1</span>
+            <h3>Visita técnica gratuita</h3>
+            <p>Analizamos el terreno, la orientación, el tipo de suelo y tus preferencias. Sin coste y sin compromiso.</p>
+          </div>
+          <div class="step-item fu">
+            <span class="step-num">2</span>
+            <h3>Propuesta y presupuesto</h3>
+            <p>Elaboramos una propuesta con selección de especies y presupuesto cerrado antes de empezar.</p>
+          </div>
+          <div class="step-item fu">
+            <span class="step-num">3</span>
+            <h3>Ejecución con equipo propio</h3>
+            <p>Nuestro equipo realiza toda la obra: preparación del terreno, plantación, riego y acabados.</p>
+          </div>
+          <div class="step-item fu">
+            <span class="step-num">4</span>
+            <h3>Entrega y mantenimiento</h3>
+            <p>Entregamos el jardín terminado y te ofrecemos la opción de mantenimiento recurrente.</p>
+          </div>
+        </div>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- PROCESO -->
-<section class="section proceso">
+<!-- CUÁNDO CONTRATAR -->
+<section class="section para-quien">
   <div class="wrap">
-    <div class="eyebrow-center">Cómo trabajamos</div>
-    <h2 class="h2-center">Cuatro pasos, <span class="it">de la idea a la realidad</span></h2>
-    <p class="lead-center">Sin sorpresas ni subcontratas. El mismo equipo que diseña tu jardín lo construye y puede mantenerlo después.</p>
+    <div class="eyebrow-center">Cuándo contratar</div>
+    <h2 class="h2-center">Cuándo tiene sentido <span class="it">contratar paisajismo</span></h2>
+    <p class="lead-center">El otoño y la primavera son las épocas ideales en Mallorca para acometer un proyecto de paisajismo: las temperaturas suaves favorecen el arraigo de las plantas. Sin embargo, trabajamos durante todo el año y nos adaptamos a los plazos de cada obra. Si ya tienes el jardín construido y lo que necesitas es un cuidado continuo, te ofrecemos también nuestro servicio de <a href="/es/mantenimiento-jardines-particulares/" style="color:var(--green);border-bottom:1px solid var(--gold-soft);">mantenimiento recurrente de jardines</a>.</p>
 
-    <div class="steps">
-      <div class="step fu">
-        <div class="step-n">01</div>
-        <h3>Visita técnica gratuita</h3>
-        <p>Analizamos el terreno, la orientación, el tipo de suelo y tus preferencias. Sin coste y sin compromiso.</p>
+    <div class="perfiles-grid">
+      <div class="perfil-card fu">
+        <div class="perfil-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <h3>Jardín desde cero</h3>
+        <p>La propiedad acaba de construirse o reformarse y el jardín parte de cero.</p>
       </div>
-      <div class="step fu">
-        <div class="step-n">02</div>
-        <h3>Propuesta y presupuesto</h3>
-        <p>Elaboramos una propuesta con selección de especies y presupuesto cerrado antes de empezar.</p>
+      <div class="perfil-card fu">
+        <div class="perfil-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg></div>
+        <h3>Sin coherencia visual</h3>
+        <p>El espacio exterior ha perdido coherencia visual y necesita un replanteamiento completo.</p>
       </div>
-      <div class="step fu">
-        <div class="step-n">03</div>
-        <h3>Ejecución con equipo propio</h3>
-        <p>Nuestro equipo realiza toda la obra: preparación del terreno, plantación, riego y acabados.</p>
-      </div>
-      <div class="step fu">
-        <div class="step-n">04</div>
-        <h3>Entrega y mantenimiento</h3>
-        <p>Entregamos el jardín terminado y te ofrecemos la opción de mantenimiento recurrente.</p>
+      <div class="perfil-card fu">
+        <div class="perfil-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="14" r="6"/><path d="M9.17 5.6 8 3H5l2 4"/><path d="M14.83 5.6 16 3h3l-2 4"/><path d="M12 9v5"/><path d="m9 12 3 3 3-3"/></svg></div>
+        <h3>Bajo mantenimiento</h3>
+        <p>El propietario quiere un jardín de bajo mantenimiento a largo plazo.</p>
       </div>
     </div>
   </div>
@@ -1025,67 +953,82 @@ p, li, .faq-body p, .resena-text, .col-block p,
     <h2 class="h2-center">Jardines <span class="it">diseñados</span> en Mallorca</h2>
     <p class="lead-center">Una selección de proyectos de paisajismo ejecutados en villas y fincas de toda la isla, incluyendo Esporles, Valldemossa y Caimari.</p>
 
-    <div class="proyectos-grid">
-      <div class="proyecto-card">
-        <div class="proyecto-card-img">
-          <img src="/img/proyecto-sa-llimonera.webp" alt="Proyecto de paisajismo en Sa Llimonera, Mallorca" loading="lazy" width="480" height="360">
-        </div>
-        <div class="proyecto-card-body">
-          <span class="proyecto-card-zona">Sa Llimonera · Palma</span>
-          <div class="proyecto-card-nombre">Proyecto Llimonera</div>
-          <p class="proyecto-card-desc">Diseño y construcción de jardín mediterráneo en villa privada. Paisajismo integral con especies autóctonas y sistema de riego automatizado.</p>
-          <a href="/docs/DOSSIER_LORENA_LLIMONERA_9_compressed.pdf" target="_blank" rel="noopener" class="btn-dossier">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg> Ver dossier del proyecto
-          </a>
-        </div>
-      </div>      <div class="proyecto-card">
-        <div class="proyecto-card-img">
-          <img src="/img/proyecto-sometimes.webp" alt="Proyecto Paraíso Sometimes — jardín de villa en Mallorca" loading="lazy" width="480" height="360">
-        </div>
-        <div class="proyecto-card-body">
-          <span class="proyecto-card-zona">Mallorca</span>
-          <div class="proyecto-card-nombre">Paraíso Sometimes</div>
-          <p class="proyecto-card-desc">Jardín de villa con diseño orgánico, integración de zonas de descanso y vegetación mediterránea de bajo mantenimiento.</p>
-          <a href="/docs/DOSSIER_PARAISO_SOMETIMES-01_compressed.pdf" target="_blank" rel="noopener" class="btn-dossier">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg> Ver dossier del proyecto
-          </a>
-        </div>
-      </div>      <div class="proyecto-card">
-        <div class="proyecto-card-img">
-          <img src="/img/proyecto-marratxi.webp" alt="Proyecto de paisajismo en Marratxí, Mallorca" loading="lazy" width="480" height="360">
-        </div>
-        <div class="proyecto-card-body">
-          <span class="proyecto-card-zona">Marratxí</span>
-          <div class="proyecto-card-nombre">Proyecto Marratxí</div>
-          <p class="proyecto-card-desc">Transformación completa de jardín en chalet de nueva construcción. Diseño funcional con césped, setos y zona de piscina.</p>
-          <a href="/docs/260306_Maria_Jose_Garden_compressed.pdf" target="_blank" rel="noopener" class="btn-dossier">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg> Ver dossier del proyecto
-          </a>
-        </div>
-      </div>      <div class="proyecto-card">
-        <div class="proyecto-card-img">
-          <img src="/img/proyecto-can-elio.webp" alt="Proyecto Can Elio — finca en Valldemossa, Mallorca" loading="lazy" width="480" height="360">
-        </div>
-        <div class="proyecto-card-body">
-          <span class="proyecto-card-zona">Valldemossa</span>
-          <div class="proyecto-card-nombre">Can Elio Valldemossa</div>
-          <p class="proyecto-card-desc">Jardín rústico en finca de Valldemossa. Integración del paisaje natural con zonas de jardín formal y huerto mediterráneo.</p>
-          <a href="/docs/260325_Can-Elio_Garden_compressed.pdf" target="_blank" rel="noopener" class="btn-dossier">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg> Ver dossier del proyecto
-          </a>
-        </div>
-      </div>      <div class="proyecto-card">
-        <div class="proyecto-card-img">
-          <img src="/img/proyecto-esporlas.webp" alt="Proyecto de paisajismo en Esporles, Mallorca" loading="lazy" width="480" height="360">
-        </div>
-        <div class="proyecto-card-body">
-          <span class="proyecto-card-zona">Esporles</span>
-          <div class="proyecto-card-nombre">Proyecto Esporlas</div>
-          <p class="proyecto-card-desc">Diseño paisajístico en finca de Esporles con aprovechamiento del desnivel natural y selección de especies resistentes a la sequía.</p>
-          <a href="/docs/11_251117_Adams_Jardin.pdf" target="_blank" rel="noopener" class="btn-dossier">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg> Ver dossier del proyecto
-          </a>
-        </div>
+    <div class="gal-grid">
+      <div class="gal-item" data-full="/img/garden-solution-paisajismo-hero.webp">
+        <img src="/img/garden-solution-paisajismo-hero.webp" alt="" loading="lazy" width="560" height="420">
+        <div class="gal-overlay"><span class="gal-zoom-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span></div>
+      </div>
+      <div class="gal-item" data-full="/img/garden-solution-paisajismo.webp">
+        <img src="/img/garden-solution-paisajismo.webp" alt="" loading="lazy" width="560" height="420">
+        <div class="gal-overlay"><span class="gal-zoom-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span></div>
+      </div>
+      <div class="gal-item" data-full="/img/proyecto-sometimes.webp">
+        <img src="/img/proyecto-sometimes.webp" alt="" loading="lazy" width="560" height="420">
+        <div class="gal-overlay"><span class="gal-zoom-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span></div>
+      </div>
+      <div class="gal-item" data-full="/img/proyecto-marratxi.webp">
+        <img src="/img/proyecto-marratxi.webp" alt="" loading="lazy" width="560" height="420">
+        <div class="gal-overlay"><span class="gal-zoom-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span></div>
+      </div>
+      <div class="gal-item" data-full="/img/proyecto-can-elio.webp">
+        <img src="/img/proyecto-can-elio.webp" alt="" loading="lazy" width="560" height="420">
+        <div class="gal-overlay"><span class="gal-zoom-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span></div>
+      </div>
+      <div class="gal-item" data-full="/img/proyecto-esporlas.webp">
+        <img src="/img/proyecto-esporlas.webp" alt="" loading="lazy" width="560" height="420">
+        <div class="gal-overlay"><span class="gal-zoom-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOSSIERS DE PROYECTOS -->
+<section class="section dossiers-s">
+  <div class="wrap">
+    <div class="eyebrow-center">Dossiers descargables</div>
+    <h2 class="h2-center">Detalle de cada <span class="it">proyecto</span></h2>
+    <p class="lead-center">Consulta el dossier completo de cada proyecto de paisajismo, con memoria descriptiva y fotografías del resultado final.</p>
+
+    <div class="dossier-grid">
+      <div class="dossier-card fu">
+        <span class="dossier-zona">Sa Llimonera · Palma</span>
+        <div class="dossier-nombre">Proyecto Llimonera</div>
+        <p class="dossier-desc">Diseño y construcción de jardín mediterráneo en villa privada. Paisajismo integral con especies autóctonas y sistema de riego automatizado.</p>
+        <a href="/docs/DOSSIER_LORENA_LLIMONERA_9_compressed.pdf" target="_blank" rel="noopener" class="btn-dossier">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg> Ver dossier del proyecto
+        </a>
+      </div>
+      <div class="dossier-card fu">
+        <span class="dossier-zona">Mallorca</span>
+        <div class="dossier-nombre">Paraíso Sometimes</div>
+        <p class="dossier-desc">Jardín de villa con diseño orgánico, integración de zonas de descanso y vegetación mediterránea de bajo mantenimiento.</p>
+        <a href="/docs/DOSSIER_PARAISO_SOMETIMES-01_compressed.pdf" target="_blank" rel="noopener" class="btn-dossier">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg> Ver dossier del proyecto
+        </a>
+      </div>
+      <div class="dossier-card fu">
+        <span class="dossier-zona">Marratxí</span>
+        <div class="dossier-nombre">Proyecto Marratxí</div>
+        <p class="dossier-desc">Transformación completa de jardín en chalet de nueva construcción. Diseño funcional con césped, setos y zona de piscina.</p>
+        <a href="/docs/260306_Maria_Jose_Garden_compressed.pdf" target="_blank" rel="noopener" class="btn-dossier">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg> Ver dossier del proyecto
+        </a>
+      </div>
+      <div class="dossier-card fu">
+        <span class="dossier-zona">Valldemossa</span>
+        <div class="dossier-nombre">Can Elio Valldemossa</div>
+        <p class="dossier-desc">Jardín rústico en finca de Valldemossa. Integración del paisaje natural con zonas de jardín formal y huerto mediterráneo.</p>
+        <a href="/docs/260325_Can-Elio_Garden_compressed.pdf" target="_blank" rel="noopener" class="btn-dossier">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg> Ver dossier del proyecto
+        </a>
+      </div>
+      <div class="dossier-card fu">
+        <span class="dossier-zona">Esporles</span>
+        <div class="dossier-nombre">Proyecto Esporlas</div>
+        <p class="dossier-desc">Diseño paisajístico en finca de Esporles con aprovechamiento del desnivel natural y selección de especies resistentes a la sequía.</p>
+        <a href="/docs/11_251117_Adams_Jardin.pdf" target="_blank" rel="noopener" class="btn-dossier">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg> Ver dossier del proyecto
+        </a>
       </div>
     </div>
   </div>
@@ -1099,14 +1042,14 @@ p, li, .faq-body p, .resena-text, .col-block p,
     <p class="lead-center">Trabajamos en toda la isla. Estas son nuestras principales zonas de actuación — si tu propiedad está en otro municipio, consulta disponibilidad sin compromiso.</p>
 
     <div class="zonas-tags">
-      <a href="/es/jardineria-palma/" class="zona-tag">Palma</a>
-      <a href="/es/jardineria-llucmajor/" class="zona-tag">Llucmajor</a>
-      <a href="/es/jardineria-marratxi/" class="zona-tag">Marratxí</a>
-      <a href="/es/jardineria-calvia/" class="zona-tag">Calvià</a>
-      <a href="/es/jardineria-alcudia/" class="zona-tag">Alcúdia</a>
-      <span class="zona-tag">Esporles</span>
-      <span class="zona-tag">Valldemossa</span>
-      <span class="zona-tag">Caimari</span>
+      <a href="/es/jardineria-palma/" class="zona-tag"><span class="zona-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>Palma</a>
+      <a href="/es/jardineria-llucmajor/" class="zona-tag"><span class="zona-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>Llucmajor</a>
+      <a href="/es/jardineria-marratxi/" class="zona-tag"><span class="zona-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>Marratxí</a>
+      <a href="/es/jardineria-calvia/" class="zona-tag"><span class="zona-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>Calvià</a>
+      <a href="/es/jardineria-alcudia/" class="zona-tag"><span class="zona-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>Alcúdia</a>
+      <span class="zona-tag"><span class="zona-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>Esporles</span>
+      <span class="zona-tag"><span class="zona-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>Valldemossa</span>
+      <span class="zona-tag"><span class="zona-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>Caimari</span>
     </div>
     <p class="zonas-nota">Y cualquier municipio de Mallorca — consulta disponibilidad</p>
   </div>
@@ -1120,16 +1063,19 @@ p, li, .faq-body p, .resena-text, .col-block p,
 
     <div class="rel-grid">
       <a href="/es/mantenimiento-jardines-particulares/" class="rel-card">
+        <span class="rel-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg></span>
         <h3>Mantenimiento de jardines</h3>
         <p>Cuidado periódico para que el jardín diseñado conserve siempre su mejor estado. Visitas programadas con el mismo equipo que lo construyó.</p>
         <span class="rel-link">Ver servicio</span>
       </a>
       <a href="/es/riego-automatico/" class="rel-card">
+        <span class="rel-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69s-5 5.36-5 9.19a5 5 0 0 0 10 0c0-3.83-5-9.19-5-9.19Z"/></svg></span>
         <h3>Riego automático</h3>
         <p>Instalación de sistemas de riego eficientes, integrados desde el diseño del jardín o incorporados a espacios ya existentes.</p>
         <span class="rel-link">Ver servicio</span>
       </a>
       <a href="/es/poda-arboles-setos/" class="rel-card">
+        <span class="rel-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg></span>
         <h3>Poda de árboles y setos</h3>
         <p>Poda profesional de árboles, arbustos y setos para mantener la forma, salud y estética del jardín a lo largo del año.</p>
         <span class="rel-link">Ver servicio</span>
@@ -1220,18 +1166,18 @@ p, li, .faq-body p, .resena-text, .col-block p,
             <div class="form-row">
               <div class="form-field">
                 <label for="nombre">Nombre*</label>
-                <input type="text" id="nombre" name="nombre" required>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej. María García" required>
               </div>
               <div class="form-field">
                 <label for="telefono">Teléfono*</label>
-                <input type="tel" id="telefono" name="telefono" required>
+                <input type="tel" id="telefono" name="telefono" placeholder="Ej. 622 123 456" required>
               </div>
             </div>
 
             <div class="form-row">
               <div class="form-field full">
                 <label for="email">Email*</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
               </div>
             </div>
 
@@ -1420,7 +1366,7 @@ const fuEls = document.querySelectorAll('.fu');
 const fuObs = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {
     if (entry.isIntersecting) {
-      setTimeout(() => entry.target.classList.add('vis'), i * 100);
+      setTimeout(() => entry.target.classList.add('vis'), i * 120);
       fuObs.unobserve(entry.target);
     }
   });
@@ -1430,9 +1376,7 @@ fuEls.forEach(el => fuObs.observe(el));
 // Header shadow
 const hdr = document.querySelector('.header');
 window.addEventListener('scroll', () => {
-  hdr.style.boxShadow = window.scrollY > 20
-    ? '0 4px 20px rgba(15,15,13,0.06)'
-    : 'none';
+  hdr.style.boxShadow = window.scrollY > 20 ? '0 4px 20px rgba(15,15,13,0.06)' : 'none';
 }, { passive: true });
 </script>
 
@@ -1499,6 +1443,41 @@ window.addEventListener('scroll', () => {
       if(btn){ btn.disabled=false; btn.textContent='Solicitar presupuesto gratuito'; }
     });
   });
+})();
+</script>
+
+<!-- LIGHTBOX GALERÍA -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <img src="" alt="" id="lightboxImg">
+</div>
+<script>
+/* Lightbox: click en foto de galería para agrandar */
+(function(){
+  var lb = document.getElementById('lightbox');
+  var lbImg = document.getElementById('lightboxImg');
+  var lbClose = document.getElementById('lightboxClose');
+  if(!lb || !lbImg) return;
+  function openLightbox(src){
+    lbImg.src = src;
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox(){
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.querySelectorAll('.gal-item').forEach(function(item){
+    item.addEventListener('click', function(){
+      var full = item.getAttribute('data-full') || item.querySelector('img').src;
+      openLightbox(full);
+    });
+  });
+  lbClose.addEventListener('click', closeLightbox);
+  lb.addEventListener('click', function(e){ if(e.target === lb) closeLightbox(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeLightbox(); });
 })();
 </script>
 </body>
