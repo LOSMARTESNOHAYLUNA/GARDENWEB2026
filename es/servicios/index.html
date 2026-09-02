@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Servicios de Jardinería en Mallorca · Garden Solution</title>
+<meta name="description" content="Todos los servicios de jardinería en Mallorca: paisajismo, mantenimiento, poda, endoterapia, riego automático y más. Equipo propio, toda la isla. Presupuesto gratuito.">
+<link rel="canonical" href="https://mallorcagardensolution.com/es/servicios/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Manrope:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PQFTLP9XSD"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-PQFTLP9XSD');</script>
+<style>
+:root{--paper:#FBF8F2;--paper-soft:#F4EFE4;--paper-warm:#EDE5D2;--ink:#0F0F0D;--ink-soft:#2E2C28;--gray-soft:#6B6862;--line:#DDD5C3;--line-soft:#EAE3D2;--green:#1E4934;--green-soft:#2E6B4D;--gold:#B8954A;--gold-soft:#D6BC8A;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{font-family:'Manrope',sans-serif;font-weight:300;color:var(--ink);background:var(--paper);line-height:1.6;overflow-x:hidden;}
+h1,h2,h3,h4{font-family:'Montserrat',sans-serif;font-weight:600;line-height:1.15;color:var(--green);}
+a{color:inherit;text-decoration:none;}img{max-width:100%;height:auto;display:block;}
+.wrap{max-width:1200px;margin:0 auto;padding:0 32px;}
+.header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(251,248,242,0.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line-soft);}
+.header .wrap{display:flex;align-items:center;justify-content:space-between;padding:20px 32px;}
+.logo{font-family:'Montserrat';font-size:20px;color:var(--green);font-weight:700;}
+.logo .it{color:var(--gold);}
+.nav ul{list-style:none;display:flex;gap:34px;}
+.nav a{font-family:'Manrope';font-size:14px;color:var(--ink-soft);transition:color 0.3s;}
+.nav a:hover,.nav a.active{color:var(--green);}
+.lang-switch{display:flex;gap:8px;font-family:'Manrope';font-size:12px;letter-spacing:0.15em;text-transform:uppercase;}
+.lang-switch a{color:var(--gray-soft);padding:4px 8px;border-radius:4px;}
+.lang-switch a.active{color:var(--green);font-weight:600;}
+.menu-toggle{display:none;background:none;border:none;cursor:pointer;font-size:24px;color:var(--green);}
+/* HERO */
+.page-hero{padding:140px 0 80px;text-align:center;background:var(--paper-soft);}
+.page-hero .eyebrow{font-family:'Manrope';font-size:11px;letter-spacing:0.4em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;}
+.page-hero h1{font-size:clamp(36px,5vw,60px);margin-bottom:20px;}
+.page-hero .lead{font-family:'Manrope';font-size:18px;font-weight:300;color:var(--ink-soft);max-width:620px;margin:0 auto;line-height:1.7;}
+/* SERVICIOS GRID */
+.section{padding:90px 0;}
+.svcs-cats h2{font-size:clamp(24px,3vw,38px);margin-bottom:10px;}
+.svcs-cats .sub{font-family:'Manrope';font-size:16px;font-weight:300;color:var(--ink-soft);margin-bottom:40px;line-height:1.65;}
+.cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.svc-card{background:var(--paper);border:1px solid var(--line-soft);overflow:hidden;transition:transform 0.3s,box-shadow 0.3s;display:flex;flex-direction:column;}
+.svc-card:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(30,73,52,0.08);}
+.svc-card-img{aspect-ratio:3/2;overflow:hidden;}
+.svc-card-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s;}
+.svc-card:hover .svc-card-img img{transform:scale(1.05);}
+.svc-card-body{padding:24px 26px 28px;flex:1;display:flex;flex-direction:column;}
+.svc-card-body h3{font-size:18px;margin-bottom:8px;}
+.svc-card-body p{font-family:'Manrope';font-size:14px;font-weight:300;color:var(--gray-soft);line-height:1.65;margin-bottom:18px;flex:1;}
+.svc-link{font-family:'Manrope';font-size:11px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--green);display:inline-flex;align-items:center;gap:6px;}
+.svc-link::after{content:'→';transition:transform 0.3s;}
+.svc-card:hover .svc-link::after{transform:translateX(5px);}
+.cat-separator{margin:70px 0 50px;padding-top:50px;border-top:1px solid var(--line-soft);}
+/* CTA */
+.cta-banner{background:var(--green);padding:90px 0;text-align:center;}
+.cta-banner h2{font-size:clamp(28px,4vw,48px);color:var(--paper);margin-bottom:14px;}
+.cta-banner p{font-family:'Manrope';font-size:17px;font-weight:300;color:rgba(251,248,242,0.8);margin-bottom:40px;}
+.cta-btns{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;}
+.btn{font-family:'Manrope';font-weight:600;font-size:14px;letter-spacing:0.06em;text-transform:uppercase;padding:17px 34px;border-radius:100px;display:inline-flex;align-items:center;gap:10px;transition:all 0.3s;cursor:pointer;border:none;}
+.btn-gold{background:var(--gold);color:var(--ink);}
+.btn-gold:hover{background:var(--gold-soft);transform:translateY(-2px);}
+.btn-outline-w{background:transparent;color:var(--paper);border:1px solid rgba(251,248,242,0.4);}
+.btn-outline-w:hover{border-color:var(--paper);}
+/* FOOTER */
+.footer{background:var(--ink);color:rgba(251,248,242,0.75);padding:80px 0 30px;}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;margin-bottom:60px;}
+.footer h4{color:var(--paper);font-size:16px;margin-bottom:20px;font-family:'Montserrat';font-weight:600;}
+.logo-footer{font-family:'Montserrat';font-size:22px;color:var(--paper);margin-bottom:20px;font-weight:700;}
+.logo-footer .it{color:var(--gold-soft);}
+.footer p,.footer li{font-family:'Manrope';font-size:14px;line-height:1.7;font-weight:300;}
+.footer ul{list-style:none;}
+.footer ul li{padding:5px 0;}
+.footer a{transition:color 0.3s;}
+.footer a:hover{color:var(--gold-soft);}
+.footer-bottom{padding-top:30px;border-top:1px solid rgba(251,248,242,0.1);display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px;font-family:'Manrope';font-size:12px;}
+.footer-legal{display:flex;gap:24px;}
+.footer .lang-switch a{color:rgba(251,248,242,0.6);}
+.footer .lang-switch a.active{color:var(--gold-soft);font-weight:600;}
+.fu{opacity:0;transform:translateY(22px);transition:opacity 0.7s ease,transform 0.7s ease;}
+.fu.vis{opacity:1;transform:translateY(0);}
+@media(max-width:968px){.cat-grid{grid-template-columns:1fr 1fr;}.footer-grid{grid-template-columns:1fr 1fr;}}
+@media(max-width:640px){.wrap{padding:0 24px;}.nav ul{display:none;}.menu-toggle{display:block;}.cat-grid{grid-template-columns:1fr;}.footer-grid{grid-template-columns:1fr;gap:40px;}.footer-bottom{flex-direction:column;align-items:center;}.footer-legal{justify-content:center;}.cta-btns{flex-direction:column;align-items:center;}}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="wrap">
+    <a href="/es/" class="logo">Garden <span class="it">Solution</span></a>
+    <nav class="nav"><ul>
+      <li><a href="/es/servicios/" class="active">Servicios</a></li>
+      <li><a href="/es/#zonas">Zonas</a></li>
+      <li><a href="/es/sobre-nosotros/">Nosotros</a></li>
+      <li><a href="/es/#contacto">Contacto</a></li>
+    </ul></nav>
+    <div class="lang-switch"><a href="/es/servicios/" class="active">ES</a><a href="/en/">EN</a><a href="/de/">DE</a></div>
+    <button class="menu-toggle">☰</button>
+  </div>
+</header>
+
+<div class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow">Garden Solution · Mallorca</div>
+    <h1>Servicios de jardinería en Mallorca</h1>
+    <p class="lead">Equipo propio para cada servicio. Sin subcontratas, sin intermediarios. Más de 10 años cuidando villas y fincas en toda la isla.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="wrap">
+
+    <!-- CATEGORÍA: DISEÑO Y PAISAJISMO -->
+    <div class="svcs-cats">
+      <h2>Diseño y paisajismo</h2>
+      <p class="sub">Diseñamos y construimos jardines desde cero. El mismo equipo diseña y construye — sin subcontratas.</p>
+      <div class="cat-grid">
+        <div class="svc-card fu">
+          <div class="svc-card-img"><img src="/img/galeria-garden-solution-paisajismo-diseno-jardines1.webp" alt="Paisajismo y diseño de jardín en Mallorca" loading="lazy" width="400" height="267"></div>
+          <div class="svc-card-body"><h3>Paisajismo y diseño de jardines</h3><p>Proyectos de diseño y construcción de jardines para villas y fincas. Desde el estudio del terreno hasta el jardín terminado.</p><a href="/es/paisajismo-diseno-jardines/" class="svc-link">Ver proyectos y proceso</a></div>
+        </div>
+        <div class="svc-card fu">
+          <div class="svc-card-img"><img src="/img/galeria-garden-solution-riego-automatico1.webp" alt="Instalación de riego automático en Mallorca" loading="lazy" width="400" height="267"></div>
+          <div class="svc-card-body"><h3>Riego automático</h3><p>Diseño e instalación de sistemas de riego automático. Imprescindible para jardines en Mallorca, especialmente para propietarios de segunda residencia.</p><a href="/es/riego-automatico/" class="svc-link">Saber más</a></div>
+        </div>
+        <div class="svc-card fu">
+          <div class="svc-card-img"><img src="/img/galeria-garden-solution-cesped-artificial1.webp" alt="Instalación de césped artificial en Mallorca" loading="lazy" width="400" height="267"></div>
+          <div class="svc-card-body"><h3>Césped artificial</h3><p>Instalación de césped artificial en jardines. Sin riego, sin cortes, sin mantenimiento. Siempre verde en el clima mediterráneo de Mallorca.</p><a href="/es/cesped-artificial/" class="svc-link">Saber más</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CATEGORÍA: MANTENIMIENTO -->
+    <div class="svcs-cats cat-separator">
+      <h2>Mantenimiento de jardines</h2>
+      <p class="sub">Servicio recurrente con calendario fijo. El mismo equipo en cada visita — que conoce tu jardín y trabaja con criterio.</p>
+      <div class="cat-grid">
+        <div class="svc-card fu">
+          <div class="svc-card-img"><img src="/img/galeria-garden-solution-mantenimiento-comunidades1.webp" alt="Mantenimiento de jardín para particulares en Mallorca" loading="lazy" width="400" height="267"></div>
+          <div class="svc-card-body"><h3>Mantenimiento para particulares</h3><p>Mantenimiento recurrente de jardines en villas y fincas privadas. Más de 40 clientes recurrentes fijos en toda la isla.</p><a href="/es/mantenimiento-jardines-particulares/" class="svc-link">Saber más</a></div>
+        </div>
+        <div class="svc-card fu">
+          <div class="svc-card-img"><img src="/img/galeria-garden-solution-mantenimiento-comunidades2.webp" alt="Mantenimiento de zonas verdes en comunidades en Mallorca" loading="lazy" width="400" height="267"></div>
+          <div class="svc-card-body"><h3>Comunidades de vecinos</h3><p>Mantenimiento de zonas verdes en urbanizaciones y comunidades de propietarios. Coordinación con el administrador de finca.</p><a href="/es/mantenimiento-comunidades/" class="svc-link">Saber más</a></div>
+        </div>
+        <div class="svc-card fu">
+          <div class="svc-card-img"><img src="/img/galeria-garden-solution-mantenimiento-piscinas1.webp" alt="Mantenimiento de piscinas en villas de Mallorca" loading="lazy" width="400" height="267"></div>
+          <div class="svc-card-body"><h3>Mantenimiento de piscinas</h3><p>Mantenimiento del agua, limpieza y revisión de equipos. Carnet de piscinas oficial. Se puede combinar con el mantenimiento del jardín.</p><a href="/es/mantenimiento-piscinas/" class="svc-link">Saber más</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CATEGORÍA: PODA -->
+    <div class="svcs-cats cat-separator">
+      <h2>Poda profesional</h2>
+      <p class="sub">Poda con criterio técnico y sin clavos. Evaluamos cada árbol antes de intervenir.</p>
+      <div class="cat-grid">
+        <div class="svc-card fu">
+          <div class="svc-card-img"><img src="/img/galeria-garden-solution-poda-arboles-setos1.webp" alt="Poda de árboles y setos en Mallorca" loading="lazy" width="400" height="267"></div>
+          <div class="svc-card-body"><h3>Poda de árboles y setos</h3><p>Poda de cualquier especie de árbol o arbusto. Pinos, olivos, cipreses, frutales, setos. Retirada de restos incluida.</p><a href="/es/poda-arboles-setos/" class="svc-link">Saber más</a></div>
+        </div>
+        <div class="svc-card fu">
+          <div class="svc-card-img"><img src="/img/galeria-garden-solution-poda-en-altura1.webp" alt="Poda en altura con arboricultura en Mallorca" loading="lazy" width="400" height="267"></div>
+          <div class="svc-card-body"><h3>Poda en altura</h3><p>Trabajo en altura con técnicas de arboricultura certificadas. Para árboles de gran porte que no pueden podarse desde el suelo. Sin clavos.</p><a href="/es/poda-en-altura/" class="svc-link">Saber más</a></div>
+        </div>
+        <div class="svc-card fu">
+          <div class="svc-card-img"><img src="/img/galeria-garden-solution-poda-palmeras1.webp" alt="Poda de palmeras en Mallorca sin clavos" loading="lazy" width="400" height="267"></div>
+          <div class="svc-card-body"><h3>Poda de palmeras</h3><p>Poda de palmeras con técnica correcta y sin clavos. Precios desde 50–70€. Carnet fitosanitario para tratamiento preventivo del picudo rojo.</p><a href="/es/poda-palmeras/" class="svc-link">Ver precios y servicio</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CATEGORÍA: FITOSANIDAD -->
+    <div class="svcs-cats cat-separator">
+      <h2>Fitosanidad y control de plagas</h2>
+      <p class="sub">Carnet fitosanitario oficial. Diagnóstico y tratamiento de plagas y enfermedades en jardines y palmeras.</p>
+      <div class="cat-grid">
+        <div class="svc-card fu">
+          <div class="svc-card-img"><img src="/img/galeria-garden-solution-endoterapia1.webp" alt="Endoterapia vegetal en palmera en Mallorca" loading="lazy" width="400" height="267"></div>
+          <div class="svc-card-body"><h3>Endoterapia vegetal</h3><p>Inyección directa de productos fitosanitarios en el sistema vascular de la palmera. El tratamiento más eficaz contra el picudo rojo.</p><a href="/es/endoterapia/" class="svc-link">Saber más</a></div>
+        </div>
+        <div class="svc-card fu">
+          <div class="svc-card-img"><img src="/img/galeria-garden-solution-picudo-rojo1.webp" alt="Tratamiento del picudo rojo en palmeras de Mallorca" loading="lazy" width="400" height="267"></div>
+          <div class="svc-card-body"><h3>Picudo rojo de la palmera</h3><p>Diagnóstico, tratamiento curativo y protocolo preventivo para palmeras en zonas de riesgo. Especialmente indicado en zonas costeras.</p><a href="/es/picudo-rojo/" class="svc-link">Saber más</a></div>
+        </div>
+        <div class="svc-card fu">
+          <div class="svc-card-img"><img src="/img/galeria-garden-solution-controles-fitosanitarios1.webp" alt="Controles fitosanitarios en jardines de Mallorca" loading="lazy" width="400" height="267"></div>
+          <div class="svc-card-body"><h3>Controles fitosanitarios</h3><p>Inspección y tratamiento de plagas y enfermedades en jardines. Diagnóstico incluido. Carnet fitosanitario oficial para aplicación de productos regulados.</p><a href="/es/controles-fitosanitarios/" class="svc-link">Saber más</a></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CATEGORÍA: FINCAS -->
+    <div class="svcs-cats cat-separator">
+      <h2>Limpieza y gestión de fincas</h2>
+      <p class="sub">Desbroce, silvicultura preventiva y gestión de parcelas rurales. Normativa balear de prevención de incendios.</p>
+      <div class="cat-grid">
+        <div class="svc-card fu">
+          <div class="svc-card-img"><img src="/img/galeria-garden-solution-limpieza-fincas1.webp" alt="Limpieza y desbroce de finca rural en Mallorca" loading="lazy" width="400" height="267"></div>
+          <div class="svc-card-body"><h3>Limpieza de fincas</h3><p>Desbroce y limpieza de fincas rurales y parcelas. Maquinaria propia. Retirada de restos incluida. Fincas de cualquier tamaño en toda Mallorca.</p><a href="/es/limpieza-fincas/" class="svc-link">Saber más</a></div>
+        </div>
+        <div class="svc-card fu">
+          <div class="svc-card-img"><img src="/img/galeria-garden-solution-silvicultura-preventiva1.webp" alt="Silvicultura preventiva en Mallorca" loading="lazy" width="400" height="267"></div>
+          <div class="svc-card-body"><h3>Silvicultura preventiva</h3><p>Control de vegetación y fajas cortafuegos para cumplir con la normativa balear de prevención de incendios en zonas forestales.</p><a href="/es/silvicultura-preventiva/" class="svc-link">Saber más</a></div>
+        </div>
+        <div class="svc-card fu">
+          <div class="svc-card-img"><img src="/img/galeria-garden-solution-cesped-artificial3.webp" alt="Mantenimiento integral de jardines y fincas en Mallorca" loading="lazy" width="400" height="267"></div>
+          <div class="svc-card-body"><h3>Césped natural</h3><p>Instalación y mantenimiento de césped natural. Siembra, extensión en rollo y cuidado periódico con especies adaptadas al clima de Mallorca.</p><a href="/es/cesped-natural/" class="svc-link">Saber más</a></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <div class="wrap">
+    <h2>¿Necesitas un presupuesto?</h2>
+    <p>Visita técnica gratuita en toda Mallorca · Respuesta en 24 horas · Sin compromiso</p>
+    <div class="cta-btns">
+      <a href="tel:+34621493977" class="btn btn-gold">Llamar · 621 49 39 77</a>
+      <a href="/es/#contacto" class="btn btn-outline-w">Enviar mensaje</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div><div class="logo-footer">Garden <span class="it">Solution</span></div><p>Empresa de jardinería en Mallorca especializada en villas, fincas y comunidades.</p><br><p><strong style="color:var(--paper);">Garden Solution Mallorca SL</strong><br>NIF: B21650155<br>Camí de Jesús 44, Naves M/25<br>07011 Palma · Illes Balears</p></div>
+      <div><h4>Servicios</h4><ul><li><a href="/es/paisajismo-diseno-jardines/">Paisajismo</a></li><li><a href="/es/mantenimiento-jardines-particulares/">Mantenimiento</a></li><li><a href="/es/poda-arboles-setos/">Poda</a></li><li><a href="/es/poda-palmeras/">Palmeras</a></li><li><a href="/es/endoterapia/">Endoterapia</a></li><li><a href="/es/riego-automatico/">Riego</a></li></ul></div>
+      <div><h4>Zonas</h4><ul><li><a href="/es/jardineria-palma/">Palma</a></li><li><a href="/es/jardineria-llucmajor/">Llucmajor</a></li><li><a href="/es/jardineria-marratxi/">Marratxí</a></li><li><a href="/es/jardineria-calvia/">Calvià</a></li><li><a href="/es/jardineria-alcudia/">Alcúdia</a></li></ul></div>
+      <div><h4>Contacto</h4><ul><li><a href="tel:+34621493977">621 49 39 77</a></li><li><a href="tel:+34971967413">971 96 74 13</a></li><li><a href="mailto:info@mallorcagardensolution.com">info@mallorcagardensolution.com</a></li><li><a href="https://www.instagram.com/gardenn_solution/" target="_blank" rel="noopener">Instagram</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Garden Solution Mallorca SL · Todos los derechos reservados</div>
+      <div class="footer-legal"><a href="/es/aviso-legal/">Aviso legal</a><a href="/es/politica-privacidad/">Privacidad</a><a href="/es/politica-cookies/">Cookies</a></div>
+      <div class="lang-switch"><a href="/es/servicios/" class="active">ES</a><a href="/en/">EN</a><a href="/de/">DE</a></div>
+    </div>
+  </div>
+</footer>
+<script>
+document.querySelectorAll('.fu').forEach(el=>{new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis');});},{threshold:0.1}).observe(el);});
+const hdr=document.querySelector('.header');
+window.addEventListener('scroll',()=>{hdr.style.boxShadow=window.scrollY>20?'0 4px 20px rgba(15,15,13,0.06)':'none';},{passive:true});
+document.querySelector('.menu-toggle')?.addEventListener('click',()=>{const n=document.querySelector('.nav ul');n.style.display=n.style.display==='flex'?'none':'flex';});
+</script>
+<!-- ===== BANNER COOKIES RGPD / EU ===== -->
+<div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9999;background:var(--ink,#0F0F0D);color:rgba(251,248,242,0.9);padding:22px 32px;border-top:2px solid var(--gold,#B8954A);font-family:'Manrope',sans-serif;">
+  <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
+    <div style="flex:1;min-width:280px;">
+      <p style="font-size:14px;font-weight:300;line-height:1.6;margin:0;">
+        Usamos cookies propias y de terceros (Google Analytics, GTM) para analizar el tráfico y mejorar tu experiencia. Puedes aceptar todas las cookies o configurarlas individualmente.
+        <a href="/es/politica-cookies/" style="color:var(--gold,#B8954A);text-decoration:underline;margin-left:4px;">Política de cookies</a>
+      </p>
+    </div>
+    <div style="display:flex;gap:12px;flex-shrink:0;flex-wrap:wrap;">
+      <button onclick="cookieChoice('deny')" style="font-family:'Manrope';font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:11px 22px;border-radius:100px;background:transparent;color:rgba(251,248,242,0.65);border:1px solid rgba(251,248,242,0.2);cursor:pointer;transition:all 0.2s;" onmouseover="this.style.borderColor='rgba(251,248,242,0.5)'" onmouseout="this.style.borderColor='rgba(251,248,242,0.2)'">Solo esenciales</button>
+      <button onclick="cookieChoice('accept')" style="font-family:'Manrope';font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:11px 22px;border-radius:100px;background:var(--gold,#B8954A);color:#0F0F0D;border:none;cursor:pointer;transition:all 0.2s;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">Aceptar todas</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  // Comprobar consentimiento guardado
+  var consent = localStorage.getItem('gsc_cookie_consent');
+  if(!consent){
+    document.getElementById('cookie-banner').style.display='block';
+  } else {
+    applyConsent(consent);
+  }
+  
+  window.cookieChoice = function(choice){
+    localStorage.setItem('gsc_cookie_consent', choice);
+    document.getElementById('cookie-banner').style.display='none';
+    applyConsent(choice);
+  };
+  
+  function applyConsent(choice){
+    // Google Consent Mode v2
+    if(typeof gtag === 'function'){
+      if(choice === 'accept'){
+        gtag('consent','update',{
+          analytics_storage:'granted',
+          ad_storage:'denied',
+          ad_user_data:'denied',
+          ad_personalization:'denied'
+        });
+      } else {
+        gtag('consent','update',{
+          analytics_storage:'denied',
+          ad_storage:'denied',
+          ad_user_data:'denied',
+          ad_personalization:'denied'
+        });
+      }
+    }
+    // GTM dataLayer push
+    if(window.dataLayer){
+      window.dataLayer.push({
+        'event': 'cookie_consent',
+        'consent_choice': choice,
+        'analytics_consent': choice === 'accept' ? 'granted' : 'denied'
+      });
+    }
+  }
+})();
+</script>
+<!-- ===== FIN BANNER COOKIES ===== -->
+
+</body>
+</html>
