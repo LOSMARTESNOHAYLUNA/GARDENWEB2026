@@ -28,6 +28,19 @@
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Manrope:wght@200;300;400;500;600;700&display=swap"></noscript>
 
 <!-- Google Analytics -->
+<!-- Google Consent Mode v2: por defecto denegado hasta que el usuario decida -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'analytics_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'wait_for_update': 500
+  });
+</script>
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQFTLP9XSD"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -276,22 +289,27 @@ img { max-width: 100%; height: auto; display: block; }
 .servicios { background: var(--paper-soft); }
 .servicios-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .servicio-card {
-  background: var(--paper); padding: 40px 32px; border: 1px solid var(--line-soft);
+  background: var(--paper); border: 1px solid var(--line-soft);
   transition: all 0.4s ease; position: relative; overflow: hidden;
+  display: flex; flex-direction: column;
 }
 .servicio-card::before {
   content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 2px;
   background: var(--gold); transform: scaleX(0); transform-origin: left;
-  transition: transform 0.4s ease;
+  transition: transform 0.4s ease; z-index: 2;
 }
 .servicio-card:hover::before { transform: scaleX(1); }
 .servicio-card:hover { transform: translateY(-4px); box-shadow: 0 20px 50px rgba(30,73,52,0.1); }
+.servicio-img { aspect-ratio: 4/3; overflow: hidden; background: var(--paper-warm); }
+.servicio-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.servicio-card:hover .servicio-img img { transform: scale(1.06); }
+.servicio-body { padding: 24px 24px 28px; display: flex; flex-direction: column; flex-grow: 1; }
 .servicio-num {
   font-family: 'Montserrat'; font-size: 14px; color: var(--gold);
   letter-spacing: 0.15em; margin-bottom: 16px;
 }
-.servicio-card h3 { font-size: 26px; color: var(--green); margin-bottom: 14px; line-height: 1.2; }
-.servicio-card p { font-size: 15px; color: var(--ink-soft); margin-bottom: 20px; line-height: 1.65; }
+.servicio-card h3 { font-size: 19px; color: var(--green); margin-bottom: 10px; line-height: 1.25; }
+.servicio-card p { font-size: 14px; color: var(--ink-soft); margin-bottom: 16px; line-height: 1.6; flex-grow: 1; }
 .servicio-link {
   font-family:'Manrope'; font-size: 12px; letter-spacing: 0.2em;
   text-transform: uppercase; color: var(--green); font-weight: 600;
@@ -815,7 +833,7 @@ p, li, .faq-body p, .resena-text, .col-block p,
     <nav class="nav">
       <ul>
         <li class="has-dd">
-          <a href="/es/#servicios">Servicios</a>
+          <a href="/es/servicios/">Servicios</a>
           <div class="dd-menu"><div class="dd-inner">
             <div class="dd-col">
               <span class="dd-label">Mantenimiento</span>
@@ -920,41 +938,41 @@ p, li, .faq-body p, .resena-text, .col-block p,
   <div class="cat-group">
     <div class="cat-header"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg><span>Mantenimiento</span></div>
     <div class="cat-cards">
-      <a href="/es/mantenimiento-jardines-particulares/" class="servicio-card"><h3>Jardines particulares</h3><p>Cuidado periódico de villas y fincas con equipo propio y visitas programadas.</p><span class="servicio-link">Ver servicio</span></a>
-      <a href="/es/mantenimiento-comunidades/" class="servicio-card"><h3>Comunidades de vecinos</h3><p>Mantenimiento de zonas verdes comunitarias con calendario fijo y comunicación directa.</p><span class="servicio-link">Ver servicio</span></a>
-      <a href="/es/mantenimiento-piscinas/" class="servicio-card"><h3>Piscinas</h3><p>Control del agua, limpieza y tratamientos con carnet de piscinas oficial.</p><span class="servicio-link">Ver servicio</span></a>
+      <a href="/es/mantenimiento-jardines-particulares/" class="servicio-card"><div class="servicio-img"><img src="/img/garden-solution-mantenimiento-de-jardines-particulares-1.webp" alt="" loading="lazy" width="400" height="300"></div><div class="servicio-body"><h3>Jardines particulares</h3><p>Cuidado periódico de villas y fincas con equipo propio y visitas programadas.</p><span class="servicio-link">Ver servicio</span></div></a>
+      <a href="/es/mantenimiento-comunidades/" class="servicio-card"><div class="servicio-img"><img src="/img/garden-solution-comunidades-hero.webp" alt="" loading="lazy" width="400" height="300"></div><div class="servicio-body"><h3>Comunidades de vecinos</h3><p>Mantenimiento de zonas verdes comunitarias con calendario fijo y comunicación directa.</p><span class="servicio-link">Ver servicio</span></div></a>
+      <a href="/es/mantenimiento-piscinas/" class="servicio-card"><div class="servicio-img"><img src="/img/garden-solution-piscinas-hero.webp" alt="" loading="lazy" width="400" height="300"></div><div class="servicio-body"><h3>Piscinas</h3><p>Control del agua, limpieza y tratamientos con carnet de piscinas oficial.</p><span class="servicio-link">Ver servicio</span></div></a>
     </div>
   </div>
   <div class="cat-group">
     <div class="cat-header"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" x2="8.12" y1="4" y2="15.88"/><line x1="14.47" x2="20" y1="14.48" y2="20"/><line x1="8.12" x2="12" y1="8.12" y2="12"/></svg><span>Poda</span></div>
     <div class="cat-cards">
-      <a href="/es/poda-arboles-setos/" class="servicio-card"><h3>Árboles y setos</h3><p>Poda técnica de árboles ornamentales, frutales, cipreses y setos.</p><span class="servicio-link">Ver servicio</span></a>
-      <a href="/es/poda-palmeras/" class="servicio-card"><h3>Palmeras</h3><p>Especialistas en poda anual. Sin clavos. Precios orientativos disponibles.</p><span class="servicio-link">Ver servicio</span></a>
-      <a href="/es/poda-en-altura/" class="servicio-card"><h3>Poda en altura</h3><p>Trabajos verticales con equipo de arboricultura para árboles de gran porte.</p><span class="servicio-link">Ver servicio</span></a>
+      <a href="/es/poda-arboles-setos/" class="servicio-card"><div class="servicio-img"><img src="/img/garden-solution-arboles-cetos-hero.webp" alt="" loading="lazy" width="400" height="300"></div><div class="servicio-body"><h3>Árboles y setos</h3><p>Poda técnica de árboles ornamentales, frutales, cipreses y setos.</p><span class="servicio-link">Ver servicio</span></div></a>
+      <a href="/es/poda-palmeras/" class="servicio-card"><div class="servicio-img"><img src="/img/garden-solution-poda-palmeras-hero.webp" alt="" loading="lazy" width="400" height="300"></div><div class="servicio-body"><h3>Palmeras</h3><p>Especialistas en poda anual. Sin clavos. Precios orientativos disponibles.</p><span class="servicio-link">Ver servicio</span></div></a>
+      <a href="/es/poda-en-altura/" class="servicio-card"><div class="servicio-img"><img src="/img/garden-solution-poda-altura-hero.webp" alt="" loading="lazy" width="400" height="300"></div><div class="servicio-body"><h3>Poda en altura</h3><p>Trabajos verticales con equipo de arboricultura para árboles de gran porte.</p><span class="servicio-link">Ver servicio</span></div></a>
     </div>
   </div>
   <div class="cat-group">
     <div class="cat-header"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5Z"/><polyline points="14 2 14 8 20 8"/></svg><span>Diseño e Instalación</span></div>
     <div class="cat-cards">
-      <a href="/es/paisajismo-diseno-jardines/" class="servicio-card"><h3>Paisajismo y diseño</h3><p>Jardines desde cero: conceptualización, plantación, riego y elementos decorativos.</p><span class="servicio-link">Ver servicio</span></a>
-      <a href="/es/riego-automatico/" class="servicio-card"><h3>Riego automático</h3><p>Diseño e instalación de sistemas de riego eficientes para jardín mediterráneo.</p><span class="servicio-link">Ver servicio</span></a>
-      <a href="/es/cesped-artificial/" class="servicio-card"><h3>Césped artificial</h3><p>Verde todo el año sin riego. Instalación sobre tierra, hormigón o madera.</p><span class="servicio-link">Ver servicio</span></a>
-      <a href="/es/cesped-natural/" class="servicio-card"><h3>Césped natural</h3><p>Siembra, preparación del suelo y mantenimiento de césped natural en Mallorca.</p><span class="servicio-link">Ver servicio</span></a>
+      <a href="/es/paisajismo-diseno-jardines/" class="servicio-card"><div class="servicio-img"><img src="/img/garden-solution-paisajismo-hero.webp" alt="" loading="lazy" width="400" height="300"></div><div class="servicio-body"><h3>Paisajismo y diseño</h3><p>Jardines desde cero: conceptualización, plantación, riego y elementos decorativos.</p><span class="servicio-link">Ver servicio</span></div></a>
+      <a href="/es/riego-automatico/" class="servicio-card"><div class="servicio-img"><img src="/img/garden-solution-riego-automatico-hero.webp" alt="" loading="lazy" width="400" height="300"></div><div class="servicio-body"><h3>Riego automático</h3><p>Diseño e instalación de sistemas de riego eficientes para jardín mediterráneo.</p><span class="servicio-link">Ver servicio</span></div></a>
+      <a href="/es/cesped-artificial/" class="servicio-card"><div class="servicio-img"><img src="/img/garden-solution-cesped-artificial-hero.webp" alt="" loading="lazy" width="400" height="300"></div><div class="servicio-body"><h3>Césped artificial</h3><p>Verde todo el año sin riego. Instalación sobre tierra, hormigón o madera.</p><span class="servicio-link">Ver servicio</span></div></a>
+      <a href="/es/cesped-natural/" class="servicio-card"><div class="servicio-img"><img src="/img/garden-solution-cesped-natural-hero.webp" alt="" loading="lazy" width="400" height="300"></div><div class="servicio-body"><h3>Césped natural</h3><p>Siembra, preparación del suelo y mantenimiento de césped natural en Mallorca.</p><span class="servicio-link">Ver servicio</span></div></a>
     </div>
   </div>
   <div class="cat-group">
     <div class="cat-header"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Fitosanidad</span></div>
     <div class="cat-cards">
-      <a href="/es/picudo-rojo/" class="servicio-card"><h3>Picudo rojo</h3><p>Tratamiento y prevención del picudo rojo con carnet fitosanitario oficial.</p><span class="servicio-link">Ver servicio</span></a>
-      <a href="/es/endoterapia/" class="servicio-card"><h3>Endoterapia vegetal</h3><p>Tratamiento inyectable directo al árbol. Eficaz, sin pulverización exterior.</p><span class="servicio-link">Ver servicio</span></a>
-      <a href="/es/controles-fitosanitarios/" class="servicio-card"><h3>Controles fitosanitarios</h3><p>Inspecciones periódicas para detectar plagas y enfermedades a tiempo.</p><span class="servicio-link">Ver servicio</span></a>
+      <a href="/es/picudo-rojo/" class="servicio-card"><div class="servicio-img"><img src="/img/garden-solution-picudo-rojo-hero.webp" alt="" loading="lazy" width="400" height="300"></div><div class="servicio-body"><h3>Picudo rojo</h3><p>Tratamiento y prevención del picudo rojo con carnet fitosanitario oficial.</p><span class="servicio-link">Ver servicio</span></div></a>
+      <a href="/es/endoterapia/" class="servicio-card"><div class="servicio-img"><img src="/img/garden-solution-endoterapia-hero.webp" alt="" loading="lazy" width="400" height="300"></div><div class="servicio-body"><h3>Endoterapia vegetal</h3><p>Tratamiento inyectable directo al árbol. Eficaz, sin pulverización exterior.</p><span class="servicio-link">Ver servicio</span></div></a>
+      <a href="/es/controles-fitosanitarios/" class="servicio-card"><div class="servicio-img"><img src="/img/garden-solution-controles-fitosanitarios-hero.webp" alt="" loading="lazy" width="400" height="300"></div><div class="servicio-body"><h3>Controles fitosanitarios</h3><p>Inspecciones periódicas para detectar plagas y enfermedades a tiempo.</p><span class="servicio-link">Ver servicio</span></div></a>
     </div>
   </div>
   <div class="cat-group">
     <div class="cat-header"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span>Fincas</span></div>
     <div class="cat-cards">
-      <a href="/es/limpieza-fincas/" class="servicio-card"><h3>Limpieza de fincas</h3><p>Desbroce y eliminación de maleza en parcelas rurales de cualquier tamaño.</p><span class="servicio-link">Ver servicio</span></a>
-      <a href="/es/silvicultura-preventiva/" class="servicio-card"><h3>Silvicultura preventiva</h3><p>Gestión de biomasa para prevención de incendios según normativa balear.</p><span class="servicio-link">Ver servicio</span></a>
+      <a href="/es/limpieza-fincas/" class="servicio-card"><div class="servicio-img"><img src="/img/garden-solution-limpiezas-fincas-hero.webp" alt="" loading="lazy" width="400" height="300"></div><div class="servicio-body"><h3>Limpieza de fincas</h3><p>Desbroce y eliminación de maleza en parcelas rurales de cualquier tamaño.</p><span class="servicio-link">Ver servicio</span></div></a>
+      <a href="/es/silvicultura-preventiva/" class="servicio-card"><div class="servicio-img"><img src="/img/garden-solution-prevencion-incendios-hero.webp" alt="" loading="lazy" width="400" height="300"></div><div class="servicio-body"><h3>Silvicultura preventiva</h3><p>Gestión de biomasa para prevención de incendios según normativa balear.</p><span class="servicio-link">Ver servicio</span></div></a>
     </div>
   </div>
 </div>
@@ -1526,5 +1544,56 @@ window.addEventListener('scroll', () => {
   });
 })();
 </script>
+<!-- BANNER DE COOKIES -->
+<style>
+#gs-cookie-banner{position:fixed;left:0;right:0;bottom:0;z-index:9999;background:var(--ink,#0F0F0D);color:var(--paper,#FBF8F2);padding:22px 24px;box-shadow:0 -8px 30px rgba(0,0,0,0.25);display:none}
+#gs-cookie-banner.gs-show{display:block}
+.gs-cookie-inner{max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px}
+.gs-cookie-text{flex:1 1 420px;font-family:'Manrope',sans-serif;font-size:13px;line-height:1.6;color:rgba(251,248,242,0.85);margin:0}
+.gs-cookie-text a{color:var(--gold,#C9A24B);text-decoration:underline}
+.gs-cookie-actions{display:flex;gap:12px;flex-wrap:wrap}
+.gs-cookie-btn{font-family:'Manrope',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:12px 22px;border-radius:2px;cursor:pointer;border:1px solid rgba(251,248,242,0.55);background:transparent;color:var(--paper,#FBF8F2);transition:background .3s,color .3s}
+.gs-cookie-btn:hover{background:rgba(251,248,242,0.14)}
+@media (max-width:640px){.gs-cookie-inner{flex-direction:column;align-items:stretch}.gs-cookie-actions{justify-content:stretch}.gs-cookie-btn{flex:1;text-align:center}}
+</style>
+<div id="gs-cookie-banner" role="dialog" aria-label="Aviso de cookies">
+  <div class="gs-cookie-inner">
+    <p class="gs-cookie-text">Usamos cookies propias y de terceros para analizar la navegación y mejorar nuestros servicios. Puedes aceptarlas, rechazarlas o consultar más información en nuestra <a href="/es/politica-cookies/">política de cookies</a>.</p>
+    <div class="gs-cookie-actions">
+      <button type="button" class="gs-cookie-btn" id="gsCookieReject">Rechazar</button>
+      <button type="button" class="gs-cookie-btn" id="gsCookieAccept">Aceptar todas</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  function gtagConsent(action, params){ if(typeof gtag==='function'){ gtag('consent', action, params); } }
+  var KEY = 'gs_cookie_consent';
+  var banner = document.getElementById('gs-cookie-banner');
+  var stored = null;
+  try { stored = localStorage.getItem(KEY); } catch(e){}
+  if(stored === 'accepted'){
+    gtagConsent('update', {'ad_storage':'granted','analytics_storage':'granted','ad_user_data':'granted','ad_personalization':'granted'});
+  } else if(stored !== 'rejected'){
+    if(banner){ banner.classList.add('gs-show'); }
+  }
+  var acceptBtn = document.getElementById('gsCookieAccept');
+  var rejectBtn = document.getElementById('gsCookieReject');
+  if(acceptBtn){
+    acceptBtn.addEventListener('click', function(){
+      try { localStorage.setItem(KEY,'accepted'); } catch(e){}
+      gtagConsent('update', {'ad_storage':'granted','analytics_storage':'granted','ad_user_data':'granted','ad_personalization':'granted'});
+      if(banner){ banner.classList.remove('gs-show'); }
+    });
+  }
+  if(rejectBtn){
+    rejectBtn.addEventListener('click', function(){
+      try { localStorage.setItem(KEY,'rejected'); } catch(e){}
+      if(banner){ banner.classList.remove('gs-show'); }
+    });
+  }
+})();
+</script>
+
 </body>
 </html>

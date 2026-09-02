@@ -10,6 +10,19 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Manrope:wght@200;300;400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Manrope:wght@200;300;400;500;600;700&display=swap"></noscript>
+<!-- Google Consent Mode v2: por defecto denegado hasta que el usuario decida -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'analytics_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'wait_for_update': 500
+  });
+</script>
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PQFTLP9XSD"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-PQFTLP9XSD');</script>
 <style>
@@ -458,7 +471,7 @@ p, li, .faq-body p, .resena-text, .col-block p,
 </head>
 <body>
 <header class="header"><div class="wrap"><a href="/es/" class="logo">Garden <span class="it">Solution</span></a><nav class="nav"><ul><li class="has-dd">
-          <a href="/es/#servicios">Servicios</a>
+          <a href="/es/servicios/">Servicios</a>
           <div class="dd-menu"><div class="dd-inner">
             <div class="dd-col">
               <span class="dd-label">Mantenimiento</span>
@@ -638,4 +651,55 @@ p, li, .faq-body p, .resena-text, .col-block p,
   });
 })();
 </script>
+<!-- BANNER DE COOKIES -->
+<style>
+#gs-cookie-banner{position:fixed;left:0;right:0;bottom:0;z-index:9999;background:var(--ink,#0F0F0D);color:var(--paper,#FBF8F2);padding:22px 24px;box-shadow:0 -8px 30px rgba(0,0,0,0.25);display:none}
+#gs-cookie-banner.gs-show{display:block}
+.gs-cookie-inner{max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px}
+.gs-cookie-text{flex:1 1 420px;font-family:'Manrope',sans-serif;font-size:13px;line-height:1.6;color:rgba(251,248,242,0.85);margin:0}
+.gs-cookie-text a{color:var(--gold,#C9A24B);text-decoration:underline}
+.gs-cookie-actions{display:flex;gap:12px;flex-wrap:wrap}
+.gs-cookie-btn{font-family:'Manrope',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:12px 22px;border-radius:2px;cursor:pointer;border:1px solid rgba(251,248,242,0.55);background:transparent;color:var(--paper,#FBF8F2);transition:background .3s,color .3s}
+.gs-cookie-btn:hover{background:rgba(251,248,242,0.14)}
+@media (max-width:640px){.gs-cookie-inner{flex-direction:column;align-items:stretch}.gs-cookie-actions{justify-content:stretch}.gs-cookie-btn{flex:1;text-align:center}}
+</style>
+<div id="gs-cookie-banner" role="dialog" aria-label="Aviso de cookies">
+  <div class="gs-cookie-inner">
+    <p class="gs-cookie-text">Usamos cookies propias y de terceros para analizar la navegación y mejorar nuestros servicios. Puedes aceptarlas, rechazarlas o consultar más información en nuestra <a href="/es/politica-cookies/">política de cookies</a>.</p>
+    <div class="gs-cookie-actions">
+      <button type="button" class="gs-cookie-btn" id="gsCookieReject">Rechazar</button>
+      <button type="button" class="gs-cookie-btn" id="gsCookieAccept">Aceptar todas</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  function gtagConsent(action, params){ if(typeof gtag==='function'){ gtag('consent', action, params); } }
+  var KEY = 'gs_cookie_consent';
+  var banner = document.getElementById('gs-cookie-banner');
+  var stored = null;
+  try { stored = localStorage.getItem(KEY); } catch(e){}
+  if(stored === 'accepted'){
+    gtagConsent('update', {'ad_storage':'granted','analytics_storage':'granted','ad_user_data':'granted','ad_personalization':'granted'});
+  } else if(stored !== 'rejected'){
+    if(banner){ banner.classList.add('gs-show'); }
+  }
+  var acceptBtn = document.getElementById('gsCookieAccept');
+  var rejectBtn = document.getElementById('gsCookieReject');
+  if(acceptBtn){
+    acceptBtn.addEventListener('click', function(){
+      try { localStorage.setItem(KEY,'accepted'); } catch(e){}
+      gtagConsent('update', {'ad_storage':'granted','analytics_storage':'granted','ad_user_data':'granted','ad_personalization':'granted'});
+      if(banner){ banner.classList.remove('gs-show'); }
+    });
+  }
+  if(rejectBtn){
+    rejectBtn.addEventListener('click', function(){
+      try { localStorage.setItem(KEY,'rejected'); } catch(e){}
+      if(banner){ banner.classList.remove('gs-show'); }
+    });
+  }
+})();
+</script>
+
 </body></html>
