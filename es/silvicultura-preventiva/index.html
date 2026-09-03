@@ -257,8 +257,20 @@ img { max-width:100%; height:auto; display:block; }
 }
 .col-block a { color:var(--green); border-bottom:1px solid var(--gold-soft); transition:color 0.2s; }
 .col-block a:hover { color:var(--gold); }
-.step-img { margin-top:28px; }
+.step-img { margin-top:28px; position:relative; }
 .step-img img { width:100%; aspect-ratio:4/3.4; object-fit:cover; border-radius:2px; display:block; }
+.step-img-badge {
+  position:absolute; bottom:18px; left:18px; z-index:2;
+  display:inline-flex; align-items:center; gap:8px;
+  height:34px; padding:0 18px; border-radius:17px;
+  background:var(--green); color:var(--paper);
+  font-family:'Montserrat'; font-weight:700; font-size:12.5px;
+  letter-spacing:0.01em; white-space:nowrap;
+  box-shadow:0 8px 24px rgba(15,15,13,0.25);
+}
+@media (max-width:480px) {
+  .step-img-badge { font-size:11px; height:30px; padding:0 14px; left:12px; bottom:12px; white-space:normal; text-align:center; line-height:1.2; }
+}
 .check-list { list-style:none; }
 .check-list li {
   font-family:'Manrope'; font-size:15px; font-weight:300; color:var(--ink-soft);
@@ -698,7 +710,7 @@ p, li, .faq-body p, .resena-text, .col-block p,
         <li><a href="/es/zonas/">Zonas</a></li>
         <li><a href="/es/sobre-nosotros/">Nosotros</a></li>
         <li><a href="/es/preguntas-frecuentes/">FAQ</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="/es/contacto/">Contacto</a></li>
       </ul>
     </nav>
     <div class="lang-switch">
@@ -794,6 +806,7 @@ p, li, .faq-body p, .resena-text, .col-block p,
         <p>La silvicultura preventiva tiene un objetivo concreto regulado por ley: reducir el riesgo de incendio en zonas forestales o de interfaz urbano-forestal. No es simplemente una limpieza estética: la intervención sigue criterios técnicos específicos de gestión forestal y puede ser necesaria para cumplir con las obligaciones legales del propietario. Si tu finca está en zona forestal o limita con monte, consulta también con nosotros sobre tus obligaciones preventivas.</p>
         <div class="step-img">
           <img src="/img/garden-soluition-equipo-servicio.webp" alt="Equipo de Garden Solution trabajando en un jardín de Mallorca" loading="lazy" width="560" height="480">
+          <span class="step-img-badge">Un equipo completo a tu disposición</span>
         </div>
       </div>
 

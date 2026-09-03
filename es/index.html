@@ -192,7 +192,7 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .header .wrap { display: flex; align-items: center; justify-content: space-between; padding: 20px 32px; }
 .logo { font-family: 'Montserrat'; font-size: 24px; color: var(--green); font-weight: 500; letter-spacing: 0.02em; }
-.logo .it { font-style: italic; color: var(--gold); }
+.logo .it { font-weight:800; color: var(--gold); }
 .nav ul { list-style: none; display: flex; gap: 34px; align-items: center; }
 .nav a { font-family:'Manrope'; font-weight: 400; font-size: 14px; color: var(--ink-soft); letter-spacing: 0.03em; transition: color 0.3s; }
 .nav a:hover { color: var(--green); }
@@ -230,7 +230,7 @@ img { max-width: 100%; height: auto; display: block; }
   margin-bottom: 28px; letter-spacing: -0.01em;
   opacity: 0; animation: fadeUp 1s ease 0.4s forwards;
 }
-.hero h1 .it { font-style: italic; color: var(--gold-soft); }
+.hero h1 .it { font-weight:800; color: var(--gold-soft); }
 .hero-sub {
   font-family: 'Manrope'; font-weight: 300; font-size: clamp(16px, 1.8vw, 20px);
   color: rgba(251,248,242,0.85); max-width: 620px; margin: 0 auto 44px; line-height: 1.7;
@@ -278,7 +278,7 @@ img { max-width: 100%; height: auto; display: block; }
   font-size: clamp(38px, 4.5vw, 62px); line-height: 1.05;
   text-align: center; margin-bottom: 24px;
 }
-.section-title .it { font-style: italic; color: var(--gold); }
+.section-title .it { font-weight:800; color: var(--gold); }
 .section-intro {
   font-family: 'Manrope'; font-size: 17px; font-weight: 300;
   color: var(--ink-soft); text-align: center; max-width: 640px;
@@ -337,7 +337,7 @@ img { max-width: 100%; height: auto; display: block; }
   text-transform: uppercase; color: var(--gold-soft); }
 .zonas-nota {
   text-align: center; margin-top: 50px; font-family: 'Montserrat';
-  font-style: italic; font-size: 20px; color: rgba(251,248,242,0.7);
+  font-weight: 600; font-size: 20px; color: rgba(251,248,242,0.7);
 }
 
 /* ===== PROYECTOS ===== */
@@ -383,7 +383,7 @@ img { max-width: 100%; height: auto; display: block; }
 .nosotros-text p { font-family:'Manrope'; font-weight:300; font-size: 16px;
   color: var(--ink-soft); line-height: 1.75; margin-bottom: 20px; }
 .nosotros-text .firma {
-  font-family: 'Montserrat'; font-style: italic; font-size: 22px;
+  font-family: 'Montserrat'; font-weight: 600; font-size: 22px;
   color: var(--green); margin-top: 30px;
 }
 
@@ -392,7 +392,7 @@ img { max-width: 100%; height: auto; display: block; }
 .resenas-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-bottom: 50px; }
 .resena-card { background: var(--paper); padding: 40px 32px; border-left: 3px solid var(--gold); }
 .resena-stars { color: var(--gold); font-size: 16px; letter-spacing: 4px; margin-bottom: 20px; }
-.resena-text { font-family: 'Montserrat'; font-style: italic; font-size: 19px;
+.resena-text { font-family: 'Montserrat'; font-style: normal; font-size: 19px;
   line-height: 1.6; color: var(--ink); margin-bottom: 24px; }
 .resena-author { font-family:'Manrope'; font-size: 13px; letter-spacing: 0.1em;
   text-transform: uppercase; color: var(--gray-soft); font-weight: 500; }
@@ -424,7 +424,7 @@ img { max-width: 100%; height: auto; display: block; }
   padding: 100px 0; background: var(--green); color: var(--paper); text-align: center;
 }
 .banner-cta h2 { color: var(--paper); font-size: clamp(36px, 4vw, 56px); margin-bottom: 24px; }
-.banner-cta h2 .it { font-style: italic; color: var(--gold-soft); }
+.banner-cta h2 .it { font-weight:800; color: var(--gold-soft); }
 .banner-cta p { font-family:'Manrope'; font-size: 17px; color: rgba(251,248,242,0.8);
   max-width: 560px; margin: 0 auto 40px; }
 .banner-cta .hero-cta { justify-content: center; }
@@ -511,7 +511,7 @@ img { max-width: 100%; height: auto; display: block; }
   font-family: 'Montserrat'; }
 .footer .logo-footer { font-family: 'Montserrat'; font-size: 28px;
   color: var(--paper); margin-bottom: 20px; }
-.footer .logo-footer .it { font-style: italic; color: var(--gold-soft); }
+.footer .logo-footer .it { font-weight:800; color: var(--gold-soft); }
 .footer p, .footer li { font-family:'Manrope'; font-size: 14px; line-height: 1.7; font-weight: 300; }
 .footer ul { list-style: none; }
 .footer ul li { padding: 6px 0; }
@@ -583,7 +583,7 @@ img { max-width: 100%; height: auto; display: block; }
 .cat-header svg { flex-shrink:0; }
 .cat-header span { font-family:'Montserrat'; font-size:22px; font-weight:700; color:var(--green); }
 .cat-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
-.cat-cards.cat-cards-2 { grid-template-columns:repeat(2,1fr); max-width:720px; margin:0 auto; }
+.cat-cards.cat-cards-2 { grid-template-columns:repeat(2,1fr); }
 @media(max-width:968px){ .cat-cards{ grid-template-columns:1fr 1fr; } .cat-cards.cat-cards-2{ grid-template-columns:1fr 1fr; max-width:none; } }
 @media(max-width:640px){ .cat-cards{ grid-template-columns:1fr; } .cat-cards.cat-cards-2{ grid-template-columns:1fr; } }
 
@@ -858,7 +858,7 @@ h1 .it, h2 .it, h3 .it, h4 .it,
         <li><a href="/es/zonas/">Zonas</a></li>
         <li><a href="/es/sobre-nosotros/">Nosotros</a></li>
         <li><a href="#faq">FAQ</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="/es/contacto/">Contacto</a></li>
       </ul>
     </nav>
     <div class="lang-switch">
