@@ -108,7 +108,7 @@ img{max-width:100%;height:auto;display:block;}
 .breadcrumb-inner .current{color:var(--green);font-weight:500;}
 
 /* HERO CON IMAGEN DE FONDO (estructura unificada con el resto de la web) */
-.hero-bg{position:relative;overflow:hidden;min-height:520px;display:flex;align-items:flex-end;background-size:cover;background-position:center;padding:150px 0 70px;}
+.hero-bg{position:relative;overflow:hidden;min-height:480px;display:flex;align-items:flex-end;background-size:cover;background-position:center;padding:150px 0 70px;}
 .hero-bg-overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(15,15,13,0.48) 0%, rgba(15,15,13,0.58) 45%, rgba(15,15,13,0.88) 100%);}
 .hero-bg .wrap{position:relative;z-index:1;width:100%;}
 .hero-bg .breadcrumb-inner{color:rgba(251,248,242,0.9);margin-bottom:26px;text-shadow:0 2px 10px rgba(0,0,0,0.55);}
@@ -117,14 +117,16 @@ img{max-width:100%;height:auto;display:block;}
 .hero-bg .breadcrumb-inner .sep{color:rgba(251,248,242,0.55);}
 .hero-bg .breadcrumb-inner .current{color:var(--gold-soft);}
 .hero-bg .eyebrow{display:inline-flex;align-items:center;background:rgba(15,15,13,0.4);border:1px solid rgba(251,248,242,0.3);padding:9px 20px;border-radius:100px;color:var(--paper);font-weight:700;font-size:11px;letter-spacing:0.25em;text-transform:uppercase;font-family:'Manrope';margin-bottom:24px;}
-.hero-bg h1{color:var(--paper);font-size:clamp(38px,4.8vw,64px);margin-bottom:20px;max-width:760px;text-shadow:0 2px 14px rgba(0,0,0,0.5);}
+.hero-bg h1{color:var(--paper);font-size:clamp(38px,4.8vw,64px);max-width:760px;text-shadow:0 2px 14px rgba(0,0,0,0.5);}
 .hero-bg h1 .it{font-weight:800;color:var(--gold-soft);}
-.hero-bg .firma{font-family:'Montserrat';font-size:18px;font-weight:600;color:rgba(251,248,242,0.9);text-shadow:0 2px 10px rgba(0,0,0,0.5);}
-@media(max-width:640px){ .hero-bg{padding:130px 0 50px;min-height:420px;} }
+@media(max-width:640px){ .hero-bg{padding:130px 0 50px;min-height:380px;} }
 
-/* INTRO (texto bajo el hero) */
-.intro-nosotros{padding:60px 0;background:var(--paper);}
-.intro-nosotros .lead{font-family:'Manrope';font-size:18px;font-weight:300;color:var(--ink-soft);line-height:1.8;max-width:760px;margin:0 auto;text-align:center;}
+/* FILA UNO: párrafo + firma junto a la foto */
+.fila1-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.fila1-text .lead{font-family:'Manrope';font-size:17px;font-weight:300;color:var(--ink-soft);line-height:1.75;margin-bottom:24px;max-width:520px;}
+.fila1-text .firma{font-family:'Montserrat';font-size:20px;font-weight:600;color:var(--green);}
+.fila1-img img{width:100%;aspect-ratio:4/5;object-fit:cover;}
+@media(max-width:968px){ .fila1-grid{grid-template-columns:1fr;gap:50px;} }
 
 /* SECCIONES */
 .section{padding:100px 0;}
@@ -136,15 +138,13 @@ img{max-width:100%;height:auto;display:block;}
 .h2-center .it{font-weight:800; color:var(--gold);}
 .lead-center{font-family:'Manrope';font-size:16px;font-weight:300;color:var(--ink-soft);text-align:center;max-width:620px;margin:0 auto 60px;line-height:1.7;}
 
-/* HISTORIA */
+/* HISTORIA (fila dos): foto + título debajo / texto */
 .historia-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;}
-.historia-text h2{font-size:clamp(28px,3vw,42px);margin-bottom:24px;}
-.historia-text h2 .it{font-weight:800; color:var(--gold);}
+.historia-caption{font-size:clamp(28px,3vw,42px);margin-top:24px;line-height:1.15;}
+.historia-caption .it{font-weight:800;color:var(--gold);}
 .historia-text p{font-family:'Manrope';font-size:16px;font-weight:300;color:var(--ink-soft);line-height:1.8;margin-bottom:20px;}
 .historia-text a{color:var(--green);border-bottom:1px solid var(--gold-soft);}
 .historia-img img{width:100%;aspect-ratio:3/2;object-fit:cover;}
-.historia-caption{font-family:'Montserrat';font-size:20px;color:var(--green);margin-top:18px;text-align:center;}
-.historia-caption .it{font-weight:800;color:var(--gold);}
 
 /* VALORES */
 .valores-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(30,73,52,0.08);}
@@ -207,9 +207,6 @@ img{max-width:100%;height:auto;display:block;}
 
 /* RESPONSIVE */
 @media(max-width:968px){
-  .hero-nosotros .wrap{grid-template-columns:1fr;gap:50px;}
-  .hero-img{order:-1;}
-  .hero-img::after{display:none;}
   .historia-grid{grid-template-columns:1fr;gap:50px;}
   .valores-grid{grid-template-columns:1fr;}
   .counters-grid{grid-template-columns:repeat(2,1fr);}
@@ -222,7 +219,6 @@ img{max-width:100%;height:auto;display:block;}
   .nav ul{display:none;}
   .menu-toggle{display:block;}
   .section{padding:70px 0;}
-  .hero-nosotros{padding:30px 0 70px;}
   .counters-grid{grid-template-columns:1fr 1fr;}
   .footer-grid{grid-template-columns:1fr;gap:40px;}
   .footer-bottom{flex-direction:column;align-items:center;text-align:center;}
@@ -298,7 +294,7 @@ img{max-width:100%;height:auto;display:block;}
   .svcs-grid { grid-template-columns:1fr !important; }
   .two-col { grid-template-columns:1fr !important; gap:40px !important; }
   .hero-local .wrap { grid-template-columns:1fr !important; }
-  .hero-nosotros .wrap { grid-template-columns:1fr !important; }
+  .fila1-grid { grid-template-columns:1fr !important; }
   .contacto-grid { grid-template-columns:1fr !important; }
   .counters-grid { grid-template-columns:1fr !important; }
   .certs-grid { grid-template-columns:1fr !important; }
@@ -500,7 +496,7 @@ p, li, .faq-body p, .resena-text, .col-block p,
 </header>
 
 <!-- HERO CON IMAGEN DE FONDO -->
-<section class="hero-bg" style="background-image:url('/img/Gabriel-y-Eloy.webp');">
+<section class="hero-bg" style="background-image:url('/img/garden-solution-mantenimiento-de-jardines-particulares-1.webp');">
   <div class="hero-bg-overlay"></div>
   <div class="wrap">
     <div class="breadcrumb-inner">
@@ -510,18 +506,30 @@ p, li, .faq-body p, .resena-text, .col-block p,
     </div>
     <div class="eyebrow">Quiénes somos · Mallorca</div>
     <h1>Diez años <span class="it">cuidando jardines</span> como si fueran nuestros</h1>
-    <p class="firma">— Gabriel y Eloy, socios fundadores</p>
   </div>
 </section>
 
-<!-- INTRO -->
-<section class="intro-nosotros">
+<!-- FILA UNO: párrafo + firma junto a la foto -->
+<section class="section bg-white">
   <div class="wrap">
-    <p class="lead">Somos Garden Solution Mallorca, una empresa familiar con más de 10 años cuidando villas, fincas y comunidades por toda la isla. Nuestro equipo propio combina conocimiento técnico y una forma de trabajar cercana que nuestros clientes valoran temporada tras temporada.</p>
+    <div class="fila1-grid">
+      <div class="fila1-text">
+        <p class="lead">Somos Garden Solution Mallorca, una empresa familiar con más de 10 años cuidando villas, fincas y comunidades por toda la isla. Nuestro equipo propio combina conocimiento técnico y una forma de trabajar cercana que nuestros clientes valoran temporada tras temporada.</p>
+        <p class="firma">— Gabriel y Eloy, socios fundadores</p>
+      </div>
+
+      <div class="fila1-img fu">
+        <img
+          src="/img/Gabriel-y-Eloy.webp"
+          alt="Gabriel y Eloy, equipo de Garden Solution Mallorca"
+          loading="lazy" width="600" height="750"
+        >
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- HISTORIA / QUIÉNES SOMOS -->
+<!-- HISTORIA / QUIÉNES SOMOS (fila dos: foto + título debajo / texto) -->
 <section class="section bg-soft">
   <div class="wrap">
     <div class="historia-grid">
@@ -531,11 +539,10 @@ p, li, .faq-body p, .resena-text, .col-block p,
           alt="Equipo de Garden Solution trabajando en jardín de villa en Mallorca"
           loading="lazy" width="600" height="400"
         >
-        <p class="historia-caption">Una empresa <span class="it">de jardín</span> que conoce la isla</p>
+        <h2 class="historia-caption">Un equipo que entiende <span class="it">cada rincón</span> de la isla</h2>
       </div>
 
       <div class="historia-text">
-        <div class="eyebrow-center" style="text-align:left;">Nuestra historia</div>
         <p>Garden Solution nació en Mallorca y en Mallorca ha crecido. Durante más de 10 años hemos aprendido el microclima de cada municipio, las especies que funcionan en cada tipo de suelo y cómo trabajan los jardines de la isla en cada estación. Ese conocimiento no se improvisa.</p>
         <p>Trabajamos con equipo propio en todas las intervenciones —sin subcontratas— lo que nos permite mantener la misma calidad de trabajo en cada visita, en cada poda y en cada proyecto de paisajismo. El equipo que diseña tu jardín es el mismo que lo construye y puede mantenerlo después.</p>
         <p>Nuestra cartera incluye propietarios de villas y fincas en Palma, Llucmajor, Marratxí, Calvià y Alcúdia, además de proyectos realizados en Esporles, Valldemossa y Caimari. Muchos llevan años con nosotros: ese dato dice más sobre cómo trabajamos que cualquier descripción.</p>
