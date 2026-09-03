@@ -95,6 +95,38 @@ img{max-width:100%;height:auto;display:block;}
 .section-title .it{font-weight:700;color:var(--gold);}
 .section-intro{font-family:'Manrope';font-size:17px;font-weight:300;color:var(--ink-soft);text-align:center;max-width:640px;margin:0 auto 70px;line-height:1.7;}
 /* HERO SERVICIOS (texto, sin imagen) */
+/* ===== HERO (unificado con home) ===== */
+.hero-zone {
+  min-height: 88vh; position: relative; display: flex; align-items: center;
+  padding: 150px 0 90px;
+  background: linear-gradient(135deg, #1E4934 0%, #2E6B4D 100%);
+  overflow: hidden; color: var(--paper);
+}
+.hero-zone .hero-video-wrap { position:absolute;top:0;left:0;right:0;bottom:0;overflow:hidden;z-index:0;pointer-events:none; }
+.hero-zone .hero-video-wrap img {
+  position:absolute;top:0;left:0;width:100%;height:100%;
+  object-fit:cover;object-position:center;
+  animation:heroZoneZoom 12s ease-in-out infinite alternate;
+}
+@keyframes heroZoneZoom {
+  from { transform:scale(1); }
+  to   { transform:scale(1.06); }
+}
+.hero-zone .hero-overlay { position:absolute;inset:0;background:linear-gradient(rgba(15,15,13,0.58),rgba(15,15,13,0.72));z-index:1; }
+.hero-zone .wrap { position: relative; z-index: 2; text-align: center; }
+.hero-zone .hero-eyebrow {
+  font-family: 'Manrope'; font-size: 12px; letter-spacing: 0.4em; text-transform: uppercase;
+  color: var(--gold-soft); margin-bottom: 24px;
+}
+.hero-zone h1 {
+  font-size: clamp(38px, 5.5vw, 68px); font-weight: 400 !important; color: var(--paper);
+  margin-bottom: 24px; letter-spacing: -0.01em;
+}
+.hero-zone h1 .it { font-style: italic; color: var(--gold-soft); font-weight: 400 !important; }
+.hero-zone .hero-sub {
+  font-family: 'Manrope'; font-weight: 300; font-size: clamp(16px, 1.8vw, 19px);
+  color: rgba(251,248,242,0.85); max-width: 640px; margin: 0 auto; line-height: 1.7;
+}
 .servicios-hero{padding:120px 0 60px;background:var(--paper-soft);border-bottom:1px solid var(--line-soft);}
 .servicios-hero .eyebrow{font-family:'Manrope';font-size:11px;letter-spacing:0.4em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
 .servicios-hero h1{font-size:clamp(32px,4vw,52px);margin-bottom:16px;}
@@ -264,16 +296,13 @@ img{max-width:100%;height:auto;display:block;}
 
 /* === TIPOGRAFÍA GLOBAL === */
 p, li, .section-intro, .servicio-card p, .info-val,
-.form-field label, .footer p, .footer li, .eu-banner-text p {
-  font-size: 17px;
+.footer p, .footer li, .eu-banner-text p {
+  font-size: 17px !important;
   line-height: 1.75;
 }
-.form-field label { font-size:9px; }
-.info-label { font-size:10px; }
-.footer p, .footer li { font-size:14px; }
-.eu-banner-text p { font-size:13px; }
-.servicio-card p { font-size:14px; }
-.dd-menu a { font-size:13px; }
+.form-field label { font-size:9px !important; }
+.info-label { font-size:10px !important; }
+.dd-menu a { font-size:13px !important; }
 
 </style>
 </head>
@@ -316,13 +345,21 @@ p, li, .section-intro, .servicio-card p, .info-val,
 
 <div class="breadcrumb"><div class="wrap"><div class="breadcrumb-inner"><a href="/es/">Inicio</a><span class="sep">›</span><span class="current">Servicios</span></div></div></div>
 
-<div class="servicios-hero">
-  <div class="wrap">
-    <div class="eyebrow">Qué hacemos · Jardinería en Mallorca</div>
-    <h1>Todos nuestros <span class="it">servicios de jardinería</span> en Mallorca</h1>
-    <p>Del diseño integral al cuidado semanal. Un equipo propio con carnet fitosanitario y carnet de piscinas que se ocupa de todo — mantenimiento, poda, paisajismo, riego, fitosanidad y fincas — para que tú solo tengas que disfrutar del jardín.</p>
+<section class="hero hero-zone">
+  <div class="hero-video-wrap">
+    <picture>
+      <source media="(max-width: 768px)" srcset="/img/banner-mobile.webp">
+      <source media="(min-width: 769px)" srcset="/img/banner-home-garden.webp">
+      <img src="/img/banner-home-garden.webp" alt="Todos nuestros servicios de jardinería en Mallorca — Garden Solution" loading="eager" fetchpriority="high">
+    </picture>
   </div>
-</div>
+  <div class="hero-overlay"></div>
+  <div class="wrap" style="position:relative;z-index:2;">
+    <div class="hero-eyebrow">Qué hacemos · Jardinería en Mallorca</div>
+    <h1>Todos nuestros <span class="it">servicios de jardinería</span> en Mallorca</h1>
+    <p class="hero-sub">Del diseño integral al cuidado semanal. Un equipo propio con carnet fitosanitario y carnet de piscinas que se ocupa de todo — mantenimiento, poda, paisajismo, riego, fitosanidad y fincas — para que tú solo tengas que disfrutar del jardín.</p>
+  </div>
+</section>
 
 <section class="servicios-body">
   <div class="wrap">

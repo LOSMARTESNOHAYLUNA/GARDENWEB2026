@@ -115,6 +115,73 @@ img{max-width:100%;height:auto;display:block;}
 .h2-c .it{font-style:italic;color:var(--gold);}
 .lead-c{font-family:'Manrope';font-size:16px;font-weight:300;color:var(--ink-soft);text-align:center;max-width:620px;margin:0 auto 60px;line-height:1.7;}
 /* HERO LOCAL */
+/* ===== HERO ESTILO SERVICIOS (con foto de home) ===== */
+.hero-bg-zone {
+  position:relative; overflow:hidden;
+  min-height:560px; display:flex; align-items:flex-end;
+  background-size:cover; background-position:center;
+  padding:150px 0 70px;
+}
+.hero-bg-zone .hero-bg-overlay {
+  position:absolute; inset:0;
+  background:linear-gradient(180deg, rgba(15,15,13,0.48) 0%, rgba(15,15,13,0.58) 45%, rgba(15,15,13,0.88) 100%);
+}
+.hero-bg-zone .wrap { position:relative; z-index:1; width:100%; }
+.hero-bg-zone .hero-eyebrow {
+  display:inline-flex; align-items:center;
+  background:rgba(15,15,13,0.4); border:1px solid rgba(251,248,242,0.3);
+  padding:9px 20px; border-radius:100px;
+  color:var(--paper); font-weight:700; font-size:11px; letter-spacing:0.25em;
+  text-transform:uppercase; font-family:'Manrope'; margin-bottom:24px;
+}
+.hero-bg-zone h1 { color:var(--paper); font-size:clamp(36px,4.6vw,58px); margin-bottom:24px; max-width:760px; text-shadow:0 2px 14px rgba(0,0,0,0.5); }
+.hero-bg-zone h1 .it { color:var(--gold-soft); }
+.hero-bg-zone .hero-sub {
+  font-family:'Manrope'; font-weight:300; font-size:17px; color:rgba(251,248,242,0.92);
+  max-width:640px; margin:0 0 32px; line-height:1.7; text-shadow:0 2px 10px rgba(0,0,0,0.4);
+}
+.hero-bg-zone .hero-cta { display:flex; gap:16px; flex-wrap:wrap; margin-bottom:28px; }
+.hero-bg-zone .trust-bar { color:rgba(251,248,242,0.85); }
+.hero-bg-zone .trust-bar .dot { color:var(--gold-soft); }
+@media (max-width:640px) {
+  .hero-bg-zone { padding:130px 0 50px; min-height:460px; }
+}
+
+/* ===== HERO (unificado con home) ===== */
+.hero-zone {
+  min-height: 88vh; position: relative; display: flex; align-items: center;
+  padding: 150px 0 90px;
+  background: linear-gradient(135deg, #1E4934 0%, #2E6B4D 100%);
+  overflow: hidden; color: var(--paper);
+}
+.hero-zone .hero-video-wrap { position:absolute;top:0;left:0;right:0;bottom:0;overflow:hidden;z-index:0;pointer-events:none; }
+.hero-zone .hero-video-wrap img {
+  position:absolute;top:0;left:0;width:100%;height:100%;
+  object-fit:cover;object-position:center;
+  animation:heroZoneZoom 12s ease-in-out infinite alternate;
+}
+@keyframes heroZoneZoom {
+  from { transform:scale(1); }
+  to   { transform:scale(1.06); }
+}
+.hero-zone .hero-overlay { position:absolute;inset:0;background:linear-gradient(rgba(15,15,13,0.58),rgba(15,15,13,0.72));z-index:1; }
+.hero-zone .wrap { position: relative; z-index: 2; text-align: center; }
+.hero-zone .hero-eyebrow {
+  font-family: 'Manrope'; font-size: 12px; letter-spacing: 0.4em; text-transform: uppercase;
+  color: var(--gold-soft); margin-bottom: 24px;
+}
+.hero-zone h1 {
+  font-size: clamp(38px, 5.5vw, 68px); font-weight: 400 !important; color: var(--paper);
+  margin-bottom: 24px; letter-spacing: -0.01em;
+}
+.hero-zone h1 .it { font-style: italic; color: var(--gold-soft); }
+.hero-zone .hero-sub {
+  font-family: 'Manrope'; font-weight: 300; font-size: clamp(16px, 1.8vw, 19px);
+  color: rgba(251,248,242,0.85); max-width: 640px; margin: 0 auto 40px; line-height: 1.7;
+}
+.hero-zone .hero-cta { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 34px; }
+.hero-zone .trust-bar { justify-content: center; color: rgba(251,248,242,0.75); }
+.hero-zone .trust-bar .dot { color: var(--gold-soft); }
 .hero-local{padding:50px 0 90px;background:var(--paper);}
 .hero-local .wrap{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;}
 .hero-text .eyebrow{font-family:'Manrope';font-size:11px;letter-spacing:0.4em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
@@ -133,12 +200,40 @@ img{max-width:100%;height:auto;display:block;}
 .col-block h2 .it{font-style:italic;color:var(--gold);}
 .col-block p{font-family:'Manrope';font-size:15px;font-weight:300;color:var(--ink-soft);line-height:1.8;margin-bottom:16px;}
 .col-block a{color:var(--green);border-bottom:1px solid var(--gold-soft);}
+/* ===== SERVICIOS MÁS SOLICITADOS (cards) ===== */
+.rel-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+.rel-card {
+  background:var(--paper); padding:0;
+  border:1px solid var(--line-soft); position:relative;
+  display:flex; flex-direction:column; overflow:hidden;
+  transition:transform 0.4s, box-shadow 0.4s;
+}
+.rel-card::before {
+  content:''; position:absolute; top:0; left:0; right:0; height:2px;
+  background:var(--gold); transform:scaleX(0); transform-origin:left; transition:transform 0.4s; z-index:2;
+}
+.rel-card:hover::before { transform:scaleX(1); }
+.rel-card:hover { transform:translateY(-4px); box-shadow:0 16px 40px rgba(30,73,52,0.08); }
+.rel-img { aspect-ratio:4/3; overflow:hidden; background:var(--paper-warm); }
+.rel-img img { width:100%; height:100%; object-fit:cover; transition:transform 0.5s ease; }
+.rel-card:hover .rel-img img { transform:scale(1.06); }
+.rel-body { padding:28px 28px 32px; display:flex; flex-direction:column; flex-grow:1; }
+.rel-card h3 { font-size:22px; margin-bottom:12px; }
+.rel-card p { font-family:'Manrope'; font-size:14px; font-weight:300; color:var(--ink-soft); line-height:1.65; flex-grow:1; margin-bottom:22px; }
+.rel-link { font-family:'Manrope'; font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:var(--green); font-weight:600; display:inline-flex; align-items:center; gap:8px; }
+.rel-link::after { content:'→'; transition:transform 0.3s; }
+.rel-card:hover .rel-link::after { transform:translateX(6px); }
+@media (max-width:968px) { .rel-grid { grid-template-columns:repeat(2,1fr); } }
+@media (max-width:640px) { .rel-grid { grid-template-columns:1fr; } }
+
 .check-list{list-style:none;}
 .check-list li{font-family:'Manrope';font-size:14px;font-weight:300;color:var(--ink-soft);line-height:1.65;padding:10px 0;border-bottom:1px solid var(--line-soft);display:flex;gap:12px;align-items:flex-start;}
 .check-list li::before{content:'→';color:var(--gold);flex-shrink:0;margin-top:1px;}
 /* ZONAS */
-.zonas-mini{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px;}
-.zona-mini{font-family:'Manrope';font-size:12px;padding:6px 16px;border:1px solid var(--line);color:var(--gray-soft);letter-spacing:0.05em;}
+.zonas-mini-label{font-family:'Manrope';font-weight:600;font-size:12px;letter-spacing:0.14em;text-transform:uppercase;color:var(--green);margin-top:26px;margin-bottom:12px;}
+.zonas-mini{display:flex;flex-wrap:wrap;gap:10px;margin-top:0;}
+.zona-mini{font-family:'Manrope';font-size:13px;font-weight:600;padding:8px 18px;border:1px solid var(--gold-soft);border-radius:100px;background:rgba(184,149,74,0.08);color:var(--ink-soft);letter-spacing:0.03em;transition:all 0.3s;}
+.zona-mini:hover{background:var(--gold-soft);color:var(--ink);border-color:var(--gold-soft);}
 /* SERVICIOS LOCALES */
 .svcs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:50px;}
 .svc-card{background:var(--paper);border:1px solid var(--line-soft);padding:32px 28px;position:relative;transition:transform 0.3s,box-shadow 0.3s;}
@@ -151,6 +246,36 @@ img{max-width:100%;height:auto;display:block;}
 .svc-link::after{content:'→';transition:transform 0.3s;}
 .svc-card:hover .svc-link::after{transform:translateX(5px);}
 /* GALERÍA */
+/* ===== GALERÍA LIGHTBOX (unificado) ===== */
+.gal-item { cursor:pointer; }
+.gal-zoom-icon {
+  width:52px; height:52px; border-radius:50%;
+  background:rgba(251,248,242,0.92); color:var(--green);
+  display:flex; align-items:center; justify-content:center;
+  transform:scale(0.8); transition:transform 0.35s;
+}
+.gal-item:hover .gal-zoom-icon { transform:scale(1); }
+.lightbox {
+  position:fixed; inset:0; z-index:10000;
+  background:rgba(15,15,13,0.92);
+  display:flex; align-items:center; justify-content:center;
+  padding:40px; opacity:0; visibility:hidden;
+  transition:opacity 0.3s ease;
+}
+.lightbox.open { opacity:1; visibility:visible; }
+.lightbox img { max-width:min(90vw,1100px); max-height:88vh; width:auto; height:auto; object-fit:contain; box-shadow:0 30px 80px rgba(0,0,0,0.5); }
+.lightbox-close {
+  position:absolute; top:24px; right:28px;
+  width:44px; height:44px; border-radius:50%;
+  background:rgba(251,248,242,0.12); border:1px solid rgba(251,248,242,0.3);
+  color:var(--paper); display:flex; align-items:center; justify-content:center;
+  cursor:pointer; transition:background 0.3s;
+}
+.lightbox-close:hover { background:rgba(251,248,242,0.22); }
+@media (max-width:640px) {
+  .lightbox { padding:16px; }
+  .lightbox-close { top:14px; right:14px; }
+}
 .gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
 .gal-item{position:relative;overflow:hidden;aspect-ratio:4/3;background:var(--paper-warm);}
 .gal-item img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s;}
@@ -163,7 +288,7 @@ img{max-width:100%;height:auto;display:block;}
 .faq-item{border-bottom:1px solid var(--line-soft);}
 .faq-item:first-child{border-top:1px solid var(--line-soft);}
 .faq-trigger{width:100%;padding:26px 0;display:flex;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;text-align:left;}
-.faq-trigger h3{font-family:'Montserrat';font-size:21px;font-weight:500;color:var(--green);line-height:1.2;padding-right:20px;}
+.faq-trigger h3{font-family:'Montserrat';font-size:22px;font-weight:500;color:var(--green);line-height:1.2;padding-right:20px;}
 .faq-icon{font-size:26px;color:var(--gold);flex-shrink:0;font-family:'Manrope';font-weight:300;transition:transform 0.3s;line-height:1;}
 .faq-item.open .faq-icon{transform:rotate(45deg);}
 .faq-body{max-height:0;overflow:hidden;transition:max-height 0.4s ease;}
@@ -445,23 +570,18 @@ p, li, .faq-body p, .resena-text, .col-block p,
 .cert-info p, .idioma-card p,
 .proyecto-card-desc, .rel-card p,
 .svc-card p, .info-val, .eu-banner-text p,
-.check-list li, .footer p, .footer li {
+.check-list li, .footer p, .footer li,
+.incluye-card p, .why-item p, .faq-body p,
+.col-block p, .perfil-card p, .form-side .sub {
   font-size: 17px !important;
-  line-height: 1.75;
+  line-height: 1.75 !important;
 }
-.resena-text { font-style: normal !important; }
+.lead, .lead-c, .lead-center {
+  font-weight: 400 !important;
+  line-height: 1.65 !important;
+  max-width: 680px;
+}
 
-.lead, .lead-c, .lead-center,
-.form-field label, .check-list li,
-.historia-text p, .form-info p,
-.art-content p, .legal-content p,
-.perfil-list li, .valor-item p,
-.cert-info p, .idioma-card p,
-.proyecto-card-desc, .rel-card p,
-.svc-card p, .info-val, .eu-banner-text p {
-  font-size: 17px !important;
-  line-height: 1.75;
-}
 .resena-text { font-style: normal !important; }
 
 </style>
@@ -525,27 +645,23 @@ p, li, .faq-body p, .resena-text, .col-block p,
   </div>
 </div>
 
-<section class="hero-local">
+<section class="hero-bg hero-bg-zone" style="background-image:url('/img/banner-home-garden.webp');">
+  <div class="hero-bg-overlay"></div>
   <div class="wrap">
-    <div class="hero-text">
-      <div class="eyebrow">Jardinería en Alcúdia · Norte de Mallorca</div>
-      <h1>Empresa de jardinería <span class="it">en Alcúdia</span></h1>
-      <p class="lead">Alcúdia, en el norte de Mallorca, concentra una gran cantidad de propiedades costeras con palmeras, jardines mediterráneos y propietarios de segunda residencia que necesitan un servicio de jardinería de confianza para cuidar su propiedad todo el año. Atendemos en español, inglés y alemán.</p>
-      <div class="hero-ctas">
+    <div class="hero-eyebrow">Jardinería en Alcúdia · Norte de Mallorca</div>
+    <h1>Empresa de jardinería <span class="it">en Alcúdia</span></h1>
+    <p class="hero-sub">Alcúdia, en el norte de Mallorca, concentra una gran cantidad de propiedades costeras con palmeras, jardines mediterráneos y propietarios de segunda residencia que necesitan un servicio de jardinería de confianza para cuidar su propiedad todo el año. Atendemos en español, inglés y alemán.</p>
+    <div class="hero-cta">
         <a href="#contacto" class="btn btn-gold">Solicitar presupuesto gratuito</a>
         <a href="#servicios" class="btn btn-ghost">Ver servicios</a>
       </div>
-      <div class="trust-bar">
+    <div class="trust-bar">
         <span>Segunda residencia</span>
         <span class="dot">·</span>
         <span>ES · EN · DE</span>
         <span class="dot">·</span>
         <span>Palmeras y jardines costeros</span>
       </div>
-    </div>
-    <div class="hero-img">
-      <img src="/img/hero-palmeras.webp" alt="Poda de palmeras en villa costera de Alcúdia, Mallorca" width="560" height="700" loading="eager" fetchpriority="high">
-    </div>
   </div>
 </section>
 
@@ -557,6 +673,7 @@ p, li, .faq-body p, .resena-text, .col-block p,
         <p>Alcúdia tiene un carácter propio dentro de Mallorca: es el norte de la isla, con su bahía, su puerto deportivo y una alta concentración de propietarios alemanes y británicos. Las propiedades aquí suelen tener jardines con palmeras datileras, buganvillas y plantas mediterráneas resistentes al salitre.</p>
         <p>El picudo rojo es una amenaza real en esta zona de alta densidad de palmeras. Contamos con carnet fitosanitario oficial para aplicar tratamientos de endoterapia preventivos y curativos en palmeras afectadas.</p>
         <p>Para los propietarios de segunda residencia que pasan meses fuera de la isla, el servicio de mantenimiento recurrente en Alcúdia garantiza que la propiedad esté siempre en perfecto estado a su llegada, sin depender de nadie en local.</p>
+        <div class="zonas-mini-label">Barrios que cubrimos en Alcúdia</div>
         <div class="zonas-mini">
           <span class="zona-mini">Alcúdia ciudad</span>
           <span class="zona-mini">Puerto de Alcúdia</span>
@@ -566,16 +683,25 @@ p, li, .faq-body p, .resena-text, .col-block p,
         </div>
       </div>
       <div class="col-block">
-        <h2>Servicios más solicitados <span class="it">en Alcúdia</span></h2>
-        <ul class="check-list">
-          <li><a href="/es/mantenimiento-jardines-particulares/">Mantenimiento recurrente</a> para propietarios de segunda residencia</li>
-          <li><a href="/es/poda-palmeras/">Poda de palmeras</a> —zona de alta densidad de palmeras datileras</li>
-          <li><a href="/es/endoterapia/">Endoterapia y prevención del picudo rojo</a> con carnet fitosanitario</li>
-          <li><a href="/es/riego-automatico/">Riego automático</a> para jardines que se cuidan solos en ausencia del propietario</li>
-          <li><a href="/es/paisajismo-diseno-jardines/">Paisajismo</a> con especies resistentes al ambiente costero</li>
-          <li><a href="/es/poda-arboles-setos/">Poda y mantenimiento</a> de árboles ornamentales</li>
-        </ul>
+        <div class="hero-img">
+          <img src="/img/hero-palmeras.webp" alt="Poda de palmeras en villa costera de Alcúdia, Mallorca" width="560" height="700" loading="lazy">
+        </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-white">
+  <div class="wrap">
+    <div class="eyebrow-c">Servicios más solicitados</div>
+    <h2 class="h2-c">Servicios más solicitados <span class="it">en Alcúdia</span></h2>
+    <div class="rel-grid" style="margin-top:50px;">
+      <a href="/es/mantenimiento-jardines-particulares/" class="rel-card"><div class="rel-img"><img src="/img/garden-solution-mantenimiento-de-jardines-particulares-1.webp" alt="" loading="lazy" width="400" height="280"></div><div class="rel-body"><h3>Mantenimiento recurrente</h3><p>Mantenimiento recurrente para propietarios de segunda residencia.</p><span class="rel-link">Ver servicio</span></div></a>
+      <a href="/es/poda-palmeras/" class="rel-card"><div class="rel-img"><img src="/img/garden-solution-poda-palmeras-hero.webp" alt="" loading="lazy" width="400" height="280"></div><div class="rel-body"><h3>Poda de palmeras</h3><p>Poda de palmeras —zona de alta densidad de palmeras datileras.</p><span class="rel-link">Ver servicio</span></div></a>
+      <a href="/es/endoterapia/" class="rel-card"><div class="rel-img"><img src="/img/garden-solution-endoterapia-hero.webp" alt="" loading="lazy" width="400" height="280"></div><div class="rel-body"><h3>Endoterapia y prevención del picudo rojo</h3><p>Endoterapia y prevención del picudo rojo con carnet fitosanitario.</p><span class="rel-link">Ver servicio</span></div></a>
+      <a href="/es/riego-automatico/" class="rel-card"><div class="rel-img"><img src="/img/garden-solution-riego-automatico-hero.webp" alt="" loading="lazy" width="400" height="280"></div><div class="rel-body"><h3>Riego automático</h3><p>Riego automático para jardines que se cuidan solos en ausencia del propietario.</p><span class="rel-link">Ver servicio</span></div></a>
+      <a href="/es/paisajismo-diseno-jardines/" class="rel-card"><div class="rel-img"><img src="/img/garden-solution-paisajismo-hero.webp" alt="" loading="lazy" width="400" height="280"></div><div class="rel-body"><h3>Paisajismo</h3><p>Paisajismo con especies resistentes al ambiente costero.</p><span class="rel-link">Ver servicio</span></div></a>
+      <a href="/es/poda-arboles-setos/" class="rel-card"><div class="rel-img"><img src="/img/garden-solution-arboles-cetos-hero.webp" alt="" loading="lazy" width="400" height="280"></div><div class="rel-body"><h3>Poda y mantenimiento</h3><p>Poda y mantenimiento de árboles ornamentales.</p><span class="rel-link">Ver servicio</span></div></a>
     </div>
   </div>
 </section>
@@ -585,9 +711,9 @@ p, li, .faq-body p, .resena-text, .col-block p,
     <div class="eyebrow-c">Proyectos en Alcúdia</div>
     <h2 class="h2-c">Trabajos realizados <span class="it">en Alcúdia</span></h2>
     <div class="gal-grid" style="margin-top:50px;">
-      <div class="gal-item"><img src="/img/palmera-1.webp" alt="Poda de palmera datilera en villa de Alcúdia, Mallorca" loading="lazy" width="480" height="360"><div class="gal-overlay"><span class="gal-label">Palmera · Alcúdia</span></div></div>
-      <div class="gal-item"><img src="/img/proyecto-paisajismo-sometimes-2.webp" alt="Jardín mediterráneo en villa costera de Alcúdia" loading="lazy" width="480" height="360"><div class="gal-overlay"><span class="gal-label">Villa costera · Alcúdia</span></div></div>
-      <div class="gal-item"><img src="/img/endoterapia-palmera.webp" alt="Tratamiento de endoterapia en palmera de Alcúdia, Mallorca" loading="lazy" width="480" height="360"><div class="gal-overlay"><span class="gal-label">Endoterapia · Alcúdia</span></div></div>
+      <div class="gal-item" data-full="/img/palmera-1.webp"><img src="/img/palmera-1.webp" alt="Poda de palmera datilera en villa de Alcúdia, Mallorca" loading="lazy" width="480" height="360"><div class="gal-overlay"><span class="gal-zoom-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span></div></div>
+      <div class="gal-item" data-full="/img/proyecto-paisajismo-sometimes-2.webp"><img src="/img/proyecto-paisajismo-sometimes-2.webp" alt="Jardín mediterráneo en villa costera de Alcúdia" loading="lazy" width="480" height="360"><div class="gal-overlay"><span class="gal-zoom-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span></div></div>
+      <div class="gal-item" data-full="/img/endoterapia-palmera.webp"><img src="/img/endoterapia-palmera.webp" alt="Tratamiento de endoterapia en palmera de Alcúdia, Mallorca" loading="lazy" width="480" height="360"><div class="gal-overlay"><span class="gal-zoom-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span></div></div>
     </div>
   </div>
 </section>
@@ -877,6 +1003,42 @@ window.addEventListener('scroll',()=>{hdr.style.boxShadow=window.scrollY>20?'0 4
       if(banner){ banner.classList.remove('gs-show'); }
     });
   }
+})();
+</script>
+
+
+<!-- LIGHTBOX GALERÍA -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <img src="" alt="" id="lightboxImg">
+</div>
+<script>
+/* Lightbox: click en foto de galería para agrandar */
+(function(){
+  var lb = document.getElementById('lightbox');
+  var lbImg = document.getElementById('lightboxImg');
+  var lbClose = document.getElementById('lightboxClose');
+  if(!lb || !lbImg) return;
+  function openLightbox(src){
+    lbImg.src = src;
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox(){
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  document.querySelectorAll('.gal-item').forEach(function(item){
+    item.addEventListener('click', function(){
+      var full = item.getAttribute('data-full') || item.querySelector('img').src;
+      openLightbox(full);
+    });
+  });
+  lbClose.addEventListener('click', closeLightbox);
+  lb.addEventListener('click', function(e){ if(e.target === lb) closeLightbox(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeLightbox(); });
 })();
 </script>
 

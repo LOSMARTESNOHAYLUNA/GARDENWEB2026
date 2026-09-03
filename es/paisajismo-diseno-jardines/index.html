@@ -408,10 +408,11 @@ a.zona-tag:hover .zona-icon svg { stroke:var(--paper) !important; }
 .gal-item:hover img { transform:scale(1.06); }
 .gal-step-num {
   position:absolute; top:12px; left:12px; z-index:2;
-  width:30px; height:30px; border-radius:50%;
+  height:30px; padding:0 14px; border-radius:15px;
   background:var(--green); color:var(--paper);
   display:flex; align-items:center; justify-content:center;
-  font-family:'Montserrat'; font-weight:700; font-size:13px;
+  font-family:'Montserrat'; font-weight:700; font-size:12px;
+  letter-spacing:0.02em; white-space:nowrap;
 }
 .gal-overlay {
   position:absolute; inset:0;
@@ -503,17 +504,21 @@ a.zona-tag:hover { border-color:var(--green); color:var(--green); background:rgb
 .relacionados { background:var(--paper); }
 .rel-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
 .rel-card {
-  background:var(--paper-soft); padding:40px 32px;
+  background:var(--paper-soft); padding:0;
   border:1px solid var(--line-soft); position:relative;
-  display:flex; flex-direction:column;
+  display:flex; flex-direction:column; overflow:hidden;
   transition:transform 0.4s, box-shadow 0.4s;
 }
 .rel-card::before {
   content:''; position:absolute; top:0; left:0; right:0; height:2px;
-  background:var(--gold); transform:scaleX(0); transform-origin:left; transition:transform 0.4s;
+  background:var(--gold); transform:scaleX(0); transform-origin:left; transition:transform 0.4s; z-index:2;
 }
 .rel-card:hover::before { transform:scaleX(1); }
 .rel-card:hover { transform:translateY(-4px); box-shadow:0 16px 40px rgba(30,73,52,0.08); }
+.rel-img { aspect-ratio:4/3; overflow:hidden; background:var(--paper-warm); }
+.rel-img img { width:100%; height:100%; object-fit:cover; transition:transform 0.5s ease; }
+.rel-card:hover .rel-img img { transform:scale(1.06); }
+.rel-body { padding:28px 28px 32px; display:flex; flex-direction:column; flex-grow:1; }
 .rel-card h3 { font-size:24px; margin-bottom:12px; }
 .rel-card p { font-family:'Manrope'; font-size:14px; font-weight:300; color:var(--ink-soft); line-height:1.65; flex-grow:1; margin-bottom:22px; }
 .rel-link { font-family:'Manrope'; font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:var(--green); font-weight:600; display:inline-flex; align-items:center; gap:8px; }
@@ -741,19 +746,17 @@ p, li, .faq-body p, .resena-text, .col-block p,
 .lead, .lead-c, .lead-center,
 .perfil-card p, .dossier-desc, .rel-card p,
 .info-val, .eu-banner-text p,
-.check-list li, .footer p, .footer li {
+.check-list li, .footer p, .footer li,
+.incluye-card p, .why-item p, .form-side .sub {
   font-size: 17px !important;
-  line-height: 1.75;
+  line-height: 1.75 !important;
+}
+.lead, .lead-c, .lead-center {
+  font-weight: 400 !important;
+  line-height: 1.65 !important;
+  max-width: 680px;
 }
 .resena-text { font-style: normal !important; }
-
-.lead, .lead-c, .lead-center,
-.check-list li,
-.perfil-card p, .dossier-desc, .rel-card p,
-.info-val, .eu-banner-text p {
-  font-size: 17px !important;
-  line-height: 1.75;
-}
 
 </style>
 </head>
@@ -982,62 +985,62 @@ p, li, .faq-body p, .resena-text, .col-block p,
     <div class="gal-grid gal-grid-steps">
       <div class="gal-item" data-full="/img/galeria-garden-solution-paisajismo-diseno-jardines1.webp">
         <img src="/img/galeria-garden-solution-paisajismo-diseno-jardines1.webp" alt="" loading="lazy" width="560" height="420">
-        <span class="gal-step-num">1</span>
+        <span class="gal-step-num">Día 1</span>
         <div class="gal-overlay"><span class="gal-zoom-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span></div>
       </div>
       <div class="gal-item" data-full="/img/galeria-garden-solution-paisajismo-diseno-jardines2.webp">
         <img src="/img/galeria-garden-solution-paisajismo-diseno-jardines2.webp" alt="" loading="lazy" width="560" height="420">
-        <span class="gal-step-num">2</span>
+        <span class="gal-step-num">Día 1</span>
         <div class="gal-overlay"><span class="gal-zoom-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span></div>
       </div>
       <div class="gal-item" data-full="/img/galeria-garden-solution-paisajismo-diseno-jardines3.webp">
         <img src="/img/galeria-garden-solution-paisajismo-diseno-jardines3.webp" alt="" loading="lazy" width="560" height="420">
-        <span class="gal-step-num">3</span>
+        <span class="gal-step-num">Día 1</span>
         <div class="gal-overlay"><span class="gal-zoom-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span></div>
       </div>
       <div class="gal-item" data-full="/img/galeria-garden-solution-paisajismo-diseno-jardines4.webp">
         <img src="/img/galeria-garden-solution-paisajismo-diseno-jardines4.webp" alt="" loading="lazy" width="560" height="420">
-        <span class="gal-step-num">4</span>
+        <span class="gal-step-num">Día 2</span>
         <div class="gal-overlay"><span class="gal-zoom-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span></div>
       </div>
       <div class="gal-item" data-full="/img/galeria-garden-solution-paisajismo-diseno-jardines5.webp">
         <img src="/img/galeria-garden-solution-paisajismo-diseno-jardines5.webp" alt="" loading="lazy" width="560" height="420">
-        <span class="gal-step-num">5</span>
+        <span class="gal-step-num">Día 2</span>
         <div class="gal-overlay"><span class="gal-zoom-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span></div>
       </div>
       <div class="gal-item" data-full="/img/galeria-garden-solution-paisajismo-diseno-jardines6.webp">
         <img src="/img/galeria-garden-solution-paisajismo-diseno-jardines6.webp" alt="" loading="lazy" width="560" height="420">
-        <span class="gal-step-num">6</span>
+        <span class="gal-step-num">Día 2</span>
         <div class="gal-overlay"><span class="gal-zoom-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span></div>
       </div>
       <div class="gal-item" data-full="/img/galeria-garden-solution-paisajismo-diseno-jardines7.webp">
         <img src="/img/galeria-garden-solution-paisajismo-diseno-jardines7.webp" alt="" loading="lazy" width="560" height="420">
-        <span class="gal-step-num">7</span>
+        <span class="gal-step-num">Día 3</span>
         <div class="gal-overlay"><span class="gal-zoom-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span></div>
       </div>
       <div class="gal-item" data-full="/img/galeria-garden-solution-paisajismo-diseno-jardines8.webp">
         <img src="/img/galeria-garden-solution-paisajismo-diseno-jardines8.webp" alt="" loading="lazy" width="560" height="420">
-        <span class="gal-step-num">8</span>
+        <span class="gal-step-num">Día 3</span>
         <div class="gal-overlay"><span class="gal-zoom-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span></div>
       </div>
       <div class="gal-item" data-full="/img/galeria-garden-solution-paisajismo-diseno-jardines9.webp">
         <img src="/img/galeria-garden-solution-paisajismo-diseno-jardines9.webp" alt="" loading="lazy" width="560" height="420">
-        <span class="gal-step-num">9</span>
+        <span class="gal-step-num">Día 3</span>
         <div class="gal-overlay"><span class="gal-zoom-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span></div>
       </div>
       <div class="gal-item" data-full="/img/galeria-garden-solution-paisajismo-diseno-jardines10.webp">
         <img src="/img/galeria-garden-solution-paisajismo-diseno-jardines10.webp" alt="" loading="lazy" width="560" height="420">
-        <span class="gal-step-num">10</span>
+        <span class="gal-step-num">Día 4</span>
         <div class="gal-overlay"><span class="gal-zoom-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span></div>
       </div>
       <div class="gal-item" data-full="/img/galeria-garden-solution-paisajismo-diseno-jardines11.webp">
         <img src="/img/galeria-garden-solution-paisajismo-diseno-jardines11.webp" alt="" loading="lazy" width="560" height="420">
-        <span class="gal-step-num">11</span>
+        <span class="gal-step-num">Día 4</span>
         <div class="gal-overlay"><span class="gal-zoom-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span></div>
       </div>
       <div class="gal-item" data-full="/img/galeria-garden-solution-paisajismo-diseno-jardines12.webp">
         <img src="/img/galeria-garden-solution-paisajismo-diseno-jardines12.webp" alt="" loading="lazy" width="560" height="420">
-        <span class="gal-step-num">12</span>
+        <span class="gal-step-num">Día 4</span>
         <div class="gal-overlay"><span class="gal-zoom-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span></div>
       </div>
     </div>
@@ -1129,24 +1132,9 @@ p, li, .faq-body p, .resena-text, .col-block p,
     <h2 class="h2-center">Servicios <span class="it">complementarios</span></h2>
 
     <div class="rel-grid">
-      <a href="/es/mantenimiento-jardines-particulares/" class="rel-card">
-        <span class="rel-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg></span>
-        <h3>Mantenimiento de jardines</h3>
-        <p>Cuidado periódico para que el jardín diseñado conserve siempre su mejor estado. Visitas programadas con el mismo equipo que lo construyó.</p>
-        <span class="rel-link">Ver servicio</span>
-      </a>
-      <a href="/es/riego-automatico/" class="rel-card">
-        <span class="rel-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69s-5 5.36-5 9.19a5 5 0 0 0 10 0c0-3.83-5-9.19-5-9.19Z"/></svg></span>
-        <h3>Riego automático</h3>
-        <p>Instalación de sistemas de riego eficientes, integrados desde el diseño del jardín o incorporados a espacios ya existentes.</p>
-        <span class="rel-link">Ver servicio</span>
-      </a>
-      <a href="/es/poda-arboles-setos/" class="rel-card">
-        <span class="rel-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg></span>
-        <h3>Poda de árboles y setos</h3>
-        <p>Poda profesional de árboles, arbustos y setos para mantener la forma, salud y estética del jardín a lo largo del año.</p>
-        <span class="rel-link">Ver servicio</span>
-      </a>
+      <a href="/es/mantenimiento-jardines-particulares/" class="rel-card"><div class="rel-img"><img src="/img/garden-solution-mantenimiento-de-jardines-particulares-1.webp" alt="" loading="lazy" width="400" height="280"></div><div class="rel-body"><h3>Mantenimiento de jardines</h3><p>Cuidado periódico para que el jardín diseñado conserve siempre su mejor estado. Visitas programadas con el mismo equipo que lo construyó.</p><span class="rel-link">Ver servicio</span></div></a>
+      <a href="/es/riego-automatico/" class="rel-card"><div class="rel-img"><img src="/img/garden-solution-riego-automatico-hero.webp" alt="" loading="lazy" width="400" height="280"></div><div class="rel-body"><h3>Riego automático</h3><p>Instalación de sistemas de riego eficientes, integrados desde el diseño del jardín o incorporados a espacios ya existentes.</p><span class="rel-link">Ver servicio</span></div></a>
+      <a href="/es/poda-arboles-setos/" class="rel-card"><div class="rel-img"><img src="/img/garden-solution-arboles-cetos-hero.webp" alt="" loading="lazy" width="400" height="280"></div><div class="rel-body"><h3>Poda de árboles y setos</h3><p>Poda profesional de árboles, arbustos y setos para mantener la forma, salud y estética del jardín a lo largo del año.</p><span class="rel-link">Ver servicio</span></div></a>
     </div>
   </div>
 </section>
