@@ -347,6 +347,17 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://mallorcagardensolution.com/es/zonas/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/zonas/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://mallorcagardensolution.com/img/garden-solution-mantenimiento-de-jardines-particulares-1.webp</image:loc>
+      <image:caption>Cobertura en toda Mallorca</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://mallorcagardensolution.com/en/contact/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/contacto/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/contact/"/>
