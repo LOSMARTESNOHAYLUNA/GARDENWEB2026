@@ -60,6 +60,31 @@ img{max-width:100%;display:block;}
 .nav ul{list-style:none;display:flex;gap:34px;align-items:center;}
 .nav a{font-family:'Manrope';font-weight:400;font-size:14px;color:var(--ink-soft);letter-spacing:0.03em;transition:color 0.3s;}
 .nav a:hover{color:var(--green);}
+
+/* === MEGA MENÚ SERVICIOS === */
+.has-dd { position:static; }
+.has-dd > a::after { content:' ▾'; font-size:10px; opacity:0.6; }
+.dd-menu {
+  position:fixed; left:0; right:0; top:64px;
+  width:100%; display:flex; justify-content:center;
+  background:var(--paper);
+  border-top:1px solid var(--line-soft);
+  border-bottom:1px solid var(--line-soft);
+  box-shadow:0 16px 48px rgba(15,15,13,0.10);
+  z-index:9999; opacity:0; pointer-events:none;
+  transition:opacity 0.2s ease, transform 0.2s ease;
+  transform:translateY(-8px);
+}
+.dd-menu.dd-open {
+  opacity:1; pointer-events:all; transform:translateY(0);
+}
+.dd-inner { display:grid; grid-template-columns:repeat(5,190px); padding:28px 0; }
+.dd-col { padding:0 20px; border-right:1px solid var(--line-soft); }
+.dd-col:last-child { border-right:none; }
+.dd-label { font-family:'Manrope'; font-size:9px; letter-spacing:0.25em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; font-weight:600; display:block; padding-bottom:8px; border-bottom:1px solid var(--line-soft); }
+.dd-menu a { display:block; font-family:'Manrope'; font-size:13px; font-weight:300; color:var(--ink-soft); padding:5px 0; transition:color 0.2s; text-decoration:none !important; border-bottom:none !important; }
+.dd-menu a:hover { color:var(--green); }
+@media(max-width:968px){ .dd-menu{ display:none !important; } }
 .lang-switch{display:flex;gap:8px;font-family:'Manrope';font-size:12px;letter-spacing:0.15em;text-transform:uppercase;}
 .lang-switch a{color:var(--gray-soft);padding:4px 8px;}
 .lang-switch a.active{color:var(--green);font-weight:600;}
@@ -83,7 +108,7 @@ img{max-width:100%;display:block;}
 .page-hero h1 .it{font-weight:800; color:var(--gold-soft);}
 .page-hero .lead{font-family:'Manrope';font-size:16px;font-weight:300;color:rgba(251,248,242,0.9);max-width:640px;line-height:1.75;}
 @media(max-width:640px){ .page-hero{padding:130px 0 40px;min-height:360px;} }
-.form-section{padding:20px 0 70px;}
+.form-section{padding:90px 0 70px;}
 .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start;}
 .form-info h2{font-size:clamp(26px,3vw,36px);margin-bottom:18px;}
 .form-info h2 .it{font-weight:800; color:var(--gold);}
@@ -96,7 +121,7 @@ img{max-width:100%;display:block;}
 .contact-address{display:flex;align-items:flex-start;gap:14px;padding:20px 0 4px;border-top:1px solid var(--line-soft);margin-top:4px;}
 .contact-address .contact-icon{margin-top:2px;}
 .contact-address span{font-family:'Manrope';font-size:15px;color:var(--ink-soft);line-height:1.65;}
-.zonas-parrafo{font-family:'Manrope';font-size:15px;font-weight:300;color:var(--ink-soft);line-height:1.75;margin-top:26px;}
+.zonas-parrafo{font-family:'Manrope';font-size:15px;font-weight:300;color:var(--ink-soft);line-height:1.75;margin:16px 0 26px;}
 .form-wrap{background:var(--paper-soft);padding:44px;border:1px solid var(--line-soft);}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
 .form-field{display:flex;flex-direction:column;}
@@ -137,6 +162,8 @@ img{max-width:100%;display:block;}
   .nav ul li{border-bottom:1px solid var(--line-soft);}
   .nav ul li:last-child{border-bottom:none;}
   .nav a{padding:14px 0;display:block;font-size:16px;}
+  .has-dd > a::after{display:none;}
+  .dd-inner{display:none !important;}
   .menu-toggle{display:block !important;}
   .form-grid{grid-template-columns:1fr !important;gap:40px;}
   .footer-grid{grid-template-columns:1fr !important;gap:24px;}
@@ -179,9 +206,44 @@ p, li, .footer p, .footer li, .eu-banner-text p,
   <div class="wrap">
     <a href="/es/" class="logo">Garden <span class="it">Solution</span></a>
     <nav class="nav"><ul>
-      <li><a href="/es/servicios/">Servicios</a></li>
+      <li class="has-dd">
+        <a href="/es/servicios/">Servicios</a>
+        <div class="dd-menu"><div class="dd-inner">
+          <div class="dd-col">
+            <span class="dd-label">Mantenimiento</span>
+            <a href="/es/mantenimiento-jardines-particulares/">Jardines particulares</a>
+            <a href="/es/mantenimiento-comunidades/">Comunidades</a>
+            <a href="/es/mantenimiento-piscinas/">Piscinas</a>
+          </div>
+          <div class="dd-col">
+            <span class="dd-label">Poda</span>
+            <a href="/es/poda-arboles-setos/">Árboles y setos</a>
+            <a href="/es/poda-palmeras/">Palmeras</a>
+            <a href="/es/poda-en-altura/">En altura</a>
+          </div>
+          <div class="dd-col">
+            <span class="dd-label">Diseño e instalación</span>
+            <a href="/es/paisajismo-diseno-jardines/">Paisajismo</a>
+            <a href="/es/riego-automatico/">Riego automático</a>
+            <a href="/es/cesped-artificial/">Césped artificial</a>
+            <a href="/es/cesped-natural/">Césped natural</a>
+          </div>
+          <div class="dd-col">
+            <span class="dd-label">Fitosanidad</span>
+            <a href="/es/endoterapia/">Endoterapia</a>
+            <a href="/es/picudo-rojo/">Picudo rojo</a>
+            <a href="/es/controles-fitosanitarios/">Controles fitosanitarios</a>
+          </div>
+          <div class="dd-col">
+            <span class="dd-label">Fincas</span>
+            <a href="/es/limpieza-fincas/">Limpieza de fincas</a>
+            <a href="/es/silvicultura-preventiva/">Silvicultura preventiva</a>
+          </div>
+        </div></div>
+      </li>
       <li><a href="/es/zonas/">Zonas</a></li>
       <li><a href="/es/sobre-nosotros/">Nosotros</a></li>
+      <li><a href="/es/preguntas-frecuentes/">FAQ</a></li>
       <li><a href="/es/contacto/">Contacto</a></li>
     </ul></nav>
     <div class="lang-switch">
@@ -211,6 +273,8 @@ p, li, .footer p, .footer li, .eu-banner-text p,
     <div class="form-grid">
       <div class="form-info">
         <h2>Nuestros <span class="it">datos de contacto</span></h2>
+
+        <p class="zonas-parrafo">Trabajamos en toda Mallorca. Zonas principales: Palma, Calvià, Alcúdia, Llucmajor y Marratxí. También en Esporles, Valldemossa y Caimari. Si tu propiedad está en otro municipio, consúltanos.</p>
 
         <div class="contact-details">
           <div class="contact-row">
@@ -243,8 +307,6 @@ p, li, .footer p, .footer li, .eu-banner-text p,
           <span class="contact-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
           <span>Camí de Jesús, nº 44, Naves M/25, Local 3<br>07011 Palma · Illes Balears · España</span>
         </div>
-
-        <p class="zonas-parrafo">Trabajamos en toda Mallorca. Zonas principales: Palma, Calvià, Alcúdia, Llucmajor y Marratxí. También en Esporles, Valldemossa y Caimari. Si tu propiedad está en otro municipio, consúltanos.</p>
       </div>
 
       <div class="form-wrap">
@@ -404,6 +466,22 @@ window.addEventListener('scroll',()=>{hdr.style.boxShadow=window.scrollY>20?'0 4
   if(!toggle||!nav)return;
   toggle.addEventListener('click',function(e){e.stopPropagation();var open=nav.classList.toggle('open');toggle.textContent=open?'✕':'☰';});
   document.addEventListener('click',function(e){if(nav.classList.contains('open')&&!nav.contains(e.target)&&!toggle.contains(e.target)){nav.classList.remove('open');toggle.textContent='☰';}});
+})();
+</script>
+<script>
+/* Mega menú — hover con retardo para que no desaparezca al mover el ratón */
+(function(){
+  var t, tr = document.querySelector('.has-dd'), m = document.querySelector('.dd-menu');
+  if(!tr || !m) return;
+  function show(){ clearTimeout(t); m.classList.add('dd-open'); }
+  function hide(ms){ t = setTimeout(function(){ m.classList.remove('dd-open'); }, ms); }
+  tr.addEventListener('mouseenter', show);
+  tr.addEventListener('mouseleave', function(){ hide(350); });
+  m.addEventListener('mouseenter', show);
+  m.addEventListener('mouseleave', function(){ hide(150); });
+  document.addEventListener('click', function(e){
+    if(!tr.contains(e.target) && !m.contains(e.target)) m.classList.remove('dd-open');
+  });
 })();
 </script>
 <script>

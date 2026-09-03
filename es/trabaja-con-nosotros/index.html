@@ -55,20 +55,52 @@ img{max-width:100%;display:block;}
 .nav ul{list-style:none;display:flex;gap:34px;align-items:center;}
 .nav a{font-family:'Manrope';font-weight:400;font-size:14px;color:var(--ink-soft);letter-spacing:0.03em;transition:color 0.3s;}
 .nav a:hover{color:var(--green);}
+/* === MEGA MENÚ SERVICIOS === */
+.has-dd { position:static; }
+.has-dd > a::after { content:' ▾'; font-size:10px; opacity:0.6; }
+.dd-menu {
+  position:fixed; left:0; right:0; top:64px;
+  width:100%; display:flex; justify-content:center;
+  background:var(--paper);
+  border-top:1px solid var(--line-soft);
+  border-bottom:1px solid var(--line-soft);
+  box-shadow:0 16px 48px rgba(15,15,13,0.10);
+  z-index:9999; opacity:0; pointer-events:none;
+  transition:opacity 0.2s ease, transform 0.2s ease;
+  transform:translateY(-8px);
+}
+.dd-menu.dd-open {
+  opacity:1; pointer-events:all; transform:translateY(0);
+}
+.dd-inner { display:grid; grid-template-columns:repeat(5,190px); padding:28px 0; }
+.dd-col { padding:0 20px; border-right:1px solid var(--line-soft); }
+.dd-col:last-child { border-right:none; }
+.dd-label { font-family:'Manrope'; font-size:9px; letter-spacing:0.25em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; font-weight:600; display:block; padding-bottom:8px; border-bottom:1px solid var(--line-soft); }
+.dd-menu a { display:block; font-family:'Manrope'; font-size:13px; font-weight:300; color:var(--ink-soft); padding:5px 0; transition:color 0.2s; text-decoration:none !important; border-bottom:none !important; }
+.dd-menu a:hover { color:var(--green); }
+@media(max-width:968px){ .dd-menu{ display:none !important; } }
+
 .lang-switch{display:flex;gap:8px;font-family:'Manrope';font-size:12px;letter-spacing:0.15em;text-transform:uppercase;}
 .lang-switch a{color:var(--gray-soft);padding:4px 8px;}
 .lang-switch a.active{color:var(--green);font-weight:600;}
 .menu-toggle{display:none;background:none;border:none;cursor:pointer;font-size:24px;color:var(--green);}
-.breadcrumb{padding:100px 0 0;}
 .breadcrumb-inner{font-family:'Manrope';font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--gray-soft);display:flex;gap:8px;align-items:center;}
 .breadcrumb-inner a:hover{color:var(--green);}
 .breadcrumb-inner .sep{color:var(--line);}
 .breadcrumb-inner .current{color:var(--green);font-weight:500;}
-.page-hero{padding:50px 0 80px;}
-.page-hero .eyebrow{font-family:'Manrope';font-size:11px;letter-spacing:0.4em;text-transform:uppercase;color:var(--gold);margin-bottom:16px;}
-.page-hero h1{font-size:clamp(36px,4.5vw,60px);margin-bottom:20px;}
-.page-hero h1 .it{font-weight:800; color:var(--gold);}
-.page-hero .lead{font-family:'Manrope';font-size:17px;font-weight:300;color:var(--ink-soft);max-width:600px;line-height:1.75;}
+.page-hero{position:relative;overflow:hidden;min-height:420px;display:flex;align-items:flex-end;background-image:url('/img/banner-home-garden.webp');background-size:cover;background-position:center;padding:150px 0 60px;}
+.page-hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(15,15,13,0.48) 0%, rgba(15,15,13,0.58) 45%, rgba(15,15,13,0.88) 100%);}
+.page-hero .wrap{position:relative;z-index:1;width:100%;}
+.page-hero .breadcrumb-inner{color:rgba(251,248,242,0.9);margin-bottom:24px;text-shadow:0 2px 10px rgba(0,0,0,0.55);}
+.page-hero .breadcrumb-inner a{color:rgba(251,248,242,0.9);}
+.page-hero .breadcrumb-inner a:hover{color:var(--gold-soft);}
+.page-hero .breadcrumb-inner .sep{color:rgba(251,248,242,0.55);}
+.page-hero .breadcrumb-inner .current{color:var(--gold-soft);}
+.page-hero .eyebrow{display:inline-flex;align-items:center;background:rgba(15,15,13,0.4);border:1px solid rgba(251,248,242,0.3);padding:9px 20px;border-radius:100px;color:var(--paper);font-weight:700;font-size:11px;letter-spacing:0.25em;text-transform:uppercase;font-family:'Manrope';margin-bottom:20px;}
+.page-hero h1{color:var(--paper);font-size:clamp(36px,4.5vw,60px);margin-bottom:16px;text-shadow:0 2px 14px rgba(0,0,0,0.5);}
+.page-hero h1 .it{font-weight:800; color:var(--gold-soft);}
+.page-hero .lead{font-family:'Manrope';font-size:16px;font-weight:300;color:rgba(251,248,242,0.9);max-width:640px;line-height:1.75;}
+@media(max-width:640px){ .page-hero{padding:130px 0 40px;min-height:360px;} }
 .valores-row{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding:60px 0 80px;background:var(--paper-soft);}
 .valor-wrap{background:var(--paper-soft);}
 .valor-item{padding:32px 28px;background:var(--paper);border:1px solid var(--line-soft);}
@@ -124,6 +156,8 @@ img{max-width:100%;display:block;}
   .nav ul li{border-bottom:1px solid var(--line-soft);}
   .nav ul li:last-child{border-bottom:none;}
   .nav a{padding:14px 0;display:block;font-size:16px;}
+  .has-dd > a::after{display:none;}
+  .dd-inner{display:none !important;}
   .menu-toggle{display:block !important;}
   .valores-row{grid-template-columns:1fr !important;}
   .form-grid{grid-template-columns:1fr !important;gap:40px;}
@@ -241,7 +275,41 @@ p, li, .faq-body p, .resena-text, .col-block p,
   <div class="wrap">
     <a href="/es/" class="logo">Garden <span class="it">Solution</span></a>
     <nav class="nav"><ul>
-      <li><a href="/es/servicios/">Servicios</a></li>
+      <li class="has-dd">
+        <a href="/es/servicios/">Servicios</a>
+        <div class="dd-menu"><div class="dd-inner">
+          <div class="dd-col">
+            <span class="dd-label">Mantenimiento</span>
+            <a href="/es/mantenimiento-jardines-particulares/">Jardines particulares</a>
+            <a href="/es/mantenimiento-comunidades/">Comunidades</a>
+            <a href="/es/mantenimiento-piscinas/">Piscinas</a>
+          </div>
+          <div class="dd-col">
+            <span class="dd-label">Poda</span>
+            <a href="/es/poda-arboles-setos/">Árboles y setos</a>
+            <a href="/es/poda-palmeras/">Palmeras</a>
+            <a href="/es/poda-en-altura/">En altura</a>
+          </div>
+          <div class="dd-col">
+            <span class="dd-label">Diseño e instalación</span>
+            <a href="/es/paisajismo-diseno-jardines/">Paisajismo</a>
+            <a href="/es/riego-automatico/">Riego automático</a>
+            <a href="/es/cesped-artificial/">Césped artificial</a>
+            <a href="/es/cesped-natural/">Césped natural</a>
+          </div>
+          <div class="dd-col">
+            <span class="dd-label">Fitosanidad</span>
+            <a href="/es/endoterapia/">Endoterapia</a>
+            <a href="/es/picudo-rojo/">Picudo rojo</a>
+            <a href="/es/controles-fitosanitarios/">Controles fitosanitarios</a>
+          </div>
+          <div class="dd-col">
+            <span class="dd-label">Fincas</span>
+            <a href="/es/limpieza-fincas/">Limpieza de fincas</a>
+            <a href="/es/silvicultura-preventiva/">Silvicultura preventiva</a>
+          </div>
+        </div></div>
+      </li>
       <li><a href="/es/zonas/">Zonas</a></li>
       <li><a href="/es/sobre-nosotros/">Nosotros</a></li>
       <li><a href="/es/contacto/">Contacto</a></li>
@@ -255,17 +323,13 @@ p, li, .faq-body p, .resena-text, .col-block p,
   </div>
 </header>
 
-<div class="breadcrumb">
+<div class="page-hero">
+  <div class="page-hero-overlay"></div>
   <div class="wrap">
     <div class="breadcrumb-inner">
       <a href="/es/">Inicio</a><span class="sep">›</span>
       <span class="current">Trabaja con nosotros</span>
     </div>
-  </div>
-</div>
-
-<div class="page-hero">
-  <div class="wrap">
     <div class="eyebrow">Únete al equipo · Mallorca</div>
     <h1>Trabaja <span class="it">con nosotros</span></h1>
     <p class="lead">Somos un equipo propio de jardineros que cuida villas, fincas y comunidades en toda Mallorca. Si te apasiona el trabajo bien hecho y quieres crecer en un proyecto sólido, queremos conocerte.</p>
@@ -451,6 +515,24 @@ window.addEventListener('scroll',()=>{hdr.style.boxShadow=window.scrollY>20?'0 4
   toggle.addEventListener('click',function(e){e.stopPropagation();var open=nav.classList.toggle('open');toggle.textContent=open?'✕':'☰';});
   document.addEventListener('click',function(e){if(nav.classList.contains('open')&&!nav.contains(e.target)&&!toggle.contains(e.target)){nav.classList.remove('open');toggle.textContent='☰';}});
 })();
+</script>
+<script>
+/* Mega menú — hover con retardo para que no desaparezca al mover el ratón */
+(function(){
+  var t, tr = document.querySelector('.has-dd'), m = document.querySelector('.dd-menu');
+  if(!tr || !m) return;
+  function show(){ clearTimeout(t); m.classList.add('dd-open'); }
+  function hide(ms){ t = setTimeout(function(){ m.classList.remove('dd-open'); }, ms); }
+  tr.addEventListener('mouseenter', show);
+  tr.addEventListener('mouseleave', function(){ hide(350); });
+  m.addEventListener('mouseenter', show);
+  m.addEventListener('mouseleave', function(){ hide(150); });
+  document.addEventListener('click', function(e){
+    if(!tr.contains(e.target) && !m.contains(e.target)) m.classList.remove('dd-open');
+  });
+})();
+</script>
+<script>
 document.getElementById('candidatura-form').addEventListener('submit',async function(e){
   e.preventDefault();
   const btn=this.querySelector('.btn-submit');
