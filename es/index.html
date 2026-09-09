@@ -206,7 +206,7 @@ img { max-width: 100%; height: auto; display: block; }
 .hero {
   min-height: 100vh; position: relative; display: flex; align-items: center;
   padding: 140px 0 100px;
-  background: linear-gradient(135deg, #1E4934 0%, #2E6B4D 100%);
+  background: #0F0F0D;
   overflow: hidden; color: var(--paper);
 }
 .hero-video-wrap { position:absolute;top:0;left:0;right:0;bottom:0;overflow:hidden;z-index:0;pointer-events:none; }
@@ -812,39 +812,36 @@ h1, h2, h3, h4, h5, h6 { font-weight: 500; }
 h1 .it, h2 .it, h3 .it, h4 .it,
 .section-title .it, .h2-center .it, .h2-c .it { font-style: normal !important; }
 
-/* ===== HERO SLIDER: 3 IMÁGENES CON CROSSFADE ===== */
+
+/* ===== HERO SLIDER: 3 IMÁGENES CROSSFADE ===== */
+.hs1 { background-image: url('/img/hero-home-garden-mallorca1.webp'); }
+.hs2 { background-image: url('/img/hero-home-garden-mallorca2.webp'); }
+.hs3 { background-image: url('/img/hero-home-garden-mallorca3.webp'); }
+@media (max-width: 768px) {
+  .hs1 { background-image: url('/img/hero-home-garden-mallorca1rs.webp') !important; }
+  .hs2 { background-image: url('/img/hero-home-garden-mallorca2rs.webp') !important; }
+  .hs3 { background-image: url('/img/hero-home-garden-mallorca3rs.webp') !important; }
+}
 .hero-slide {
   position: absolute;
   inset: 0;
   background-size: cover;
   background-position: center;
   opacity: 0;
-  animation: heroFade 18s ease-in-out infinite, heroZoomSlide 18s ease-in-out infinite;
-  will-change: opacity, transform;
+  animation: heroFade 12s linear infinite;
+  will-change: opacity;
 }
-.hero-slide:nth-child(1) { animation-delay: 0s, 0s; }
-.hero-slide:nth-child(2) { animation-delay: 6s, 6s; }
-.hero-slide:nth-child(3) { animation-delay: 12s, 12s; }
+/* Cada slide empieza visible en su momento — el primer keyframe es opacity:1 */
+.hero-slide:nth-child(1) { animation-delay: 0s; }
+.hero-slide:nth-child(2) { animation-delay: 4s; }
+.hero-slide:nth-child(3) { animation-delay: 8s; }
 @keyframes heroFade {
-  0%          { opacity: 0; }
-  5%          { opacity: 1; }
-  28%         { opacity: 1; }
-  33%         { opacity: 0; }
-  100%        { opacity: 0; }
+  0%    { opacity: 1; }   /* visible desde el primer momento */
+  27%   { opacity: 1; }   /* se mantiene ~3.2s */
+  33%   { opacity: 0; }   /* crossfade suave ~0.7s */
+  100%  { opacity: 0; }   /* espera hasta siguiente ciclo */
 }
-@keyframes heroZoomSlide {
-  0%   { transform: scale(1); }
-  50%  { transform: scale(1.05); }
-  100% { transform: scale(1); }
-}
-/* Hero slider — imágenes desktop y móvil */
-.hs1 { background-image: url('/img/hero-home-garden-mallorca1.webp'); }
-.hs2 { background-image: url('/img/hero-home-garden-mallorca2.webp'); }
-.hs3 { background-image: url('/img/hero-home-garden-mallorca3.webp'); }
-@media (max-width: 768px) {
-  .hs1 { background-image: url('/img/hero-home-garden-mallorca1rs.webp'); }
-  .hs2 { background-image: url('/img/hero-home-garden-mallorca2rs.webp'); }
-  .hs3 { background-image: url('/img/hero-home-garden-mallorca3rs.webp'); }
+
 }
 
 
