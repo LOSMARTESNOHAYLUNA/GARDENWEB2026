@@ -811,6 +811,43 @@ h1, h2, h3, h4, h5, h6 { font-weight: 500; }
 .hero h1 { font-weight: 700 !important; }
 h1 .it, h2 .it, h3 .it, h4 .it,
 .section-title .it, .h2-center .it, .h2-c .it { font-style: normal !important; }
+
+/* ===== HERO SLIDER: 3 IMÁGENES CON CROSSFADE ===== */
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: heroFade 18s ease-in-out infinite, heroZoomSlide 18s ease-in-out infinite;
+  will-change: opacity, transform;
+}
+.hero-slide:nth-child(1) { animation-delay: 0s, 0s; }
+.hero-slide:nth-child(2) { animation-delay: 6s, 6s; }
+.hero-slide:nth-child(3) { animation-delay: 12s, 12s; }
+@keyframes heroFade {
+  0%          { opacity: 0; }
+  5%          { opacity: 1; }
+  28%         { opacity: 1; }
+  33%         { opacity: 0; }
+  100%        { opacity: 0; }
+}
+@keyframes heroZoomSlide {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+/* Hero slider — imágenes desktop y móvil */
+.hs1 { background-image: url('/img/hero-home-garden-mallorca1.webp'); }
+.hs2 { background-image: url('/img/hero-home-garden-mallorca2.webp'); }
+.hs3 { background-image: url('/img/hero-home-garden-mallorca3.webp'); }
+@media (max-width: 768px) {
+  .hs1 { background-image: url('/img/hero-home-garden-mallorca1rs.webp'); }
+  .hs2 { background-image: url('/img/hero-home-garden-mallorca2rs.webp'); }
+  .hs3 { background-image: url('/img/hero-home-garden-mallorca3rs.webp'); }
+}
+
+
 </style>
 </head>
 <body>
@@ -874,11 +911,9 @@ h1 .it, h2 .it, h3 .it, h4 .it,
 <!-- HERO -->
 <section class="hero">
   <div class="hero-video-wrap">
-    <picture>
-    <source media="(max-width: 768px)" srcset="/img/banner-mobile.webp">
-    <source media="(min-width: 769px)" srcset="/img/banner-home-garden.webp">
-    <img src="/img/banner-home-garden.webp" alt="Jardinería y paisajismo en Mallorca — Garden Solution" loading="eager" fetchpriority="high">
-  </picture>
+    <div class="hero-slide hs1"></div>
+    <div class="hero-slide hs2"></div>
+    <div class="hero-slide hs3"></div>
   </div>
   <div class="hero-overlay"></div>
   <div class="wrap" style="position:relative;z-index:2;">
