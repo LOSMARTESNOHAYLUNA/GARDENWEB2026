@@ -499,6 +499,29 @@ p, li, .faq-body p, .resena-text, .col-block p,
 .art-rel-body h3{font-family:'Montserrat',sans-serif;font-size:14px;font-weight:600;color:var(--green);line-height:1.3;margin:0;}
 @media(max-width:640px){.art-related-grid{grid-template-columns:1fr;}}
 
+.page-hero{position:relative;overflow:hidden;min-height:560px;display:flex;align-items:flex-end;background-image:url('/img/garden-solution-mantenimiento-de-jardines-particulares-1.webp');background-size:cover;background-position:center;padding:180px 0 90px;}
+.page-hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(15,15,13,0.48) 0%, rgba(15,15,13,0.58) 45%, rgba(15,15,13,0.88) 100%);}
+.page-hero .wrap{position:relative;z-index:1;width:100%;}
+.page-hero .breadcrumb-inner{color:rgba(251,248,242,0.9);margin-bottom:24px;text-shadow:0 2px 10px rgba(0,0,0,0.55);}
+.page-hero .breadcrumb-inner a{color:rgba(251,248,242,0.9);}
+.page-hero .breadcrumb-inner a:hover{color:var(--gold-soft);}
+.page-hero .breadcrumb-inner .sep{color:rgba(251,248,242,0.55);}
+.page-hero .breadcrumb-inner .current{color:var(--gold-soft);}
+.page-hero .eyebrow{display:inline-flex;align-items:center;background:rgba(15,15,13,0.4);border:1px solid rgba(251,248,242,0.3);padding:9px 20px;border-radius:100px;color:var(--paper);font-weight:700;font-size:11px;letter-spacing:0.25em;text-transform:uppercase;font-family:'Manrope';margin-bottom:20px;}
+.page-hero h1{color:var(--paper);font-size:clamp(36px,4.5vw,60px);margin-bottom:16px;text-shadow:0 2px 14px rgba(0,0,0,0.5);}
+.page-hero h1 .it{font-weight:800;color:var(--gold-soft);}
+.page-hero .lead{font-family:'Manrope';font-size:16px;font-weight:300;color:rgba(251,248,242,0.9);max-width:640px;line-height:1.75;}
+.page-hero .art-meta{font-family:'Manrope';font-size:13px;color:rgba(251,248,242,0.7);margin-top:12px;}
+@media(max-width:640px){.page-hero{padding:130px 0 40px;min-height:360px;}}
+/* Artículos relacionados */
+.art-related{padding:60px 0;background:var(--paper-soft);}
+.art-related-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:36px;}
+.art-rel-card{background:var(--paper);border:1px solid var(--line-soft);display:flex;gap:20px;align-items:center;padding:20px;transition:transform 0.2s,box-shadow 0.2s;text-decoration:none;color:inherit;}
+.art-rel-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(15,15,13,0.08);}
+.art-rel-img{width:90px;height:68px;object-fit:cover;flex-shrink:0;}
+.art-rel-body .cat{font-family:'Manrope';font-size:10px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+.art-rel-body h3{font-family:'Montserrat',sans-serif;font-size:14px;font-weight:600;color:var(--green);line-height:1.3;margin:0;}
+@media(max-width:640px){.art-related-grid{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -537,14 +560,19 @@ p, li, .faq-body p, .resena-text, .col-block p,
             </div>
           </div></div>
         </li><li><a href="/es/zonas/">Zonas</a></li><li><a href="/es/sobre-nosotros/">Nosotros</a></li><li><a href="/es/preguntas-frecuentes/">FAQ</a></li><li><a href="/es/blog/">Blog</a></li><li><a href="/es/contacto/">Contacto</a></li></ul></nav><div class="lang-switch"><a href="/es/" class="active">ES</a><a href="/en/">EN</a><a href="/de/">DE</a></div><button class="menu-toggle" aria-label="Menú">☰</button></div></header>
-<div class="breadcrumb"><div class="wrap"><div class="breadcrumb-inner"><a href="/es/">Inicio</a><span class="sep">›</span><a href="/es/blog/">Blog</a><span class="sep">›</span><span class="current">Calendario de poda en Mallorca</span></div></div></div>
-
-<div class="art-hero">
+<section class="page-hero">
+  <div class="page-hero-overlay"></div>
   <div class="wrap">
-    <div class="art-cat">Poda · Calendario</div>
+    <div class="breadcrumb-inner">
+      <a href="/es/">Inicio</a><span class="sep">›</span>
+      <a href="/es/blog/">Blog</a><span class="sep">›</span>
+      <span class="current">Poda · Calendario</span>
+    </div>
+    <div class="eyebrow">Blog · Poda · Calendario</div>
     <h1>Calendario de poda en Mallorca: <span class="it">cuándo podar cada árbol</span></h1>
     <div class="art-meta">Por el equipo de Garden Solution · Julio 2026 · 7 min de lectura</div>
   </div>
+</section>
 </div>
 
 <div class="art-body">
@@ -601,6 +629,22 @@ p, li, .faq-body p, .resena-text, .col-block p,
 
 <section class="cta-banner"><div class="wrap"><h2 id="sec-8">¿Gestionamos la poda <span class="it">de tu jardín?</span></h2><p>Cada especie en su momento · Equipo propio · Toda Mallorca</p><div class="cta-btns"><a href="tel:+34621493977" class="btn btn-gold">Llamar · 621 49 39 77</a><a href="/es/#contacto" class="btn btn-outline-w">Enviar mensaje</a></div></div></section>
 
+<section class="art-related">
+  <div class="wrap">
+    <div class="eyebrow-c">También te puede interesar</div>
+    <h2 class="h2-c">Artículos relacionados</h2>
+    <div class="art-related-grid">
+    <a href="/es/blog/picudo-rojo-mallorca/" class="art-rel-card">
+      <img class="art-rel-img" src="/img/blog-1.webp" alt="" loading="lazy" width="90" height="68">
+      <div class="art-rel-body"><div class="cat">Palmeras · Fitosanidad</div><h3>Picudo rojo en Mallorca: guía de prevención y tratamiento</h3></div>
+    </a>
+    <a href="/es/blog/riego-automatico-mediterraneo/" class="art-rel-card">
+      <img class="art-rel-img" src="/img/blog-2.webp" alt="" loading="lazy" width="90" height="68">
+      <div class="art-rel-body"><div class="cat">Riego · Jardinería</div><h3>Riego automático para jardín mediterráneo: cómo ahorra agua</h3></div>
+    </a>
+    </div>
+  </div>
+</section>
 <footer class="footer">
   <div class="wrap">
     <div class="footer-grid">
