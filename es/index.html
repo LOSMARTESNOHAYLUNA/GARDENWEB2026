@@ -813,7 +813,7 @@ h1 .it, h2 .it, h3 .it, h4 .it,
 .section-title .it, .h2-center .it, .h2-c .it { font-style: normal !important; }
 
 
-/* ===== HERO SLIDER: 3 IMÁGENES CROSSFADE ===== */
+/* ===== HERO SLIDER ===== */
 .hs1 { background-image: url('/img/hero-home-garden-mallorca1.webp'); }
 .hs2 { background-image: url('/img/hero-home-garden-mallorca2.webp'); }
 .hs3 { background-image: url('/img/hero-home-garden-mallorca3.webp'); }
@@ -828,15 +828,9 @@ h1 .it, h2 .it, h3 .it, h4 .it,
   background-size: cover;
   background-position: center;
   opacity: 0;
-  animation: heroFade 12s linear infinite;
-  will-change: opacity;
+  transition: opacity 1.2s ease-in-out;
 }
-/* Cada slide empieza visible en su momento — el primer keyframe es opacity:1 */
-.hero-slide:nth-child(1) { animation-delay: 0s; }
-.hero-slide:nth-child(2) { animation-delay: 4s; }
-.hero-slide:nth-child(3) { animation-delay: 8s; }
-@keyframes heroFade {
-  0%    { opacity: 1; }   /* visible desde el primer momento */
+.hero-slide.active { opacity: 1; }   /* visible desde el primer momento */
   27%   { opacity: 1; }   /* se mantiene ~3.2s */
   33%   { opacity: 0; }   /* crossfade suave ~0.7s */
   100%  { opacity: 0; }   /* espera hasta siguiente ciclo */
@@ -908,7 +902,7 @@ h1 .it, h2 .it, h3 .it, h4 .it,
 <!-- HERO -->
 <section class="hero">
   <div class="hero-video-wrap">
-    <div class="hero-slide hs1"></div>
+    <div class="hero-slide hs1 active"></div>
     <div class="hero-slide hs2"></div>
     <div class="hero-slide hs3"></div>
   </div>
@@ -1662,5 +1656,19 @@ body.gs-cookie-open .gs-float-actions{display:none;}
 })();
 </script>
 
+
+<script>
+/* Hero slider */
+(function(){
+  var slides = document.querySelectorAll('.hero-slide');
+  if(slides.length < 2) return;
+  var current = 0;
+  setInterval(function(){
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  }, 5000);
+})();
+</script>
 </body>
 </html>
