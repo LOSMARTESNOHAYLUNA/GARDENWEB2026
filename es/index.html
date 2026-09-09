@@ -206,7 +206,7 @@ img { max-width: 100%; height: auto; display: block; }
 .hero {
   min-height: 100vh; position: relative; display: flex; align-items: center;
   padding: 140px 0 100px;
-  background: #0F0F0D;
+  background: linear-gradient(135deg, #1E4934 0%, #2E6B4D 100%);
   overflow: hidden; color: var(--paper);
 }
 .hero-video-wrap { position:absolute;top:0;left:0;right:0;bottom:0;overflow:hidden;z-index:0;pointer-events:none; }
@@ -767,7 +767,30 @@ h1 .it, h2 .it, h3 .it, h4 .it,
 
 
 /* === SLIDER RESEÑAS === */
-
+.resenas-slider { position:relative; max-width:780px; margin:0 auto 48px; }
+.resenas-track { overflow:hidden; }
+.resena-slide { display:none; animation:fadeSlide 0.5s ease; }
+.resena-slide.active { display:block; }
+@keyframes fadeSlide { from{opacity:0;transform:translateY(10px);} to{opacity:1;transform:translateY(0);} }
+.resena-slide .resena-card {
+  background:var(--paper);
+  padding:48px 52px;
+  border-left:4px solid var(--gold);
+  position:relative;
+}
+.resena-slide .resena-stars { color:var(--gold); font-size:18px; letter-spacing:5px; margin-bottom:24px; }
+.resena-slide .resena-text {
+  font-family:'Manrope'; font-size:17px; font-weight:300;
+  color:var(--ink-soft); line-height:1.8; margin-bottom:28px;
+  font-style:normal;
+}
+.resena-slide .resena-author {
+  font-family:'Manrope'; font-size:13px; font-weight:600;
+  letter-spacing:0.15em; text-transform:uppercase; color:var(--gold);
+}
+.resenas-controls {
+  display:flex; align-items:center; justify-content:center; gap:20px; margin-top:28px;
+}
 .resenas-dots { display:flex; gap:10px; }
 .resenas-dots button {
   width:10px; height:10px; border-radius:50%; border:none; cursor:pointer;
@@ -789,7 +812,6 @@ h1, h2, h3, h4, h5, h6 { font-weight: 500; }
 h1 .it, h2 .it, h3 .it, h4 .it,
 .section-title .it, .h2-center .it, .h2-c .it { font-style: normal !important; }
 
-
 /* ===== HERO SLIDER ===== */
 .hs1 { background-image: url('/img/hero-home-garden-mallorca1.webp'); }
 .hs2 { background-image: url('/img/hero-home-garden-mallorca2.webp'); }
@@ -800,68 +822,16 @@ h1 .it, h2 .it, h3 .it, h4 .it,
   .hs3 { background-image: url('/img/hero-home-garden-mallorca3rs.webp') !important; }
 }
 .hero-slide {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  opacity: 0;
-  transition: opacity 1.2s ease-in-out;
+  position: absolute; inset: 0;
+  background-size: cover; background-position: center;
+  opacity: 0; transition: opacity 1.2s ease-in-out;
 }
-.hero-slide.active { opacity: 1; }   /* visible desde el primer momento */
-  27%   { opacity: 1; }   /* se mantiene ~3.2s */
-  33%   { opacity: 0; }   /* crossfade suave ~0.7s */
-  100%  { opacity: 0; }   /* espera hasta siguiente ciclo */
-}
+.hero-slide.active { opacity: 1; }
 
-}
-
-
-
-/* ===== CARRUSEL RESEÑAS ===== */
-.carousel-resenas { position: relative; display: flex; align-items: center; gap: 16px; }
-.carousel-track-wrap { overflow: hidden; flex: 1; }
-.carousel-track {
-  display: flex;
-  gap: 24px;
-  transition: transform 0.4s ease;
-}
-.resena-card {
-  background: var(--paper);
-  padding: 36px 32px;
-  border-left: 3px solid var(--gold);
-  flex: 0 0 calc(33.333% - 16px);
-  min-width: calc(33.333% - 16px);
-  box-sizing: border-box;
-}
-.resena-stars { color: var(--gold); font-size: 15px; letter-spacing: 3px; margin-bottom: 18px; }
-.resena-text {
-  font-family: 'Manrope'; font-weight: 300; font-size: 15px;
-  line-height: 1.75; color: var(--ink-soft); margin-bottom: 20px;
-  font-style: normal !important;
-}
-.resena-author { font-family: 'Manrope'; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray-soft); }
-.carousel-btn {
-  background: var(--paper); border: 1px solid var(--line); color: var(--green);
-  width: 44px; height: 44px; border-radius: 50%; font-size: 18px;
-  cursor: pointer; flex-shrink: 0; transition: all 0.2s;
-  display: flex; align-items: center; justify-content: center;
-}
-.carousel-btn:hover { background: var(--green); color: var(--paper); border-color: var(--green); }
-.resenas-cta { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px; margin-top: 48px; padding-top: 40px; border-top: 1px solid var(--line-soft); }
-.rating-badge { display: flex; align-items: center; gap: 16px; }
-.rating-num { font-family: 'Montserrat'; font-size: 48px; font-weight: 700; color: var(--green); line-height: 1; }
-.rating-stars { color: var(--gold); font-size: 20px; letter-spacing: 4px; }
-.rating-base { font-family: 'Manrope'; font-size: 13px; color: var(--gray-soft); }
-.btn-ghost-green { font-family: 'Manrope'; font-weight: 600; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--green); border: 1px solid var(--green); padding: 14px 28px; border-radius: 100px; transition: all 0.3s; }
-.btn-ghost-green:hover { background: var(--green); color: var(--paper); }
-@media(max-width: 968px) {
-  .resena-card { flex: 0 0 calc(50% - 12px); min-width: calc(50% - 12px); }
-}
-@media(max-width: 640px) {
-  .resena-card { flex: 0 0 100%; min-width: 100%; }
-  .resenas-cta { flex-direction: column; align-items: flex-start; }
-}
-
+/* Reseñas: grid visible (todas) */
+.resenas-grid-all { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-bottom: 50px; }
+@media(max-width:968px){ .resenas-grid-all { grid-template-columns: repeat(2,1fr); } }
+@media(max-width:640px){ .resenas-grid-all { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -1131,70 +1101,63 @@ h1 .it, h2 .it, h3 .it, h4 .it,
       <h2>Un equipo, <span class="it">una isla</span>, un cuidado.</h2>
       <p>Somos <strong>Garden Solution Mallorca</strong>, una empresa familiar de jardinería con más de diez años cuidando villas, fincas y comunidades por toda la isla. Nuestro equipo propio combina conocimiento técnico —con carnet fitosanitario oficial— y una forma de trabajar cercana que nuestros clientes valoran temporada tras temporada.</p>
       <p>Trabajamos con la convicción de que un jardín bien cuidado es una extensión de la casa. Por eso cada visita cuenta, cada poda tiene sentido, y cada proyecto de paisajismo nace de escuchar a quien lo va a vivir.</p>
-      <p class="firma">— Gabriel y equipo</p>
+      <p class="firma">— Gabriel y Eloy, socios fundadores</p>
     </div>
   </div>
 </section>
 
-<section class="section resenas" id="resenas">
+<section class="section resenas">
   <div class="wrap">
     <div class="section-eyebrow">Lo que dicen de nosotros</div>
     <h2 class="section-title">Reseñas verificadas</h2>
-    <p class="section-intro">74 clientes han valorado nuestro trabajo en Google con una puntuación de 5,0 estrellas.</p>
+    <p class="section-intro">74 clientes han valorado nuestro trabajo en Google con una puntuación de 5,0 estrellas. Estas son algunas de las reseñas reales de la ficha de Google Business Profile.</p>
 
-    <div class="carousel-resenas">
-      <button class="carousel-btn carousel-prev" aria-label="Anterior">&#8592;</button>
-      <div class="carousel-track-wrap">
-        <div class="carousel-track" id="resenas-track">
-
-          <div class="resena-card">
-            <div class="resena-stars">★★★★★</div>
-            <p class="resena-text">«Quiero agradecer a Garden Solution SL por el excelente trabajo realizado al cortarnos un árbol. Han demostrado ser grandes profesionales, trabajando con rapidez, seguridad y mucho cuidado. Fueron puntuales, muy amables y dejaron todo perfectamente limpio al terminar. Sin duda, volveríamos a contar con ellos.»</p>
-            <p class="resena-author">Biel · Google</p>
-          </div>
-
-          <div class="resena-card">
-            <div class="resena-stars">★★★★★</div>
-            <p class="resena-text">«Excelente servicio de jardinería. Desde el primer contacto fueron muy profesionales y puntuales. Dejan el jardín impecable, cuidando cada detalle y respetando las plantas existentes. Se nota la experiencia y el amor por su trabajo. Sin duda los recomiendo.»</p>
-            <p class="resena-author">María T. · Google</p>
-          </div>
-
-          <div class="resena-card">
-            <div class="resena-stars">★★★★★</div>
-            <p class="resena-text">«Contacté con Mallorca Garden Solutions para la poda anual de dos palmeras. Desde el primer momento, muy atentos y formales. Me ofrecieron un presupuesto y enseguida pude concertar cita. Vinieron el día y hora indicados y realizaron muy buen trabajo.»</p>
-            <p class="resena-author">Cliente de Google · Mallorca</p>
-          </div>
-
-          <div class="resena-card">
-            <div class="resena-stars">★★★★★</div>
-            <p class="resena-text">«Llevamos dos años con Garden Solution para el mantenimiento de nuestra villa en Calvià. Son muy de fiar, puntuales y el jardín siempre está perfecto. Lo que más valoramos es que siempre viene el mismo equipo y ya conocen bien las plantas y nuestras preferencias.»</p>
-            <p class="resena-author">Peter K. · Google</p>
-          </div>
-
-          <div class="resena-card">
-            <div class="resena-stars">★★★★★</div>
-            <p class="resena-text">«Instalaron el riego automático en nuestra finca de Llucmajor. El trabajo fue impecable, muy ordenados y el sistema funciona perfectamente. También nos asesoraron sobre las plantas más adecuadas para el clima. Muy recomendables.»</p>
-            <p class="resena-author">Cliente de Google · Llucmajor</p>
-          </div>
-
-          <div class="resena-card">
-            <div class="resena-stars">★★★★★</div>
-            <p class="resena-text">«Tratamiento de endoterapia para nuestras palmeras. Muy profesionales, explicaron bien el proceso y el resultado ha sido muy bueno. Las palmeras están recuperando el aspecto sano. Precio justo y servicio de calidad. Los seguiremos llamando.»</p>
-            <p class="resena-author">Antònia M. · Google</p>
-          </div>
-
+    <div class="resenas-grid-all">
+        <div class="resena-card">
+          <div class="resena-stars">★★★★★</div>
+          <p class="resena-text">«Quiero agradecer a Garden Solution SL por el excelente trabajo realizado al cortarnos un árbol. Han demostrado ser grandes profesionales, trabajando con rapidez, seguridad y mucho cuidado. Fueron puntuales, muy amables y dejaron todo perfectamente limpio al terminar. Sin duda, volveríamos a contar con ellos y los recomendamos totalmente.»</p>
+          <p class="resena-author">Biel · Google</p>
+        </div>
+        <div class="resena-card">
+          <div class="resena-stars">★★★★★</div>
+          <p class="resena-text">«Excelente servicio de jardinería. Desde el primer contacto fueron muy profesionales y puntuales. Dejan el jardín impecable, cuidando cada detalle y respetando las plantas existentes. Se nota la experiencia y el amor por su trabajo. Sin duda los recomiendo, son una gran empresa.»</p>
+          <p class="resena-author">Cliente de Google · Mallorca</p>
+        </div>
+        <div class="resena-card">
+          <div class="resena-stars">★★★★★</div>
+          <p class="resena-text">«Contacté con Mallorca Garden Solutions para la poda anual de dos palmeras. Desde el primer momento, muy atentos y formales. Me ofrecieron un presupuesto y enseguida pude concertar cita. Vinieron el día y hora indicados y realizaron muy buen trabajo. Sin duda, les volveremos a llamar el año que viene.»</p>
+          <p class="resena-author">Cliente de Google · Mallorca</p>
+        </div>
+        <div class="resena-card">
+          <div class="resena-stars">★★★★★</div>
+          <p class="resena-text">«Llevamos dos años con Garden Solution para el mantenimiento de nuestra villa en Calvià. Son muy de fiar, puntuales y el jardín siempre está perfecto. Lo que más valoramos es que siempre viene el mismo equipo y ya conocen bien las plantas y nuestras preferencias.»</p>
+          <p class="resena-author">Peter K. · Google</p>
+        </div>
+        <div class="resena-card">
+          <div class="resena-stars">★★★★★</div>
+          <p class="resena-text">«Instalaron el riego automático en nuestra finca de Llucmajor. El trabajo fue impecable, muy ordenados y el sistema funciona perfectamente. También nos asesoraron sobre las plantas más adecuadas para el clima. Muy recomendables.»</p>
+          <p class="resena-author">Cliente de Google · Llucmajor</p>
+        </div>
+        <div class="resena-card">
+          <div class="resena-stars">★★★★★</div>
+          <p class="resena-text">«Tratamiento de endoterapia para nuestras palmeras. Muy profesionales, explicaron bien el proceso y el resultado ha sido muy bueno. Las palmeras están recuperando el aspecto sano. Precio justo y servicio de calidad. Los seguiremos llamando.»</p>
+          <p class="resena-author">Antònia M. · Google</p>
         </div>
       </div>
-      <button class="carousel-btn carousel-next" aria-label="Siguiente">&#8594;</button>
+        <button class="resena-arrow" id="next-resena">&#8594;</button>
+      </div>
     </div>
 
     <div class="resenas-cta">
       <div class="rating-badge">
         <div class="rating-num">5,0</div>
-        <div class="rating-stars">★★★★★</div>
-        <div class="rating-base">Basado en 74 reseñas de Google</div>
+        <div>
+          <div class="rating-stars">★★★★★</div>
+          <div class="rating-info">Basado en 74 reseñas de Google</div>
+        </div>
       </div>
-      <a href="https://maps.app.goo.gl/Rh6dmQz63in2gSoj6" target="_blank" rel="noopener" class="btn btn-ghost-green">Ver todas las reseñas en Google →</a>
+      <br>
+      <a href="https://maps.app.goo.gl/Rh6dmQz63in2gSoj6" target="_blank" rel="noopener" class="btn btn-green">Ver todas las reseñas</a>
     </div>
   </div>
 </section>
@@ -1542,38 +1505,28 @@ window.addEventListener('scroll', () => {
 })();
 </script>
 <script>
-
-/* Carrusel reseñas */
+/* Slider reseñas */
 (function(){
-  var track = document.getElementById('resenas-track');
-  if(!track) return;
-  var cards = track.querySelectorAll('.resena-card');
-  var perView = window.innerWidth >= 968 ? 3 : window.innerWidth >= 640 ? 2 : 1;
-  var total = cards.length;
-  var cur = 0;
-
-  function getPerView(){
-    return window.innerWidth >= 968 ? 3 : window.innerWidth >= 640 ? 2 : 1;
+  var slides = document.querySelectorAll('.resena-slide');
+  var dots   = document.querySelectorAll('.resenas-dots button');
+  var prev   = document.getElementById('prev-resena');
+  var next   = document.getElementById('next-resena');
+  if(!slides.length) return;
+  var cur = 0, timer;
+  function go(n){
+    slides[cur].classList.remove('active');
+    dots[cur].classList.remove('active');
+    cur = (n + slides.length) % slides.length;
+    slides[cur].classList.add('active');
+    dots[cur].classList.add('active');
+    reset();
   }
-  function slide(){
-    perView = getPerView();
-    var cardW = cards[0].offsetWidth + 24; // gap 24px
-    track.style.transform = 'translateX(-' + (cur * cardW) + 'px)';
-  }
-  document.querySelector('.carousel-next')?.addEventListener('click', function(){
-    perView = getPerView();
-    cur = (cur + 1 + total - perView) % (total - perView + 1);
-    slide();
-  });
-  document.querySelector('.carousel-prev')?.addEventListener('click', function(){
-    perView = getPerView();
-    var max = total - perView;
-    cur = cur <= 0 ? max : cur - 1;
-    slide();
-  });
-  window.addEventListener('resize', function(){ cur=0; slide(); });
+  function reset(){ clearInterval(timer); timer = setInterval(function(){ go(cur+1); }, 5000); }
+  prev.addEventListener('click', function(){ go(cur-1); });
+  next.addEventListener('click', function(){ go(cur+1); });
+  dots.forEach(function(d){ d.addEventListener('click', function(){ go(+d.dataset.idx); }); });
+  reset();
 })();
-
 </script>
 <script>
 /* Web3Forms submit */
@@ -1699,15 +1652,14 @@ body.gs-cookie-open .gs-float-actions{display:none;}
 
 
 <script>
-/* Hero slider */
 (function(){
   var slides = document.querySelectorAll('.hero-slide');
   if(slides.length < 2) return;
-  var current = 0;
+  var cur = 0;
   setInterval(function(){
-    slides[current].classList.remove('active');
-    current = (current + 1) % slides.length;
-    slides[current].classList.add('active');
+    slides[cur].classList.remove('active');
+    cur = (cur + 1) % slides.length;
+    slides[cur].classList.add('active');
   }, 5000);
 })();
 </script>
