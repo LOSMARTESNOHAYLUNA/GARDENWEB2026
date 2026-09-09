@@ -838,7 +838,8 @@ h1 .it, h2 .it, h3 .it, h4 .it,
 .resenas-carousel { overflow:hidden; }
 .resenas-track { display:flex; gap:16px; transition:transform 0.45s cubic-bezier(0.25,0.46,0.45,0.94); }
 .resena-gcard {
-  flex:0 0 auto;
+  flex:0 0 var(--card-w, 270px);
+  width:var(--card-w, 270px);
   background:#fff; border:1px solid #e8e8e8;
   border-radius:12px; padding:20px 22px 22px;
   box-shadow:0 1px 4px rgba(0,0,0,0.06);
@@ -1782,48 +1783,54 @@ body.gs-cookie-open .gs-float-actions{display:none;}
 <script>
 /* Carrusel reseñas Google */
 (function(){
-  var carousel = document.querySelector('.resenas-carousel');
-  var track = document.getElementById('resenas-track');
-  var btnP = document.getElementById('resenas-prev');
-  var btnN = document.getElementById('resenas-next');
-  if(!track || !carousel) return;
-  var cards = Array.from(track.querySelectorAll('.resena-gcard'));
-  var cur = 0;
-  var gap = 16;
+  function initCarousel() {
+    var wrap = document.querySelector('.resenas-wrap');
+    var track = document.getElementById('resenas-track');
+    var btnP = document.getElementById('resenas-prev');
+    var btnN = document.getElementById('resenas-next');
+    if (!track || !wrap) return;
 
-  function perView(){
-    var w = carousel.offsetWidth;
-    if(w >= 900) return 4;
-    if(w >= 560) return 2;
-    return 1;
+    var cards = Array.from(track.querySelectorAll('.resena-gcard'));
+    var cur = 0;
+    var gap = 16;
+
+    function pv() {
+      var w = wrap.getBoundingClientRect().width;
+      return w >= 900 ? 4 : w >= 560 ? 2 : 1;
+    }
+
+    function layout() {
+      var w = wrap.getBoundingClientRect().width;
+      var n = pv();
+      var cardW = Math.floor((w - gap * (n - 1)) / n);
+      wrap.style.setProperty('--card-w', cardW + 'px');
+      cur = Math.min(cur, Math.max(0, cards.length - n));
+      move(false);
+    }
+
+    function move(animate) {
+      track.style.transition = animate === false ? 'none' : 'transform 0.42s cubic-bezier(.25,.46,.45,.94)';
+      var cardW = cards[0].getBoundingClientRect().width || parseInt(getComputedStyle(wrap).getPropertyValue('--card-w')) || 270;
+      track.style.transform = 'translateX(-' + (cur * (cardW + gap)) + 'px)';
+      btnP.disabled = cur === 0;
+      btnN.disabled = cur >= cards.length - pv();
+    }
+
+    btnN.addEventListener('click', function() { if (cur < cards.length - pv()) { cur++; move(); } });
+    btnP.addEventListener('click', function() { if (cur > 0) { cur--; move(); } });
+    window.addEventListener('resize', function() { layout(); });
+
+    /* Ejecutar layout varias veces para capturar el render correcto */
+    layout();
+    requestAnimationFrame(function() { layout(); });
+    setTimeout(function() { layout(); }, 100);
   }
 
-  function setWidths(){
-    var pv = perView();
-    var cardW = (carousel.offsetWidth - gap * (pv - 1)) / pv;
-    cards.forEach(function(c){ c.style.width = cardW + 'px'; c.style.minWidth = cardW + 'px'; });
-    cur = Math.min(cur, Math.max(0, cards.length - pv));
-    slide(false);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCarousel);
+  } else {
+    initCarousel();
   }
-
-  function slide(animate){
-    if(animate === false) track.style.transition = 'none';
-    else track.style.transition = 'transform 0.45s cubic-bezier(0.25,0.46,0.45,0.94)';
-    var pv = perView();
-    var cardW = cards[0].offsetWidth + gap;
-    track.style.transform = 'translateX(-' + (cur * cardW) + 'px)';
-    btnP.disabled = cur === 0;
-    btnN.disabled = cur >= cards.length - pv;
-    setTimeout(function(){ track.style.transition = 'transform 0.45s cubic-bezier(0.25,0.46,0.45,0.94)'; }, 50);
-  }
-
-  btnN.addEventListener('click', function(){ var pv=perView(); if(cur < cards.length - pv){ cur++; slide(); } });
-  btnP.addEventListener('click', function(){ if(cur > 0){ cur--; slide(); } });
-
-  var ro = new ResizeObserver(function(){ setWidths(); });
-  ro.observe(carousel);
-
-  setWidths();
 })();
 </script>
 </body>
