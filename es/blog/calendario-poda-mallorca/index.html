@@ -465,6 +465,40 @@ p, li, .faq-body p, .resena-text, .col-block p,
 
 .resena-text { font-style: normal !important; }
 
+
+/* Share buttons */
+.share-section{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:28px 0;border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);margin:40px 0;}
+.share-label{font-family:'Manrope';font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--gray-soft);}
+.share-btn{display:inline-flex;align-items:center;gap:6px;padding:9px 16px;border-radius:100px;font-family:'Manrope';font-size:12px;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;cursor:pointer;border:1px solid var(--line);background:var(--paper);color:var(--ink-soft);transition:all 0.2s;text-decoration:none;}
+.share-btn:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(15,15,13,0.1);}
+.share-wa{border-color:#25D366;color:#25D366;}
+.share-wa:hover{background:#25D366;color:#fff;}
+.share-x{border-color:#000;color:#000;}
+.share-x:hover{background:#000;color:#fff;}
+.share-fb{border-color:#1877F2;color:#1877F2;}
+.share-fb:hover{background:#1877F2;color:#fff;}
+/* TOC */
+.art-toc{background:var(--paper-soft);border:1px solid var(--line-soft);padding:28px 32px;margin-bottom:40px;}
+.art-toc-title{font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;letter-spacing:0.15em;text-transform:uppercase;color:var(--green);margin-bottom:16px;}
+.art-toc ol{padding-left:20px;}
+.art-toc ol li{font-family:'Manrope';font-size:14px;font-weight:300;color:var(--ink-soft);padding:4px 0;line-height:1.5;}
+.art-toc ol li a{color:var(--green);text-decoration:none;}
+.art-toc ol li a:hover{color:var(--gold);}
+/* Art CTAs */
+.art-contact-bar{display:flex;gap:12px;flex-wrap:wrap;padding:28px;background:var(--green);margin:40px 0;}
+.art-contact-bar p{font-family:'Manrope';font-size:15px;font-weight:300;color:rgba(251,248,242,0.9);flex:1;min-width:200px;line-height:1.5;}
+.art-contact-bar .btn-wa{display:inline-flex;align-items:center;gap:8px;background:#25D366;color:#fff;font-family:'Manrope';font-weight:700;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;padding:14px 24px;border-radius:100px;text-decoration:none;transition:all 0.2s;}
+.art-contact-bar .btn-call{display:inline-flex;align-items:center;gap:8px;background:var(--paper);color:var(--green);font-family:'Manrope';font-weight:700;font-size:13px;letter-spacing:0.06em;text-transform:uppercase;padding:14px 24px;border-radius:100px;text-decoration:none;transition:all 0.2s;}
+/* Related */
+.art-related{padding:60px 0;background:var(--paper-soft);margin-top:0;}
+.art-related-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:36px;}
+.art-rel-card{background:var(--paper);border:1px solid var(--line-soft);display:flex;gap:20px;align-items:center;padding:20px;transition:transform 0.2s,box-shadow 0.2s;text-decoration:none;color:inherit;}
+.art-rel-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(15,15,13,0.08);}
+.art-rel-img{width:90px;height:68px;object-fit:cover;flex-shrink:0;}
+.art-rel-body .cat{font-family:'Manrope';font-size:10px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+.art-rel-body h3{font-family:'Montserrat',sans-serif;font-size:14px;font-weight:600;color:var(--green);line-height:1.3;margin:0;}
+@media(max-width:640px){.art-related-grid{grid-template-columns:1fr;}}
+
 </style>
 </head>
 <body>
@@ -502,7 +536,7 @@ p, li, .faq-body p, .resena-text, .col-block p,
               <a href="/es/silvicultura-preventiva/">Silvicultura preventiva</a>
             </div>
           </div></div>
-        </li><li><a href="/es/zonas/">Zonas</a></li><li><a href="/es/sobre-nosotros/">Nosotros</a></li><li><a href="/es/preguntas-frecuentes/">FAQ</a></li><li><a href="/es/contacto/">Contacto</a></li></ul></nav><div class="lang-switch"><a href="/es/" class="active">ES</a><a href="/en/">EN</a><a href="/de/">DE</a></div><button class="menu-toggle" aria-label="Menú">☰</button></div></header>
+        </li><li><a href="/es/zonas/">Zonas</a></li><li><a href="/es/sobre-nosotros/">Nosotros</a></li><li><a href="/es/preguntas-frecuentes/">FAQ</a></li><li><a href="/es/blog/">Blog</a></li><li><a href="/es/contacto/">Contacto</a></li></ul></nav><div class="lang-switch"><a href="/es/" class="active">ES</a><a href="/en/">EN</a><a href="/de/">DE</a></div><button class="menu-toggle" aria-label="Menú">☰</button></div></header>
 <div class="breadcrumb"><div class="wrap"><div class="breadcrumb-inner"><a href="/es/">Inicio</a><span class="sep">›</span><a href="/es/blog/">Blog</a><span class="sep">›</span><span class="current">Calendario de poda en Mallorca</span></div></div></div>
 
 <div class="art-hero">
@@ -515,7 +549,11 @@ p, li, .faq-body p, .resena-text, .col-block p,
 
 <div class="art-body">
   <div class="wrap">
-    <div class="art-content">
+    <div class="art-content"><div class="art-toc">
+  <div class="art-toc-title">Contenido del artículo</div>
+  <ol><li><a href="#sec-1">Pinos (Pinus): otoño o invierno</a></li><li><a href="#sec-2">Olivos: finales de invierno o primavera</a></li><li><a href="#sec-3">Palmeras: todo el año, con matices</a></li><li><a href="#sec-4">Almendros: después de la floración</a></li><li><a href="#sec-5">Setos y arbustos de floración: después de la floración</a></li><li><a href="#sec-6">Cipreses: primavera o finales de verano</a></li><li><a href="#sec-7">Regla general: podar en reposo vegetativo</a></li><li><a href="#sec-8">¿Gestionamos la poda de tu jardín?</a></li></ol>
+</div>
+
 
       <p>Podar en el momento equivocado puede estresar el árbol, reducir su floración o abrir heridas en épocas de alta actividad patógena. En Mallorca, el clima mediterráneo tiene características específicas que hay que tener en cuenta. Esta guía recoge las épocas recomendadas para las especies más habituales en los jardines de la isla.</p>
 
@@ -524,19 +562,19 @@ p, li, .faq-body p, .resena-text, .col-block p,
         <figcaption>Podar en la época correcta es tan importante como la técnica utilizada.</figcaption>
       </figure>
 
-      <h2>Pinos (<em>Pinus</em>): <span class="it">otoño o invierno</span></h2>
+      <h2 id="sec-1">Pinos (<em>Pinus</em>): <span class="it">otoño o invierno</span></h2>
       <p>Los pinos en Mallorca se podan preferiblemente en otoño o invierno, cuando están en menor actividad. La primavera es la época de máxima producción de resina y de mayor actividad de insectos descortezadores, por lo que se recomienda evitar la poda en esa estación. Si hay urgencia por riesgo de ramas, se puede podar en cualquier época, pero idealmente fuera de primavera.</p>
 
-      <h2>Olivos: <span class="it">finales de invierno o primavera</span></h2>
+      <h2 id="sec-2">Olivos: <span class="it">finales de invierno o primavera</span></h2>
       <p>El olivo se poda cuando ha pasado el riesgo de heladas pero antes de que brote con fuerza. En Mallorca, eso suele situarse entre febrero y abril. La poda del olivo tiene un doble objetivo: mantener la forma y favorecer la producción si el árbol es productivo. En olivos ornamentales la poda es más estética y puede ser algo más flexible en el tiempo.</p>
 
-      <h2>Palmeras: <span class="it">todo el año, con matices</span></h2>
+      <h2 id="sec-3">Palmeras: <span class="it">todo el año, con matices</span></h2>
       <p>Las palmeras se pueden podar durante todo el año en Mallorca. Sin embargo, hay que tener en cuenta que la poda en primavera y verano, cuando el insecto adulto del picudo rojo está más activo, puede atraer al insecto hacia las heridas frescas de la poda. Por eso, en zonas de alta incidencia de picudo, recomendamos combinar la poda con un tratamiento preventivo de endoterapia.</p>
 
-      <h2>Almendros: <span class="it">después de la floración</span></h2>
+      <h2 id="sec-4">Almendros: <span class="it">después de la floración</span></h2>
       <p>El almendro florece en enero-febrero en Mallorca, uno de los primeros árboles en hacerlo. La poda del almendro se realiza después de la floración y antes de que el árbol esté en pleno crecimiento vegetativo. Una poda mal cronometrada puede eliminar la flor antes de que cuaje o interrumpir el proceso de fructificación.</p>
 
-      <h2>Setos y arbustos de floración: <span class="it">después de la floración</span></h2>
+      <h2 id="sec-5">Setos y arbustos de floración: <span class="it">después de la floración</span></h2>
       <p>Para arbustos que florecen en primavera (buganvilla, adelfa, rosal), la regla general es podar después de la floración. Podar antes elimina los capullos y reduce la floración de esa temporada. Para los setos que no florecen o cuya floración es secundaria, la poda se puede hacer en primavera o inicio de verano para controlar el crecimiento.</p>
 
       <figure class="art-img">
@@ -544,7 +582,7 @@ p, li, .faq-body p, .resena-text, .col-block p,
         <figcaption>El pino es uno de los árboles más habituales en jardines de Mallorca y requiere una poda técnica bien cronometrada.</figcaption>
       </figure>
 
-      <h2>Cipreses: <span class="it">primavera o finales de verano</span></h2>
+      <h2 id="sec-6">Cipreses: <span class="it">primavera o finales de verano</span></h2>
       <p>Los cipreses se podan bien en primavera, antes del crecimiento intenso, o a finales de verano cuando el crecimiento se ralentiza. La poda en pleno verano puede dejar cicatrices visibles por el calor. La poda de formación de cipreses jóvenes es especialmente importante para conseguir la silueta deseada.</p>
 
       <div class="art-cta">
@@ -553,7 +591,7 @@ p, li, .faq-body p, .resena-text, .col-block p,
         <a href="/es/mantenimiento-jardines-particulares/" class="btn btn-gold" style="margin:0 auto;">Ver mantenimiento de jardines</a>
       </div>
 
-      <h2>Regla general: <span class="it">podar en reposo vegetativo</span></h2>
+      <h2 id="sec-7">Regla general: <span class="it">podar en reposo vegetativo</span></h2>
       <p>Para la mayoría de árboles, la regla general es podar en reposo vegetativo — finales de otoño o invierno — cuando el árbol ha perdido o reducido su actividad. Las heridas de poda cicatrizan mejor, hay menos riesgo de infección por hongos y el árbol recupera energía antes de la temporada de crecimiento.</p>
       <p>Hay excepciones — palmeras, cipreses, algunos frutales — pero como punto de partida, si tienes dudas sobre cuándo podar un árbol de tu jardín, el invierno suele ser una opción segura. Si quieres una evaluación específica para las especies de tu jardín, la visita técnica es gratuita y sin compromiso.</p>
 
@@ -561,7 +599,7 @@ p, li, .faq-body p, .resena-text, .col-block p,
   </div>
 </div>
 
-<section class="cta-banner"><div class="wrap"><h2>¿Gestionamos la poda <span class="it">de tu jardín?</span></h2><p>Cada especie en su momento · Equipo propio · Toda Mallorca</p><div class="cta-btns"><a href="tel:+34621493977" class="btn btn-gold">Llamar · 621 49 39 77</a><a href="/es/#contacto" class="btn btn-outline-w">Enviar mensaje</a></div></div></section>
+<section class="cta-banner"><div class="wrap"><h2 id="sec-8">¿Gestionamos la poda <span class="it">de tu jardín?</span></h2><p>Cada especie en su momento · Equipo propio · Toda Mallorca</p><div class="cta-btns"><a href="tel:+34621493977" class="btn btn-gold">Llamar · 621 49 39 77</a><a href="/es/#contacto" class="btn btn-outline-w">Enviar mensaje</a></div></div></section>
 
 <footer class="footer">
   <div class="wrap">
