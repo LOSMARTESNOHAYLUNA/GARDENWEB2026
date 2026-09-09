@@ -838,11 +838,12 @@ h1 .it, h2 .it, h3 .it, h4 .it,
 .resenas-carousel { overflow:hidden; }
 .resenas-track { display:flex; gap:16px; transition:transform 0.45s cubic-bezier(0.25,0.46,0.45,0.94); }
 .resena-gcard {
-  flex:0 0 calc(25% - 12px); min-width:calc(25% - 12px);
+  flex:0 0 auto;
   background:#fff; border:1px solid #e8e8e8;
   border-radius:12px; padding:20px 22px 22px;
   box-shadow:0 1px 4px rgba(0,0,0,0.06);
   display:flex; flex-direction:column; gap:10px;
+  box-sizing:border-box;
 }
 .resena-gcard-header { display:flex; align-items:center; justify-content:space-between; }
 .resena-gcard-user { display:flex; align-items:center; gap:12px; }
@@ -876,8 +877,7 @@ h1 .it, h2 .it, h3 .it, h4 .it,
 .rating-detail .count { font-family:'Manrope'; font-size:13px; color:var(--gray-soft); }
 .btn-google { display:inline-flex; align-items:center; gap:10px; border:1px solid var(--line); border-radius:100px; padding:12px 24px; font-family:'Manrope'; font-size:13px; font-weight:600; color:var(--ink-soft); text-decoration:none; transition:all 0.2s; background:#fff; }
 .btn-google:hover { border-color:var(--green); color:var(--green); }
-@media(max-width:968px){ .resena-gcard{ flex:0 0 calc(50% - 8px); min-width:calc(50% - 8px); } }
-@media(max-width:640px){ .resena-gcard{ flex:0 0 calc(100%); min-width:100%; } }
+
 </style>
 </head>
 <body>
@@ -1782,24 +1782,48 @@ body.gs-cookie-open .gs-float-actions{display:none;}
 <script>
 /* Carrusel reseñas Google */
 (function(){
+  var carousel = document.querySelector('.resenas-carousel');
   var track = document.getElementById('resenas-track');
   var btnP = document.getElementById('resenas-prev');
   var btnN = document.getElementById('resenas-next');
-  if(!track) return;
-  var cards = track.querySelectorAll('.resena-gcard');
+  if(!track || !carousel) return;
+  var cards = Array.from(track.querySelectorAll('.resena-gcard'));
   var cur = 0;
-  function perView(){ return window.innerWidth >= 968 ? 4 : window.innerWidth >= 640 ? 2 : 1; }
-  function maxIdx(){ return Math.max(0, cards.length - perView()); }
-  function slide(){
-    var w = cards[0].offsetWidth + 16;
-    track.style.transform = 'translateX(-'+(cur*w)+'px)';
-    btnP.disabled = cur === 0;
-    btnN.disabled = cur >= maxIdx();
+  var gap = 16;
+
+  function perView(){
+    var w = carousel.offsetWidth;
+    if(w >= 900) return 4;
+    if(w >= 560) return 2;
+    return 1;
   }
-  btnN.addEventListener('click',function(){ if(cur<maxIdx()){cur++;slide();} });
-  btnP.addEventListener('click',function(){ if(cur>0){cur--;slide();} });
-  window.addEventListener('resize',function(){cur=Math.min(cur,maxIdx());slide();});
-  slide();
+
+  function setWidths(){
+    var pv = perView();
+    var cardW = (carousel.offsetWidth - gap * (pv - 1)) / pv;
+    cards.forEach(function(c){ c.style.width = cardW + 'px'; c.style.minWidth = cardW + 'px'; });
+    cur = Math.min(cur, Math.max(0, cards.length - pv));
+    slide(false);
+  }
+
+  function slide(animate){
+    if(animate === false) track.style.transition = 'none';
+    else track.style.transition = 'transform 0.45s cubic-bezier(0.25,0.46,0.45,0.94)';
+    var pv = perView();
+    var cardW = cards[0].offsetWidth + gap;
+    track.style.transform = 'translateX(-' + (cur * cardW) + 'px)';
+    btnP.disabled = cur === 0;
+    btnN.disabled = cur >= cards.length - pv;
+    setTimeout(function(){ track.style.transition = 'transform 0.45s cubic-bezier(0.25,0.46,0.45,0.94)'; }, 50);
+  }
+
+  btnN.addEventListener('click', function(){ var pv=perView(); if(cur < cards.length - pv){ cur++; slide(); } });
+  btnP.addEventListener('click', function(){ if(cur > 0){ cur--; slide(); } });
+
+  var ro = new ResizeObserver(function(){ setWidths(); });
+  ro.observe(carousel);
+
+  setWidths();
 })();
 </script>
 </body>
