@@ -88,7 +88,6 @@ img { max-width:100%; display:block; }
 .footer p,.footer li { font-family:'Manrope'; font-size:14px; line-height:1.7; font-weight:300; }
 .footer ul { list-style:none; }
 .footer ul li { padding:5px 0; }
-.footer a { color:rgba(251,248,242,0.75); transition:color 0.3s; }
 .footer a:hover { color:var(--gold-soft); }
 .footer-bottom { padding-top:30px; border-top:1px solid rgba(251,248,242,0.1); display:flex; justify-content:space-between; flex-wrap:wrap; gap:20px; font-family:'Manrope'; font-size:12px; }
 .footer-legal-bar { display:flex; gap:24px; flex-wrap:wrap; }
@@ -317,40 +316,6 @@ p, li, .faq-body p, .resena-text, .col-block p,
 
 .resena-text { font-style: normal !important; }
 
-
-/* ===== MENÚ MÓVIL CON SUBMENUS ===== */
-@media(max-width:968px){
-  /* Cuando el nav está abierto, mostrar submenus solo si tienen dd-active */
-  .has-dd.dd-active > .dd-menu{
-    display:flex !important;
-    position:static;
-    box-shadow:none;
-    border:none;
-    border-left:2px solid var(--gold);
-    background:transparent;
-    padding:6px 0 6px 16px;
-    margin-top:4px;
-    flex-direction:column;
-    gap:0;
-  }
-  .has-dd.dd-active > .dd-menu .dd-inner{
-    flex-direction:column;
-    gap:0;
-    padding:0;
-  }
-  .has-dd.dd-active > .dd-menu .dd-col{
-    padding:0;
-  }
-  .has-dd.dd-active > .dd-menu .dd-label{
-    font-size:10px;
-    margin-bottom:4px;
-    margin-top:8px;
-  }
-  /* Indicador visual de que tiene submenu */
-  .has-dd > a::after{content:' ▾';font-size:10px;opacity:0.5;}
-  .has-dd.dd-active > a::after{content:' ▴';opacity:0.8;}
-}
-
 </style>
 </head>
 <body>
@@ -393,18 +358,7 @@ p, li, .faq-body p, .resena-text, .col-block p,
             </div>
           </div></div>
         </li>
-      <li class="has-dd">
-          <a href="/es/zonas/">Zonas</a>
-          <div class="dd-menu"><div class="dd-inner">
-            <div class="dd-col">
-              <a href="/es/jardineria-palma/">Palma</a>
-              <a href="/es/jardineria-llucmajor/">Llucmajor</a>
-              <a href="/es/jardineria-marratxi/">Marratxí</a>
-              <a href="/es/jardineria-calvia/">Calvià</a>
-              <a href="/es/jardineria-alcudia/">Alcúdia</a>
-            </div>
-          </div></div>
-        </li>
+      <li><a href="/es/zonas/">Zonas</a></li>
       <li><a href="/es/sobre-nosotros/">Nosotros</a></li>
       <li><a href="/es/preguntas-frecuentes/">FAQ</a></li>
       <li><a href="/es/blog/">Blog</a></li><li><a href="/es/contacto/">Contacto</a></li>
@@ -419,6 +373,7 @@ p, li, .faq-body p, .resena-text, .col-block p,
 </header>
 <div class="page-hero">
   <div class="wrap">
+    <div class="eyebrow">Legal</div>
     <h1>Política de Privacidad</h1>
     <p class="updated">Última actualización: julio de 2026</p>
   </div>
@@ -551,9 +506,7 @@ p, li, .faq-body p, .resena-text, .col-block p,
         <a href="/es/mapa-del-sitio/">Mapa del sitio</a>
       </div>
       <div class="lang-switch">
-        <a href="/es/politica-privacidad/" class="active">ES</a>
-        <a href="/en/">EN</a>
-        <a href="/de/">DE</a>
+        <a href="#" class="active">ES</a><a href="/en/">EN</a><a href="/de/">DE</a>
       </div>
     </div>
   </div>
@@ -566,37 +519,32 @@ window.addEventListener('scroll',()=>{hdr.style.boxShadow=window.scrollY>20?'0 4
 
 
 <script>
-/* Mega menu desktop */
+/* Mega menú — hover con retardo para que no desaparezca al mover el ratón */
 (function(){
-  document.querySelectorAll('.has-dd').forEach(function(tr){
-    var m = tr.querySelector('.dd-menu');
-    if(!m) return;
-    var t;
-    function show(){ clearTimeout(t); m.classList.add('dd-open'); }
-    function hide(){ t = setTimeout(function(){ m.classList.remove('dd-open'); }, 150); }
-    tr.addEventListener('mouseenter', show);
-    tr.addEventListener('mouseleave', hide);
-    m.addEventListener('mouseenter', show);
-    m.addEventListener('mouseleave', hide);
-  });
+  var t, tr = document.querySelector('.has-dd'), m = document.querySelector('.dd-menu');
+  if(!tr || !m) return;
+  function show(){ clearTimeout(t); m.classList.add('dd-open'); }
+  function hide(ms){ t = setTimeout(function(){ m.classList.remove('dd-open'); }, ms); }
+  tr.addEventListener('mouseenter', show);
+  tr.addEventListener('mouseleave', function(){ hide(350); });
+  m.addEventListener('mouseenter', show);
+  m.addEventListener('mouseleave', function(){ hide(150); });
   document.addEventListener('click', function(e){
-    document.querySelectorAll('.dd-menu.dd-open').forEach(function(m){
-      if(!m.closest('.has-dd').contains(e.target)) m.classList.remove('dd-open');
-    });
+    if(!tr.contains(e.target) && !m.contains(e.target)) m.classList.remove('dd-open');
   });
 })();
 </script>
 <script>
-/* Menu movil */
+/* Hamburger menu */
 (function(){
   var toggle = document.querySelector('.menu-toggle');
-  var nav = document.querySelector('.nav');
+  var nav    = document.querySelector('.nav');
   if(!toggle || !nav) return;
   toggle.addEventListener('click', function(e){
     e.stopPropagation();
     var open = nav.classList.toggle('open');
     toggle.textContent = open ? '✕' : '☰';
-    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggle.setAttribute('aria-expanded', open);
   });
   document.addEventListener('click', function(e){
     if(nav.classList.contains('open') && !nav.contains(e.target) && !toggle.contains(e.target)){
@@ -604,18 +552,6 @@ window.addEventListener('scroll',()=>{hdr.style.boxShadow=window.scrollY>20?'0 4
       toggle.textContent = '☰';
       toggle.setAttribute('aria-expanded', 'false');
     }
-  });
-  document.querySelectorAll('.has-dd > a').forEach(function(a){
-    a.addEventListener('click', function(e){
-      if(window.innerWidth <= 968){
-        e.preventDefault();
-        e.stopPropagation();
-        var li = a.closest('.has-dd');
-        var isOpen = li.classList.contains('dd-active');
-        document.querySelectorAll('.has-dd.dd-active').forEach(function(x){ x.classList.remove('dd-active'); });
-        if(!isOpen) li.classList.add('dd-active');
-      }
-    });
   });
 })();
 </script>
@@ -684,59 +620,6 @@ body.gs-cookie-open .gs-float-actions{display:none;}
   .gs-float-actions{right:16px;bottom:16px;gap:10px;}
   .gs-wa-fab{width:52px;height:52px;}
   .gs-cookie-fab{width:40px;height:40px;}
-}
-
-/* ===== CORRECCIONES RESPONSIVE ===== */
-@media(max-width:968px){
-  /* Footer igual en toda la web */
-  .footer-grid{grid-template-columns:1fr 1fr;}
-  .eu-banner{flex-direction:column;text-align:center;}
-  .eu-banner img{width:40% !important;}
-
-  /* Cards icono+texto centradas */
-  .svc-mini,.feature-card,.icon-card,[class*="icon-block"]{text-align:center;}
-  .svc-mini svg,.feature-card svg,.icon-card svg{margin:0 auto 12px;display:block;}
-
-  /* Reducir padding servicios complementarios → FAQ */
-  .related-svcs,.servicios-rel,.svcs-complementarios{padding-bottom:30px;}
-  .faq-section,.section-faq,.section.faq{padding-top:30px;}
-
-  /* Reducir espacio equipo → nuestro trabajo */
-  .team-section,.equipo-section{padding-bottom:30px;}
-  .work-section,.trabajos-section{padding-top:30px;}
-}
-
-@media(max-width:640px){
-  /* Hero centrado en móvil */
-  .page-hero{align-items:center;text-align:center;}
-  .page-hero .wrap{text-align:center;}
-  .page-hero .breadcrumb-inner{justify-content:center;}
-  .page-hero .eyebrow{margin-left:auto;margin-right:auto;}
-  .page-hero h1{text-align:center;}
-  .page-hero .btn,.page-hero a[class*="btn"]{margin:0 auto;}
-  .page-hero .hero-cta,.page-hero .cta-wrap{justify-content:center;}
-
-  /* Hero fondo imagen centrado */
-  .hero-bg .wrap,.svc-hero .wrap,.faq-hero .wrap{text-align:center;}
-  .hero-bg .breadcrumb-inner,.svc-hero .bc{justify-content:center;}
-  .hero-bg h1,.svc-hero h1{text-align:center;}
-
-  /* Home hero imagen mobile */
-  .hero{min-height:100svh;}
-
-  /* Footer 1 columna */
-  .footer-grid{grid-template-columns:1fr;gap:32px;}
-  .footer-bottom{flex-direction:column;align-items:center;text-align:center;gap:12px;}
-  .footer-legal{justify-content:center;flex-wrap:wrap;}
-
-  /* Cards centradas */
-  .svc-mini,.feature-card,.icon-card{text-align:center;align-items:center;}
-
-  /* Menú móvil con submenus */
-
-
-  /* Zonas hero imagen */
-  .hero-zone .hero-video-wrap,.hero-bg{background-position:center center;}
 }
 </style>
 <div class="gs-float-actions">
