@@ -652,14 +652,14 @@ body.gs-cookie-open .gs-float-actions{display:none;}
 }
 
 /* ===== GS-FIX-V2 START ===== */
-.topbar{position:fixed;top:0;left:0;right:0;z-index:120;background:var(--green);color:var(--paper);height:36px;display:flex;align-items:center;font-family:'Manrope';font-size:12.5px;}
-.topbar-inner{max-width:1200px;margin:0 auto;width:100%;display:flex;align-items:center;justify-content:center;gap:12px;padding:0 24px;}
+.topbar{position:static;z-index:120;background:var(--green);color:var(--paper);min-height:38px;display:flex;align-items:center;font-family:'Manrope';font-size:13.5px;}
+.topbar-inner{max-width:1200px;margin:0 auto;width:100%;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:4px 12px;padding:7px 20px;}
 .topbar .topbar-sep{opacity:0.4;}
 .topbar .topbar-tagline{opacity:0.92;}
 .topbar .topbar-brand{font-weight:600;letter-spacing:0.03em;}
 .topbar .topbar-phone{color:var(--gold-soft);font-weight:700;white-space:nowrap;}
 .topbar .topbar-phone:hover{color:#fff;}
-.header{top:36px !important;backdrop-filter:none !important;-webkit-backdrop-filter:none !important;background:rgba(251,248,242,0.98) !important;}
+.header{position:static !important;top:auto !important;backdrop-filter:none !important;-webkit-backdrop-filter:none !important;background:rgba(251,248,242,0.98) !important;}
 @media(min-width:969px){
   .dd-menu:not(.dd-menu-zonas){ top:var(--gs-top,100px) !important; }
   .has-dd-zonas{ position:relative; }
@@ -670,7 +670,7 @@ body.gs-cookie-open .gs-float-actions{display:none;}
   .dd-back{ display:none !important; }
 }
 @media(max-width:640px){
-  .topbar{ height:34px; font-size:11px; }
+  .topbar{ font-size:13px; }
   .topbar .topbar-tagline, .topbar .gs-sep1{ display:none; }
 }
 /* #3 Breadcrumbs apilados en movil */
