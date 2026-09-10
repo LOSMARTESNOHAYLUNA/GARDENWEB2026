@@ -685,6 +685,40 @@ p, li, .faq-body p, .resena-text, .col-block p,
 
 .resena-text { font-style: normal !important; }
 
+
+/* ===== MENÚ MÓVIL CON SUBMENUS ===== */
+@media(max-width:968px){
+  /* Cuando el nav está abierto, mostrar submenus solo si tienen dd-active */
+  .has-dd.dd-active > .dd-menu{
+    display:flex !important;
+    position:static;
+    box-shadow:none;
+    border:none;
+    border-left:2px solid var(--gold);
+    background:transparent;
+    padding:6px 0 6px 16px;
+    margin-top:4px;
+    flex-direction:column;
+    gap:0;
+  }
+  .has-dd.dd-active > .dd-menu .dd-inner{
+    flex-direction:column;
+    gap:0;
+    padding:0;
+  }
+  .has-dd.dd-active > .dd-menu .dd-col{
+    padding:0;
+  }
+  .has-dd.dd-active > .dd-menu .dd-label{
+    font-size:10px;
+    margin-bottom:4px;
+    margin-top:8px;
+  }
+  /* Indicador visual de que tiene submenu */
+  .has-dd > a::after{content:' ▾';font-size:10px;opacity:0.5;}
+  .has-dd.dd-active > a::after{content:' ▴';opacity:0.8;}
+}
+
 </style>
 </head>
 <body>
@@ -1247,10 +1281,23 @@ window.addEventListener('scroll', () => {
 <script>
 /* Mega menú — hover con retardo para que no desaparezca al mover el ratón */
 (function(){
-  var t, tr = document.querySelector('.has-dd'), m = document.querySelector('.dd-menu');
-  if(!tr || !m) return;
-  function show(){ clearTimeout(t); m.classList.add('dd-open'); }
-  function hide(ms){ t = setTimeout(function(){ m.classList.remove('dd-open'); }, ms); }
+    // Hover para TODOS los .has-dd en desktop
+  document.querySelectorAll('.has-dd').forEach(function(tr){
+    var m = tr.querySelector('.dd-menu');
+    if(!m) return;
+    var t;
+    function show(){ clearTimeout(t); m.classList.add('dd-open'); }
+    function hide(ms){ t = setTimeout(function(){ m.classList.remove('dd-open'); }, ms||200); }
+    tr.addEventListener('mouseenter', show);
+    tr.addEventListener('mouseleave', function(){ hide(150); });
+    m.addEventListener('mouseenter', show);
+    m.addEventListener('mouseleave', function(){ hide(150); });
+  });
+  document.addEventListener('click', function(e){
+    document.querySelectorAll('.dd-menu.dd-open').forEach(function(m){
+      if(!m.closest('.has-dd').contains(e.target)) m.classList.remove('dd-open');
+    });
+  }); }, ms); }
   tr.addEventListener('mouseenter', show);
   tr.addEventListener('mouseleave', function(){ hide(350); });
   m.addEventListener('mouseenter', show);
@@ -1277,11 +1324,15 @@ window.addEventListener('scroll', () => {
       nav.classList.remove('open');
       toggle.textContent = '☰';
       toggle.setAttribute('aria-expanded', 'false');
-  // Submenus en móvil
+  // Submenus en móvil (hasta 968px)
   document.querySelectorAll('.has-dd > a').forEach(function(a){
     a.addEventListener('click',function(e){
-      if(window.innerWidth<=640){
+      if(window.innerWidth<=968){
         e.preventDefault();
+        // Cerrar otros submenus abiertos
+        document.querySelectorAll('.has-dd.dd-active').forEach(function(li){
+          if(li!==a.closest('.has-dd')) li.classList.remove('dd-active');
+        });
         a.closest('.has-dd').classList.toggle('dd-active');
       }
     });
@@ -1464,8 +1515,7 @@ body.gs-cookie-open .gs-float-actions{display:none;}
   .svc-mini,.feature-card,.icon-card{text-align:center;align-items:center;}
 
   /* Menú móvil con submenus */
-  .nav.open .has-dd .dd-menu{display:block !important;position:static;box-shadow:none;border:none;background:var(--paper-soft);padding:8px 0 8px 16px;}
-  .nav.open .has-dd.dd-active .dd-menu{display:block !important;}
+
 
   /* Zonas hero imagen */
   .hero-zone .hero-video-wrap,.hero-bg{background-position:center center;}
