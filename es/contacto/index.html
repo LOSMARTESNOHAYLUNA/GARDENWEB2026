@@ -95,7 +95,7 @@ img{max-width:100%;display:block;}
 .breadcrumb-inner .sep{color:var(--line);}
 .breadcrumb-inner .current{color:var(--green);font-weight:500;}
 /* HERO CON IMAGEN DE FONDO (estructura unificada) */
-.page-hero{position:relative;overflow:hidden;min-height:560px;display:flex;align-items:flex-end;background-image:url('/img/garden-solution-mantenimiento-de-jardines-particulares-1.webp');background-size:cover;background-position:center;padding:180px 0 90px;}
+.page-hero{position:relative;overflow:hidden;min-height:480px;display:flex;align-items:flex-end;background-image:url('/img/garden-solution-mantenimiento-de-jardines-particulares-1.webp');background-size:cover;background-position:center;padding:180px 0 90px;}
 .page-hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(15,15,13,0.48) 0%, rgba(15,15,13,0.58) 45%, rgba(15,15,13,0.88) 100%);}
 .page-hero .wrap{position:relative;z-index:1;width:100%;}
 .page-hero .breadcrumb-inner{color:rgba(251,248,242,0.9);margin-bottom:24px;text-shadow:0 2px 10px rgba(0,0,0,0.55);}
@@ -107,7 +107,7 @@ img{max-width:100%;display:block;}
 .page-hero h1{color:var(--paper);font-size:clamp(36px,4.5vw,60px);margin-bottom:16px;text-shadow:0 2px 14px rgba(0,0,0,0.5);}
 .page-hero h1 .it{font-weight:800; color:var(--gold-soft);}
 .page-hero .lead{font-family:'Manrope';font-size:16px;font-weight:300;color:rgba(251,248,242,0.9);max-width:640px;line-height:1.75;}
-@media(max-width:640px){ .page-hero{padding:130px 0 40px;min-height:360px;} }
+@media(max-width:640px){ .page-hero{padding:130px 0 40px;min-height:480px;} }
 .form-section{padding:90px 0 70px;}
 .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start;}
 .form-info h2{font-size:clamp(26px,3vw,36px);margin-bottom:18px;}
@@ -241,7 +241,18 @@ p, li, .footer p, .footer li, .eu-banner-text p,
           </div>
         </div></div>
       </li>
-      <li><a href="/es/zonas/">Zonas</a></li>
+      <li class="has-dd">
+          <a href="/es/zonas/">Zonas</a>
+          <div class="dd-menu"><div class="dd-inner">
+            <div class="dd-col">
+              <a href="/es/jardineria-palma/">Palma</a>
+              <a href="/es/jardineria-llucmajor/">Llucmajor</a>
+              <a href="/es/jardineria-marratxi/">Marratxí</a>
+              <a href="/es/jardineria-calvia/">Calvià</a>
+              <a href="/es/jardineria-alcudia/">Alcúdia</a>
+            </div>
+          </div></div>
+        </li>
       <li><a href="/es/sobre-nosotros/">Nosotros</a></li>
       <li><a href="/es/preguntas-frecuentes/">FAQ</a></li>
       <li><a href="/es/blog/">Blog</a></li><li><a href="/es/contacto/">Contacto</a></li>
@@ -574,6 +585,60 @@ body.gs-cookie-open .gs-float-actions{display:none;}
   .gs-float-actions{right:16px;bottom:16px;gap:10px;}
   .gs-wa-fab{width:52px;height:52px;}
   .gs-cookie-fab{width:40px;height:40px;}
+}
+
+/* ===== CORRECCIONES RESPONSIVE ===== */
+@media(max-width:968px){
+  /* Footer igual en toda la web */
+  .footer-grid{grid-template-columns:1fr 1fr;}
+  .eu-banner{flex-direction:column;text-align:center;}
+  .eu-banner img{width:40% !important;}
+
+  /* Cards icono+texto centradas */
+  .svc-mini,.feature-card,.icon-card,[class*="icon-block"]{text-align:center;}
+  .svc-mini svg,.feature-card svg,.icon-card svg{margin:0 auto 12px;display:block;}
+
+  /* Reducir padding servicios complementarios → FAQ */
+  .related-svcs,.servicios-rel,.svcs-complementarios{padding-bottom:30px;}
+  .faq-section,.section-faq,.section.faq{padding-top:30px;}
+
+  /* Reducir espacio equipo → nuestro trabajo */
+  .team-section,.equipo-section{padding-bottom:30px;}
+  .work-section,.trabajos-section{padding-top:30px;}
+}
+
+@media(max-width:640px){
+  /* Hero centrado en móvil */
+  .page-hero{align-items:center;text-align:center;}
+  .page-hero .wrap{text-align:center;}
+  .page-hero .breadcrumb-inner{justify-content:center;}
+  .page-hero .eyebrow{margin-left:auto;margin-right:auto;}
+  .page-hero h1{text-align:center;}
+  .page-hero .btn,.page-hero a[class*="btn"]{margin:0 auto;}
+  .page-hero .hero-cta,.page-hero .cta-wrap{justify-content:center;}
+
+  /* Hero fondo imagen centrado */
+  .hero-bg .wrap,.svc-hero .wrap,.faq-hero .wrap{text-align:center;}
+  .hero-bg .breadcrumb-inner,.svc-hero .bc{justify-content:center;}
+  .hero-bg h1,.svc-hero h1{text-align:center;}
+
+  /* Home hero imagen mobile */
+  .hero{min-height:100svh;}
+
+  /* Footer 1 columna */
+  .footer-grid{grid-template-columns:1fr;gap:32px;}
+  .footer-bottom{flex-direction:column;align-items:center;text-align:center;gap:12px;}
+  .footer-legal{justify-content:center;flex-wrap:wrap;}
+
+  /* Cards centradas */
+  .svc-mini,.feature-card,.icon-card{text-align:center;align-items:center;}
+
+  /* Menú móvil con submenus */
+  .nav.open .has-dd .dd-menu{display:block !important;position:static;box-shadow:none;border:none;background:var(--paper-soft);padding:8px 0 8px 16px;}
+  .nav.open .has-dd.dd-active .dd-menu{display:block !important;}
+
+  /* Zonas hero imagen */
+  .hero-zone .hero-video-wrap,.hero-bg{background-position:center center;}
 }
 </style>
 <div class="gs-float-actions">
