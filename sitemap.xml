@@ -1,97 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  <url>
-    <loc>https://mallorcagardensolution.com/es/aviso-legal/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/aviso-legal/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/"/>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://mallorcagardensolution.com/es/blog/calendario-poda-mallorca/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/blog/calendario-poda-mallorca/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://mallorcagardensolution.com/es/blog/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/blog/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/"/>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://mallorcagardensolution.com/es/blog/picudo-rojo-mallorca/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/blog/picudo-rojo-mallorca/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://mallorcagardensolution.com/es/blog/riego-automatico-mediterraneo/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/blog/riego-automatico-mediterraneo/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://mallorcagardensolution.com/es/cesped-artificial/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/cesped-artificial/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://mallorcagardensolution.com/img/garden-solution-cesped-artificial-hero.webp</image:loc>
-      <image:caption>Césped artificial en Mallorca</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://mallorcagardensolution.com/es/cesped-natural/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/cesped-natural/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://mallorcagardensolution.com/img/garden-solution-cesped-natural.webp</image:loc>
-      <image:caption>Césped natural en Mallorca</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://mallorcagardensolution.com/es/contacto/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/contacto/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/contact/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/kontakt/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mallorcagardensolution.com/es/controles-fitosanitarios/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/controles-fitosanitarios/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://mallorcagardensolution.com/img/garden-solution-controles-fitosanitarios-hero.webp</image:loc>
-      <image:caption>Controles fitosanitarios en Mallorca</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://mallorcagardensolution.com/es/endoterapia/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/endoterapia/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/endotherapy-mallorca/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/endotherapie-mallorca/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://mallorcagardensolution.com/img/garden-solution-endoterapia-hero.webp</image:loc>
-      <image:caption>Endoterapia vegetal en Mallorca</image:caption>
-    </image:image>
-  </url>
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://mallorcagardensolution.com/es/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/"/>
@@ -102,276 +11,938 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://mallorcagardensolution.com/es/jardineria-alcudia/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/jardineria-alcudia/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/gardening-alcudia/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/gartenservice-alcudia/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://mallorcagardensolution.com/img/garden-solution-poda-palmeras-hero.webp</image:loc>
-      <image:caption>Empresa de jardinería en Alcúdia</image:caption>
-    </image:image>
+    <loc>https://mallorcagardensolution.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://mallorcagardensolution.com/es/jardineria-calvia/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/jardineria-calvia/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/gardening-calvia/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/gartenservice-calvia/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://mallorcagardensolution.com/img/garden-solution-jardineria-calvia-hero.webp</image:loc>
-      <image:caption>Empresa de jardinería en Calvià</image:caption>
-    </image:image>
+    <loc>https://mallorcagardensolution.com/de/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://mallorcagardensolution.com/es/jardineria-llucmajor/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/jardineria-llucmajor/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/"/>
+    <loc>https://mallorcagardensolution.com/es/servicios/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/servicios/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/services/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/leistungen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/servicios/"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://mallorcagardensolution.com/img/garden-solution-prevencion-incendios-hero.webp</image:loc>
-      <image:caption>Empresa de jardinería en Llucmajor</image:caption>
-    </image:image>
   </url>
   <url>
-    <loc>https://mallorcagardensolution.com/es/jardineria-marratxi/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/jardineria-marratxi/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/"/>
+    <loc>https://mallorcagardensolution.com/en/services/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/servicios/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/services/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/leistungen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/servicios/"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://mallorcagardensolution.com/img/garden-solution-paisajismo-hero.webp</image:loc>
-      <image:caption>Empresa de jardinería en Marratxí</image:caption>
-    </image:image>
   </url>
   <url>
-    <loc>https://mallorcagardensolution.com/es/jardineria-palma/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/jardineria-palma/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/"/>
+    <loc>https://mallorcagardensolution.com/de/leistungen/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/servicios/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/services/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/leistungen/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/servicios/"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://mallorcagardensolution.com/img/garden-solution-mantenimiento-de-jardines-particulares-1.webp</image:loc>
-      <image:caption>Empresa de jardinería en Palma de Mallorca</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://mallorcagardensolution.com/es/limpieza-fincas/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/limpieza-fincas/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://mallorcagardensolution.com/img/garden-solution-limpiezas-fincas-hero.webp</image:loc>
-      <image:caption>Limpieza y desbroce de fincas en Mallorca</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://mallorcagardensolution.com/es/mantenimiento-comunidades/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/mantenimiento-comunidades/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://mallorcagardensolution.com/img/garden-solution-comunidades-hero.webp</image:loc>
-      <image:caption>Mantenimiento de jardines en comunidades de vecinos</image:caption>
-    </image:image>
   </url>
   <url>
     <loc>https://mallorcagardensolution.com/es/mantenimiento-jardines-particulares/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/mantenimiento-jardines-particulares/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/garden-maintenance-mallorca/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/gartenpflege-mallorca/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/mantenimiento-jardines-particulares/"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://mallorcagardensolution.com/img/mantenimiento-jardines-mallorca.webp</image:loc>
-      <image:caption>Mantenimiento de jardines en Mallorca</image:caption>
-    </image:image>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/en/garden-maintenance-mallorca/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/mantenimiento-jardines-particulares/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/garden-maintenance-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/gartenpflege-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/mantenimiento-jardines-particulares/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/de/gartenpflege-mallorca/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/mantenimiento-jardines-particulares/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/garden-maintenance-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/gartenpflege-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/mantenimiento-jardines-particulares/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/es/mantenimiento-comunidades/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/mantenimiento-comunidades/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/community-maintenance-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/gemeinschaftsanlagen-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/mantenimiento-comunidades/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/en/community-maintenance-mallorca/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/mantenimiento-comunidades/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/community-maintenance-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/gemeinschaftsanlagen-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/mantenimiento-comunidades/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/de/gemeinschaftsanlagen-mallorca/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/mantenimiento-comunidades/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/community-maintenance-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/gemeinschaftsanlagen-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/mantenimiento-comunidades/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mallorcagardensolution.com/es/mantenimiento-piscinas/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/mantenimiento-piscinas/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/pool-maintenance-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/poolservice-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/mantenimiento-piscinas/"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://mallorcagardensolution.com/img/garden-solution-piscinas-hero.webp</image:loc>
-      <image:caption>Mantenimiento de piscinas en Mallorca</image:caption>
-    </image:image>
   </url>
   <url>
-    <loc>https://mallorcagardensolution.com/es/mapa-del-sitio/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/mapa-del-sitio/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://mallorcagardensolution.com/es/paisajismo-diseno-jardines/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/paisajismo-diseno-jardines/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/landscaping-garden-design/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/gartengestaltung-mallorca/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/"/>
+    <loc>https://mallorcagardensolution.com/en/pool-maintenance-mallorca/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/mantenimiento-piscinas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/pool-maintenance-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/poolservice-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/mantenimiento-piscinas/"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://mallorcagardensolution.com/img/garden-solution-paisajismo-hero.webp</image:loc>
-      <image:caption>Paisajismo y diseño de jardines en Mallorca</image:caption>
-    </image:image>
   </url>
   <url>
-    <loc>https://mallorcagardensolution.com/es/picudo-rojo/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/picudo-rojo/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/"/>
+    <loc>https://mallorcagardensolution.com/de/poolservice-mallorca/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/mantenimiento-piscinas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/pool-maintenance-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/poolservice-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/mantenimiento-piscinas/"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://mallorcagardensolution.com/img/garden-solution-picudo-rojo-hero.webp</image:loc>
-      <image:caption>Tratamiento del picudo rojo en Mallorca</image:caption>
-    </image:image>
   </url>
   <url>
     <loc>https://mallorcagardensolution.com/es/poda-arboles-setos/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/poda-arboles-setos/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/tree-pruning-mallorca/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/baumschnitt-mallorca/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/poda-arboles-setos/"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://mallorcagardensolution.com/img/garden-solution-arboles-cetos-hero.webp</image:loc>
-      <image:caption>Poda de árboles y setos en Mallorca</image:caption>
-    </image:image>
   </url>
   <url>
-    <loc>https://mallorcagardensolution.com/es/poda-en-altura/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/poda-en-altura/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/"/>
+    <loc>https://mallorcagardensolution.com/en/tree-pruning-mallorca/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/poda-arboles-setos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/tree-pruning-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/baumschnitt-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/poda-arboles-setos/"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://mallorcagardensolution.com/img/garden-solution-poda-altura-hero.webp</image:loc>
-      <image:caption>Poda en altura en Mallorca</image:caption>
-    </image:image>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/de/baumschnitt-mallorca/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/poda-arboles-setos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/tree-pruning-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/baumschnitt-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/poda-arboles-setos/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mallorcagardensolution.com/es/poda-palmeras/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/poda-palmeras/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/palm-tree-pruning-mallorca/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/palmbaumschnitt-mallorca/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/poda-palmeras/"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://mallorcagardensolution.com/img/garden-solution-poda-palmeras-hero.webp</image:loc>
-      <image:caption>Poda de palmeras en Mallorca</image:caption>
-    </image:image>
   </url>
   <url>
-    <loc>https://mallorcagardensolution.com/es/politica-cookies/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/politica-cookies/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/"/>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://mallorcagardensolution.com/es/politica-privacidad/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/politica-privacidad/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/"/>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://mallorcagardensolution.com/es/preguntas-frecuentes/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/preguntas-frecuentes/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/"/>
+    <loc>https://mallorcagardensolution.com/en/palm-tree-pruning-mallorca/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/poda-palmeras/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/palm-tree-pruning-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/palmbaumschnitt-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/poda-palmeras/"/>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/de/palmbaumschnitt-mallorca/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/poda-palmeras/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/palm-tree-pruning-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/palmbaumschnitt-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/poda-palmeras/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/es/poda-en-altura/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/poda-en-altura/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/height-pruning-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/hoehenschnitt-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/poda-en-altura/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/en/height-pruning-mallorca/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/poda-en-altura/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/height-pruning-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/hoehenschnitt-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/poda-en-altura/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/de/hoehenschnitt-mallorca/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/poda-en-altura/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/height-pruning-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/hoehenschnitt-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/poda-en-altura/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/es/paisajismo-diseno-jardines/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/paisajismo-diseno-jardines/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/landscaping-garden-design/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/gartengestaltung-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/paisajismo-diseno-jardines/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/en/landscaping-garden-design/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/paisajismo-diseno-jardines/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/landscaping-garden-design/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/gartengestaltung-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/paisajismo-diseno-jardines/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/de/gartengestaltung-mallorca/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/paisajismo-diseno-jardines/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/landscaping-garden-design/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/gartengestaltung-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/paisajismo-diseno-jardines/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mallorcagardensolution.com/es/riego-automatico/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/riego-automatico/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/automatic-irrigation-mallorca/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/bewaesserungsanlage-mallorca/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/riego-automatico/"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://mallorcagardensolution.com/img/garden-solution-riego-automatico-hero.webp</image:loc>
-      <image:caption>Riego automático en Mallorca</image:caption>
-    </image:image>
   </url>
   <url>
-    <loc>https://mallorcagardensolution.com/es/servicios/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/servicios/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/"/>
+    <loc>https://mallorcagardensolution.com/en/automatic-irrigation-mallorca/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/riego-automatico/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/automatic-irrigation-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/bewaesserungsanlage-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/riego-automatico/"/>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/de/bewaesserungsanlage-mallorca/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/riego-automatico/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/automatic-irrigation-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/bewaesserungsanlage-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/riego-automatico/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/es/cesped-artificial/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/cesped-artificial/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/artificial-grass-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/kunstrasen-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/cesped-artificial/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/en/artificial-grass-mallorca/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/cesped-artificial/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/artificial-grass-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/kunstrasen-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/cesped-artificial/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/de/kunstrasen-mallorca/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/cesped-artificial/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/artificial-grass-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/kunstrasen-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/cesped-artificial/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/es/cesped-natural/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/cesped-natural/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/natural-lawn-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/naturrasen-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/cesped-natural/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/en/natural-lawn-mallorca/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/cesped-natural/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/natural-lawn-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/naturrasen-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/cesped-natural/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/de/naturrasen-mallorca/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/cesped-natural/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/natural-lawn-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/naturrasen-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/cesped-natural/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/es/endoterapia/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/endoterapia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/endotherapy-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/endotherapie-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/endoterapia/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/en/endotherapy-mallorca/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/endoterapia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/endotherapy-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/endotherapie-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/endoterapia/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/de/endotherapie-mallorca/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/endoterapia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/endotherapy-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/endotherapie-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/endoterapia/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/es/picudo-rojo/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/picudo-rojo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/red-palm-weevil-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/palmruessler-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/picudo-rojo/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/en/red-palm-weevil-mallorca/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/picudo-rojo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/red-palm-weevil-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/palmruessler-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/picudo-rojo/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/de/palmruessler-mallorca/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/picudo-rojo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/red-palm-weevil-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/palmruessler-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/picudo-rojo/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/es/controles-fitosanitarios/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/controles-fitosanitarios/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/pest-control-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/pflanzenschutz-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/controles-fitosanitarios/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/en/pest-control-mallorca/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/controles-fitosanitarios/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/pest-control-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/pflanzenschutz-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/controles-fitosanitarios/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/de/pflanzenschutz-mallorca/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/controles-fitosanitarios/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/pest-control-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/pflanzenschutz-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/controles-fitosanitarios/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/es/limpieza-fincas/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/limpieza-fincas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/estate-clearing-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/grundstueckspflege-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/limpieza-fincas/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/en/estate-clearing-mallorca/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/limpieza-fincas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/estate-clearing-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/grundstueckspflege-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/limpieza-fincas/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/de/grundstueckspflege-mallorca/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/limpieza-fincas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/estate-clearing-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/grundstueckspflege-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/limpieza-fincas/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mallorcagardensolution.com/es/silvicultura-preventiva/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/silvicultura-preventiva/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/preventive-forestry-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/waldpflege-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/silvicultura-preventiva/"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://mallorcagardensolution.com/img/garden-solution-prevencion-incendios-hero.webp</image:loc>
-      <image:caption>Silvicultura preventiva en Mallorca</image:caption>
-    </image:image>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/en/preventive-forestry-mallorca/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/silvicultura-preventiva/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/preventive-forestry-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/waldpflege-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/silvicultura-preventiva/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/de/waldpflege-mallorca/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/silvicultura-preventiva/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/preventive-forestry-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/waldpflege-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/silvicultura-preventiva/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/es/zonas/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/zonas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/service-areas/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/servicegebiete/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/zonas/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/en/service-areas/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/zonas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/service-areas/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/servicegebiete/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/zonas/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/de/servicegebiete/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/zonas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/service-areas/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/servicegebiete/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/zonas/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/es/jardineria-palma/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/jardineria-palma/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/gardening-palma/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/gartenservice-palma/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/jardineria-palma/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/en/gardening-palma/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/jardineria-palma/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/gardening-palma/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/gartenservice-palma/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/jardineria-palma/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/de/gartenservice-palma/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/jardineria-palma/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/gardening-palma/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/gartenservice-palma/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/jardineria-palma/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/es/jardineria-calvia/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/jardineria-calvia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/gardening-calvia/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/gartenservice-calvia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/jardineria-calvia/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/en/gardening-calvia/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/jardineria-calvia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/gardening-calvia/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/gartenservice-calvia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/jardineria-calvia/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/de/gartenservice-calvia/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/jardineria-calvia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/gardening-calvia/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/gartenservice-calvia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/jardineria-calvia/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/es/jardineria-llucmajor/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/jardineria-llucmajor/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/gardening-llucmajor/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/gartenservice-llucmajor/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/jardineria-llucmajor/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/en/gardening-llucmajor/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/jardineria-llucmajor/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/gardening-llucmajor/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/gartenservice-llucmajor/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/jardineria-llucmajor/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/de/gartenservice-llucmajor/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/jardineria-llucmajor/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/gardening-llucmajor/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/gartenservice-llucmajor/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/jardineria-llucmajor/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/es/jardineria-marratxi/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/jardineria-marratxi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/gardening-marratxi/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/gartenservice-marratxi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/jardineria-marratxi/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/en/gardening-marratxi/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/jardineria-marratxi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/gardening-marratxi/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/gartenservice-marratxi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/jardineria-marratxi/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/de/gartenservice-marratxi/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/jardineria-marratxi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/gardening-marratxi/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/gartenservice-marratxi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/jardineria-marratxi/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/es/jardineria-alcudia/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/jardineria-alcudia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/gardening-alcudia/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/gartenservice-alcudia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/jardineria-alcudia/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/en/gardening-alcudia/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/jardineria-alcudia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/gardening-alcudia/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/gartenservice-alcudia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/jardineria-alcudia/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/de/gartenservice-alcudia/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/jardineria-alcudia/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/gardening-alcudia/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/gartenservice-alcudia/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/jardineria-alcudia/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mallorcagardensolution.com/es/sobre-nosotros/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/sobre-nosotros/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/about-us/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/ueber-uns/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://mallorcagardensolution.com/img/Gabriel-y-Eloy.webp</image:loc>
-      <image:caption>Diez años cuidando jardines como si fueran nuestros</image:caption>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://mallorcagardensolution.com/es/trabaja-con-nosotros/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/trabaja-con-nosotros/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://mallorcagardensolution.com/es/zonas/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/zonas/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/sobre-nosotros/"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <image:image>
-      <image:loc>https://mallorcagardensolution.com/img/garden-solution-mantenimiento-de-jardines-particulares-1.webp</image:loc>
-      <image:caption>Cobertura en toda Mallorca</image:caption>
-    </image:image>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/en/about-us/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/sobre-nosotros/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/about-us/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/ueber-uns/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/sobre-nosotros/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/de/ueber-uns/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/sobre-nosotros/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/about-us/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/ueber-uns/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/sobre-nosotros/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/es/preguntas-frecuentes/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/preguntas-frecuentes/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/faq/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/faq/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/preguntas-frecuentes/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/en/faq/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/preguntas-frecuentes/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/faq/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/faq/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/preguntas-frecuentes/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/de/faq/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/preguntas-frecuentes/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/faq/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/faq/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/preguntas-frecuentes/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/es/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/blog/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/blog/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/en/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/blog/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/blog/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/de/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/blog/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/blog/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/es/contacto/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/contacto/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/kontakt/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/contacto/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mallorcagardensolution.com/en/contact/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/contacto/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/contact/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/kontakt/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/contacto/"/>
     <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mallorcagardensolution.com/de/kontakt/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/contacto/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/contact/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/kontakt/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/contacto/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/es/trabaja-con-nosotros/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/trabaja-con-nosotros/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/work-with-us/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/karriere/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/trabaja-con-nosotros/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/en/work-with-us/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/trabaja-con-nosotros/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/work-with-us/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/karriere/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/trabaja-con-nosotros/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/de/karriere/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/trabaja-con-nosotros/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/work-with-us/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/karriere/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/trabaja-con-nosotros/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/es/mapa-del-sitio/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/mapa-del-sitio/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/sitemap/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/sitemap/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/mapa-del-sitio/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/en/sitemap/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/mapa-del-sitio/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/sitemap/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/sitemap/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/mapa-del-sitio/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/de/sitemap/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/mapa-del-sitio/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/sitemap/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/sitemap/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/mapa-del-sitio/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/es/aviso-legal/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/aviso-legal/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/legal-notice/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/impressum/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/aviso-legal/"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/en/legal-notice/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/aviso-legal/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/legal-notice/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/impressum/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/aviso-legal/"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/de/impressum/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/aviso-legal/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/legal-notice/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/impressum/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/aviso-legal/"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/es/politica-privacidad/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/politica-privacidad/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/privacy-policy/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/datenschutz/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/politica-privacidad/"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/en/privacy-policy/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/politica-privacidad/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/privacy-policy/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/datenschutz/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/politica-privacidad/"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/de/datenschutz/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/politica-privacidad/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/privacy-policy/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/datenschutz/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/politica-privacidad/"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/es/politica-cookies/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/politica-cookies/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/cookie-policy/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/cookie-richtlinie/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/politica-cookies/"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/en/cookie-policy/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/politica-cookies/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/cookie-policy/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/cookie-richtlinie/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/politica-cookies/"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/de/cookie-richtlinie/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/politica-cookies/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/cookie-policy/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/cookie-richtlinie/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/politica-cookies/"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/es/blog/calendario-poda-mallorca/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/blog/calendario-poda-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/blog/pruning-calendar-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/blog/schnittkalender-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/blog/calendario-poda-mallorca/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/en/blog/pruning-calendar-mallorca/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/blog/calendario-poda-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/blog/pruning-calendar-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/blog/schnittkalender-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/blog/calendario-poda-mallorca/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/de/blog/schnittkalender-mallorca/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/blog/calendario-poda-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/blog/pruning-calendar-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/blog/schnittkalender-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/blog/calendario-poda-mallorca/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/es/blog/picudo-rojo-mallorca/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/blog/picudo-rojo-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/blog/red-palm-weevil-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/blog/palmruessler-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/blog/picudo-rojo-mallorca/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/en/blog/red-palm-weevil-mallorca/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/blog/picudo-rojo-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/blog/red-palm-weevil-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/blog/palmruessler-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/blog/picudo-rojo-mallorca/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/de/blog/palmruessler-mallorca/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/blog/picudo-rojo-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/blog/red-palm-weevil-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/blog/palmruessler-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/blog/picudo-rojo-mallorca/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/es/blog/riego-automatico-mediterraneo/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/blog/riego-automatico-mediterraneo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/blog/mediterranean-automatic-irrigation/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/blog/mediterrane-bewaesserung/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/blog/riego-automatico-mediterraneo/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/en/blog/mediterranean-automatic-irrigation/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/blog/riego-automatico-mediterraneo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/blog/mediterranean-automatic-irrigation/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/blog/mediterrane-bewaesserung/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/blog/riego-automatico-mediterraneo/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/de/blog/mediterrane-bewaesserung/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/blog/riego-automatico-mediterraneo/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/blog/mediterranean-automatic-irrigation/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/blog/mediterrane-bewaesserung/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/blog/riego-automatico-mediterraneo/"/>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
