@@ -423,31 +423,23 @@ window.addEventListener('scroll',()=>{hdr.style.boxShadow=window.scrollY>20?'0 4
 })();
 </script>
 <script>
-/* Mega menú — hover con retardo para que no desaparezca al mover el ratón */
+/* Mega menu desktop */
 (function(){
-    // Hover para TODOS los .has-dd en desktop
   document.querySelectorAll('.has-dd').forEach(function(tr){
     var m = tr.querySelector('.dd-menu');
     if(!m) return;
     var t;
     function show(){ clearTimeout(t); m.classList.add('dd-open'); }
-    function hide(ms){ t = setTimeout(function(){ m.classList.remove('dd-open'); }, ms||200); }
+    function hide(){ t = setTimeout(function(){ m.classList.remove('dd-open'); }, 150); }
     tr.addEventListener('mouseenter', show);
-    tr.addEventListener('mouseleave', function(){ hide(150); });
+    tr.addEventListener('mouseleave', hide);
     m.addEventListener('mouseenter', show);
-    m.addEventListener('mouseleave', function(){ hide(150); });
+    m.addEventListener('mouseleave', hide);
   });
   document.addEventListener('click', function(e){
     document.querySelectorAll('.dd-menu.dd-open').forEach(function(m){
       if(!m.closest('.has-dd').contains(e.target)) m.classList.remove('dd-open');
     });
-  }); }, ms); }
-  tr.addEventListener('mouseenter', show);
-  tr.addEventListener('mouseleave', function(){ hide(350); });
-  m.addEventListener('mouseenter', show);
-  m.addEventListener('mouseleave', function(){ hide(150); });
-  document.addEventListener('click', function(e){
-    if(!tr.contains(e.target) && !m.contains(e.target)) m.classList.remove('dd-open');
   });
 })();
 </script>
