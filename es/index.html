@@ -497,7 +497,7 @@ img { max-width: 100%; height: auto; display: block; }
 .blog-img { aspect-ratio: 16/10; background: var(--paper-warm); overflow: hidden; }
 .blog-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
 .blog-card:hover .blog-img img { transform: scale(1.06); }
-.blog-body { padding: 30px; }
+.blog-body { padding: 30px; display:flex; flex-direction:column; }
 .blog-meta { font-family:'Manrope'; font-size: 11px; letter-spacing: 0.2em;
   text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
 .blog-card h3 { font-size: 24px; margin-bottom: 12px; line-height: 1.25; }
@@ -1570,8 +1570,8 @@ h1 .it, h2 .it, h3 .it, h4 .it,
 
     <div class="blog-grid">
       <a href="/es/blog/picudo-rojo-mallorca/" class="blog-card">
-        <div class="blog-card-img"><img src="/img/garden-solution-blog-picudo-rojo.webp" alt="Picudo rojo en palmera de Mallorca" loading="lazy" width="480" height="270"></div>
-        <div class="blog-card-body">
+        <div class="blog-img"><img src="/img/garden-solution-blog-picudo-rojo.webp" alt="Picudo rojo en palmera de Mallorca" loading="lazy" width="480" height="270"></div>
+        <div class="blog-body">
           <div class="blog-cat">Palmeras · Fitosanidad</div>
           <h2>Picudo rojo en Mallorca: guía de prevención y tratamiento</h2>
           <p>Todo lo que necesitas saber para proteger tus palmeras de la plaga más destructiva de la isla.</p>
@@ -1579,8 +1579,8 @@ h1 .it, h2 .it, h3 .it, h4 .it,
         </div>
       </a>
       <a href="/es/blog/riego-automatico-mediterraneo/" class="blog-card">
-        <div class="blog-card-img"><img src="/img/garden-solution-blog-riego-automatico.webp" alt="Riego automático para jardín mediterráneo en Mallorca" loading="lazy" width="480" height="270"></div>
-        <div class="blog-card-body">
+        <div class="blog-img"><img src="/img/garden-solution-blog-riego-automatico.webp" alt="Riego automático para jardín mediterráneo en Mallorca" loading="lazy" width="480" height="270"></div>
+        <div class="blog-body">
           <div class="blog-cat">Riego · Jardinería</div>
           <h2>Riego automático para jardín mediterráneo: cómo ahorra agua</h2>
           <p>Cómo diseñar un sistema de riego eficiente para el clima de Mallorca y ahorrar agua en verano.</p>
@@ -1588,8 +1588,8 @@ h1 .it, h2 .it, h3 .it, h4 .it,
         </div>
       </a>
       <a href="/es/blog/calendario-poda-mallorca/" class="blog-card">
-        <div class="blog-card-img"><img src="/img/garden-solution-blog-calendario-de-poda-mallorca.webp" alt="Calendario de poda en Mallorca" loading="lazy" width="480" height="270"></div>
-        <div class="blog-card-body">
+        <div class="blog-img"><img src="/img/garden-solution-blog-calendario-de-poda-mallorca.webp" alt="Calendario de poda en Mallorca" loading="lazy" width="480" height="270"></div>
+        <div class="blog-body">
           <div class="blog-cat">Poda · Calendario</div>
           <h2>Calendario de poda en Mallorca: cuándo podar cada árbol</h2>
           <p>Cuándo podar pinos, olivos, almendros, palmeras y setos según el clima balear.</p>
