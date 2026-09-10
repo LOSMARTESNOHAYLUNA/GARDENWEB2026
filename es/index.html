@@ -939,6 +939,11 @@ h1 .it, h2 .it, h3 .it, h4 .it,
 
 .btn-escribir-resena { display:inline-flex; align-items:center; gap:8px; border:1px solid var(--green); border-radius:100px; padding:12px 24px; font-family:'Manrope'; font-size:13px; font-weight:600; color:var(--green); text-decoration:none; background:#fff; transition:all 0.2s; }
 .btn-escribir-resena:hover { background:var(--green); color:#fff; }
+
+.blog-card .blog-link {display:inline-flex;align-items:center;gap:6px;font-family:'Manrope';font-size:13px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:var(--green);margin-top:auto;padding-top:16px;}
+.blog-card .blog-link::after{content:'→';transition:transform 0.2s;}
+.blog-card:hover .blog-link::after{transform:translateX(5px);}
+.blog-cat{font-family:'Manrope';font-size:11px;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
 </style>
 </head>
 <body>
@@ -1565,27 +1570,30 @@ h1 .it, h2 .it, h3 .it, h4 .it,
 
     <div class="blog-grid">
       <a href="/es/blog/picudo-rojo-mallorca/" class="blog-card">
-        <div class="blog-img"><img src="/img/garden-solution-blog-picudo-rojo.webp" alt="Picudo rojo Mallorca" loading="lazy"></div>
-        <div class="blog-body">
-          <div class="blog-meta">Palmeras</div>
-          <h3>Picudo rojo: guía de prevención y tratamiento</h3>
-          <p>Todo lo que necesitas saber para proteger tus palmeras de esta plaga en Mallorca.</p>
+        <div class="blog-card-img"><img src="/img/blog-1.webp" alt="Picudo rojo en palmera de Mallorca — guía de prevención y tratamiento" loading="lazy" width="480" height="270"></div>
+        <div class="blog-card-body">
+          <div class="blog-cat">Palmeras · Fitosanidad</div>
+          <h2>Picudo rojo en Mallorca: guía de prevención y tratamiento</h2>
+          <p>Todo lo que necesitas saber para proteger tus palmeras de la plaga más destructiva de la isla.</p>
+          <span class="blog-link">Leer artículo</span>
         </div>
       </a>
       <a href="/es/blog/riego-automatico-mediterraneo/" class="blog-card">
-        <div class="blog-img"><img src="/img/garden-solution-blog-riego-automatico.webp" alt="Riego automático" loading="lazy"></div>
-        <div class="blog-body">
-          <div class="blog-meta">Riego</div>
-          <h3>Riego automático para jardín mediterráneo</h3>
-          <p>Cómo ahorrar agua y tener un jardín siempre verde con un sistema bien diseñado.</p>
+        <div class="blog-card-img"><img src="/img/blog-2.webp" alt="Riego automático para jardín mediterráneo en Mallorca" loading="lazy" width="480" height="270"></div>
+        <div class="blog-card-body">
+          <div class="blog-cat">Riego · Jardinería</div>
+          <h2>Riego automático para jardín mediterráneo: cómo ahorra agua</h2>
+          <p>Cómo diseñar un sistema de riego eficiente para el clima de Mallorca y ahorrar agua en verano.</p>
+          <span class="blog-link">Leer artículo</span>
         </div>
       </a>
       <a href="/es/blog/calendario-poda-mallorca/" class="blog-card">
-        <div class="blog-img"><img src="/img/garden-solution-blog-calendario-de-poda-mallorca.webp" alt="Calendario de poda" loading="lazy"></div>
-        <div class="blog-body">
-          <div class="blog-meta">Poda</div>
-          <h3>Calendario de poda en Mallorca</h3>
-          <p>Cuándo podar cada especie según el clima balear para máxima salud del árbol.</p>
+        <div class="blog-card-img"><img src="/img/blog-3.webp" alt="Calendario de poda en Mallorca — cuándo podar cada árbol" loading="lazy" width="480" height="270"></div>
+        <div class="blog-card-body">
+          <div class="blog-cat">Poda · Calendario</div>
+          <h2>Calendario de poda en Mallorca: cuándo podar cada árbol</h2>
+          <p>Cuándo podar pinos, olivos, almendros, palmeras y setos según el clima balear.</p>
+          <span class="blog-link">Leer artículo</span>
         </div>
       </a>
     </div>
