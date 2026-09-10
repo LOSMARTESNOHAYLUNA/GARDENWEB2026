@@ -61,7 +61,7 @@ img { max-width:100%; display:block; }
 .lang-switch a.active { color:var(--green); font-weight:600; }
 .menu-toggle { display:none; background:none; border:none; cursor:pointer; font-size:24px; color:var(--green); }
 
-.page-hero { padding:120px 0 60px; background:var(--paper-soft); border-bottom:1px solid var(--line-soft); }
+.page-hero { padding:120px 0; background:var(--paper-soft); border-bottom:1px solid var(--line-soft); }
 .page-hero .eyebrow { font-family:'Manrope'; font-size:11px; letter-spacing:0.4em; text-transform:uppercase; color:var(--gold); margin-bottom:16px; }
 .page-hero h1 { font-size:clamp(32px,4vw,52px); }
 .page-hero .updated { font-family:'Manrope'; font-size:13px; color:var(--gray-soft); margin-top:12px; }
@@ -80,19 +80,28 @@ img { max-width:100%; display:block; }
 .legal-content td { padding:10px 14px; border-bottom:1px solid var(--line-soft); color:var(--ink-soft); vertical-align:top; }
 .legal-content tr:last-child td { border-bottom:none; }
 
-.footer { background:var(--ink); color:rgba(251,248,242,0.75); padding:80px 0 30px; }
-.footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:60px; margin-bottom:60px; }
-.footer h4 { color:var(--paper); font-size:20px; margin-bottom:20px; font-family:'Montserrat'; }
-.logo-footer { font-family:'Montserrat'; font-size:28px; color:var(--paper); margin-bottom:20px; }
-.logo-footer .it { font-weight:800; color:var(--gold-soft); }
-.footer p,.footer li { font-family:'Manrope'; font-size:14px; line-height:1.7; font-weight:300; }
-.footer ul { list-style:none; }
-.footer ul li { padding:5px 0; }
-.footer a:hover { color:var(--gold-soft); }
-.footer-bottom { padding-top:30px; border-top:1px solid rgba(251,248,242,0.1); display:flex; justify-content:space-between; flex-wrap:wrap; gap:20px; font-family:'Manrope'; font-size:12px; }
-.footer-legal-bar { display:flex; gap:24px; flex-wrap:wrap; }
-.footer .lang-switch a { color:rgba(251,248,242,0.6); }
-.footer .lang-switch a.active { color:var(--gold-soft); font-weight:600; }
+.footer { background: var(--ink); color: rgba(251,248,242,0.75); padding: 80px 0 30px; }
+.footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:60px; margin-bottom:36px; }
+.footer h4 { color: var(--paper); font-size: 22px; margin-bottom: 24px;
+  font-family: 'Montserrat'; }
+.footer .logo-footer { font-family: 'Montserrat'; font-size: 28px;
+  color: var(--paper); margin-bottom: 20px; }
+.footer .logo-footer .it { font-weight:800; color: var(--gold-soft); }
+.footer p, .footer li { font-family:'Manrope'; font-size: 14px; line-height: 1.7; font-weight: 300; }
+.footer ul { list-style: none; }
+.footer ul li { padding: 6px 0; }
+.footer a { transition: color 0.3s; }
+.footer a:hover { color: var(--gold-soft); }
+.footer .mapa iframe { width: 100%; border: 1px solid rgba(251,248,242,0.1); }
+.footer-bottom {
+  padding-top: 30px; border-top: 1px solid rgba(251,248,242,0.1);
+  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px;
+  font-family:'Manrope'; font-size: 12px; letter-spacing: 0.05em;
+}
+.footer-legal { display: flex; gap: 24px; flex-wrap: wrap; }
+.footer .lang-switch { justify-content: flex-start; }
+.footer .lang-switch a { color: rgba(251,248,242,0.6); }
+.footer .lang-switch a.active { color: var(--gold-soft); }
 
 @media(max-width:968px) { .footer-grid{grid-template-columns:1fr 1fr;} }
 @media(max-width:640px) {
@@ -136,12 +145,13 @@ img { max-width:100%; display:block; }
   opacity:1; pointer-events:all; transform:translateY(0);
 }
 .dd-inner { display:grid; grid-template-columns:repeat(5,190px); padding:28px 0; }
+.dd-inner-zonas { grid-template-columns:190px; }
 .dd-col { padding:0 20px; border-right:1px solid var(--line-soft); }
 .dd-col:last-child { border-right:none; }
 .dd-label { font-family:'Manrope'; font-size:9px; letter-spacing:0.25em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; font-weight:600; display:block; padding-bottom:8px; border-bottom:1px solid var(--line-soft); }
 .dd-menu a { display:block; font-family:'Manrope'; font-size:13px; font-weight:300; color:var(--ink-soft); padding:5px 0; transition:color 0.2s; text-decoration:none !important; border-bottom:none !important; }
 .dd-menu a:hover { color:var(--green); }
-@media(max-width:968px){ .dd-menu{ display:none !important; } }
+@media(max-width:968px){ .dd-menu{ position:static !important; display:block !important; width:auto !important; opacity:1 !important; pointer-events:auto !important; transform:none !important; box-shadow:none !important; border:none !important; background:transparent !important; top:auto !important; } .dd-inner{ display:block !important; padding:6px 0 2px !important; } .dd-col{ border:none !important; padding:0 !important; } .dd-menu a{ padding:8px 0 8px 16px !important; font-size:14px !important; } .dd-label{ padding:6px 0 4px !important; border:none !important; margin:0 !important; } .nav.open ul{ max-height:calc(100vh - 64px); overflow-y:auto; } }
 
 
 
@@ -191,7 +201,7 @@ img { max-width:100%; display:block; }
   .precios-grid { grid-template-columns:1fr !important; }
   .cta-btns { flex-direction:column; align-items:center; }
   .hero-ctas { flex-direction:column; }
-  .dd-inner { display:none !important; }
+  .dd-inner { display:block !important; }
 }
 
 
@@ -358,7 +368,7 @@ p, li, .faq-body p, .resena-text, .col-block p,
             </div>
           </div></div>
         </li>
-      <li><a href="/es/zonas/">Zonas</a></li>
+      <li class="has-dd"><a href="/es/zonas/">Zonas</a><div class="dd-menu"><div class="dd-inner dd-inner-zonas"><div class="dd-col"><span class="dd-label">Zonas de Mallorca</span><a href="/es/jardineria-palma/">Palma</a><a href="/es/jardineria-llucmajor/">Llucmajor</a><a href="/es/jardineria-marratxi/">Marratxí</a><a href="/es/jardineria-calvia/">Calvià</a><a href="/es/jardineria-alcudia/">Alcúdia</a></div></div></div></li>
       <li><a href="/es/sobre-nosotros/">Nosotros</a></li>
       <li><a href="/es/preguntas-frecuentes/">FAQ</a></li>
       <li><a href="/es/blog/">Blog</a></li><li><a href="/es/contacto/">Contacto</a></li>
@@ -373,7 +383,6 @@ p, li, .faq-body p, .resena-text, .col-block p,
 </header>
 <div class="page-hero">
   <div class="wrap">
-    <div class="eyebrow">Legal</div>
     <h1>Política de Cookies</h1>
     <p class="updated">Última actualización: julio de 2026</p>
   </div>
@@ -512,16 +521,20 @@ window.addEventListener('scroll',()=>{hdr.style.boxShadow=window.scrollY>20?'0 4
 <script>
 /* Mega menú — hover con retardo para que no desaparezca al mover el ratón */
 (function(){
-  var t, tr = document.querySelector('.has-dd'), m = document.querySelector('.dd-menu');
-  if(!tr || !m) return;
-  function show(){ clearTimeout(t); m.classList.add('dd-open'); }
-  function hide(ms){ t = setTimeout(function(){ m.classList.remove('dd-open'); }, ms); }
-  tr.addEventListener('mouseenter', show);
-  tr.addEventListener('mouseleave', function(){ hide(350); });
-  m.addEventListener('mouseenter', show);
-  m.addEventListener('mouseleave', function(){ hide(150); });
-  document.addEventListener('click', function(e){
-    if(!tr.contains(e.target) && !m.contains(e.target)) m.classList.remove('dd-open');
+  var triggers = document.querySelectorAll('.has-dd');
+  if(!triggers.length) return;
+  triggers.forEach(function(tr){
+    var m = tr.querySelector('.dd-menu'); if(!m) return;
+    var t;
+    function show(){ clearTimeout(t); m.classList.add('dd-open'); }
+    function hide(ms){ t = setTimeout(function(){ m.classList.remove('dd-open'); }, ms); }
+    tr.addEventListener('mouseenter', show);
+    tr.addEventListener('mouseleave', function(){ hide(350); });
+    m.addEventListener('mouseenter', show);
+    m.addEventListener('mouseleave', function(){ hide(150); });
+    document.addEventListener('click', function(e){
+      if(!tr.contains(e.target) && !m.contains(e.target)) m.classList.remove('dd-open');
+    });
   });
 })();
 </script>
@@ -611,6 +624,19 @@ body.gs-cookie-open .gs-float-actions{display:none;}
   .gs-float-actions{right:16px;bottom:16px;gap:10px;}
   .gs-wa-fab{width:52px;height:52px;}
   .gs-cookie-fab{width:40px;height:40px;}
+}
+
+/* === Heroes: contenido centrado en movil === */
+@media(max-width:768px){
+  .hero .wrap, .hero-zone .wrap, .hero-bg .wrap, .page-hero .wrap, .faq-hero .wrap { text-align:center !important; }
+  .hero .breadcrumb-inner, .hero-zone .breadcrumb-inner, .hero-bg .breadcrumb-inner, .page-hero .breadcrumb-inner, .faq-hero .breadcrumb-inner { justify-content:center !important; }
+  .hero-bg h1, .page-hero h1, .faq-hero h1,
+  .hero-bg .hero-sub, .page-hero .hero-sub, .faq-hero .hero-sub,
+  .hero-bg .lead, .page-hero .lead, .faq-hero .lead { margin-left:auto !important; margin-right:auto !important; }
+  .hero .hero-cta, .hero-zone .hero-cta, .hero-bg .hero-cta, .page-hero .hero-cta, .faq-hero .hero-cta,
+  .hero .hero-ctas, .hero-zone .hero-ctas, .hero-bg .hero-ctas, .page-hero .hero-ctas, .faq-hero .hero-ctas,
+  .hero-bg .cta-btns, .page-hero .cta-btns, .faq-hero .cta-btns { justify-content:center !important; align-items:center !important; }
+  .hero-bg .wrap > a.btn, .page-hero .wrap > a.btn, .faq-hero .wrap > a.btn { margin-left:auto !important; margin-right:auto !important; }
 }
 </style>
 <div class="gs-float-actions">

@@ -137,6 +137,19 @@ img{max-width:100%;height:auto;display:block;}
 .servicios-hero h1{font-size:clamp(32px,4vw,52px);margin-bottom:16px;}
 .servicios-hero h1 .it{font-weight:700;color:var(--gold);}
 .servicios-hero p{font-family:'Manrope';font-size:17px;font-weight:300;color:var(--ink-soft);max-width:640px;line-height:1.7;}
+/* Hero de servicios: mismo estilo que el resto de páginas de servicio */
+.hero-bg { position:relative; overflow:hidden; min-height:600px; display:flex; align-items:flex-end; background-size:cover; background-position:center; padding:150px 0 70px; }
+.hero-bg-overlay { position:absolute; inset:0; background:linear-gradient(180deg, rgba(15,15,13,0.48) 0%, rgba(15,15,13,0.58) 45%, rgba(15,15,13,0.88) 100%); }
+.hero-bg .wrap { position:relative; z-index:1; width:100%; }
+.hero-bg .breadcrumb-inner { color:rgba(251,248,242,0.9); margin-bottom:26px; text-shadow:0 2px 10px rgba(0,0,0,0.55); }
+.hero-bg .breadcrumb-inner a { color:rgba(251,248,242,0.9); }
+.hero-bg .breadcrumb-inner a:hover { color:var(--gold-soft); }
+.hero-bg .breadcrumb-inner .sep { color:rgba(251,248,242,0.55); }
+.hero-bg .breadcrumb-inner .current { color:var(--gold-soft); }
+.hero-bg .eyebrow { display:inline-flex; align-items:center; background:rgba(15,15,13,0.4); border:1px solid rgba(251,248,242,0.3); padding:9px 20px; border-radius:100px; color:var(--paper); font-weight:700; font-size:11px; letter-spacing:0.25em; text-transform:uppercase; font-family:'Manrope'; margin-bottom:24px; }
+.hero-bg h1 { color:var(--paper); font-size:clamp(38px,4.8vw,64px); margin-bottom:36px; max-width:760px; text-shadow:0 2px 14px rgba(0,0,0,0.5); }
+.hero-bg h1 .it { color:var(--gold-soft); }
+@media (max-width:640px) { .hero-bg { padding:130px 0 50px; min-height:460px; } }
 /* SERVICIOS POR CATEGORÍA */
 .servicios-body{padding:80px 0 100px;}
 .servicios-cats{display:flex;flex-direction:column;gap:44px;}
@@ -272,12 +285,13 @@ img{max-width:100%;height:auto;display:block;}
 }
 .dd-menu.dd-open { opacity:1; pointer-events:all; transform:translateY(0); }
 .dd-inner { display:grid; grid-template-columns:repeat(5,190px); padding:28px 0; }
+.dd-inner-zonas { grid-template-columns:190px; }
 .dd-col { padding:0 20px; border-right:1px solid var(--line-soft); }
 .dd-col:last-child { border-right:none; }
 .dd-label { font-family:'Manrope'; font-size:9px; letter-spacing:0.25em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; font-weight:600; display:block; padding-bottom:8px; border-bottom:1px solid var(--line-soft); }
 .dd-menu a { display:block; font-family:'Manrope'; font-size:13px; font-weight:300; color:var(--ink-soft); padding:5px 0; transition:color 0.2s; text-decoration:none !important; border-bottom:none !important; }
 .dd-menu a:hover { color:var(--green); }
-@media(max-width:968px){ .dd-menu{ display:none !important; } }
+@media(max-width:968px){ .dd-menu{ position:static !important; display:block !important; width:auto !important; opacity:1 !important; pointer-events:auto !important; transform:none !important; box-shadow:none !important; border:none !important; background:transparent !important; top:auto !important; } .dd-inner{ display:block !important; padding:6px 0 2px !important; } .dd-col{ border:none !important; padding:0 !important; } .dd-menu a{ padding:8px 0 8px 16px !important; font-size:14px !important; } .dd-label{ padding:6px 0 4px !important; border:none !important; margin:0 !important; } .nav.open ul{ max-height:calc(100vh - 64px); overflow-y:auto; } }
 
 /* ===== MENÚ MÓVIL ===== */
 @media(max-width:968px){
@@ -300,7 +314,7 @@ img{max-width:100%;height:auto;display:block;}
   .has-dd > a::after { display:none; }
   .menu-toggle { display:block !important; }
 }
-@media(max-width:640px){ .dd-inner { display:none !important; } }
+@media(max-width:640px){ .dd-inner { display:block !important; } }
 
 /* === TIPOGRAFÍA GLOBAL === */
 p, li, .section-intro, .servicio-card p, .info-val,
@@ -349,12 +363,12 @@ p, li, .section-intro, .servicio-card p, .info-val,
               <a href="/es/silvicultura-preventiva/">Silvicultura preventiva</a>
             </div>
           </div></div>
-        </li><li><a href="/es/zonas/">Zonas</a></li><li><a href="/es/sobre-nosotros/">Nosotros</a></li><li><a href="/es/preguntas-frecuentes/">FAQ</a></li><li><a href="/es/blog/">Blog</a></li><li><a href="/es/contacto/">Contacto</a></li></ul></nav><div class="lang-switch"><a href="/es/servicios/" class="active">ES</a><a href="/en/">EN</a><a href="/de/">DE</a></div><button class="menu-toggle" aria-label="Menú">☰</button></div></header>
+        </li><li class="has-dd"><a href="/es/zonas/">Zonas</a><div class="dd-menu"><div class="dd-inner dd-inner-zonas"><div class="dd-col"><span class="dd-label">Zonas de Mallorca</span><a href="/es/jardineria-palma/">Palma</a><a href="/es/jardineria-llucmajor/">Llucmajor</a><a href="/es/jardineria-marratxi/">Marratxí</a><a href="/es/jardineria-calvia/">Calvià</a><a href="/es/jardineria-alcudia/">Alcúdia</a></div></div></div></li><li><a href="/es/sobre-nosotros/">Nosotros</a></li><li><a href="/es/preguntas-frecuentes/">FAQ</a></li><li><a href="/es/blog/">Blog</a></li><li><a href="/es/contacto/">Contacto</a></li></ul></nav><div class="lang-switch"><a href="/es/servicios/" class="active">ES</a><a href="/en/">EN</a><a href="/de/">DE</a></div><button class="menu-toggle" aria-label="Menú">☰</button></div></header>
 
 <section class="hero-bg" style="background-image:url('/img/garden-solution-mantenimiento-de-jardines-particulares-1.webp');">
   <div class="hero-bg-overlay"></div>
   <div class="wrap">
-    <div class="breadcrumb-inner"><div class="breadcrumb-inner"><a href="/es/">Inicio</a><span class="sep">›</span><span class="current">Servicios</span></div></div>
+    <div class="breadcrumb-inner"><a href="/es/">Inicio</a><span class="sep">›</span><span class="current">Servicios</span></div>
     <div class="eyebrow">Servicios de jardinería · Mallorca</div>
     <h1>Todos nuestros <span class="it">servicios de jardinería</span> en Mallorca</h1>
   </div>
@@ -667,16 +681,20 @@ const hdr=document.querySelector('.header');window.addEventListener('scroll',()=
 <script>
 /* Mega menú — hover con retardo para que no desaparezca al mover el ratón */
 (function(){
-  var t, tr = document.querySelector('.has-dd'), m = document.querySelector('.dd-menu');
-  if(!tr || !m) return;
-  function show(){ clearTimeout(t); m.classList.add('dd-open'); }
-  function hide(ms){ t = setTimeout(function(){ m.classList.remove('dd-open'); }, ms); }
-  tr.addEventListener('mouseenter', show);
-  tr.addEventListener('mouseleave', function(){ hide(350); });
-  m.addEventListener('mouseenter', show);
-  m.addEventListener('mouseleave', function(){ hide(150); });
-  document.addEventListener('click', function(e){
-    if(!tr.contains(e.target) && !m.contains(e.target)) m.classList.remove('dd-open');
+  var triggers = document.querySelectorAll('.has-dd');
+  if(!triggers.length) return;
+  triggers.forEach(function(tr){
+    var m = tr.querySelector('.dd-menu'); if(!m) return;
+    var t;
+    function show(){ clearTimeout(t); m.classList.add('dd-open'); }
+    function hide(ms){ t = setTimeout(function(){ m.classList.remove('dd-open'); }, ms); }
+    tr.addEventListener('mouseenter', show);
+    tr.addEventListener('mouseleave', function(){ hide(350); });
+    m.addEventListener('mouseenter', show);
+    m.addEventListener('mouseleave', function(){ hide(150); });
+    document.addEventListener('click', function(e){
+      if(!tr.contains(e.target) && !m.contains(e.target)) m.classList.remove('dd-open');
+    });
   });
 })();
 </script>
@@ -791,6 +809,30 @@ body.gs-cookie-open .gs-float-actions{display:none;}
   .gs-float-actions{right:16px;bottom:16px;gap:10px;}
   .gs-wa-fab{width:52px;height:52px;}
   .gs-cookie-fab{width:40px;height:40px;}
+}
+
+/* === Footer normalizado (consistente con la home) === */
+.footer-grid{grid-template-columns:2fr 1fr 1fr 1fr;}
+@media(max-width:968px){
+  .footer-grid{grid-template-columns:1fr !important;gap:24px !important;}
+  .footer ul{columns:2 !important;column-gap:16px !important;}
+  .footer ul li{break-inside:avoid;padding:3px 0;}
+  .footer-grid > div:last-child ul{columns:1 !important;}
+  .footer-bottom{flex-direction:column;align-items:center;text-align:center;gap:12px;}
+  .footer-legal{justify-content:center;}
+}
+
+/* === Heroes: contenido centrado en movil === */
+@media(max-width:768px){
+  .hero .wrap, .hero-zone .wrap, .hero-bg .wrap, .page-hero .wrap, .faq-hero .wrap { text-align:center !important; }
+  .hero .breadcrumb-inner, .hero-zone .breadcrumb-inner, .hero-bg .breadcrumb-inner, .page-hero .breadcrumb-inner, .faq-hero .breadcrumb-inner { justify-content:center !important; }
+  .hero-bg h1, .page-hero h1, .faq-hero h1,
+  .hero-bg .hero-sub, .page-hero .hero-sub, .faq-hero .hero-sub,
+  .hero-bg .lead, .page-hero .lead, .faq-hero .lead { margin-left:auto !important; margin-right:auto !important; }
+  .hero .hero-cta, .hero-zone .hero-cta, .hero-bg .hero-cta, .page-hero .hero-cta, .faq-hero .hero-cta,
+  .hero .hero-ctas, .hero-zone .hero-ctas, .hero-bg .hero-ctas, .page-hero .hero-ctas, .faq-hero .hero-ctas,
+  .hero-bg .cta-btns, .page-hero .cta-btns, .faq-hero .cta-btns { justify-content:center !important; align-items:center !important; }
+  .hero-bg .wrap > a.btn, .page-hero .wrap > a.btn, .faq-hero .wrap > a.btn { margin-left:auto !important; margin-right:auto !important; }
 }
 </style>
 <div class="gs-float-actions">
