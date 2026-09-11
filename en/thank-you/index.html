@@ -64,6 +64,8 @@ h1 .it{color:var(--gold);font-weight:400;}
 .footer-note a{color:var(--green);}
 @media(max-width:480px){.actions{flex-direction:column;align-items:center;}}
 </style>
+<style id="gs-overflow-guard">/* Anti-desbordamiento: rompe palabras/tokens largos (emails, @handles, URLs) para que nada salga del contenedor en movil */
+body,body *{overflow-wrap:anywhere;}</style>
 </head>
 <body>
 <header class="header">

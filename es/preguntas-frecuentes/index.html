@@ -466,6 +466,8 @@ p, li, .faq-body p, .resena-text, .col-block p,
 .hero-bg h1{color:var(--paper);font-size:clamp(38px,4.8vw,64px);max-width:760px;text-shadow:0 2px 14px rgba(0,0,0,0.5);}
 @media(max-width:640px){.hero-bg{padding:130px 0 50px;min-height:380px;}}
 </style>
+<style id="gs-overflow-guard">/* Anti-desbordamiento: rompe palabras/tokens largos (emails, @handles, URLs) para que nada salga del contenedor en movil */
+body,body *{overflow-wrap:anywhere;}</style>
 </head>
 <body>
 <div class="topbar"><div class="topbar-inner"><span class="topbar-brand">Garden Solution</span><span class="topbar-sep gs-sep1">|</span><span class="topbar-tagline">Empresa de jardinería en Mallorca</span><span class="topbar-sep">|</span><a class="topbar-phone" href="https://wa.me/34621493977">621 49 39 77</a></div></div>
