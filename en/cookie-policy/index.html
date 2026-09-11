@@ -95,9 +95,10 @@ img { max-width:100%; display:block; }
 .legal-content ul { list-style:none; margin:0 0 16px; }
 .legal-content ul li { font-family:'Manrope'; font-size:15px; font-weight:300; color:var(--ink-soft); line-height:1.7; padding:6px 0 6px 20px; position:relative; }
 .legal-content ul li::before { content:'—'; position:absolute; left:0; color:var(--gold); }
-.legal-content table { width:100%; border-collapse:collapse; margin:20px 0 28px; font-family:'Manrope'; font-size:13px; }
+.legal-content .table-wrap { width:100%; max-width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch; margin:20px 0 28px; }
+.legal-content table { width:100%; border-collapse:collapse; font-family:'Manrope'; font-size:13px; }
 .legal-content th { background:var(--green); color:var(--paper); padding:10px 14px; text-align:left; font-weight:500; }
-.legal-content td { padding:10px 14px; border-bottom:1px solid var(--line-soft); color:var(--ink-soft); vertical-align:top; }
+.legal-content td { padding:10px 14px; border-bottom:1px solid var(--line-soft); color:var(--ink-soft); vertical-align:top; overflow-wrap:anywhere; word-break:break-word; }
 .legal-content tr:last-child td { border-bottom:none; }
 
 .footer { background: var(--ink); color: rgba(251,248,242,0.75); padding: 80px 0 30px; }
@@ -130,6 +131,7 @@ img { max-width:100%; display:block; }
   .footer-bottom{flex-direction:column; align-items:center; text-align:center;}
   .footer-legal-bar{justify-content:center;}
   .legal-content table{font-size:12px;}
+  .legal-content .table-wrap table{min-width:520px;}
 }
 
 
@@ -424,29 +426,29 @@ p, li, .faq-body p, .resena-text, .col-block p,
       <h3>2.1 Our own technical cookies (exempt from consent)</h3>
       <p>These are cookies strictly necessary for the basic operation of the website. Without them, the site cannot function correctly. They do not require the user's consent under the applicable regulations.</p>
 
-      <table>
+      <div class="table-wrap"><table>
         <tr><th>Name</th><th>Type</th><th>Purpose</th><th>Duration</th><th>Owner</th></tr>
         <tr><td>cookieconsent_status</td><td>Technical</td><td>Stores the user's preference regarding the cookie banner</td><td>1 year</td><td>mallorcagardensolution.com</td></tr>
-      </table>
+      </table></div>
 
       <h3>2.2 Analytics cookies (require consent)</h3>
       <p>These allow us to count the number of visitors and statistically analyse how users navigate the site. The information collected is anonymous and is used to improve the website.</p>
 
-      <table>
+      <div class="table-wrap"><table>
         <tr><th>Name</th><th>Type</th><th>Purpose</th><th>Duration</th><th>Owner</th></tr>
         <tr><td>_ga</td><td>Analytics</td><td>Identifies users anonymously (Google Analytics)</td><td>2 years</td><td>Google Ireland Ltd.</td></tr>
         <tr><td>_ga_PQFTLP9XSD</td><td>Analytics</td><td>Stores the session state (Google Analytics G-PQFTLP9XSD)</td><td>2 years</td><td>Google Ireland Ltd.</td></tr>
         <tr><td>_gid</td><td>Analytics</td><td>Distinguishes users (Google Analytics)</td><td>24 hours</td><td>Google Ireland Ltd.</td></tr>
         <tr><td>_gat</td><td>Analytics</td><td>Limits the request rate (Google Analytics)</td><td>1 minute</td><td>Google Ireland Ltd.</td></tr>
-      </table>
+      </table></div>
 
       <h3>2.3 Third-party cookies — Google Maps (require consent)</h3>
       <p>The contact form includes an embedded Google Maps map. When the map loads, Google may set its own cookies for it to function.</p>
 
-      <table>
+      <div class="table-wrap"><table>
         <tr><th>Name</th><th>Type</th><th>Purpose</th><th>Duration</th><th>Owner</th></tr>
         <tr><td>NID, CONSENT, SOCS</td><td>Third-party</td><td>Personalisation and preferences for the Google Maps map</td><td>6 months – 2 years</td><td>Google Ireland Ltd.</td></tr>
-      </table>
+      </table></div>
 
       <h2>3. How to manage cookies</h2>
       <p>When you first access the website, a banner appears allowing you to accept or reject non-technical cookies. This preference is stored for one year and can be changed at any time from your browser settings.</p>

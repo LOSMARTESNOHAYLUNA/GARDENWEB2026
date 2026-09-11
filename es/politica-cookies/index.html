@@ -95,9 +95,10 @@ img { max-width:100%; display:block; }
 .legal-content ul { list-style:none; margin:0 0 16px; }
 .legal-content ul li { font-family:'Manrope'; font-size:15px; font-weight:300; color:var(--ink-soft); line-height:1.7; padding:6px 0 6px 20px; position:relative; }
 .legal-content ul li::before { content:'—'; position:absolute; left:0; color:var(--gold); }
-.legal-content table { width:100%; border-collapse:collapse; margin:20px 0 28px; font-family:'Manrope'; font-size:13px; }
+.legal-content .table-wrap { width:100%; max-width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch; margin:20px 0 28px; }
+.legal-content table { width:100%; border-collapse:collapse; font-family:'Manrope'; font-size:13px; }
 .legal-content th { background:var(--green); color:var(--paper); padding:10px 14px; text-align:left; font-weight:500; }
-.legal-content td { padding:10px 14px; border-bottom:1px solid var(--line-soft); color:var(--ink-soft); vertical-align:top; }
+.legal-content td { padding:10px 14px; border-bottom:1px solid var(--line-soft); color:var(--ink-soft); vertical-align:top; overflow-wrap:anywhere; word-break:break-word; }
 .legal-content tr:last-child td { border-bottom:none; }
 
 .footer { background: var(--ink); color: rgba(251,248,242,0.75); padding: 80px 0 30px; }
@@ -130,6 +131,7 @@ img { max-width:100%; display:block; }
   .footer-bottom{flex-direction:column; align-items:center; text-align:center;}
   .footer-legal-bar{justify-content:center;}
   .legal-content table{font-size:12px;}
+  .legal-content .table-wrap table{min-width:520px;}
 }
 
 
@@ -424,29 +426,29 @@ p, li, .faq-body p, .resena-text, .col-block p,
       <h3>2.1 Cookies técnicas propias (exentas de consentimiento)</h3>
       <p>Son cookies estrictamente necesarias para el funcionamiento básico del sitio web. Sin ellas, el sitio no puede funcionar correctamente. No requieren consentimiento del usuario conforme a la normativa vigente.</p>
 
-      <table>
+      <div class="table-wrap"><table>
         <tr><th>Nombre</th><th>Tipo</th><th>Finalidad</th><th>Duración</th><th>Titular</th></tr>
         <tr><td>cookieconsent_status</td><td>Técnica</td><td>Almacena la preferencia del usuario sobre el banner de cookies</td><td>1 año</td><td>mallorcagardensolution.com</td></tr>
-      </table>
+      </table></div>
 
       <h3>2.2 Cookies analíticas (requieren consentimiento)</h3>
       <p>Permiten cuantificar el número de visitantes y analizar estadísticamente cómo los usuarios navegan por el sitio. La información recogida es anónima y se utiliza para mejorar el sitio web.</p>
 
-      <table>
+      <div class="table-wrap"><table>
         <tr><th>Nombre</th><th>Tipo</th><th>Finalidad</th><th>Duración</th><th>Titular</th></tr>
         <tr><td>_ga</td><td>Analítica</td><td>Identifica de forma anónima a los usuarios (Google Analytics)</td><td>2 años</td><td>Google Ireland Ltd.</td></tr>
         <tr><td>_ga_PQFTLP9XSD</td><td>Analítica</td><td>Almacena el estado de la sesión (Google Analytics G-PQFTLP9XSD)</td><td>2 años</td><td>Google Ireland Ltd.</td></tr>
         <tr><td>_gid</td><td>Analítica</td><td>Distingue a los usuarios (Google Analytics)</td><td>24 horas</td><td>Google Ireland Ltd.</td></tr>
         <tr><td>_gat</td><td>Analítica</td><td>Limita la tasa de solicitudes (Google Analytics)</td><td>1 minuto</td><td>Google Ireland Ltd.</td></tr>
-      </table>
+      </table></div>
 
       <h3>2.3 Cookies de terceros — Google Maps (requieren consentimiento)</h3>
       <p>El formulario de contacto incluye un mapa embebido de Google Maps. Al cargar el mapa, Google puede establecer cookies propias para su funcionamiento.</p>
 
-      <table>
+      <div class="table-wrap"><table>
         <tr><th>Nombre</th><th>Tipo</th><th>Finalidad</th><th>Duración</th><th>Titular</th></tr>
         <tr><td>NID, CONSENT, SOCS</td><td>Terceros</td><td>Personalización y preferencias del mapa de Google Maps</td><td>6 meses – 2 años</td><td>Google Ireland Ltd.</td></tr>
-      </table>
+      </table></div>
 
       <h2>3. Cómo gestionar las cookies</h2>
       <p>Al acceder por primera vez al sitio web, aparece un banner que permite aceptar o rechazar las cookies no técnicas. Esta preferencia se almacena durante un año y puede modificarse en cualquier momento desde la configuración del navegador.</p>
