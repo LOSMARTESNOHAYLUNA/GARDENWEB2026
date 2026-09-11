@@ -598,37 +598,120 @@ document.getElementById('candidatura-form').addEventListener('submit',async func
     <p class="gs-cookie-text">We use our own and third-party cookies to analyse browsing and improve our services. You can accept them, reject them or find out more in our <a href="/en/cookie-policy/">cookie policy</a>.</p>
     <div class="gs-cookie-actions">
       <button type="button" class="gs-cookie-btn" id="gsCookieReject">Reject</button>
+      <button type="button" class="gs-cookie-btn" id="gsCookieConfig">Configure</button>
       <button type="button" class="gs-cookie-btn" id="gsCookieAccept">Accept all</button>
     </div>
   </div>
 </div>
+
+<div id="gs-cookie-prefs" role="dialog" aria-modal="true" aria-label="Cookie preferences">
+  <div class="gs-prefs-box">
+    <div class="gs-prefs-head">
+      <h3>Cookie preferences</h3>
+      <button type="button" class="gs-prefs-x" id="gsPrefsClose" aria-label="Close">&times;</button>
+    </div>
+    <p class="gs-prefs-intro">We use cookies for the basic operation of the site and, with your permission, to analyse traffic and display the Google map. Choose which categories you want to allow. More information in our <a href="/en/cookie-policy/">cookie policy</a>.</p>
+    <div class="gs-prefs-cat">
+      <div class="gs-prefs-cat-top">
+        <span class="gs-prefs-cat-title">Necessary cookies</span>
+        <span class="gs-prefs-always">Always active</span>
+      </div>
+      <p class="gs-prefs-cat-desc">Essential for the basic functioning of the website. They do not require consent.</p>
+    </div>
+    <div class="gs-prefs-cat">
+      <div class="gs-prefs-cat-top">
+        <span class="gs-prefs-cat-title">Analytics cookies</span>
+        <label class="gs-switch"><input type="checkbox" id="gsCkAnalytics"><span class="gs-slider"></span></label>
+      </div>
+      <p class="gs-prefs-cat-desc">Let us anonymously measure how the site is used (Google Analytics) in order to improve it.</p>
+    </div>
+    <div class="gs-prefs-cat">
+      <div class="gs-prefs-cat-top">
+        <span class="gs-prefs-cat-title">Third-party cookies (Google Maps)</span>
+        <label class="gs-switch"><input type="checkbox" id="gsCkThird"><span class="gs-slider"></span></label>
+      </div>
+      <p class="gs-prefs-cat-desc">Allow the Google Maps map to load on the contact page. Google may set its own cookies.</p>
+    </div>
+    <div class="gs-prefs-actions">
+      <button type="button" class="gs-cookie-btn" id="gsPrefsRejectAll">Reject all</button>
+      <button type="button" class="gs-cookie-btn gs-btn-primary" id="gsCookieSave">Save preferences</button>
+      <button type="button" class="gs-cookie-btn" id="gsPrefsAcceptAll">Accept all</button>
+    </div>
+  </div>
+</div>
+
+<style id="gs-cookie-prefs-css">
+#gs-cookie-prefs{position:fixed;inset:0;z-index:10000;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(15,15,13,0.55);}
+#gs-cookie-prefs.gs-show{display:flex;}
+.gs-prefs-box{background:var(--paper,#FBF8F2);color:var(--ink,#0F0F0D);max-width:520px;width:100%;max-height:88vh;overflow-y:auto;border-radius:8px;padding:26px 26px 22px;box-shadow:0 20px 60px rgba(0,0,0,0.35);font-family:'Manrope',sans-serif;}
+.gs-prefs-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:10px;}
+.gs-prefs-head h3{font-family:'Montserrat',sans-serif;font-size:19px;font-weight:600;color:var(--green,#1E4934);margin:0;}
+.gs-prefs-x{background:none;border:none;font-size:26px;line-height:1;cursor:pointer;color:var(--gray-soft,#6B6862);padding:0 4px;}
+.gs-prefs-x:hover{color:var(--ink,#0F0F0D);}
+.gs-prefs-intro{font-size:13px;line-height:1.6;color:var(--ink-soft,#2E2C28);margin:0 0 18px;}
+.gs-prefs-intro a{color:var(--gold,#B8954A);text-decoration:underline;}
+.gs-prefs-cat{border:1px solid var(--line-soft,#EAE3D2);border-radius:6px;padding:14px 16px;margin-bottom:12px;}
+.gs-prefs-cat-top{display:flex;align-items:center;justify-content:space-between;gap:12px;}
+.gs-prefs-cat-title{font-weight:600;font-size:14px;color:var(--ink,#0F0F0D);}
+.gs-prefs-cat-desc{font-size:12.5px;line-height:1.55;color:var(--gray-soft,#6B6862);margin:8px 0 0;}
+.gs-prefs-always{font-size:11px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--green-soft,#2E6B4D);white-space:nowrap;}
+.gs-switch{position:relative;display:inline-block;width:44px;height:24px;flex:0 0 auto;}
+.gs-switch input{opacity:0;width:0;height:0;}
+.gs-slider{position:absolute;inset:0;background:#c9c4b8;border-radius:24px;transition:.25s;cursor:pointer;}
+.gs-slider:before{content:'';position:absolute;height:18px;width:18px;left:3px;top:3px;background:#fff;border-radius:50%;transition:.25s;}
+.gs-switch input:checked + .gs-slider{background:var(--green,#1E4934);}
+.gs-switch input:checked + .gs-slider:before{transform:translateX(20px);}
+.gs-prefs-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;}
+.gs-prefs-actions .gs-cookie-btn{flex:1 1 auto;color:var(--ink,#0F0F0D);border:1px solid var(--line,#DDD5C3);background:transparent;}
+.gs-prefs-actions .gs-cookie-btn:hover{background:rgba(15,15,13,0.06);}
+.gs-btn-primary{background:var(--green,#1E4934) !important;border-color:var(--green,#1E4934) !important;color:var(--paper,#FBF8F2) !important;}
+.gs-btn-primary:hover{background:var(--green-soft,#2E6B4D) !important;}
+@media(max-width:640px){.gs-prefs-actions .gs-cookie-btn{flex:1 1 100%;}}
+</style>
 <script>
 (function(){
-  function gtagConsent(action, params){ if(typeof gtag==='function'){ gtag('consent', action, params); } }
-  var KEY = 'gs_cookie_consent';
-  var banner = document.getElementById('gs-cookie-banner');
-  var stored = null;
-  try { stored = localStorage.getItem(KEY); } catch(e){}
-  if(stored === 'accepted'){
-    gtagConsent('update', {'ad_storage':'granted','analytics_storage':'granted','ad_user_data':'granted','ad_personalization':'granted'});
-  } else if(stored !== 'rejected'){
-    if(banner){ banner.classList.add('gs-show'); }
-  }
-  var acceptBtn = document.getElementById('gsCookieAccept');
-  var rejectBtn = document.getElementById('gsCookieReject');
-  if(acceptBtn){
-    acceptBtn.addEventListener('click', function(){
-      try { localStorage.setItem(KEY,'accepted'); } catch(e){}
-      gtagConsent('update', {'ad_storage':'granted','analytics_storage':'granted','ad_user_data':'granted','ad_personalization':'granted'});
-      if(banner){ banner.classList.remove('gs-show'); }
+  function gtag2(a,p){ if(typeof gtag==='function'){ gtag('consent',a,p); } }
+  var KEY='gs_cookie_consent_v2', LEGACY='gs_cookie_consent';
+  var banner=document.getElementById('gs-cookie-banner');
+  var prefs=document.getElementById('gs-cookie-prefs');
+  var body=document.body;
+  var chkA=document.getElementById('gsCkAnalytics');
+  var chkT=document.getElementById('gsCkThird');
+  function apply(c){
+    gtag2('update',{
+      'analytics_storage': c.analytics?'granted':'denied',
+      'ad_storage': c.thirdparty?'granted':'denied',
+      'ad_user_data': c.thirdparty?'granted':'denied',
+      'ad_personalization': c.thirdparty?'granted':'denied'
     });
   }
-  if(rejectBtn){
-    rejectBtn.addEventListener('click', function(){
-      try { localStorage.setItem(KEY,'rejected'); } catch(e){}
-      if(banner){ banner.classList.remove('gs-show'); }
-    });
+  function save(c){ try{ localStorage.setItem(KEY,JSON.stringify(c)); }catch(e){} apply(c); }
+  function read(){
+    var raw=null; try{ raw=localStorage.getItem(KEY); }catch(e){}
+    if(raw){ try{ return JSON.parse(raw); }catch(e){} }
+    var old=null; try{ old=localStorage.getItem(LEGACY); }catch(e){}
+    if(old==='accepted') return {analytics:true,thirdparty:true};
+    if(old==='rejected') return {analytics:false,thirdparty:false};
+    return null;
   }
+  function openState(){
+    if((banner&&banner.classList.contains('gs-show'))||(prefs&&prefs.classList.contains('gs-show'))){ body.classList.add('gs-cookie-open'); }
+    else { body.classList.remove('gs-cookie-open'); }
+  }
+  function showBanner(){ if(prefs)prefs.classList.remove('gs-show'); if(banner)banner.classList.add('gs-show'); openState(); }
+  function hideAll(){ if(banner)banner.classList.remove('gs-show'); if(prefs)prefs.classList.remove('gs-show'); openState(); }
+  function showPrefs(){ var c=read()||{analytics:false,thirdparty:false}; if(chkA)chkA.checked=!!c.analytics; if(chkT)chkT.checked=!!c.thirdparty; if(banner)banner.classList.remove('gs-show'); if(prefs)prefs.classList.add('gs-show'); openState(); }
+  var initial=read();
+  if(initial){ apply(initial); } else if(banner){ showBanner(); }
+  function bind(id,fn){ var el=document.getElementById(id); if(el)el.addEventListener('click',fn); }
+  bind('gsCookieAccept',function(){ save({analytics:true,thirdparty:true}); hideAll(); });
+  bind('gsCookieReject',function(){ save({analytics:false,thirdparty:false}); hideAll(); });
+  bind('gsCookieConfig',showPrefs);
+  bind('gsCookieSave',function(){ save({analytics:chkA?chkA.checked:false, thirdparty:chkT?chkT.checked:false}); hideAll(); });
+  bind('gsPrefsAcceptAll',function(){ save({analytics:true,thirdparty:true}); hideAll(); });
+  bind('gsPrefsRejectAll',function(){ save({analytics:false,thirdparty:false}); hideAll(); });
+  bind('gsPrefsClose',function(){ if(read()){ hideAll(); } else { showBanner(); } });
+  document.addEventListener('click',function(e){ if(e.target.closest && e.target.closest('#gsCookieFab')){ showPrefs(); } });
 })();
 </script>
 
@@ -728,27 +811,7 @@ body{padding-top:var(--gs-top,100px) !important;}
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a1 1 0 0 1 1 1 3 3 0 0 0 3 3 1 1 0 0 1 1 1 3 3 0 0 0 3 3 1 1 0 0 1 1 1 10 10 0 1 1-9-9Z"/><circle cx="8.5" cy="10.5" r="1"/><circle cx="8" cy="15" r="1"/><circle cx="12" cy="17" r="1"/><circle cx="15" cy="14" r="1"/></svg>
   </button>
 </div>
-<script>
-(function(){
-  var banner = document.getElementById('gs-cookie-banner');
-  var fab = document.getElementById('gsCookieFab');
-  function syncOpen(){
-    if(banner && banner.classList.contains('gs-show')){ document.body.classList.add('gs-cookie-open'); }
-    else { document.body.classList.remove('gs-cookie-open'); }
-  }
-  syncOpen();
-  if(banner){
-    var obs = new MutationObserver(syncOpen);
-    obs.observe(banner, {attributes:true, attributeFilter:['class']});
-  }
-  if(fab && banner){
-    fab.addEventListener('click', function(){
-      banner.classList.add('gs-show');
-      syncOpen();
-    });
-  }
-})();
-</script>
+<script>/* Preferencias de cookies: el botón flotante (#gsCookieFab) lo gestiona el script del banner de consentimiento */</script>
 
 <!-- GS-FIX-V2-JS START -->
 <script>
