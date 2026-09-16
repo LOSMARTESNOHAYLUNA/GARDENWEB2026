@@ -1,4 +1,21 @@
 User-agent: *
 Allow: /
 
+# Páginas legales / técnicas: excluidas del sitemap y no indexables
+Disallow: /es/aviso-legal/
+Disallow: /es/politica-cookies/
+Disallow: /es/politica-privacidad/
+Disallow: /es/gracias/
+Disallow: /es/mapa-del-sitio/
+Disallow: /en/legal-notice/
+Disallow: /en/cookie-policy/
+Disallow: /en/privacy-policy/
+Disallow: /en/thank-you/
+Disallow: /en/sitemap/
+Disallow: /de/impressum/
+Disallow: /de/cookie-richtlinie/
+Disallow: /de/datenschutz/
+Disallow: /de/danke/
+Disallow: /de/sitemap/
+
 Sitemap: https://mallorcagardensolution.com/sitemap.xml
