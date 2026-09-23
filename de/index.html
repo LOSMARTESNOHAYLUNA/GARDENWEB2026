@@ -956,8 +956,15 @@ h1 .it, h2 .it, h3 .it, h4 .it,
 body,body *{overflow-wrap:anywhere;}</style>
 <style>
 .logo-img{display:none;}
-@media(max-width:968px){ .header .logo .logo-text{display:none;} .header .logo .logo-img{display:inline-block;height:40px;width:auto;vertical-align:middle;} }
-@media(max-width:640px){ .header .lang-switch{gap:3px;font-size:11px;letter-spacing:0.06em;} .header .lang-switch a{padding:4px 7px;border:1px solid var(--line-soft);border-radius:4px;} .header .lang-switch a.active{border-color:var(--green);} }
+@media(max-width:968px){
+ .header .wrap{ justify-content:flex-start; gap:10px; }
+ .header .logo{ margin-right:auto; }
+ .header .logo .logo-text{display:none;}
+ .header .logo .logo-img{display:inline-block;height:52px;width:auto;vertical-align:middle;}
+ .header .lang-switch{gap:4px;font-size:11px;letter-spacing:0.04em;}
+ .header .lang-switch a{padding:4px 7px;border:1px solid var(--line-soft);border-radius:4px;}
+ .header .lang-switch a.active{border-color:var(--green);}
+}
 </style>
 </head>
 <body>
@@ -1081,7 +1088,7 @@ body,body *{overflow-wrap:anywhere;}</style>
   <div class="cat-group">
     <div class="cat-header"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21c.5 -4.5 2.5 -8 7 -10"/><path d="M9 18c6.218 0 10.5 -3.288 11 -12v-2h-4.014c-9 0 -11.986 4 -12 9c0 1 0 3 2 5h3z"/></svg><span>Schnitt</span></div>
     <div class="cat-cards">
-      <a href="/de/baumschnitt-mallorca/" class="servicio-card"><div class="servicio-img"><img src="/img/img-setos-garden-solution.webp" alt="" loading="lazy" width="400" height="300"></div><div class="servicio-body"><h3>Bäume und Hecken</h3><p>Fachgerechter Schnitt von Zier- und Obstbäumen, Zypressen und Hecken.</p><span class="servicio-link">Leistung ansehen</span></div></a>
+      <a href="/de/baumschnitt-mallorca/" class="servicio-card"><div class="servicio-img"><img src="/img/banner-1920x800-setos-card.webp" alt="" loading="lazy" width="400" height="300"></div><div class="servicio-body"><h3>Bäume und Hecken</h3><p>Fachgerechter Schnitt von Zier- und Obstbäumen, Zypressen und Hecken.</p><span class="servicio-link">Leistung ansehen</span></div></a>
       <a href="/de/palmbaumschnitt-mallorca/" class="servicio-card"><div class="servicio-img"><img src="/img/garden-solution-poda-palmeras-hero-card.webp" alt="" loading="lazy" width="400" height="300"></div><div class="servicio-body"><h3>Palmen</h3><p>Spezialisten für den jährlichen Schnitt. Ohne Steigeisen. Richtpreise verfügbar.</p><span class="servicio-link">Leistung ansehen</span></div></a>
       <a href="/de/hoehenschnitt-mallorca/" class="servicio-card"><div class="servicio-img"><img src="/img/garden-solution-poda-altura-hero-card.webp" alt="" loading="lazy" width="400" height="300"></div><div class="servicio-body"><h3>Höhenschnitt</h3><p>Vertikale Arbeiten mit Baumklettertechnik für großgewachsene Bäume.</p><span class="servicio-link">Leistung ansehen</span></div></a>
     </div>
@@ -1089,7 +1096,7 @@ body,body *{overflow-wrap:anywhere;}</style>
   <div class="cat-group">
     <div class="cat-header"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><line x1="4" y1="10" x2="20" y2="10"/><line x1="10" y1="10" x2="10" y2="20"/></svg><span>Gestaltung & Installation</span></div>
     <div class="cat-cards cat-cards-2">
-      <a href="/de/gartengestaltung-mallorca/" class="servicio-card"><div class="servicio-img"><img src="/img/banner-1920x800-paisajismo-garden-solution.webp" alt="" loading="lazy" width="400" height="300"></div><div class="servicio-body"><h3>Gartengestaltung und Design</h3><p>Gärten von Grund auf: Konzeption, Bepflanzung, Bewässerung und dekorative Elemente.</p><span class="servicio-link">Leistung ansehen</span></div></a>
+      <a href="/de/gartengestaltung-mallorca/" class="servicio-card"><div class="servicio-img"><img src="/img/banner-1920x800-paisajismo-garden-solution-card.webp" alt="" loading="lazy" width="400" height="300"></div><div class="servicio-body"><h3>Gartengestaltung und Design</h3><p>Gärten von Grund auf: Konzeption, Bepflanzung, Bewässerung und dekorative Elemente.</p><span class="servicio-link">Leistung ansehen</span></div></a>
       <a href="/de/bewaesserungsanlage-mallorca/" class="servicio-card"><div class="servicio-img"><img src="/img/garden-solution-riego-automatico-hero-card.webp" alt="" loading="lazy" width="400" height="300"></div><div class="servicio-body"><h3>Automatische Bewässerung</h3><p>Planung und Installation effizienter Bewässerungssysteme für den mediterranen Garten.</p><span class="servicio-link">Leistung ansehen</span></div></a>
       <a href="/de/kunstrasen-mallorca/" class="servicio-card"><div class="servicio-img"><img src="/img/garden-solution-cesped-artificial-hero-card.webp" alt="" loading="lazy" width="400" height="300"></div><div class="servicio-body"><h3>Kunstrasen</h3><p>Das ganze Jahr grün, ganz ohne Bewässerung. Verlegung auf Erde, Beton oder Holz.</p><span class="servicio-link">Leistung ansehen</span></div></a>
       <a href="/de/naturrasen-mallorca/" class="servicio-card"><div class="servicio-img"><img src="/img/garden-solution-cesped-natural-hero-card.webp" alt="" loading="lazy" width="400" height="300"></div><div class="servicio-body"><h3>Naturrasen</h3><p>Aussaat, Bodenvorbereitung und Pflege von Naturrasen auf Mallorca.</p><span class="servicio-link">Leistung ansehen</span></div></a>

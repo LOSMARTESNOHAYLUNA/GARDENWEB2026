@@ -468,7 +468,8 @@ img { max-width:100%; height:auto; display:block; }
 .zonas-s { background:var(--paper); }
 .zonas-tags { display:flex; flex-wrap:wrap; gap:14px; margin-top:40px; justify-content:center; }
 .zonas-tags .zona-tag{ width:130px; min-width:0; }
-@media(max-width:640px){ .zonas-tags{ display:grid; grid-template-columns:repeat(3,1fr); gap:10px; } .zonas-tags .zona-tag{ width:auto; flex-direction:row; gap:8px; padding:14px 8px; } .zonas-tags .zona-icon{ width:26px; height:26px; } }
+.zonas-tags{ max-width:720px; margin-left:auto; margin-right:auto; }
+@media(max-width:640px){ .zonas-tags{ display:flex; flex-wrap:wrap; justify-content:center; gap:10px; max-width:none; } .zonas-tags .zona-tag{ width:calc(50% - 5px); flex-direction:row; justify-content:flex-start; gap:10px; padding:14px 12px; } .zonas-tags .zona-icon{ width:26px; height:26px; flex-shrink:0; } }
 .zona-tag {
   font-family:'Manrope'; font-size:13px; font-weight:400; letter-spacing:0.05em;
   padding:22px 20px; border:1px solid var(--line); color:var(--ink-soft);
@@ -830,8 +831,15 @@ p, li, .faq-body p, .resena-text, .col-block p,
 body,body *{overflow-wrap:anywhere;}</style>
 <style>
 .logo-img{display:none;}
-@media(max-width:968px){ .header .logo .logo-text{display:none;} .header .logo .logo-img{display:inline-block;height:40px;width:auto;vertical-align:middle;} }
-@media(max-width:640px){ .header .lang-switch{gap:3px;font-size:11px;letter-spacing:0.06em;} .header .lang-switch a{padding:4px 7px;border:1px solid var(--line-soft);border-radius:4px;} .header .lang-switch a.active{border-color:var(--green);} }
+@media(max-width:968px){
+ .header .wrap{ justify-content:flex-start; gap:10px; }
+ .header .logo{ margin-right:auto; }
+ .header .logo .logo-text{display:none;}
+ .header .logo .logo-img{display:inline-block;height:52px;width:auto;vertical-align:middle;}
+ .header .lang-switch{gap:4px;font-size:11px;letter-spacing:0.04em;}
+ .header .lang-switch a{padding:4px 7px;border:1px solid var(--line-soft);border-radius:4px;}
+ .header .lang-switch a.active{border-color:var(--green);}
+}
 </style>
 </head>
 <body>
