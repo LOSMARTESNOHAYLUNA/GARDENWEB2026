@@ -597,13 +597,18 @@ p, li, .faq-body p, .resena-text, .col-block p,
 </style>
 <style id="gs-overflow-guard">/* Anti-desbordamiento: rompe palabras/tokens largos (emails, @handles, URLs) para que nada salga del contenedor en movil */
 body,body *{overflow-wrap:anywhere;}</style>
+<style>
+.logo-img{display:none;}
+@media(max-width:968px){ .header .logo .logo-text{display:none;} .header .logo .logo-img{display:inline-block;height:40px;width:auto;vertical-align:middle;} }
+@media(max-width:640px){ .header .lang-switch{gap:3px;font-size:11px;letter-spacing:0.06em;} .header .lang-switch a{padding:4px 7px;border:1px solid var(--line-soft);border-radius:4px;} .header .lang-switch a.active{border-color:var(--green);} }
+</style>
 </head>
 <body>
 
 <div class="topbar"><div class="topbar-inner"><span class="topbar-brand">Garden Solution</span><span class="topbar-sep gs-sep1">|</span><span class="topbar-tagline">Gartenbaufirma auf Mallorca</span><span class="topbar-sep">|</span><a class="topbar-phone" href="https://wa.me/34621493977">621 49 39 77</a></div></div>
 <header class="header">
   <div class="wrap">
-    <a href="/de/" class="logo">Garden <span class="it">Solution</span></a>
+    <a href="/de/" class="logo"><span class="logo-text">Garden <span class="it">Solution</span></span><img class="logo-img" src="/img/logo-garden-solution.webp" alt="Garden Solution" width="40" height="40"></a>
     <nav class="nav"><ul>
       <li class="has-dd">
           <a href="/de/leistungen/">Leistungen</a>
@@ -649,7 +654,7 @@ body,body *{overflow-wrap:anywhere;}</style>
     <button class="menu-toggle" aria-label="Menü">☰</button>
   </div>
 </header>
-<section class="hero-bg hero-bg-zone" style="background-image:url('/img/garden-solution-Villa-mediterranea.webp');">
+<section class="hero-bg hero-bg-zone" style="background-image:url('/img/banner-1920x800-garden-solution-andratx.webp');">
   <div class="hero-bg-overlay"></div>
   <div class="wrap">
     <div class="breadcrumb-inner">
@@ -686,7 +691,7 @@ body,body *{overflow-wrap:anywhere;}</style>
       </div>
       <div class="col-block">
         <div class="hero-img">
-          <img src="/img/garden-solution-villa-con-piscina.webp" alt="Premium-Gartenpflege in einer Villa in Andratx, Mallorca — Garden Solution" width="560" height="700" loading="lazy">
+          <img src="/img/img-andratx-garden-solution.webp" alt="Premium-Gartenpflege in einer Villa in Andratx, Mallorca — Garden Solution" width="560" height="700" loading="lazy">
         </div>
       </div>
     </div>

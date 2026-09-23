@@ -401,6 +401,8 @@ img { max-width:100%; height:auto; display:block; }
 /* ===== ZONAS ===== */
 .zonas-s { background:var(--paper); }
 .zonas-tags { display:flex; flex-wrap:wrap; gap:14px; margin-top:40px; justify-content:center; }
+.zonas-tags .zona-tag{ width:130px; min-width:0; }
+@media(max-width:640px){ .zonas-tags{ display:grid; grid-template-columns:repeat(3,1fr); gap:10px; } .zonas-tags .zona-tag{ width:auto; flex-direction:row; gap:8px; padding:14px 8px; } .zonas-tags .zona-icon{ width:26px; height:26px; } }
 .zona-tag {
   font-family:'Manrope'; font-size:13px; font-weight:400; letter-spacing:0.05em;
   padding:22px 20px; border:1px solid var(--line); color:var(--ink-soft);
@@ -757,6 +759,11 @@ p, li, .faq-body p, .resena-text, .col-block p,
 </style>
 <style id="gs-overflow-guard">/* Anti-desbordamiento: rompe palabras/tokens largos (emails, @handles, URLs) para que nada salga del contenedor en movil */
 body,body *{overflow-wrap:anywhere;}</style>
+<style>
+.logo-img{display:none;}
+@media(max-width:968px){ .header .logo .logo-text{display:none;} .header .logo .logo-img{display:inline-block;height:40px;width:auto;vertical-align:middle;} }
+@media(max-width:640px){ .header .lang-switch{gap:3px;font-size:11px;letter-spacing:0.06em;} .header .lang-switch a{padding:4px 7px;border:1px solid var(--line-soft);border-radius:4px;} .header .lang-switch a.active{border-color:var(--green);} }
+</style>
 </head>
 <body>
 
@@ -764,7 +771,7 @@ body,body *{overflow-wrap:anywhere;}</style>
 <div class="topbar"><div class="topbar-inner"><span class="topbar-brand">Garden Solution</span><span class="topbar-sep gs-sep1">|</span><span class="topbar-tagline">Empresa de jardinería en Mallorca</span><span class="topbar-sep">|</span><a class="topbar-phone" href="https://wa.me/34621493977">621 49 39 77</a></div></div>
 <header class="header" id="header">
   <div class="wrap">
-    <a href="/es/" class="logo">Garden <span class="it">Solution</span></a>
+    <a href="/es/" class="logo"><span class="logo-text">Garden <span class="it">Solution</span></span><img class="logo-img" src="/img/logo-garden-solution.webp" alt="Garden Solution" width="40" height="40"></a>
     <nav class="nav">
       <ul>
         <li class="has-dd">
