@@ -1,0 +1,90 @@
+# ==========================================================
+# Garden Solution Mallorca - configuracion Apache (Hostinger)
+# Generado a partir de vercel.json
+# ==========================================================
+
+Options -Indexes
+DirectoryIndex index.html
+
+RewriteEngine On
+
+# --- HTTPS ---
+# dinahosting ya fuerza HTTPS a nivel de servidor ("Forzar HTTPS" activado),
+# por eso NO se añade aquí, para evitar bucles de redireccion detras de Varnish.
+
+# --- Forzar dominio sin www ---
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+
+# ==========================================================
+# Redirecciones 301 (migradas de vercel.json)
+# Se omiten las que solo anaden barra final: Apache ya lo hace.
+# ==========================================================
+
+RedirectMatch 301 ^/es/mantenimiento\-de\-jardines/?$ /es/mantenimiento-jardines-particulares/
+RedirectMatch 301 ^/es/mantenimiento\-de\-jardines\-particulares/?$ /es/mantenimiento-jardines-particulares/
+RedirectMatch 301 ^/es/mantenimiento\-de\-comunidades/?$ /es/mantenimiento-comunidades/
+RedirectMatch 301 ^/es/mantenimiento\-de\-piscinas/?$ /es/mantenimiento-piscinas/
+RedirectMatch 301 ^/es/paisajismo/?$ /es/paisajismo-diseno-jardines/
+RedirectMatch 301 ^/es/paisajismo\-y\-diseno\-de\-jardines\-en\-mallorca/?$ /es/paisajismo-diseno-jardines/
+RedirectMatch 301 ^/es/poda\-de\-arboles\-y\-setos/?$ /es/poda-arboles-setos/
+RedirectMatch 301 ^/es/poda\-de\-palmeras/?$ /es/poda-palmeras/
+RedirectMatch 301 ^/es/faq/?$ /es/preguntas-frecuentes/
+RedirectMatch 301 ^/mantenimiento\-de\-jardines/?$ /es/mantenimiento-jardines-particulares/
+RedirectMatch 301 ^/mantenimiento\-de\-jardines\-particulares/?$ /es/mantenimiento-jardines-particulares/
+RedirectMatch 301 ^/mantenimiento\-de\-comunidades/?$ /es/mantenimiento-comunidades/
+RedirectMatch 301 ^/mantenimiento\-de\-piscinas/?$ /es/mantenimiento-piscinas/
+RedirectMatch 301 ^/poda\-de\-arboles\-y\-setos/?$ /es/poda-arboles-setos/
+RedirectMatch 301 ^/poda\-de\-palmeras/?$ /es/poda-palmeras/
+RedirectMatch 301 ^/poda\-en\-altura/?$ /es/poda-en-altura/
+RedirectMatch 301 ^/cesped\-artificial/?$ /es/cesped-artificial/
+RedirectMatch 301 ^/cesped\-natural/?$ /es/cesped-natural/
+RedirectMatch 301 ^/riego\-automatico/?$ /es/riego-automatico/
+RedirectMatch 301 ^/picudo\-rojo/?$ /es/picudo-rojo/
+RedirectMatch 301 ^/controles\-fitosanitarios/?$ /es/controles-fitosanitarios/
+RedirectMatch 301 ^/limpieza\-fincas/?$ /es/limpieza-fincas/
+RedirectMatch 301 ^/silvicultura\-preventiva/?$ /es/silvicultura-preventiva/
+RedirectMatch 301 ^/endoterapia/?$ /es/endoterapia/
+RedirectMatch 301 ^/paisajismo\-y\-diseno\-de\-jardines\-en\-mallorca/?$ /es/paisajismo-diseno-jardines/
+RedirectMatch 301 ^/sobre\-nosotros/?$ /es/sobre-nosotros/
+RedirectMatch 301 ^/faq/?$ /es/preguntas-frecuentes/
+RedirectMatch 301 ^/blog/?$ /es/blog/
+RedirectMatch 301 ^/cuidados\-de\-una\-palmera\-exterior/?$ /es/blog/picudo-rojo-mallorca/
+RedirectMatch 301 ^/cuando\-se\-podan\-las\-palmeras/?$ /es/poda-palmeras/
+RedirectMatch 301 ^/como\-podar\-una\-palmera\-paso\-a\-paso/?$ /es/poda-palmeras/
+RedirectMatch 301 ^/cuando\-es\-la\-epoca\-de\-la\-procesionaria/?$ /es/blog/calendario-poda-mallorca/
+RedirectMatch 301 ^/personalizar\-cookies/?$ /es/
+RedirectMatch 301 ^/a\-que\-temperatura\-muere\-la\-procesionaria\-te\-lo\-explicamos/?$ /es/blog/calendario-poda-mallorca/
+RedirectMatch 301 ^/oruga\-procesionaria\-y\-perros\-que\-debes\-saber\-para\-evitar\-un\-susto/?$ /es/blog/picudo-rojo-mallorca/
+RedirectMatch 301 ^/picadura\-de\-procesionaria\-todo\-lo\-que\-debes\-saber/?$ /es/picudo-rojo/
+RedirectMatch 301 ^/nidos\-de\-procesionaria/?$ /es/picudo-rojo/
+RedirectMatch 301 ^/es/blog/picudo\-rojo\-senales\-alarma/?$ /es/blog/picudo-rojo-mallorca/
+RedirectMatch 301 ^/es/blog/riego\-automatico\-jardines\-mallorca/?$ /es/blog/riego-automatico-mediterraneo/
+RedirectMatch 301 ^/es/blog/cuando\-podar\-mallorca/?$ /es/blog/calendario-poda-mallorca/
+RedirectMatch 301 ^/es/blog/picudo\-rojo\-senales\-alarma/?$ /es/blog/picudo-rojo-mallorca/
+RedirectMatch 301 ^/trabaja\-con\-nosotros/?$ /es/trabaja-con-nosotros/
+
+# ==========================================================
+# Content-Type para sitemaps / XSL
+# ==========================================================
+<FilesMatch "sitemap.*\.xml$">
+  Header set Content-Type "application/xml; charset=utf-8"
+</FilesMatch>
+<FilesMatch "sitemap\.xsl$">
+  Header set Content-Type "text/xsl; charset=utf-8"
+</FilesMatch>
+
+# ==========================================================
+# Cache de assets estaticos (1 ano, immutable)
+# ==========================================================
+<FilesMatch "\.(webp|jpg|jpeg|png|svg|gif|ico|woff2|woff|ttf|css|js)$">
+  Header set Cache-Control "public, max-age=31536000, immutable"
+</FilesMatch>
+
+# ==========================================================
+# Compresion GZIP (mejora velocidad)
+# ==========================================================
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css application/javascript application/json image/svg+xml application/xml
+</IfModule>
+
