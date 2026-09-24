@@ -37,6 +37,29 @@
   });
 </script>
 
+<!-- Restaurar consentimiento guardado ANTES de GTM (para evaluar etiquetas con el estado correcto) -->
+<script>
+(function(){
+  try{
+    var raw=localStorage.getItem('gs_cookie_consent_v2');
+    var c=raw?JSON.parse(raw):null;
+    if(!c){
+      var old=localStorage.getItem('gs_cookie_consent');
+      if(old==='accepted')c={analytics:true,thirdparty:true};
+      else if(old==='rejected')c={analytics:false,thirdparty:false};
+    }
+    if(c){
+      gtag('consent','update',{
+        'analytics_storage':c.analytics?'granted':'denied',
+        'ad_storage':c.thirdparty?'granted':'denied',
+        'ad_user_data':c.thirdparty?'granted':'denied',
+        'ad_personalization':c.thirdparty?'granted':'denied'
+      });
+    }
+  }catch(e){}
+})();
+</script>
+
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -741,7 +764,7 @@ document.getElementById('candidatura-form').addEventListener('submit',async func
       }
     }
   }
-  function save(c){ try{ localStorage.setItem(KEY,JSON.stringify(c)); }catch(e){} apply(c); }
+  function save(c){ try{ localStorage.setItem(KEY,JSON.stringify(c)); }catch(e){} apply(c); try{ window.dataLayer=window.dataLayer||[]; window.dataLayer.push({event:'gs_consent_update'}); }catch(e){} }
   function read(){
     var raw=null; try{ raw=localStorage.getItem(KEY); }catch(e){}
     if(raw){ try{ return JSON.parse(raw); }catch(e){} }
