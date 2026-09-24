@@ -707,6 +707,39 @@ document.getElementById('candidatura-form').addEventListener('submit',async func
       'ad_user_data': c.thirdparty?'granted':'denied',
       'ad_personalization': c.thirdparty?'granted':'denied'
     });
+    applyMaps(!!c.thirdparty);
+  }
+  function gsMapTxt(){
+    var l=(document.documentElement.lang||'es').slice(0,2);
+    if(l==='en')return{t:'To load the Google map we need your consent for third-party cookies.',b:'Load map'};
+    if(l==='de')return{t:'Um die Google-Karte zu laden, ben\u00f6tigen wir Ihre Zustimmung zu Cookies von Drittanbietern.',b:'Karte laden'};
+    return{t:'Para cargar el mapa de Google necesitamos tu consentimiento de cookies de terceros.',b:'Cargar mapa'};
+  }
+  function applyMaps(granted){
+    var maps=document.querySelectorAll('iframe.gs-consent-map');
+    for(var i=0;i<maps.length;i++){
+      var m=maps[i],wrap=m.parentNode,ph=wrap.querySelector('.gs-map-consent');
+      if(granted){
+        if(!m.getAttribute('src')&&m.getAttribute('data-src')){m.setAttribute('src',m.getAttribute('data-src'));}
+        m.style.display='';
+        if(ph){ph.parentNode.removeChild(ph);}
+      }else{
+        if(m.getAttribute('src')){m.removeAttribute('src');}
+        m.style.display='none';
+        if(!ph){
+          var x=gsMapTxt();
+          ph=document.createElement('div');
+          ph.className='gs-map-consent';
+          ph.style.cssText='min-height:300px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;text-align:center;padding:28px;background:#EFEBE1;color:#0F0F0D;font-family:Manrope,sans-serif;font-size:14px;line-height:1.6;border:1px solid #DDD5C3;';
+          var p=document.createElement('p');p.textContent=x.t;p.style.cssText='margin:0;max-width:420px;';
+          var b=document.createElement('button');b.type='button';b.textContent=x.b;
+          b.style.cssText='font-family:Manrope,sans-serif;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:12px 22px;border-radius:2px;cursor:pointer;border:1px solid #0F0F0D;background:#C9A24B;color:#0F0F0D;';
+          b.addEventListener('click',function(){var cur=read()||{analytics:false,thirdparty:false};save({analytics:cur.analytics,thirdparty:true});});
+          ph.appendChild(p);ph.appendChild(b);
+          wrap.appendChild(ph);
+        }
+      }
+    }
   }
   function save(c){ try{ localStorage.setItem(KEY,JSON.stringify(c)); }catch(e){} apply(c); }
   function read(){
@@ -726,6 +759,7 @@ document.getElementById('candidatura-form').addEventListener('submit',async func
   function showPrefs(){ var c=read()||{analytics:false,thirdparty:false}; if(chkA)chkA.checked=!!c.analytics; if(chkT)chkT.checked=!!c.thirdparty; if(banner)banner.classList.remove('gs-show'); if(prefs)prefs.classList.add('gs-show'); openState(); }
   var initial=read();
   if(initial){ apply(initial); } else if(banner){ showBanner(); }
+  applyMaps(!!(initial&&initial.thirdparty));
   function bind(id,fn){ var el=document.getElementById(id); if(el)el.addEventListener('click',fn); }
   bind('gsCookieAccept',function(){ save({analytics:true,thirdparty:true}); hideAll(); });
   bind('gsCookieReject',function(){ save({analytics:false,thirdparty:false}); hideAll(); });
