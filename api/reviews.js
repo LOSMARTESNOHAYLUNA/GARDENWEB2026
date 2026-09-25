@@ -6,7 +6,8 @@
 
 module.exports = async (req, res) => {
   var key = process.env.GOOGLE_PLACES_API_KEY;
-  var placeId = process.env.GOOGLE_PLACE_ID;
+  // Place ID de Garden Solution Mallorca SL (público, no es secreto)
+  var placeId = process.env.GOOGLE_PLACE_ID || 'ChIJxdJLNgaPwk4RYxbOROBK_fo';
   var lang = String((req.query && req.query.lang) || 'es').slice(0, 2).toLowerCase();
   if (['es', 'en', 'de'].indexOf(lang) === -1) lang = 'es';
 
