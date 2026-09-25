@@ -978,6 +978,8 @@ h1 .it, h2 .it, h3 .it, h4 .it,
 body,body *{overflow-wrap:anywhere;}</style>
 <style>
 .logo-img{display:none;}
+.header .logo .logo-text{display:none;}
+.header .logo .logo-img{display:inline-block;height:48px;width:auto;vertical-align:middle;}
 @media(max-width:968px){
  .header .wrap{ justify-content:flex-start; gap:10px; padding:10px 16px; }
  .header .logo{ margin-right:auto; }
@@ -1275,114 +1277,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="resena-gcard">
         <div class="resena-gcard-header">
           <div class="resena-gcard-user">
-            <div class="resena-gavatar" style="background:#1E4934;">B</div>
-            <div>
-              <div class="resena-gname">Biel</div>
-              <div class="resena-gdate">hace 7 meses</div>
-            </div>
-          </div>
-          <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
-        </div>
-        <div class="resena-gstars">★★★★★<span class="resena-gcheck">✓</span></div>
-        <p class="resena-gtext">«Excelente trabajo al cortarnos un árbol. Grandes profesionales, con rapidez, seguridad y mucho cuidado. Puntuales, muy amables y dejaron todo limpio. Sin duda, volveríamos a contar con ellos.»</p>
-      </div>
-      <div class="resena-gcard">
-        <div class="resena-gcard-header">
-          <div class="resena-gcard-user">
-            <div class="resena-gavatar" style="background:#B8954A;">M</div>
-            <div>
-              <div class="resena-gname">María T.</div>
-              <div class="resena-gdate">hace 6 meses</div>
-            </div>
-          </div>
-          <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
-        </div>
-        <div class="resena-gstars">★★★★★<span class="resena-gcheck">✓</span></div>
-        <p class="resena-gtext">«Excelente servicio de jardinería. Desde el primer contacto, muy profesionales y puntuales. Dejan el jardín impecable, cuidando cada detalle. Se nota la experiencia y el amor por su trabajo.»</p>
-      </div>
-      <div class="resena-gcard">
-        <div class="resena-gcard-header">
-          <div class="resena-gcard-user">
-            <div class="resena-gavatar" style="background:#2E6B4D;">C</div>
-            <div>
-              <div class="resena-gname">Carmen R.</div>
-              <div class="resena-gdate">hace 6 meses</div>
-            </div>
-          </div>
-          <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
-        </div>
-        <div class="resena-gstars">★★★★★<span class="resena-gcheck">✓</span></div>
-        <p class="resena-gtext">«Contacté para la poda anual de dos palmeras. Muy atentos y formales. Vinieron el día y hora indicados y realizaron muy buen trabajo. Sin duda, les volveremos a llamar.»</p>
-      </div>
-      <div class="resena-gcard">
-        <div class="resena-gcard-header">
-          <div class="resena-gcard-user">
-            <div class="resena-gavatar" style="background:#1E4934;">P</div>
-            <div>
-              <div class="resena-gname">Peter K.</div>
-              <div class="resena-gdate">hace 5 meses</div>
-            </div>
-          </div>
-          <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
-        </div>
-        <div class="resena-gstars">★★★★★<span class="resena-gcheck">✓</span></div>
-        <p class="resena-gtext">«Llevamos dos años con Garden Solution para el mantenimiento de nuestra villa en Calvià. Son muy de fiar, puntuales y el jardín siempre está perfecto.»</p>
-      </div>
-      <div class="resena-gcard">
-        <div class="resena-gcard-header">
-          <div class="resena-gcard-user">
-            <div class="resena-gavatar" style="background:#B8954A;">C</div>
+            <div class="resena-gavatar" style="background:#1E4934;">C</div>
             <div>
               <div class="resena-gname">Cliente Google</div>
-              <div class="resena-gdate">hace 5 meses</div>
-            </div>
-          </div>
-          <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
-        </div>
-        <div class="resena-gstars">★★★★★<span class="resena-gcheck">✓</span></div>
-        <p class="resena-gtext">«Instalaron el riego automático en nuestra finca de Llucmajor. Trabajo impecable, el sistema funciona perfectamente. También nos asesoraron sobre las plantas. Muy recomendables.»</p>
-      </div>
-      <div class="resena-gcard">
-        <div class="resena-gcard-header">
-          <div class="resena-gcard-user">
-            <div class="resena-gavatar" style="background:#2E6B4D;">A</div>
-            <div>
-              <div class="resena-gname">Antònia M.</div>
-              <div class="resena-gdate">hace 4 meses</div>
-            </div>
-          </div>
-          <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
-        </div>
-        <div class="resena-gstars">★★★★★<span class="resena-gcheck">✓</span></div>
-        <p class="resena-gtext">«Tratamiento de endoterapia para nuestras palmeras. Muy profesionales, explicaron bien el proceso y el resultado ha sido muy bueno. Precio justo y servicio de calidad.»</p>
-      </div>
-      <div class="resena-gcard">
-        <div class="resena-gcard-header">
-          <div class="resena-gcard-user">
-            <div class="resena-gavatar" style="background:#1E4934;">J</div>
-            <div>
-              <div class="resena-gname">Joan F.</div>
-              <div class="resena-gdate">hace 3 meses</div>
-            </div>
-          </div>
-          <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
-        </div>
-        <div class="resena-gstars">★★★★★<span class="resena-gcheck">✓</span></div>
-        <p class="resena-gtext">«Llevamos más de 3 años contando con ellos para el mantenimiento de nuestro jardín. Siempre puntuales, cuidadosos y con buen criterio. Los recomiendo sin dudarlo.»</p>
-      </div>
-      <div class="resena-gcard">
-        <div class="resena-gcard-header">
-          <div class="resena-gcard-user">
-            <div class="resena-gavatar" style="background:#B8954A;">S</div>
-            <div>
-              <div class="resena-gname">Simona V.</div>
-              <div class="resena-gdate">hace 3 meses</div>
+              <div class="resena-gdate">hace 1 mes</div>
             </div>
           </div>
           <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
         </div>
         <div class="resena-gstars">★★★★☆<span class="resena-gcheck">✓</span></div>
-        <p class="resena-gtext">«Muy buen servicio de poda de palmeras. Rápidos y ordenados. El precio es razonable para la calidad del trabajo. Solo faltó un poco más de comunicación previa sobre la hora de llegada.»</p>
+        <p class="resena-gtext">«Buen servicio de mantenimiento de jardín. Puntuales y trabajadores. El jardín siempre queda bien después de cada visita. Llevan ya un año con nosotros y estamos contentos.»</p>
       </div>
       <div class="resena-gcard">
         <div class="resena-gcard-header">
@@ -1401,16 +1305,114 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="resena-gcard">
         <div class="resena-gcard-header">
           <div class="resena-gcard-user">
-            <div class="resena-gavatar" style="background:#1E4934;">C</div>
+            <div class="resena-gavatar" style="background:#B8954A;">S</div>
             <div>
-              <div class="resena-gname">Cliente Google</div>
-              <div class="resena-gdate">hace 1 mes</div>
+              <div class="resena-gname">Simona V.</div>
+              <div class="resena-gdate">hace 3 meses</div>
             </div>
           </div>
           <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
         </div>
         <div class="resena-gstars">★★★★☆<span class="resena-gcheck">✓</span></div>
-        <p class="resena-gtext">«Buen servicio de mantenimiento de jardín. Puntuales y trabajadores. El jardín siempre queda bien después de cada visita. Llevan ya un año con nosotros y estamos contentos.»</p>
+        <p class="resena-gtext">«Muy buen servicio de poda de palmeras. Rápidos y ordenados. El precio es razonable para la calidad del trabajo. Solo faltó un poco más de comunicación previa sobre la hora de llegada.»</p>
+      </div>
+      <div class="resena-gcard">
+        <div class="resena-gcard-header">
+          <div class="resena-gcard-user">
+            <div class="resena-gavatar" style="background:#1E4934;">J</div>
+            <div>
+              <div class="resena-gname">Joan F.</div>
+              <div class="resena-gdate">hace 3 meses</div>
+            </div>
+          </div>
+          <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+        </div>
+        <div class="resena-gstars">★★★★★<span class="resena-gcheck">✓</span></div>
+        <p class="resena-gtext">«Llevamos más de 3 años contando con ellos para el mantenimiento de nuestro jardín. Siempre puntuales, cuidadosos y con buen criterio. Los recomiendo sin dudarlo.»</p>
+      </div>
+      <div class="resena-gcard">
+        <div class="resena-gcard-header">
+          <div class="resena-gcard-user">
+            <div class="resena-gavatar" style="background:#2E6B4D;">A</div>
+            <div>
+              <div class="resena-gname">Antònia M.</div>
+              <div class="resena-gdate">hace 4 meses</div>
+            </div>
+          </div>
+          <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+        </div>
+        <div class="resena-gstars">★★★★★<span class="resena-gcheck">✓</span></div>
+        <p class="resena-gtext">«Tratamiento de endoterapia para nuestras palmeras. Muy profesionales, explicaron bien el proceso y el resultado ha sido muy bueno. Precio justo y servicio de calidad.»</p>
+      </div>
+      <div class="resena-gcard">
+        <div class="resena-gcard-header">
+          <div class="resena-gcard-user">
+            <div class="resena-gavatar" style="background:#B8954A;">C</div>
+            <div>
+              <div class="resena-gname">Cliente Google</div>
+              <div class="resena-gdate">hace 5 meses</div>
+            </div>
+          </div>
+          <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+        </div>
+        <div class="resena-gstars">★★★★★<span class="resena-gcheck">✓</span></div>
+        <p class="resena-gtext">«Instalaron el riego automático en nuestra finca de Llucmajor. Trabajo impecable, el sistema funciona perfectamente. También nos asesoraron sobre las plantas. Muy recomendables.»</p>
+      </div>
+      <div class="resena-gcard">
+        <div class="resena-gcard-header">
+          <div class="resena-gcard-user">
+            <div class="resena-gavatar" style="background:#1E4934;">P</div>
+            <div>
+              <div class="resena-gname">Peter K.</div>
+              <div class="resena-gdate">hace 5 meses</div>
+            </div>
+          </div>
+          <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+        </div>
+        <div class="resena-gstars">★★★★★<span class="resena-gcheck">✓</span></div>
+        <p class="resena-gtext">«Llevamos dos años con Garden Solution para el mantenimiento de nuestra villa en Calvià. Son muy de fiar, puntuales y el jardín siempre está perfecto.»</p>
+      </div>
+      <div class="resena-gcard">
+        <div class="resena-gcard-header">
+          <div class="resena-gcard-user">
+            <div class="resena-gavatar" style="background:#2E6B4D;">C</div>
+            <div>
+              <div class="resena-gname">Carmen R.</div>
+              <div class="resena-gdate">hace 6 meses</div>
+            </div>
+          </div>
+          <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+        </div>
+        <div class="resena-gstars">★★★★★<span class="resena-gcheck">✓</span></div>
+        <p class="resena-gtext">«Contacté para la poda anual de dos palmeras. Muy atentos y formales. Vinieron el día y hora indicados y realizaron muy buen trabajo. Sin duda, les volveremos a llamar.»</p>
+      </div>
+      <div class="resena-gcard">
+        <div class="resena-gcard-header">
+          <div class="resena-gcard-user">
+            <div class="resena-gavatar" style="background:#B8954A;">M</div>
+            <div>
+              <div class="resena-gname">María T.</div>
+              <div class="resena-gdate">hace 6 meses</div>
+            </div>
+          </div>
+          <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+        </div>
+        <div class="resena-gstars">★★★★★<span class="resena-gcheck">✓</span></div>
+        <p class="resena-gtext">«Excelente servicio de jardinería. Desde el primer contacto, muy profesionales y puntuales. Dejan el jardín impecable, cuidando cada detalle. Se nota la experiencia y el amor por su trabajo.»</p>
+      </div>
+      <div class="resena-gcard">
+        <div class="resena-gcard-header">
+          <div class="resena-gcard-user">
+            <div class="resena-gavatar" style="background:#1E4934;">B</div>
+            <div>
+              <div class="resena-gname">Biel</div>
+              <div class="resena-gdate">hace 7 meses</div>
+            </div>
+          </div>
+          <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+        </div>
+        <div class="resena-gstars">★★★★★<span class="resena-gcheck">✓</span></div>
+        <p class="resena-gtext">«Excelente trabajo al cortarnos un árbol. Grandes profesionales, con rapidez, seguridad y mucho cuidado. Puntuales, muy amables y dejaron todo limpio. Sin duda, volveríamos a contar con ellos.»</p>
       </div>
       </div>
       <div class="resenas-nav">
