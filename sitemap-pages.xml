@@ -66,6 +66,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://mallorcagardensolution.com/es/endoterapia-procesionaria/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://mallorcagardensolution.com/es/jardineria-alcudia/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/jardineria-alcudia/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/gardening-alcudia/"/>
