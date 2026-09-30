@@ -67,6 +67,10 @@
   </url>
   <url>
     <loc>https://mallorcagardensolution.com/es/endoterapia-procesionaria/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/endoterapia-procesionaria/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/pine-processionary-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/prozessionsspinner-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/endoterapia-procesionaria/"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -341,6 +345,15 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://mallorcagardensolution.com/en/pine-processionary-mallorca/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/endoterapia-procesionaria/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/pine-processionary-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/prozessionsspinner-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/endoterapia-procesionaria/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://mallorcagardensolution.com/en/estate-clearing-mallorca/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/limpieza-fincas/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/estate-clearing-mallorca/"/>
@@ -571,6 +584,15 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/endotherapy-mallorca/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/endotherapie-mallorca/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/endoterapia/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mallorcagardensolution.com/de/prozessionsspinner-mallorca/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://mallorcagardensolution.com/es/endoterapia-procesionaria/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/pine-processionary-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/prozessionsspinner-mallorca/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/endoterapia-procesionaria/"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
