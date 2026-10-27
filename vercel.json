@@ -253,62 +253,62 @@
       "permanent": true
     },
     {
-      "source": "/wp-content/:path*",
+      "source": "/wp-content/(.*)",
       "destination": "/es/",
       "permanent": true
     },
     {
-      "source": "/wp-admin/:path*",
+      "source": "/wp-admin/(.*)",
       "destination": "/es/",
       "permanent": true
     },
     {
-      "source": "/wp-json/:path*",
+      "source": "/wp-json/(.*)",
       "destination": "/es/",
       "permanent": true
     },
     {
-      "source": "/wp-includes/:path*",
+      "source": "/wp-includes/(.*)",
       "destination": "/es/",
       "permanent": true
     },
     {
-      "source": "/category/:path*",
+      "source": "/category/(.*)",
       "destination": "/es/blog/",
       "permanent": true
     },
     {
-      "source": "/en/category/:path*",
+      "source": "/en/category/(.*)",
       "destination": "/en/blog/",
       "permanent": true
     },
     {
-      "source": "/author/:path*",
+      "source": "/author/(.*)",
       "destination": "/es/",
       "permanent": true
     },
     {
-      "source": "/en/author/:path*",
+      "source": "/en/author/(.*)",
       "destination": "/en/",
       "permanent": true
     },
     {
-      "source": "/en/tag/:path*",
+      "source": "/en/tag/(.*)",
       "destination": "/en/blog/",
       "permanent": true
     },
     {
-      "source": "/tag/:path*",
+      "source": "/tag/(.*)",
       "destination": "/es/blog/",
       "permanent": true
     },
     {
-      "source": "/blog/page/:path*",
+      "source": "/blog/page/(.*)",
       "destination": "/es/blog/",
       "permanent": true
     },
     {
-      "source": "/en/gardening-blog/page/:path*",
+      "source": "/en/gardening-blog/page/(.*)",
       "destination": "/en/blog/",
       "permanent": true
     },
