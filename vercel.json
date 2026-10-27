@@ -211,6 +211,291 @@
       "source": "/trabaja-con-nosotros/",
       "destination": "/es/trabaja-con-nosotros/",
       "permanent": true
+    },
+    {
+      "source": "/como-limpiar-las-hojas-de-las-plantas/",
+      "destination": "/es/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/cerramientos-vallados/",
+      "destination": "/es/",
+      "permanent": true
+    },
+    {
+      "source": "/en/home/",
+      "destination": "/en/",
+      "permanent": true
+    },
+    {
+      "source": "/en/how-to-clean-plant-leaves/",
+      "destination": "/en/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/feed/",
+      "destination": "/es/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/en/feed/",
+      "destination": "/en/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/comments/feed/",
+      "destination": "/es/",
+      "permanent": true
+    },
+    {
+      "source": "/en/comments/feed/",
+      "destination": "/en/",
+      "permanent": true
+    },
+    {
+      "source": "/wp-content/:path*",
+      "destination": "/es/",
+      "permanent": true
+    },
+    {
+      "source": "/wp-admin/:path*",
+      "destination": "/es/",
+      "permanent": true
+    },
+    {
+      "source": "/wp-json/:path*",
+      "destination": "/es/",
+      "permanent": true
+    },
+    {
+      "source": "/wp-includes/:path*",
+      "destination": "/es/",
+      "permanent": true
+    },
+    {
+      "source": "/category/:path*",
+      "destination": "/es/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/en/category/:path*",
+      "destination": "/en/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/author/:path*",
+      "destination": "/es/",
+      "permanent": true
+    },
+    {
+      "source": "/en/author/:path*",
+      "destination": "/en/",
+      "permanent": true
+    },
+    {
+      "source": "/en/tag/:path*",
+      "destination": "/en/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/tag/:path*",
+      "destination": "/es/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/blog/page/:path*",
+      "destination": "/es/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/en/gardening-blog/page/:path*",
+      "destination": "/en/blog/",
+      "permanent": true
+    },
+    {
+      "source": "/como-crear-bordillos-para-jardin-guia-practica-y-decorativa/",
+      "destination": "/es/paisajismo-diseno-jardines/",
+      "permanent": true
+    },
+    {
+      "source": "/cuanto-cuesta-podar-una-palmera/",
+      "destination": "/es/poda-palmeras/",
+      "permanent": true
+    },
+    {
+      "source": "/cuando-se-podan-los-limoneros/",
+      "destination": "/es/poda-arboles-setos/",
+      "permanent": true
+    },
+    {
+      "source": "/cuando-se-podan-los-rosales-guia-practica-para-una-floracion-espectacular/",
+      "destination": "/es/poda-arboles-setos/",
+      "permanent": true
+    },
+    {
+      "source": "/plantas-mediterraneas-para-jardin-guia-completa/",
+      "destination": "/es/paisajismo-diseno-jardines/",
+      "permanent": true
+    },
+    {
+      "source": "/como-eliminar-el-pulgon-de-las-plantas/",
+      "destination": "/es/controles-fitosanitarios/",
+      "permanent": true
+    },
+    {
+      "source": "/como-eliminar-mosquitos-de-las-plantas/",
+      "destination": "/es/controles-fitosanitarios/",
+      "permanent": true
+    },
+    {
+      "source": "/dichondra-repens-alternativa-sostenible-al-cesped/",
+      "destination": "/es/cesped-natural/",
+      "permanent": true
+    },
+    {
+      "source": "/calendario-de-poda-de-arboles-frutales-en-espana/",
+      "destination": "/es/poda-arboles-setos/",
+      "permanent": true
+    },
+    {
+      "source": "/cuando-es-la-epoca-de-resiembra-del-cesped/",
+      "destination": "/es/cesped-natural/",
+      "permanent": true
+    },
+    {
+      "source": "/nidos-de-orugas-en-el-suelo-que-hacer/",
+      "destination": "/es/endoterapia-procesionaria/",
+      "permanent": true
+    },
+    {
+      "source": "/como-bajar-el-ph-de-la-piscina-guia-completa/",
+      "destination": "/es/mantenimiento-piscinas/",
+      "permanent": true
+    },
+    {
+      "source": "/como-trasplantar-una-palmera/",
+      "destination": "/es/poda-palmeras/",
+      "permanent": true
+    },
+    {
+      "source": "/cuando-se-podan-las-hortensias-guia-completa/",
+      "destination": "/es/poda-arboles-setos/",
+      "permanent": true
+    },
+    {
+      "source": "/en/red-palm-weevil/",
+      "destination": "/en/red-palm-weevil-mallorca/",
+      "permanent": true
+    },
+    {
+      "source": "/en/estate-cleaning/",
+      "destination": "/en/estate-clearing-mallorca/",
+      "permanent": true
+    },
+    {
+      "source": "/en/plant-endotherapy/",
+      "destination": "/en/endotherapy-mallorca/",
+      "permanent": true
+    },
+    {
+      "source": "/en/phytosanitary-controls/",
+      "destination": "/en/pest-control-mallorca/",
+      "permanent": true
+    },
+    {
+      "source": "/en/preventive-silviculture/",
+      "destination": "/en/preventive-forestry-mallorca/",
+      "permanent": true
+    },
+    {
+      "source": "/en/landscaping-and-garden-design-in-mallorca/",
+      "destination": "/en/landscaping-garden-design/",
+      "permanent": true
+    },
+    {
+      "source": "/en/maintenance-of-neighborhood-communities/",
+      "destination": "/en/community-maintenance-mallorca/",
+      "permanent": true
+    },
+    {
+      "source": "/en/when-are-lemon-trees-pruned/",
+      "destination": "/en/tree-pruning-mallorca/",
+      "permanent": true
+    },
+    {
+      "source": "/en/caterpillar-nests-on-the-ground-what-to-do/",
+      "destination": "/en/pine-processionary-mallorca/",
+      "permanent": true
+    },
+    {
+      "source": "/en/how-to-clean-artificial-grass-well-tell-you/",
+      "destination": "/en/artificial-grass-mallorca/",
+      "permanent": true
+    },
+    {
+      "source": "/en/dichondra-repens-sustainable-alternative-to-lawns/",
+      "destination": "/en/natural-lawn-mallorca/",
+      "permanent": true
+    },
+    {
+      "source": "/en/when-to-prune-palm-trees/",
+      "destination": "/en/palm-tree-pruning-mallorca/",
+      "permanent": true
+    },
+    {
+      "source": "/en/when-is-the-processionary-caterpillar-season/",
+      "destination": "/en/pine-processionary-mallorca/",
+      "permanent": true
+    },
+    {
+      "source": "/en/pruning-calendar-for-fruit-trees-in-spain/",
+      "destination": "/en/tree-pruning-mallorca/",
+      "permanent": true
+    },
+    {
+      "source": "/en/processionary-caterpillars-and-dogs-what-you-need-to-know-to-avoid-a-scare/",
+      "destination": "/en/pine-processionary-mallorca/",
+      "permanent": true
+    },
+    {
+      "source": "/en/how-to-prune-a-palm-tree-step-by-step/",
+      "destination": "/en/palm-tree-pruning-mallorca/",
+      "permanent": true
+    },
+    {
+      "source": "/en/how-to-transplant-a-palm-tree/",
+      "destination": "/en/palm-tree-pruning-mallorca/",
+      "permanent": true
+    },
+    {
+      "source": "/en/when-to-scarify-your-lawn/",
+      "destination": "/en/natural-lawn-mallorca/",
+      "permanent": true
+    },
+    {
+      "source": "/en/care-of-an-outdoor-palm-tree/",
+      "destination": "/en/palm-tree-pruning-mallorca/",
+      "permanent": true
+    },
+    {
+      "source": "/en/when-to-prune-hydrangeas-complete-guide/",
+      "destination": "/en/tree-pruning-mallorca/",
+      "permanent": true
+    },
+    {
+      "source": "/en/mediterranean-plants-for-the-garden-a-comprehensive-guide/",
+      "destination": "/en/landscaping-garden-design/",
+      "permanent": true
+    },
+    {
+      "source": "/en/what-is-drip-irrigation-is-it-worth-it/",
+      "destination": "/en/automatic-irrigation-mallorca/",
+      "permanent": true
+    },
+    {
+      "source": "/en/how-to-create-garden-kerbs-practical-and-decorative-guide/",
+      "destination": "/en/landscaping-garden-design/",
+      "permanent": true
     }
   ],
   "headers": [
