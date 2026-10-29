@@ -1989,6 +1989,8 @@ body{padding-top:var(--gs-top,100px) !important;}
 (function(){
   var slides = document.querySelectorAll('.hero-slide');
   if(slides.length < 2) return;
+  /* En móvil el hero es una sola imagen: no se cargan las otras dos ni arranca el slider */
+  if(window.matchMedia('(max-width:768px)').matches) return;
   var cur = 0, started = false;
   /* Las diapositivas 2 y 3 se cargan y el slider arranca en la primera interacción (o a los 10 s) */
   function start(){
