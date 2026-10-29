@@ -33,6 +33,8 @@
 <link rel="preload" as="font" type="font/woff2" href="/fonts/manrope-latin.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="/fonts/montserrat-latin.woff2" crossorigin>
 <style>
+@font-face{font-family:'Manrope Fallback';src:local('Arial');size-adjust:100%;ascent-override:106.6%;descent-override:30%;line-gap-override:0%}
+@font-face{font-family:'Montserrat Fallback';src:local('Arial');size-adjust:109.6%;ascent-override:88.3%;descent-override:22.9%;line-gap-override:0%}
 @font-face{font-family:'Manrope';font-style:normal;font-weight:200 700;font-display:swap;src:url(/fonts/manrope-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF}
 @font-face{font-family:'Manrope';font-style:normal;font-weight:200 700;font-display:swap;src:url(/fonts/manrope-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
 @font-face{font-family:'Montserrat';font-style:normal;font-weight:400 700;font-display:swap;src:url(/fonts/montserrat-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF}
@@ -197,14 +199,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 html { scroll-behavior:smooth; }
 #incluye, #faq, #contacto, #zonas { scroll-margin-top:90px; }
 body {
-  font-family:'Manrope', sans-serif;
+  font-family:'Manrope','Manrope Fallback', sans-serif;
   font-weight:300;
   color:var(--ink);
   background:var(--paper);
   line-height:1.6;
   overflow-x:hidden;
 }
-h1,h2,h3,h4 { font-family:'Montserrat'; font-weight:500; line-height:1.15; color:var(--green); }
+h1,h2,h3,h4 { font-family:'Montserrat','Montserrat Fallback'; font-weight:500; line-height:1.15; color:var(--green); }
 a { color:inherit; text-decoration:none; }
 img { max-width:100%; height:auto; display:block; }
 .wrap { max-width:1200px; margin:0 auto; padding:0 32px; }
@@ -217,12 +219,12 @@ img { max-width:100%; height:auto; display:block; }
   transition:box-shadow 0.3s ease;
 }
 .header .wrap { display:flex; align-items:center; justify-content:space-between; padding:10px 32px; }
-.logo { font-family:'Montserrat'; font-size:24px; color:var(--green); font-weight:500; letter-spacing:0.02em; }
+.logo { font-family:'Montserrat','Montserrat Fallback'; font-size:24px; color:var(--green); font-weight:500; letter-spacing:0.02em; }
 .logo .it { font-weight:800; color:var(--gold); }
 .nav ul { list-style:none; display:flex; gap:34px; align-items:center; }
-.nav a { font-family:'Manrope'; font-weight:400; font-size:14px; color:var(--ink-soft); letter-spacing:0.03em; transition:color 0.3s; }
+.nav a { font-family:'Manrope','Manrope Fallback'; font-weight:400; font-size:14px; color:var(--ink-soft); letter-spacing:0.03em; transition:color 0.3s; }
 .nav a:hover { color:var(--green); }
-.lang-switch { display:flex; gap:8px; font-family:'Manrope'; font-size:12px; letter-spacing:0.15em; text-transform:uppercase; }
+.lang-switch { display:flex; gap:8px; font-family:'Manrope','Manrope Fallback'; font-size:12px; letter-spacing:0.15em; text-transform:uppercase; }
 .lang-switch a { color:var(--gray-soft); padding:4px 8px; border-radius:4px; transition:all 0.3s; }
 .lang-switch a.active { color:var(--green); font-weight:600; }
 .lang-switch a:hover { color:var(--green); }
@@ -230,7 +232,7 @@ img { max-width:100%; height:auto; display:block; }
 
 /* ===== BOTONES ===== */
 .btn {
-  font-family:'Manrope'; font-weight:600; font-size:14px;
+  font-family:'Manrope','Manrope Fallback'; font-weight:600; font-size:14px;
   letter-spacing:0.06em; text-transform:uppercase;
   padding:17px 34px; border-radius:100px;
   display:inline-flex; align-items:center; gap:10px;
@@ -248,7 +250,7 @@ img { max-width:100%; height:auto; display:block; }
 
 /* ===== BREADCRUMB ===== */
 .breadcrumb-inner {
-  font-family:'Manrope'; font-size:12px; letter-spacing:0.08em; text-transform:uppercase;
+  font-family:'Manrope','Manrope Fallback'; font-size:12px; letter-spacing:0.08em; text-transform:uppercase;
   color:var(--gray-soft); display:flex; gap:8px; align-items:center;
 }
 .breadcrumb-inner a:hover { color:var(--green); }
@@ -277,7 +279,7 @@ img { max-width:100%; height:auto; display:block; }
   background:rgba(15,15,13,0.4); border:1px solid rgba(251,248,242,0.3);
   padding:9px 20px; border-radius:100px;
   color:var(--paper); font-weight:700; font-size:11px; letter-spacing:0.25em;
-  text-transform:uppercase; font-family:'Manrope'; margin-bottom:24px;
+  text-transform:uppercase; font-family:'Manrope','Manrope Fallback'; margin-bottom:24px;
 }
 .hero-bg h1 { color:var(--paper); font-size:clamp(38px,4.8vw,64px); margin-bottom:36px; max-width:760px; text-shadow:0 2px 14px rgba(0,0,0,0.5); }
 .hero-bg h1 .it { color:var(--gold-soft); }
@@ -289,7 +291,7 @@ img { max-width:100%; height:auto; display:block; }
 .intro-service { background:var(--paper); }
 .intro-grid { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; }
 .intro-text .lead {
-  font-family:'Manrope'; font-size:17px; font-weight:300;
+  font-family:'Manrope','Manrope Fallback'; font-size:17px; font-weight:300;
   color:var(--ink-soft); line-height:1.75; margin-bottom:32px; max-width:520px;
 }
 .intro-img { position:relative; }
@@ -309,8 +311,8 @@ img { max-width:100%; height:auto; display:block; }
   box-shadow:0 12px 34px rgba(15,15,13,0.08);
   padding:24px 28px; display:inline-flex; gap:26px; margin-bottom:32px;
 }
-.hero-stat strong { display:block; font-family:'Montserrat'; font-size:28px; font-weight:700; color:var(--green); line-height:1; }
-.hero-stat span { font-family:'Manrope'; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:var(--gray-soft); }
+.hero-stat strong { display:block; font-family:'Montserrat','Montserrat Fallback'; font-size:28px; font-weight:700; color:var(--green); line-height:1; }
+.hero-stat span { font-family:'Manrope','Manrope Fallback'; font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:var(--gray-soft); }
 .hero-stat + .hero-stat { padding-left:26px; border-left:1px solid var(--line-soft); }
 @media (max-width:640px) {
   .hero-stats-float { flex-direction:column; align-items:stretch; gap:16px; padding:24px; width:100%; }
@@ -328,7 +330,7 @@ img { max-width:100%; height:auto; display:block; }
 }
 .incluye-card:hover { transform:translateY(-3px); box-shadow:0 14px 34px rgba(30,73,52,0.1); border-color:var(--gold-soft); }
 .incluye-icon { flex-shrink:0; width:38px; height:38px; display:flex; align-items:center; justify-content:center; background:var(--paper-warm); border-radius:50%; }
-.incluye-card p { font-family:'Manrope'; font-size:14px !important; font-weight:400; color:var(--ink-soft); line-height:1.55 !important; margin:0 !important; }
+.incluye-card p { font-family:'Manrope','Manrope Fallback'; font-size:14px !important; font-weight:400; color:var(--ink-soft); line-height:1.55 !important; margin:0 !important; }
 .incluye-card--full { grid-column:1 / -1; background:var(--paper-warm); border-color:var(--gold-soft); }
 @media (max-width:640px) { .incluye-grid { grid-template-columns:1fr; } .incluye-card--full { grid-column:auto; } }
 
@@ -343,7 +345,7 @@ img { max-width:100%; height:auto; display:block; }
 .step-item:last-child::before { display:none; }
 .step-num {
   position:absolute; left:0; top:0; width:40px; height:40px; border-radius:50%;
-  background:var(--green); color:var(--paper); font-family:'Montserrat'; font-weight:700; font-size:15px;
+  background:var(--green); color:var(--paper); font-family:'Montserrat','Montserrat Fallback'; font-weight:700; font-size:15px;
   display:flex; align-items:center; justify-content:center;
 }
 .step-item p { margin-bottom:0 !important; }
@@ -362,20 +364,20 @@ img { max-width:100%; height:auto; display:block; }
 .faq-item { counter-increment:faq; }
 .faq-trigger h3::before {
   content:counter(faq, decimal-leading-zero);
-  color:var(--gold-soft); font-family:'Montserrat'; font-weight:700; font-size:14px;
+  color:var(--gold-soft); font-family:'Montserrat','Montserrat Fallback'; font-weight:700; font-size:14px;
   margin-right:12px; letter-spacing:0.05em;
 }
 
 /* ===== SECCIONES BASE ===== */
 .section { padding:72px 0; }
 .eyebrow-center {
-  font-family:'Manrope'; font-size:11px; letter-spacing:0.4em;
+  font-family:'Manrope','Manrope Fallback'; font-size:11px; letter-spacing:0.4em;
   text-transform:uppercase; color:var(--gold); margin-bottom:20px; text-align:center;
 }
 .h2-center { font-size:clamp(28px,4vw,45px); text-align:center; margin-bottom:24px; line-height:1.05; }
 .h2-center .it { font-weight:800; color:var(--gold); }
 .lead-center {
-  font-family:'Manrope'; font-size:16px; font-weight:300; color:var(--ink-soft);
+  font-family:'Manrope','Manrope Fallback'; font-size:16px; font-weight:300; color:var(--ink-soft);
   text-align:center; max-width:620px; margin:0 auto 60px; line-height:1.7;
 }
 
@@ -386,7 +388,7 @@ img { max-width:100%; height:auto; display:block; }
 .col-block h2 { font-size:clamp(26px,3vw,38px); margin-bottom:20px; line-height:1.15; }
 .col-block h2 .it { font-weight:800; color:var(--gold); }
 .col-block p {
-  font-family:'Manrope'; font-size:16px; font-weight:300;
+  font-family:'Manrope','Manrope Fallback'; font-size:16px; font-weight:300;
   color:var(--ink-soft); line-height:1.75; margin-bottom:18px;
 }
 .col-block a { color:var(--green); border-bottom:1px solid var(--gold-soft); transition:color 0.2s; }
@@ -398,7 +400,7 @@ img { max-width:100%; height:auto; display:block; }
   display:inline-flex; align-items:center; gap:8px;
   height:34px; padding:0 18px; border-radius:17px;
   background:var(--green); color:var(--paper);
-  font-family:'Montserrat'; font-weight:700; font-size:12.5px;
+  font-family:'Montserrat','Montserrat Fallback'; font-weight:700; font-size:12.5px;
   letter-spacing:0.01em; white-space:nowrap;
   box-shadow:0 8px 24px rgba(15,15,13,0.25);
 }
@@ -419,11 +421,11 @@ img { max-width:100%; height:auto; display:block; }
 .perfil-icon { margin-bottom:20px; }
 .perfil-card h3 { font-size:22px; margin-bottom:12px; }
 .perfil-card p {
-  font-family:'Manrope'; font-size:14px; font-weight:300;
+  font-family:'Manrope','Manrope Fallback'; font-size:14px; font-weight:300;
   color:var(--gray-soft); line-height:1.7;
 }
 .tag {
-  display:inline-block; font-family:'Manrope'; font-size:10px; letter-spacing:0.2em;
+  display:inline-block; font-family:'Manrope','Manrope Fallback'; font-size:10px; letter-spacing:0.2em;
   text-transform:uppercase; color:var(--gold); border:1px solid var(--gold);
   padding:4px 12px; margin-bottom:14px;
 }
@@ -435,7 +437,7 @@ img { max-width:100%; height:auto; display:block; }
 .senales-list li {
   display:flex; gap:14px; align-items:flex-start;
   padding:14px 0; border-bottom:1px solid var(--line-soft);
-  font-family:'Manrope'; font-size:16px; font-weight:300; color:var(--ink-soft); line-height:1.6;
+  font-family:'Manrope','Manrope Fallback'; font-size:16px; font-weight:300; color:var(--ink-soft); line-height:1.6;
 }
 .senales-list li:last-child { border-bottom:none; }
 .senales-list .senal-ico {
@@ -449,7 +451,7 @@ img { max-width:100%; height:auto; display:block; }
 .cert-icon { flex-shrink:0; width:64px; height:64px; border-radius:50%; background:rgba(251,248,242,0.14); display:flex; align-items:center; justify-content:center; }
 .cert-text h2 { font-size:clamp(28px,3vw,42px); color:var(--paper); margin-bottom:14px; }
 .cert-text h2 .it { font-weight:800; color:var(--gold-soft); }
-.cert-text p { font-family:'Manrope'; font-size:16px; font-weight:300; color:rgba(251,248,242,0.85); line-height:1.75; max-width:620px; margin:0 auto; }
+.cert-text p { font-family:'Manrope','Manrope Fallback'; font-size:16px; font-weight:300; color:rgba(251,248,242,0.85); line-height:1.75; max-width:620px; margin:0 auto; }
 @media (max-width:968px) { .cert-inner { flex-direction:column; gap:30px; text-align:center; } }
 
 /* ===== POR QUÉ NOSOTROS ===== */
@@ -462,7 +464,7 @@ img { max-width:100%; height:auto; display:block; }
 .why-item:hover { background:rgba(30,73,52,0.85); }
 .why-icon { font-size:30px; margin-bottom:18px; }
 .why-item h3 { font-size:22px; color:var(--paper); margin-bottom:12px; }
-.why-item p { font-family:'Manrope'; font-size:14px; font-weight:300; color:rgba(251,248,242,0.75); line-height:1.7; }
+.why-item p { font-family:'Manrope','Manrope Fallback'; font-size:14px; font-weight:300; color:rgba(251,248,242,0.75); line-height:1.7; }
 
 /* ===== GALERÍA ===== */
 .galeria { background:var(--paper-soft); }
@@ -515,14 +517,14 @@ img { max-width:100%; height:auto; display:block; }
 .zonas-tags{ max-width:720px; margin-left:auto; margin-right:auto; }
 @media(max-width:640px){ .zonas-tags{ display:flex; flex-wrap:wrap; justify-content:center; gap:10px; max-width:none; } .zonas-tags .zona-tag{ width:calc(50% - 5px); flex-direction:row; justify-content:flex-start; gap:10px; padding:14px 12px; } .zonas-tags .zona-icon{ width:26px; height:26px; flex-shrink:0; } }
 .zona-tag {
-  font-family:'Manrope'; font-size:13px; font-weight:400; letter-spacing:0.05em;
+  font-family:'Manrope','Manrope Fallback'; font-size:13px; font-weight:400; letter-spacing:0.05em;
   padding:22px 20px; border:1px solid var(--line); color:var(--ink-soft);
   transition:all 0.3s;
   display:flex; flex-direction:column; align-items:center; gap:12px;
   min-width:112px; text-align:center;
 }
 .zona-tag:hover { border-color:var(--green); color:var(--green); background:rgba(30,73,52,0.04); }
-.zonas-nota { text-align:center; margin-top:28px; font-family:'Montserrat'; font-weight:500; font-size:19px; color:var(--gray-soft); }
+.zonas-nota { text-align:center; margin-top:28px; font-family:'Montserrat','Montserrat Fallback'; font-weight:500; font-size:19px; color:var(--gray-soft); }
 
 /* ===== SERVICIOS RELACIONADOS ===== */
 .relacionados { background:var(--paper-soft); }
@@ -544,8 +546,8 @@ img { max-width:100%; height:auto; display:block; }
 .rel-card:hover .rel-img img { transform:scale(1.06); }
 .rel-body { padding:28px 28px 32px; display:flex; flex-direction:column; flex-grow:1; }
 .rel-card h3 { font-size:24px; margin-bottom:12px; }
-.rel-card p { font-family:'Manrope'; font-size:14px; font-weight:300; color:var(--ink-soft); line-height:1.65; flex-grow:1; margin-bottom:22px; }
-.rel-link { font-family:'Manrope'; font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:var(--green); font-weight:600; display:inline-flex; align-items:center; gap:8px; }
+.rel-card p { font-family:'Manrope','Manrope Fallback'; font-size:14px; font-weight:300; color:var(--ink-soft); line-height:1.65; flex-grow:1; margin-bottom:22px; }
+.rel-link { font-family:'Manrope','Manrope Fallback'; font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:var(--green); font-weight:600; display:inline-flex; align-items:center; gap:8px; }
 .rel-link::after { content:'→'; transition:transform 0.3s; }
 .rel-card:hover .rel-link::after { transform:translateX(6px); }
 
@@ -559,44 +561,44 @@ img { max-width:100%; height:auto; display:block; }
   display:flex; justify-content:space-between; align-items:center;
   background:none; border:none; cursor:pointer; text-align:left;
 }
-.faq-trigger h3 { font-family:'Montserrat'; font-size:22px; font-weight:500; color:var(--green); line-height:1.2; padding-right:24px; }
-.faq-icon { font-size:28px; color:var(--gold); flex-shrink:0; font-family:'Manrope'; font-weight:300; transition:transform 0.3s; line-height:1; }
+.faq-trigger h3 { font-family:'Montserrat','Montserrat Fallback'; font-size:22px; font-weight:500; color:var(--green); line-height:1.2; padding-right:24px; }
+.faq-icon { font-size:28px; color:var(--gold); flex-shrink:0; font-family:'Manrope','Manrope Fallback'; font-weight:300; transition:transform 0.3s; line-height:1; }
 .faq-item.open .faq-icon { transform:rotate(45deg); }
 .faq-body { max-height:0; overflow:hidden; transition:max-height 0.4s ease; }
 .faq-item.open .faq-body { max-height:400px; }
-.faq-body p { font-family:'Manrope'; font-size:15px; font-weight:300; color:var(--ink-soft); line-height:1.75; padding-bottom:28px; }
+.faq-body p { font-family:'Manrope','Manrope Fallback'; font-size:15px; font-weight:300; color:var(--ink-soft); line-height:1.75; padding-bottom:28px; }
 
 /* ===== CTA BANNER ===== */
 .cta-banner { background:var(--green); padding:90px 0; text-align:center; }
 .cta-banner h2 { font-size:clamp(30px,4vw,50px); color:var(--paper); margin-bottom:16px; }
 .cta-banner h2 .it { font-weight:800; color:var(--gold-soft); }
-.cta-banner p { font-family:'Manrope'; font-size:17px; font-weight:300; color:rgba(251,248,242,0.8); margin-bottom:44px; line-height:1.6; }
+.cta-banner p { font-family:'Manrope','Manrope Fallback'; font-size:17px; font-weight:300; color:rgba(251,248,242,0.8); margin-bottom:44px; line-height:1.6; }
 .cta-btns { display:flex; gap:20px; justify-content:center; flex-wrap:wrap; }
 
 /* ===== CONTACTO ===== */
 .contacto-s { background:var(--paper); }
 .contacto-grid { display:grid; grid-template-columns:1.15fr 0.85fr; gap:80px; align-items:start; }
-.form-side .eyebrow-left { font-family:'Manrope'; font-size:11px; letter-spacing:0.4em; text-transform:uppercase; color:var(--gold); margin-bottom:16px; }
+.form-side .eyebrow-left { font-family:'Manrope','Manrope Fallback'; font-size:11px; letter-spacing:0.4em; text-transform:uppercase; color:var(--gold); margin-bottom:16px; }
 .form-side h2 { font-size:clamp(28px,3vw,42px); margin-bottom:12px; }
 .form-side h2 .it { font-weight:800; color:var(--gold); }
-.form-side .sub { font-family:'Manrope'; font-size:15px; font-weight:300; color:var(--ink-soft); line-height:1.65; margin-bottom:36px; }
+.form-side .sub { font-family:'Manrope','Manrope Fallback'; font-size:15px; font-weight:300; color:var(--ink-soft); line-height:1.65; margin-bottom:36px; }
 .form-wrap { background:var(--paper-soft); padding:48px; border:1px solid var(--line-soft); }
 .form-row { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-bottom:18px; }
 .form-field { display:flex; flex-direction:column; position:relative; }
 .form-field.full { grid-column:1/-1; }
 .form-field label {
   position:absolute; top:9px; left:17px; z-index:1;
-  font-family:'Manrope'; font-size:9px; letter-spacing:0.15em; text-transform:uppercase;
+  font-family:'Manrope','Manrope Fallback'; font-size:9px; letter-spacing:0.15em; text-transform:uppercase;
   color:var(--green); margin:0; font-weight:600; pointer-events:none;
 }
 .form-field input, .form-field select, .form-field textarea {
-  font-family:'Manrope'; font-size:15px; padding:28px 16px 10px;
+  font-family:'Manrope','Manrope Fallback'; font-size:15px; padding:28px 16px 10px;
   border:1px solid var(--line); background:var(--paper);
   color:var(--ink); transition:border-color 0.3s; font-weight:300; appearance:none;
 }
 .form-field input:focus, .form-field select:focus, .form-field textarea:focus { outline:none; border-color:var(--gold); }
 .form-field textarea { resize:vertical; min-height:120px; padding-top:30px; }
-.form-check { display:flex; gap:10px; align-items:flex-start; margin:18px 0; font-family:'Manrope'; font-size:12px; color:var(--gray-soft); line-height:1.55; }
+.form-check { display:flex; gap:10px; align-items:flex-start; margin:18px 0; font-family:'Manrope','Manrope Fallback'; font-size:12px; color:var(--gray-soft); line-height:1.55; }
 .form-check input { margin-top:3px; flex-shrink:0; }
 .form-check a { color:var(--green); border-bottom:1px solid var(--gold-soft); }
 
@@ -605,8 +607,8 @@ img { max-width:100%; height:auto; display:block; }
 .info-side h3 .it { font-weight:800; color:var(--gold); }
 .info-row { display:flex; gap:16px; align-items:flex-start; padding:18px 0; border-bottom:1px solid var(--line-soft); }
 .info-row:last-of-type { border-bottom:none; }
-.info-label { font-family:'Manrope'; font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); min-width:80px; padding-top:2px; flex-shrink:0; }
-.info-val { font-family:'Manrope'; font-size:15px; font-weight:300; color:var(--ink-soft); line-height:1.6; }
+.info-label { font-family:'Manrope','Manrope Fallback'; font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); min-width:80px; padding-top:2px; flex-shrink:0; }
+.info-val { font-family:'Manrope','Manrope Fallback'; font-size:15px; font-weight:300; color:var(--ink-soft); line-height:1.6; }
 .info-val a:hover { color:var(--green); }
 .info-map { margin-top:28px; }
 .info-map iframe { width:100%; border:1px solid var(--line-soft); }
@@ -614,15 +616,15 @@ img { max-width:100%; height:auto; display:block; }
 /* ===== FOOTER ===== */
 .footer { background:var(--ink); color:rgba(251,248,242,0.75); padding:80px 0 30px; }
 .footer-grid { display:grid; grid-template-columns:2fr 1fr 1fr 1.5fr; gap:60px; margin-bottom:60px; }
-.footer h2 { color:var(--paper); font-size:20px; margin-bottom:20px; font-family:'Montserrat'; }
-.logo-footer { font-family:'Montserrat'; font-size:28px; color:var(--paper); margin-bottom:20px; }
+.footer h2 { color:var(--paper); font-size:20px; margin-bottom:20px; font-family:'Montserrat','Montserrat Fallback'; }
+.logo-footer { font-family:'Montserrat','Montserrat Fallback'; font-size:28px; color:var(--paper); margin-bottom:20px; }
 .logo-footer .it { font-weight:800; color:var(--gold-soft); }
-.footer p, .footer li { font-family:'Manrope'; font-size:14px; line-height:1.7; font-weight:300; }
+.footer p, .footer li { font-family:'Manrope','Manrope Fallback'; font-size:14px; line-height:1.7; font-weight:300; }
 .footer ul { list-style:none; }
 .footer ul li { padding:5px 0; }
 .footer a { transition:color 0.3s; }
 .footer a:hover { color:var(--gold-soft); }
-.footer-bottom { padding-top:30px; border-top:1px solid rgba(251,248,242,0.1); display:flex; justify-content:space-between; flex-wrap:wrap; gap:20px; font-family:'Manrope'; font-size:12px; }
+.footer-bottom { padding-top:30px; border-top:1px solid rgba(251,248,242,0.1); display:flex; justify-content:space-between; flex-wrap:wrap; gap:20px; font-family:'Manrope','Manrope Fallback'; font-size:12px; }
 .footer-legal { display:flex; gap:24px; flex-wrap:wrap; }
 .footer .lang-switch a { color:rgba(251,248,242,0.6); }
 .footer .lang-switch a.active { color:var(--gold-soft); font-weight:600; }
@@ -679,8 +681,8 @@ img { max-width:100%; height:auto; display:block; }
 .dd-inner-zonas { grid-template-columns:190px; }
 .dd-col { padding:0 20px; border-right:1px solid var(--line-soft); }
 .dd-col:last-child { border-right:none; }
-.dd-label { font-family:'Manrope'; font-size:9px; letter-spacing:0.25em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; font-weight:600; display:block; padding-bottom:8px; border-bottom:1px solid var(--line-soft); }
-.dd-menu a { display:block; font-family:'Manrope'; font-size:13px; font-weight:300; color:var(--ink-soft); padding:5px 0; transition:color 0.2s; text-decoration:none !important; border-bottom:none !important; }
+.dd-label { font-family:'Manrope','Manrope Fallback'; font-size:9px; letter-spacing:0.25em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; font-weight:600; display:block; padding-bottom:8px; border-bottom:1px solid var(--line-soft); }
+.dd-menu a { display:block; font-family:'Manrope','Manrope Fallback'; font-size:13px; font-weight:300; color:var(--ink-soft); padding:5px 0; transition:color 0.2s; text-decoration:none !important; border-bottom:none !important; }
 .dd-menu a:hover { color:var(--green); }
 @media(max-width:968px){ .dd-menu{ position:static !important; display:block !important; width:auto !important; opacity:1 !important; pointer-events:auto !important; transform:none !important; box-shadow:none !important; border:none !important; background:transparent !important; top:auto !important; } .dd-inner{ display:block !important; padding:6px 0 2px !important; } .dd-col{ border:none !important; padding:0 !important; } .dd-menu a{ padding:8px 0 8px 16px !important; font-size:14px !important; } .dd-label{ padding:6px 0 4px !important; border:none !important; margin:0 !important; } .nav.open ul{ max-height:calc(100vh - 64px); overflow-y:auto; } }
 
@@ -736,14 +738,14 @@ img { max-width:100%; height:auto; display:block; }
 .eu-banner-text strong {
   display:block;
   color:#003399;
-  font-family:'Manrope',sans-serif;
+  font-family:'Manrope','Manrope Fallback',sans-serif;
   font-size:14px;
   font-weight:700;
   margin-bottom:6px;
 }
 .eu-banner-text p {
   color:#1a1a1a;
-  font-family:'Manrope',sans-serif;
+  font-family:'Manrope','Manrope Fallback',sans-serif;
   font-size:13px;
   font-weight:300;
   line-height:1.6;
@@ -1334,7 +1336,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <span>I have read and accept the <a href="/en/privacy-policy/">privacy policy</a> and the processing of my data to respond to my enquiry.</span>
             </label>
 
-            <div class="form-result" style="display:none;padding:12px;background:#fce4ec;color:#c62828;margin-top:8px;font-family:Manrope;font-size:14px;"></div>
+            <div class="form-result" style="display:none;padding:12px;background:#fce4ec;color:#c62828;margin-top:8px;font-family:'Manrope','Manrope Fallback';font-size:14px;"></div>
             <button type="submit" class="btn btn-green" style="width:100%;justify-content:center;margin-top:8px;">
               Request a free quote
             </button>
@@ -1599,10 +1601,10 @@ window.addEventListener('scroll', () => {
 #gs-cookie-banner{position:fixed;left:0;right:0;bottom:0;z-index:9999;background:var(--ink,#0F0F0D);color:var(--paper,#FBF8F2);padding:22px 24px;box-shadow:0 -8px 30px rgba(0,0,0,0.25);display:none}
 #gs-cookie-banner.gs-show{display:block}
 .gs-cookie-inner{max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px}
-.gs-cookie-text{flex:1 1 420px;font-family:'Manrope',sans-serif;font-size:13px;line-height:1.6;color:rgba(251,248,242,0.85);margin:0}
+.gs-cookie-text{flex:1 1 420px;font-family:'Manrope','Manrope Fallback',sans-serif;font-size:13px;line-height:1.6;color:rgba(251,248,242,0.85);margin:0}
 .gs-cookie-text a{color:var(--gold,#C9A24B);text-decoration:underline}
 .gs-cookie-actions{display:flex;gap:12px;flex-wrap:wrap}
-.gs-cookie-btn{font-family:'Manrope',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:12px 22px;border-radius:2px;cursor:pointer;border:1px solid rgba(251,248,242,0.55);background:transparent;color:var(--paper,#FBF8F2);transition:background .3s,color .3s}
+.gs-cookie-btn{font-family:'Manrope','Manrope Fallback',sans-serif;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:12px 22px;border-radius:2px;cursor:pointer;border:1px solid rgba(251,248,242,0.55);background:transparent;color:var(--paper,#FBF8F2);transition:background .3s,color .3s}
 .gs-cookie-btn:hover{background:rgba(251,248,242,0.14)}
 @media (max-width:640px){.gs-cookie-inner{flex-direction:column;align-items:stretch}.gs-cookie-text{flex:0 0 auto}.gs-cookie-actions{flex-direction:column;justify-content:stretch}.gs-cookie-btn{flex:0 0 auto;text-align:center}}
 </style>
@@ -1656,9 +1658,9 @@ window.addEventListener('scroll', () => {
 <style id="gs-cookie-prefs-css">
 #gs-cookie-prefs{position:fixed;inset:0;z-index:10000;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(15,15,13,0.55);}
 #gs-cookie-prefs.gs-show{display:flex;}
-.gs-prefs-box{background:var(--paper,#FBF8F2);color:var(--ink,#0F0F0D);max-width:520px;width:100%;max-height:88vh;overflow-y:auto;border-radius:8px;padding:26px 26px 22px;box-shadow:0 20px 60px rgba(0,0,0,0.35);font-family:'Manrope',sans-serif;}
+.gs-prefs-box{background:var(--paper,#FBF8F2);color:var(--ink,#0F0F0D);max-width:520px;width:100%;max-height:88vh;overflow-y:auto;border-radius:8px;padding:26px 26px 22px;box-shadow:0 20px 60px rgba(0,0,0,0.35);font-family:'Manrope','Manrope Fallback',sans-serif;}
 .gs-prefs-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:10px;}
-.gs-prefs-head h3{font-family:'Montserrat',sans-serif;font-size:19px;font-weight:600;color:var(--green,#1E4934);margin:0;}
+.gs-prefs-head h3{font-family:'Montserrat','Montserrat Fallback',sans-serif;font-size:19px;font-weight:600;color:var(--green,#1E4934);margin:0;}
 .gs-prefs-x{background:none;border:none;font-size:26px;line-height:1;cursor:pointer;color:var(--gray-soft,#6B6862);padding:0 4px;}
 .gs-prefs-x:hover{color:var(--ink,#0F0F0D);}
 .gs-prefs-intro{font-size:13px;line-height:1.6;color:var(--ink-soft,#2E2C28);margin:0 0 18px;}
@@ -1721,10 +1723,10 @@ window.addEventListener('scroll', () => {
           var x=gsMapTxt();
           ph=document.createElement('div');
           ph.className='gs-map-consent';
-          ph.style.cssText='min-height:300px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;text-align:center;padding:28px;background:#EFEBE1;color:#0F0F0D;font-family:Manrope,sans-serif;font-size:14px;line-height:1.6;border:1px solid #DDD5C3;';
+          ph.style.cssText='min-height:300px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;text-align:center;padding:28px;background:#EFEBE1;color:#0F0F0D;font-family:"Manrope","Manrope Fallback",sans-serif;font-size:14px;line-height:1.6;border:1px solid #DDD5C3;';
           var p=document.createElement('p');p.textContent=x.t;p.style.cssText='margin:0;max-width:420px;';
           var b=document.createElement('button');b.type='button';b.textContent=x.b;
-          b.style.cssText='font-family:Manrope,sans-serif;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:12px 22px;border-radius:2px;cursor:pointer;border:1px solid #0F0F0D;background:#C9A24B;color:#0F0F0D;';
+          b.style.cssText='font-family:"Manrope","Manrope Fallback",sans-serif;font-size:12px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:12px 22px;border-radius:2px;cursor:pointer;border:1px solid #0F0F0D;background:#C9A24B;color:#0F0F0D;';
           b.addEventListener('click',function(){var cur=read()||{analytics:false,thirdparty:false};save({analytics:cur.analytics,thirdparty:true});});
           ph.appendChild(p);ph.appendChild(b);
           wrap.appendChild(ph);
@@ -1812,7 +1814,7 @@ body.gs-cookie-open .gs-float-actions{display:none;}
 }
 
 /* ===== GS-FIX-V2 START ===== */
-.topbar{position:fixed;top:0;left:0;right:0;z-index:121;background:var(--green);color:var(--paper);min-height:38px;display:flex;align-items:center;font-family:'Manrope';font-size:13.5px;}
+.topbar{position:fixed;top:0;left:0;right:0;z-index:121;background:var(--green);color:var(--paper);min-height:38px;display:flex;align-items:center;font-family:'Manrope','Manrope Fallback';font-size:13.5px;}
 .topbar-inner{max-width:1200px;margin:0 auto;width:100%;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:4px 12px;padding:7px 20px;}
 .topbar .topbar-sep{opacity:0.4;}
 .topbar .topbar-tagline{opacity:0.92;}
@@ -1849,7 +1851,7 @@ body{padding-top:var(--gs-top,100px) !important;}
   .has-dd > a::after{ content:'\203A' !important; display:inline-block !important; font-size:22px; opacity:0.5; margin:0 !important; }
   .dd-menu{ position:fixed !important; top:var(--gs-top,98px) !important; left:0 !important; right:0 !important; bottom:0 !important; width:100% !important; height:calc(100vh - var(--gs-top,98px)); background:var(--paper) !important; transform:translateX(100%) !important; transition:transform .3s ease !important; display:block !important; opacity:1 !important; pointer-events:auto !important; z-index:130; overflow-y:auto; box-shadow:none !important; border:none !important; padding:0 !important; }
   .has-dd.gs-open > .dd-menu{ transform:translateX(0) !important; }
-  .dd-back{ display:flex !important; align-items:center; gap:8px; padding:16px 24px; font-family:'Manrope'; font-weight:700; font-size:15px; color:var(--green); border-bottom:1px solid var(--line-soft); cursor:pointer; background:var(--paper-soft); }
+  .dd-back{ display:flex !important; align-items:center; gap:8px; padding:16px 24px; font-family:'Manrope','Manrope Fallback'; font-weight:700; font-size:15px; color:var(--green); border-bottom:1px solid var(--line-soft); cursor:pointer; background:var(--paper-soft); }
   .dd-back::before{ content:'\2039'; font-size:24px; line-height:1; }
   .dd-inner{ display:block !important; grid-template-columns:none !important; padding:8px 0 24px !important; }
   .dd-inner-zonas{ grid-template-columns:none !important; }
