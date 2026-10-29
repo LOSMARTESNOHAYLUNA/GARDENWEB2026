@@ -28,10 +28,15 @@
 <link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/poda-arboles-setos/">
 
 <!-- Fuentes -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Manrope:wght@200;300;400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Manrope:wght@200;300;400;500;600;700&display=swap"></noscript>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/manrope-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/montserrat-latin.woff2" crossorigin>
+<style>
+@font-face{font-family:'Manrope';font-style:normal;font-weight:200 700;font-display:swap;src:url(/fonts/manrope-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:200 700;font-display:swap;src:url(/fonts/manrope-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:400 700;font-display:swap;src:url(/fonts/montserrat-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:400 700;font-display:swap;src:url(/fonts/montserrat-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+</style>
+
 
 <!-- Google Analytics -->
 <!-- Google Consent Mode v2: por defecto denegado hasta que el usuario decida -->
@@ -843,6 +848,13 @@ body,body *{overflow-wrap:anywhere;}</style>
  .header .lang-switch a.active{border-color:var(--green);}
 }
 </style>
+<style>
+/* Contraste AA (>=4.5:1) en textos dorados sobre fondo claro */
+:root{--gold-text:#7F611F;}
+.section-eyebrow,.eyebrow-c,.eyebrow-center,.blog-cat,.cert-item p{color:var(--gold-text);}
+.section-title .it,.h2-center .it,h2 .it{color:var(--gold-text);}
+.bg-dark .eyebrow-center,.bg-dark .it,.page-hero .blog-cat{color:var(--gold-soft);}
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -854,7 +866,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="topbar"><div class="topbar-inner"><span class="topbar-brand">Garden Solution</span><span class="topbar-sep gs-sep1">|</span><span class="topbar-tagline">Gartenbaufirma auf Mallorca</span><span class="topbar-sep">|</span><a class="topbar-phone" href="https://wa.me/34621493977">621 49 39 77</a></div></div>
 <header class="header" id="header">
   <div class="wrap">
-    <a href="/de/" class="logo"><span class="logo-text">Garden <span class="it">Solution</span></span><img class="logo-img" src="/img/logo-garden-solution.webp" alt="Garden Solution" width="40" height="40"></a>
+    <a href="/de/" class="logo"><span class="logo-text">Garden <span class="it">Solution</span></span><img class="logo-img" src="/img/logo-garden-solution-144.webp" alt="Garden Solution" width="72" height="72"></a>
     <nav class="nav">
       <ul>
         <li class="has-dd">
@@ -944,7 +956,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           src="/img/img-setos-garden-solution.webp"
           alt="Kiefernschnitt auf Mallorca — Garden Solution"
           width="480" height="600"
-          loading="lazy"
+          loading="lazy" decoding="async"
         >
       </div>
     </div>
@@ -1004,7 +1016,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
         <div class="step-img">
-          <img src="/img/garden-soluition-equipo-servicio.webp" alt="Team von Garden Solution bei der Arbeit in einem Garten auf Mallorca" loading="lazy" width="560" height="480">
+          <img src="/img/garden-soluition-equipo-servicio.webp" alt="Team von Garden Solution bei der Arbeit in einem Garten auf Mallorca" loading="lazy" decoding="async" width="560" height="480">
           <span class="step-img-badge">Ein komplettes Team zu Ihrer Verfügung</span>
         </div>
       </div>
@@ -1024,7 +1036,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="especie-card fu">
         <img src="/img/img-setos-garden-solution.webp"
           alt="Kiefernschnitt auf Mallorca — Garden Solution"
-          loading="lazy" width="480" height="320">
+          loading="lazy" decoding="async" width="480" height="320">
         <div class="especie-info">
           <h3>Kiefern</h3>
           <p>Häufigste Art · Kronenschnitt und Entfernung trockener Äste</p>
@@ -1033,7 +1045,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="especie-card fu">
         <img src="/img/olivo.webp"
           alt="Olivenbaumschnitt auf Mallorca — Garden Solution"
-          loading="lazy" width="480" height="320">
+          loading="lazy" decoding="async" width="480" height="320">
         <div class="especie-info">
           <h3>Olivenbäume</h3>
           <p>Zierend und ertragreich · Fachgerechter Schnitt</p>
@@ -1042,7 +1054,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="especie-card fu">
         <img src="/img/cipres.webp"
           alt="Schnitt und Formgebung von Zypressen und Hecken auf Mallorca"
-          loading="lazy" width="480" height="320">
+          loading="lazy" decoding="async" width="480" height="320">
         <div class="especie-info">
           <h3>Zypressen und Hecken</h3>
           <p>Formgebung und Formerhaltung</p>
@@ -1086,27 +1098,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <div class="gal-grid">
       <div class="gal-item" data-full="/img/galeria-garden-solution-poda-arboles-setos1.webp">
-        <img src="/img/galeria-garden-solution-poda-arboles-setos1.webp" alt="Baumschnitt Villa Mallorca" loading="lazy" width="480" height="360">
+        <img src="/img/galeria-garden-solution-poda-arboles-setos1.webp" alt="Baumschnitt Villa Mallorca" loading="lazy" decoding="async" width="480" height="360">
         <div class="gal-overlay"><span class="gal-zoom-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span></div>
       </div>
       <div class="gal-item" data-full="/img/galeria-garden-solution-poda-arboles-setos2.webp">
-        <img src="/img/galeria-garden-solution-poda-arboles-setos2.webp" alt="Heckenrückschnitt Mallorca" loading="lazy" width="480" height="360">
+        <img src="/img/galeria-garden-solution-poda-arboles-setos2.webp" alt="Heckenrückschnitt Mallorca" loading="lazy" decoding="async" width="480" height="360">
         <div class="gal-overlay"><span class="gal-zoom-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span></div>
       </div>
       <div class="gal-item" data-full="/img/galeria-garden-solution-poda-arboles-setos3.webp">
-        <img src="/img/galeria-garden-solution-poda-arboles-setos3.webp" alt="Zierschnitt Mallorca" loading="lazy" width="480" height="360">
+        <img src="/img/galeria-garden-solution-poda-arboles-setos3.webp" alt="Zierschnitt Mallorca" loading="lazy" decoding="async" width="480" height="360">
         <div class="gal-overlay"><span class="gal-zoom-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span></div>
       </div>
       <div class="gal-item" data-full="/img/galeria-garden-solution-poda-arboles-setos4.webp">
-        <img src="/img/galeria-garden-solution-poda-arboles-setos4.webp" alt="Heckenformgebung Mallorca" loading="lazy" width="480" height="360">
+        <img src="/img/galeria-garden-solution-poda-arboles-setos4.webp" alt="Heckenformgebung Mallorca" loading="lazy" decoding="async" width="480" height="360">
         <div class="gal-overlay"><span class="gal-zoom-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span></div>
       </div>
       <div class="gal-item" data-full="/img/galeria-garden-solution-poda-arboles-setos5.webp">
-        <img src="/img/galeria-garden-solution-poda-arboles-setos5.webp" alt="Höhenschnitt Mallorca" loading="lazy" width="480" height="360">
+        <img src="/img/galeria-garden-solution-poda-arboles-setos5.webp" alt="Höhenschnitt Mallorca" loading="lazy" decoding="async" width="480" height="360">
         <div class="gal-overlay"><span class="gal-zoom-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span></div>
       </div>
       <div class="gal-item" data-full="/img/galeria-garden-solution-poda-arboles-setos6.webp">
-        <img src="/img/galeria-garden-solution-poda-arboles-setos6.webp" alt="Ergebnis Schnitt Mallorca" loading="lazy" width="480" height="360">
+        <img src="/img/galeria-garden-solution-poda-arboles-setos6.webp" alt="Ergebnis Schnitt Mallorca" loading="lazy" decoding="async" width="480" height="360">
         <div class="gal-overlay"><span class="gal-zoom-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></span></div>
       </div>
     
@@ -1142,9 +1154,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <h2 class="h2-center">Ergänzende <span class="it">Leistungen</span></h2>
 
     <div class="rel-grid">
-      <a href="/de/palmbaumschnitt-mallorca/" class="rel-card"><div class="rel-img"><img src="/img/garden-solution-poda-palmeras-hero.webp" alt="Palmenschnitt von Garden Solution auf Mallorca" loading="lazy" width="400" height="280"></div><div class="rel-body"><h3>Palmenschnitt</h3><p>Palmen erfordern einen anderen Schnitt als andere Bäume. Spezialisierte Ausrüstung und ohne Steigeisen, um den Stamm zu schützen.</p><span class="rel-link">Zum Service</span></div></a>
-      <a href="/de/hoehenschnitt-mallorca/" class="rel-card"><div class="rel-img"><img src="/img/garden-solution-poda-altura-hero.webp" alt="Höhenschnitt von Garden Solution auf Mallorca" loading="lazy" width="400" height="280"></div><div class="rel-body"><h3>Höhenschnitt</h3><p>Für große Bäume, die spezialisierte Seilklettertechnik erfordern. Wir bewerten jeden Fall bei einem kostenlosen Vor-Ort-Termin.</p><span class="rel-link">Zum Service</span></div></a>
-      <a href="/de/gartenpflege-mallorca/" class="rel-card"><div class="rel-img"><img src="/img/garden-solution-mantenimiento-de-jardines-particulares-1.webp" alt="Private Gartenpflege von Garden Solution auf Mallorca" loading="lazy" width="400" height="280"></div><div class="rel-body"><h3>Gartenpflege</h3><p>Der Baum- und Heckenschnitt kann in einen regelmäßigen Pflegeplan integriert werden, damit Ihr Garten stets in perfektem Zustand ist.</p><span class="rel-link">Zum Service</span></div></a>
+      <a href="/de/palmbaumschnitt-mallorca/" class="rel-card"><div class="rel-img"><img src="/img/garden-solution-poda-palmeras-hero.webp" alt="Palmenschnitt von Garden Solution auf Mallorca" loading="lazy" decoding="async" width="400" height="280"></div><div class="rel-body"><h3>Palmenschnitt</h3><p>Palmen erfordern einen anderen Schnitt als andere Bäume. Spezialisierte Ausrüstung und ohne Steigeisen, um den Stamm zu schützen.</p><span class="rel-link">Zum Service</span></div></a>
+      <a href="/de/hoehenschnitt-mallorca/" class="rel-card"><div class="rel-img"><img src="/img/garden-solution-poda-altura-hero.webp" alt="Höhenschnitt von Garden Solution auf Mallorca" loading="lazy" decoding="async" width="400" height="280"></div><div class="rel-body"><h3>Höhenschnitt</h3><p>Für große Bäume, die spezialisierte Seilklettertechnik erfordern. Wir bewerten jeden Fall bei einem kostenlosen Vor-Ort-Termin.</p><span class="rel-link">Zum Service</span></div></a>
+      <a href="/de/gartenpflege-mallorca/" class="rel-card"><div class="rel-img"><img src="/img/garden-solution-mantenimiento-de-jardines-particulares-1.webp" alt="Private Gartenpflege von Garden Solution auf Mallorca" loading="lazy" decoding="async" width="400" height="280"></div><div class="rel-body"><h3>Gartenpflege</h3><p>Der Baum- und Heckenschnitt kann in einen regelmäßigen Pflegeplan integriert werden, damit Ihr Garten stets in perfektem Zustand ist.</p><span class="rel-link">Zum Service</span></div></a>
     </div>
   </div>
 </section>

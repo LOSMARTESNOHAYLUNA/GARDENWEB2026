@@ -22,9 +22,15 @@
 <link rel="alternate" hreflang="en" href="https://mallorcagardensolution.com/en/blog/">
 <link rel="alternate" hreflang="de" href="https://mallorcagardensolution.com/de/blog/">
 <link rel="alternate" hreflang="x-default" href="https://mallorcagardensolution.com/es/blog/">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Manrope:wght@200;300;400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Manrope:wght@200;300;400;500;600;700&display=swap"></noscript>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/manrope-latin.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="/fonts/montserrat-latin.woff2" crossorigin>
+<style>
+@font-face{font-family:'Manrope';font-style:normal;font-weight:200 700;font-display:swap;src:url(/fonts/manrope-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF}
+@font-face{font-family:'Manrope';font-style:normal;font-weight:200 700;font-display:swap;src:url(/fonts/manrope-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:400 700;font-display:swap;src:url(/fonts/montserrat-latin-ext.woff2) format('woff2');unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF}
+@font-face{font-family:'Montserrat';font-style:normal;font-weight:400 700;font-display:swap;src:url(/fonts/montserrat-latin.woff2) format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+</style>
+
 <!-- Google Consent Mode v2: por defecto denegado hasta que el usuario decida -->
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -533,6 +539,13 @@ body,body *{overflow-wrap:anywhere;}</style>
  .header .lang-switch a.active{border-color:var(--green);}
 }
 </style>
+<style>
+/* Contraste AA (>=4.5:1) en textos dorados sobre fondo claro */
+:root{--gold-text:#7F611F;}
+.section-eyebrow,.eyebrow-c,.eyebrow-center,.blog-cat,.cert-item p{color:var(--gold-text);}
+.section-title .it,.h2-center .it,h2 .it{color:var(--gold-text);}
+.bg-dark .eyebrow-center,.bg-dark .it,.page-hero .blog-cat{color:var(--gold-soft);}
+</style>
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -540,7 +553,7 @@ body,body *{overflow-wrap:anywhere;}</style>
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <div class="topbar"><div class="topbar-inner"><span class="topbar-brand">Garden Solution</span><span class="topbar-sep gs-sep1">|</span><span class="topbar-tagline">Empresa de jardinería en Mallorca</span><span class="topbar-sep">|</span><a class="topbar-phone" href="https://wa.me/34621493977">621 49 39 77</a></div></div>
-<header class="header"><div class="wrap"><a href="/es/" class="logo"><span class="logo-text">Garden <span class="it">Solution</span></span><img class="logo-img" src="/img/logo-garden-solution.webp" alt="Garden Solution" width="40" height="40"></a><nav class="nav"><ul><li class="has-dd">
+<header class="header"><div class="wrap"><a href="/es/" class="logo"><span class="logo-text">Garden <span class="it">Solution</span></span><img class="logo-img" src="/img/logo-garden-solution-144.webp" alt="Garden Solution" width="72" height="72"></a><nav class="nav"><ul><li class="has-dd">
           <a href="/es/servicios/">Servicios</a>
           <div class="dd-menu"><div class="dd-inner">
             <div class="dd-col">
@@ -590,7 +603,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="wrap">
   <div class="blog-grid">
     <a href="/es/blog/como-saber-si-palmera-tiene-picudo-rojo/" class="blog-card">
-      <div class="blog-card-img"><img src="/img/palmera-canaria-jardin-mallorca-hero.webp" alt="Palmera canaria en el jardín de una casa de piedra en Mallorca con la Serra de Tramuntana al fondo" loading="lazy" width="480" height="270"></div>
+      <div class="blog-card-img"><img src="/img/palmera-canaria-jardin-mallorca-hero.webp" alt="Palmera canaria en el jardín de una casa de piedra en Mallorca con la Serra de Tramuntana al fondo" loading="lazy" decoding="async" width="480" height="270"></div>
       <div class="blog-card-body">
         <div class="blog-cat">Palmeras · Fitosanidad</div>
         <h2>Cómo saber si tu palmera tiene picudo rojo</h2>
@@ -599,7 +612,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </a>
     <a href="/es/blog/jardin-mediterraneo-bajo-mantenimiento-mallorca/" class="blog-card">
-      <div class="blog-card-img"><img src="/img/jardin-xerojardineria-mallorca-hero.webp" alt="Jardín mediterráneo de bajo mantenimiento en una finca de Mallorca con grava, palmitos, agaves y muro de piedra seca" loading="lazy" width="480" height="270"></div>
+      <div class="blog-card-img"><img src="/img/jardin-xerojardineria-mallorca-hero.webp" alt="Jardín mediterráneo de bajo mantenimiento en una finca de Mallorca con grava, palmitos, agaves y muro de piedra seca" loading="lazy" decoding="async" width="480" height="270"></div>
       <div class="blog-card-body">
         <div class="blog-cat">Paisajismo · Diseño</div>
         <h2>Jardín mediterráneo de bajo mantenimiento en Mallorca</h2>
@@ -608,7 +621,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </a>
     <a href="/es/blog/cuando-como-podar-olivos-mallorca/" class="blog-card">
-      <div class="blog-card-img"><img src="/img/olivar-mallorca-invierno-hero.webp" alt="Olivar tradicional en bancales de piedra seca en Mallorca con la Serra de Tramuntana al fondo" loading="lazy" width="480" height="270"></div>
+      <div class="blog-card-img"><img src="/img/olivar-mallorca-invierno-hero.webp" alt="Olivar tradicional en bancales de piedra seca en Mallorca con la Serra de Tramuntana al fondo" loading="lazy" decoding="async" width="480" height="270"></div>
       <div class="blog-card-body">
         <div class="blog-cat">Poda · Olivos</div>
         <h2>Cuándo y cómo podar los olivos en Mallorca</h2>
@@ -617,7 +630,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </a>
     <a href="/es/blog/plantas-sin-riego-verano-mallorca/" class="blog-card">
-      <div class="blog-card-img"><img src="/img/jardin-secano-verano-mallorca-hero.webp" alt="Jardín de secano en Mallorca en pleno verano con adelfas, lavanda, euforbias y un olivo" loading="lazy" width="480" height="270"></div>
+      <div class="blog-card-img"><img src="/img/jardin-secano-verano-mallorca-hero.webp" alt="Jardín de secano en Mallorca en pleno verano con adelfas, lavanda, euforbias y un olivo" loading="lazy" decoding="async" width="480" height="270"></div>
       <div class="blog-card-body">
         <div class="blog-cat">Plantas · Sequía</div>
         <h2>Plantas que sobreviven el verano en Mallorca sin riego</h2>
@@ -626,7 +639,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </a>
     <a href="/es/blog/procesionaria-pino-mallorca/" class="blog-card">
-      <div class="blog-card-img"><img src="/img/pinar-costa-mallorca-procesionaria-hero.webp" alt="Pinar junto a una cala de Mallorca, hábitat de la procesionaria del pino" loading="lazy" width="480" height="270"></div>
+      <div class="blog-card-img"><img src="/img/pinar-costa-mallorca-procesionaria-hero.webp" alt="Pinar junto a una cala de Mallorca, hábitat de la procesionaria del pino" loading="lazy" decoding="async" width="480" height="270"></div>
       <div class="blog-card-body">
         <div class="blog-cat">Pinos · Fitosanidad</div>
         <h2>Procesionaria del pino en Mallorca</h2>
@@ -635,7 +648,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </a>
     <a href="/es/blog/cesped-artificial-mallorca-ventajas-precio/" class="blog-card">
-      <div class="blog-card-img"><img src="/img/cesped-artificial-mallorca-hero.webp" alt="Jardín de una finca en Mallorca con césped artificial y la Serra de Tramuntana al fondo" loading="lazy" width="480" height="270"></div>
+      <div class="blog-card-img"><img src="/img/cesped-artificial-mallorca-hero.webp" alt="Jardín de una finca en Mallorca con césped artificial y la Serra de Tramuntana al fondo" loading="lazy" decoding="async" width="480" height="270"></div>
       <div class="blog-card-body">
         <div class="blog-cat">Césped · Instalación</div>
         <h2>Césped artificial en Mallorca: ventajas y precio</h2>
@@ -644,7 +657,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </a>
     <a href="/es/blog/picudo-rojo-mallorca/" class="blog-card">
-      <div class="blog-card-img"><img src="/img/Cards-blogs-garden-solution-picudo.webp" alt="Picudo rojo en palmera de Mallorca — guía de prevención y tratamiento" loading="lazy" width="480" height="270"></div>
+      <div class="blog-card-img"><img src="/img/Cards-blogs-garden-solution-picudo.webp" alt="Picudo rojo en palmera de Mallorca — guía de prevención y tratamiento" loading="lazy" decoding="async" width="480" height="270"></div>
       <div class="blog-card-body">
         <div class="blog-cat">Palmeras · Fitosanidad</div>
         <h2>Picudo rojo en Mallorca: guía de prevención y tratamiento</h2>
@@ -653,7 +666,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </a>
     <a href="/es/blog/riego-automatico-mediterraneo/" class="blog-card">
-      <div class="blog-card-img"><img src="/img/Cards-blogs-garden-solution-riego.webp" alt="Riego automático para jardín mediterráneo en Mallorca" loading="lazy" width="480" height="270"></div>
+      <div class="blog-card-img"><img src="/img/Cards-blogs-garden-solution-riego.webp" alt="Riego automático para jardín mediterráneo en Mallorca" loading="lazy" decoding="async" width="480" height="270"></div>
       <div class="blog-card-body">
         <div class="blog-cat">Riego · Jardinería</div>
         <h2>Riego automático para jardín mediterráneo: cómo ahorra agua</h2>
@@ -662,7 +675,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </a>
     <a href="/es/blog/calendario-poda-mallorca/" class="blog-card">
-      <div class="blog-card-img"><img src="/img/Cards-blogs-garden-solution-poda.webp" alt="Calendario de poda en Mallorca — cuándo podar cada árbol" loading="lazy" width="480" height="270"></div>
+      <div class="blog-card-img"><img src="/img/Cards-blogs-garden-solution-poda.webp" alt="Calendario de poda en Mallorca — cuándo podar cada árbol" loading="lazy" decoding="async" width="480" height="270"></div>
       <div class="blog-card-body">
         <div class="blog-cat">Poda · Calendario</div>
         <h2>Calendario de poda en Mallorca: cuándo podar cada árbol</h2>
