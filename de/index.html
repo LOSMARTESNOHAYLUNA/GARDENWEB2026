@@ -1988,15 +1988,20 @@ body{padding-top:var(--gs-top,100px) !important;}
 <script>
 (function(){
   var slides = document.querySelectorAll('.hero-slide');
-  function ld(){ slides.forEach(function(s){ s.classList.add("ld"); }); }
-  if(document.readyState==="complete") ld(); else window.addEventListener("load", ld);
   if(slides.length < 2) return;
-  var cur = 0;
-  setInterval(function(){
-    slides[cur].classList.remove('active');
-    cur = (cur + 1) % slides.length;
-    slides[cur].classList.add('active');
-  }, 5000);
+  var cur = 0, started = false;
+  /* Las diapositivas 2 y 3 se cargan y el slider arranca en la primera interacción (o a los 10 s) */
+  function start(){
+    if(started) return; started = true;
+    slides.forEach(function(s){ s.classList.add("ld"); });
+    setInterval(function(){
+      slides[cur].classList.remove('active');
+      cur = (cur + 1) % slides.length;
+      slides[cur].classList.add('active');
+    }, 5000);
+  }
+  ['scroll','touchstart','mousemove','keydown'].forEach(function(e){ window.addEventListener(e, start, {once:true, passive:true}); });
+  setTimeout(start, 10000);
 })();
 </script>
 <script>
