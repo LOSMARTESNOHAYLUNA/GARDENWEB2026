@@ -850,12 +850,12 @@ h1 .it, h2 .it, h3 .it, h4 .it,
 
 /* ===== HERO SLIDER ===== */
 .hs1 { background-image: url('/img/hero-home-garden-mallorca1.webp'); }
-.hs2 { background-image: url('/img/hero-home-garden-mallorca2.webp'); }
-.hs3 { background-image: url('/img/hero-home-garden-mallorca3.webp'); }
+.hs2.ld { background-image: url('/img/hero-home-garden-mallorca2.webp'); }
+.hs3.ld { background-image: url('/img/hero-home-garden-mallorca3.webp'); }
 @media (max-width: 768px) {
   .hs1 { background-image: url('/img/hero-home-garden-mallorca1-rs.webp') !important; }
-  .hs2 { background-image: url('/img/hero-home-garden-mallorca2rs.webp') !important; }
-  .hs3 { background-image: url('/img/hero-home-garden-mallorca3rs.webp') !important; }
+  .hs2.ld { background-image: url('/img/hero-home-garden-mallorca2rs.webp') !important; }
+  .hs3.ld { background-image: url('/img/hero-home-garden-mallorca3rs.webp') !important; }
 }
 .hero-slide {
   position: absolute; inset: 0;
@@ -1004,6 +1004,12 @@ body,body *{overflow-wrap:anywhere;}</style>
 .section-eyebrow,.eyebrow-c,.eyebrow-center,.blog-cat,.cert-item p{color:var(--gold-text);}
 .section-title .it,.h2-center .it,h2 .it{color:var(--gold-text);}
 .bg-dark .eyebrow-center,.bg-dark .it,.page-hero .blog-cat{color:var(--gold-soft);}
+.h2-c .it,.col-block h2 .it,.form-side h2 .it,.info-side h3 .it,.art-content h2 .it,.hero-text h1 .it,.hero-text .eyebrow,.form-side .eyebrow-left,.eyebrow-left,.info-label,.art-related .eyebrow-c,.art-rel-body .cat{color:var(--gold-text);}
+.precio-nota{color:var(--gold-soft);}
+.precios-disclaimer{color:rgba(251,248,242,0.8);}
+.art-content a.btn-gold{color:var(--ink);}
+.share-wa{color:#0B7A3E;border-color:#0B7A3E;}
+.share-fb{color:#0F5FCC;border-color:#0F5FCC;}
 </style>
 </head>
 <body>
@@ -1979,6 +1985,8 @@ body{padding-top:var(--gs-top,100px) !important;}
 <script>
 (function(){
   var slides = document.querySelectorAll('.hero-slide');
+  function ld(){ slides.forEach(function(s){ s.classList.add("ld"); }); }
+  if(document.readyState==="complete") ld(); else window.addEventListener("load", ld);
   if(slides.length < 2) return;
   var cur = 0;
   setInterval(function(){
