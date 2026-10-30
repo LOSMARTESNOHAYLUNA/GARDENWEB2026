@@ -447,8 +447,12 @@ img { max-width:100%; height:auto; display:block; }
 .hero-btns { display:flex; flex-wrap:wrap; gap:14px; align-items:stretch; }
 .hero-btns .btn { text-align:center; justify-content:center; }
 #riego-inteligente { scroll-margin-top:90px; }
+.que-incluye .two-col { align-items:start; }
+.como-s { background:var(--paper-soft); padding-top:0; }
+.como-s .step-img { margin-top:0; }
+@media (max-width:968px) { .como-s { padding-top:10px; } }
 .riego-s .wrap { padding:0; max-width:none; }
-.riego-s { background:var(--green); padding:36px 32px; margin-top:24px; border-radius:2px; text-align:left; }
+.riego-s { background:var(--green); padding:36px 32px; border-radius:2px; text-align:left; }
 .riego-s h2 { font-size:clamp(26px,3vw,34px); color:var(--paper); margin-bottom:10px; }
 .riego-s h2 .it { font-weight:800; color:var(--gold-soft); }
 .riego-s .riego-sub { font-family:'Manrope','Manrope Fallback'; font-size:16px; font-weight:300; color:rgba(251,248,242,0.85); margin-bottom:28px; line-height:1.5; }
@@ -1082,7 +1086,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p>Monatlicher PDF-Bericht mit Fotos und einer Beschreibung aller in Ihrem Garten ausgeführten Arbeiten. Immer informiert, ohne Überraschungen.</p>
           </div>
         </div>
-        <section class="riego-s" id="riego-inteligente" aria-label="Intelligente Bewässerung">
+      </div>
+
+      <section class="riego-s" id="riego-inteligente" aria-label="Intelligente Bewässerung">
           <div class="wrap">
             <h2>Intelligente <span class="it">Bewässerung</span></h2>
             <p class="riego-sub">Bewässert nur, was nötig ist, und meldet, wenn etwas ausfällt.</p>
@@ -1105,9 +1111,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <a href="#contacto" class="btn btn-gold" data-riego-cta>Ich möchte intelligente Bewässerung für meinen Garten</a>
           </div>
-        </section>
-      </div>
+      </section>
+    </div>
+  </div>
+</section>
 
+<!-- SO ARBEITEN WIR -->
+<section class="section como-s">
+  <div class="wrap">
+    <div class="two-col">
       <div class="col-block">
         <h2>Wie wir auf jedem Grundstück <span class="it">arbeiten</span></h2>
         <div class="step-list">
@@ -1124,6 +1136,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p>Falls Ihr Garten auch einen <a href="/de/baumschnitt-mallorca/">Baumschnitt</a> oder <a href="/de/gartengestaltung-mallorca/">eine komplette Neugestaltung</a> benötigt, übernimmt dasselbe Team dies, ohne dass Sie sich mit Dritten abstimmen müssen.</p>
           </div>
         </div>
+      </div>
+
+      <div class="col-block">
         <div class="step-img">
           <img src="/img/garden-soluition-equipo-servicio.webp" alt="Team von Garden Solution bei der Arbeit in einem Garten auf Mallorca" loading="lazy" decoding="async" width="560" height="480">
           <span class="step-img-badge">Ein komplettes Team zu Ihrer Verfügung</span>
@@ -1877,8 +1892,8 @@ body.gs-cookie-open .gs-float-actions{display:none;}
 
 /* === Menos gap tras foto equipo (que-incluye) en movil === */
 @media(max-width:768px){
-  .que-incluye{ padding-bottom:22px !important; }
-  .que-incluye .step-img{ margin-bottom:0 !important; }
+  .como-s{ padding-bottom:22px !important; }
+  .como-s .step-img{ margin-bottom:0 !important; }
 }
 
 /* ===== GS-FIX-V2 START ===== */
