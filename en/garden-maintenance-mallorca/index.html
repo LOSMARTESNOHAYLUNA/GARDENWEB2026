@@ -444,16 +444,8 @@ img { max-width:100%; height:auto; display:block; }
 .check-list li::before { content:'→'; color:var(--gold); flex-shrink:0; margin-top:1px; }
 
 /* ===== RIEGO INTELIGENTE ===== */
-.hero-tag {
-  display:inline-flex; align-items:center; gap:10px; margin:0 0 28px;
-  background:rgba(184,149,74,0.2); border:1px solid var(--gold-soft);
-  padding:9px 18px; border-radius:100px; color:var(--paper);
-  font-family:'Manrope','Manrope Fallback'; font-weight:600; font-size:14px; line-height:1.3;
-  transition:background 0.3s;
-}
-.hero-tag:hover { background:rgba(184,149,74,0.35); }
-.hero-tag::before { content:''; width:8px; height:8px; border-radius:50%; background:var(--gold-soft); flex:none; }
-.hero-bg h1:has(+ .hero-tag) { margin-bottom:20px; }
+.hero-btns { display:flex; flex-wrap:wrap; gap:14px; align-items:stretch; }
+.hero-btns .btn { text-align:center; justify-content:center; }
 #riego-inteligente { scroll-margin-top:90px; }
 .riego-s { background:var(--green); padding:80px 0; text-align:center; }
 .riego-s h2 { font-size:clamp(30px,4vw,48px); color:var(--paper); margin-bottom:14px; }
@@ -1015,8 +1007,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="eyebrow">Regular care · Mallorca</div>
     <h1>Garden <span class="it">maintenance</span> in Mallorca</h1>
-    <a href="#riego-inteligente" class="hero-tag">Includes smart irrigation option</a>
-    <a href="#contacto" class="btn btn-gold">Request a free quote</a>
+    <div class="hero-btns">
+      <a href="#contacto" class="btn btn-gold">Request a free quote</a>
+      <a href="#riego-inteligente" class="btn btn-green">Includes smart irrigation option</a>
+    </div>
   </div>
 </section>
 
