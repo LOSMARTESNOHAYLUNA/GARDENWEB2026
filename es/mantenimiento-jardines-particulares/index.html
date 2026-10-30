@@ -443,6 +443,29 @@ img { max-width:100%; height:auto; display:block; }
 }
 .check-list li::before { content:'→'; color:var(--gold); flex-shrink:0; margin-top:1px; }
 
+/* ===== RIEGO INTELIGENTE ===== */
+.hero-tag {
+  display:inline-flex; align-items:center; gap:10px; margin:0 0 28px;
+  background:rgba(184,149,74,0.2); border:1px solid var(--gold-soft);
+  padding:9px 18px; border-radius:100px; color:var(--paper);
+  font-family:'Manrope','Manrope Fallback'; font-weight:600; font-size:14px; line-height:1.3;
+  transition:background 0.3s;
+}
+.hero-tag:hover { background:rgba(184,149,74,0.35); }
+.hero-tag::before { content:''; width:8px; height:8px; border-radius:50%; background:var(--gold-soft); flex:none; }
+.hero-bg h1:has(+ .hero-tag) { margin-bottom:20px; }
+#riego-inteligente { scroll-margin-top:90px; }
+.riego-s { background:var(--green); padding:80px 0; text-align:center; }
+.riego-s h2 { font-size:clamp(30px,4vw,48px); color:var(--paper); margin-bottom:14px; }
+.riego-s h2 .it { font-weight:800; color:var(--gold-soft); }
+.riego-sub { font-family:'Manrope','Manrope Fallback'; font-size:18px; font-weight:300; color:rgba(251,248,242,0.85); margin-bottom:48px; line-height:1.5; }
+.riego-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-bottom:48px; text-align:left; }
+.riego-card { padding:32px 28px; border:1px solid rgba(214,188,138,0.35); background:rgba(251,248,242,0.06); border-radius:2px; }
+.riego-icon { display:flex; align-items:center; justify-content:center; width:56px; height:56px; border-radius:50%; border:1px solid var(--gold-soft); margin-bottom:20px; }
+.riego-card h3 { font-size:19px; color:var(--paper); margin-bottom:8px; }
+.riego-card p { font-family:'Manrope','Manrope Fallback'; font-size:15px; font-weight:300; color:rgba(251,248,242,0.8); line-height:1.55; margin:0; }
+@media (max-width:768px) { .riego-grid { grid-template-columns:1fr; } .riego-s { padding:60px 0; } }
+
 /* ===== PARA QUIÉN ===== */
 .para-quien { background:var(--paper); }
 .perfiles-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:60px; }
@@ -992,6 +1015,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="eyebrow">Cuidado periódico · Mallorca</div>
     <h1>Mantenimiento de <span class="it">jardines</span> en Mallorca</h1>
+    <a href="#riego-inteligente" class="hero-tag">Incluye opción de riego inteligente</a>
     <a href="#contacto" class="btn btn-gold">Solicitar presupuesto gratuito</a>
   </div>
 </section>
@@ -1087,6 +1111,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
     </div>
+  </div>
+</section>
+
+<!-- RIEGO INTELIGENTE -->
+<section class="riego-s" id="riego-inteligente" aria-label="Riego inteligente">
+  <div class="wrap">
+    <h2>Riego <span class="it">inteligente</span></h2>
+    <p class="riego-sub">Riega solo lo necesario y avisa si algo falla.</p>
+    <div class="riego-grid">
+      <div class="riego-card fu">
+        <span class="riego-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--gold-soft)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="M20 12h2"/><path d="m19.07 4.93-1.41 1.41"/><path d="M15.947 12.65a4 4 0 0 0-5.925-4.128"/><path d="M13 22H7a5 5 0 1 1 4.9-6H13a3 3 0 0 1 0 6Z"/></svg></span>
+        <h3>Se adapta al tiempo.</h3>
+        <p>Ajusta el riego a la previsión y a la lluvia.</p>
+      </div>
+      <div class="riego-card fu">
+        <span class="riego-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--gold-soft)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.69s-5 5.36-5 9.19a5 5 0 0 0 10 0c0-3.83-5-9.19-5-9.19Z"/><path d="M12 14v-3"/></svg></span>
+        <h3>Controla el caudal.</h3>
+        <p>Avisa si detecta un consumo anómalo.</p>
+      </div>
+      <div class="riego-card fu">
+        <span class="riego-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--gold-soft)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg></span>
+        <h3>Desde el móvil.</h3>
+        <p>Estado y avisos aunque no estés en Mallorca.</p>
+      </div>
+    </div>
+    <a href="#contacto" class="btn btn-gold" data-riego-cta>Quiero riego inteligente en mi jardín</a>
   </div>
 </section>
 
@@ -1320,6 +1370,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   <option>Paisajismo / diseño</option>
                   <option>Poda de árboles o palmeras</option>
                   <option>Endoterapia / picudo rojo</option>
+                  <option>Mantenimiento mensual + riego inteligente</option>
                   <option>Riego automático</option>
                   <option>Otro</option>
                 </select>
@@ -1566,6 +1617,20 @@ window.addEventListener('scroll', () => {
         if(result){ result.style.display='block'; result.textContent='Error de conexión. Llámanos al 621 49 39 77'; }
       }
       if(btn){ btn.disabled=false; btn.textContent='Solicitar presupuesto gratuito'; }
+    });
+  });
+})();
+</script>
+
+<script>
+/* Riego inteligente: preselecciona el servicio en el formulario y registra el evento en GTM */
+(function(){
+  document.querySelectorAll('[data-riego-cta]').forEach(function(b){
+    b.addEventListener('click',function(){
+      var sel=document.getElementById('servicio');
+      if(sel) sel.value='Mantenimiento mensual + riego inteligente';
+      window.dataLayer=window.dataLayer||[];
+      window.dataLayer.push({event:'riego_inteligente_cta_click',service_interest:'Mantenimiento mensual + riego inteligente'});
     });
   });
 })();
