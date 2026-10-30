@@ -455,7 +455,6 @@ img { max-width:100%; height:auto; display:block; }
 .riego-grid { flex:1; grid-template-rows:repeat(3,1fr); }
 .como-s { background:var(--paper-soft); padding-top:0; }
 .como-s .step-img { margin-top:0; }
-@media (max-width:968px) { .como-s { padding-top:10px; } }
 .riego-s .wrap { padding:0; max-width:none; }
 .riego-s { background:var(--green); padding:36px 32px; border-radius:2px; text-align:left; }
 .riego-s h2 { font-size:clamp(26px,3vw,34px); color:var(--paper); margin-bottom:10px; }
@@ -468,6 +467,14 @@ img { max-width:100%; height:auto; display:block; }
 .riego-card p { font-family:'Manrope','Manrope Fallback'; font-size:14px; font-weight:300; color:rgba(251,248,242,0.8); line-height:1.5; margin:0; }
 .riego-s a.btn { color:var(--ink); border-bottom:none; }
 @media (max-width:640px) { .riego-s { padding:30px 20px; } }
+@media (max-width:968px) {
+  .que-incluye { padding-bottom:24px !important; }
+  .como-s { padding-top:0 !important; }
+  .riego-s h2, .riego-s .riego-sub { text-align:center; }
+  .riego-card { flex-direction:column; align-items:center; text-align:center; gap:12px; padding:24px 20px; }
+  .riego-grid { grid-template-rows:none; }
+  .riego-s a.btn { align-self:center; }
+}
 
 /* ===== PARA QUIÉN ===== */
 .para-quien { background:var(--paper); }
