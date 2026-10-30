@@ -447,16 +447,18 @@ img { max-width:100%; height:auto; display:block; }
 .hero-btns { display:flex; flex-wrap:wrap; gap:14px; align-items:stretch; }
 .hero-btns .btn { text-align:center; justify-content:center; }
 #riego-inteligente { scroll-margin-top:90px; }
-.riego-s { background:var(--green); padding:80px 0; text-align:center; }
-.riego-s h2 { font-size:clamp(30px,4vw,48px); color:var(--paper); margin-bottom:14px; }
+.riego-s .wrap { padding:0; max-width:none; }
+.riego-s { background:var(--green); padding:36px 32px; margin-top:24px; border-radius:2px; text-align:left; }
+.riego-s h2 { font-size:clamp(26px,3vw,34px); color:var(--paper); margin-bottom:10px; }
 .riego-s h2 .it { font-weight:800; color:var(--gold-soft); }
-.riego-sub { font-family:'Manrope','Manrope Fallback'; font-size:18px; font-weight:300; color:rgba(251,248,242,0.85); margin-bottom:48px; line-height:1.5; }
-.riego-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-bottom:48px; text-align:left; }
-.riego-card { padding:32px 28px; border:1px solid rgba(214,188,138,0.35); background:rgba(251,248,242,0.06); border-radius:2px; }
-.riego-icon { display:flex; align-items:center; justify-content:center; width:56px; height:56px; border-radius:50%; border:1px solid var(--gold-soft); margin-bottom:20px; }
-.riego-card h3 { font-size:19px; color:var(--paper); margin-bottom:8px; }
-.riego-card p { font-family:'Manrope','Manrope Fallback'; font-size:15px; font-weight:300; color:rgba(251,248,242,0.8); line-height:1.55; margin:0; }
-@media (max-width:768px) { .riego-grid { grid-template-columns:1fr; } .riego-s { padding:60px 0; } }
+.riego-s .riego-sub { font-family:'Manrope','Manrope Fallback'; font-size:16px; font-weight:300; color:rgba(251,248,242,0.85); margin-bottom:28px; line-height:1.5; }
+.riego-grid { display:grid; grid-template-columns:1fr; gap:14px; margin-bottom:30px; }
+.riego-card { display:flex; align-items:center; gap:18px; padding:18px 20px; border:1px solid rgba(214,188,138,0.35); background:rgba(251,248,242,0.06); border-radius:2px; }
+.riego-icon { display:flex; align-items:center; justify-content:center; flex:none; width:52px; height:52px; border-radius:50%; border:1px solid var(--gold-soft); }
+.riego-card h3 { font-size:17px; color:var(--paper); margin-bottom:4px; }
+.riego-card p { font-family:'Manrope','Manrope Fallback'; font-size:14px; font-weight:300; color:rgba(251,248,242,0.8); line-height:1.5; margin:0; }
+.riego-s a.btn { color:var(--ink); border-bottom:none; }
+@media (max-width:640px) { .riego-s { padding:30px 20px; } }
 
 /* ===== PARA QUIÉN ===== */
 .para-quien { background:var(--paper); }
@@ -1080,6 +1082,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p>Monthly PDF report with photos and a description of all the work carried out in your garden. Always informed, no surprises.</p>
           </div>
         </div>
+        <section class="riego-s" id="riego-inteligente" aria-label="Smart irrigation">
+          <div class="wrap">
+            <h2>Smart <span class="it">irrigation</span></h2>
+            <p class="riego-sub">Waters only what is needed and alerts you if something fails.</p>
+            <div class="riego-grid">
+              <div class="riego-card fu">
+                <span class="riego-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--gold-soft)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="M20 12h2"/><path d="m19.07 4.93-1.41 1.41"/><path d="M15.947 12.65a4 4 0 0 0-5.925-4.128"/><path d="M13 22H7a5 5 0 1 1 4.9-6H13a3 3 0 0 1 0 6Z"/></svg></span>
+                <h3>Adapts to the weather.</h3>
+                <p>Adjusts watering to the forecast and the rain.</p>
+              </div>
+              <div class="riego-card fu">
+                <span class="riego-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--gold-soft)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.69s-5 5.36-5 9.19a5 5 0 0 0 10 0c0-3.83-5-9.19-5-9.19Z"/><path d="M12 14v-3"/></svg></span>
+                <h3>Monitors water flow.</h3>
+                <p>Alerts you if it detects abnormal consumption.</p>
+              </div>
+              <div class="riego-card fu">
+                <span class="riego-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--gold-soft)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg></span>
+                <h3>From your phone.</h3>
+                <p>Status and alerts even when you are not in Mallorca.</p>
+              </div>
+            </div>
+            <a href="#contacto" class="btn btn-gold" data-riego-cta>I want smart irrigation in my garden</a>
+          </div>
+        </section>
       </div>
 
       <div class="col-block">
@@ -1105,32 +1131,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
 
     </div>
-  </div>
-</section>
-
-<!-- RIEGO INTELIGENTE -->
-<section class="riego-s" id="riego-inteligente" aria-label="Smart irrigation">
-  <div class="wrap">
-    <h2>Smart <span class="it">irrigation</span></h2>
-    <p class="riego-sub">Waters only what is needed and alerts you if something fails.</p>
-    <div class="riego-grid">
-      <div class="riego-card fu">
-        <span class="riego-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--gold-soft)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="M20 12h2"/><path d="m19.07 4.93-1.41 1.41"/><path d="M15.947 12.65a4 4 0 0 0-5.925-4.128"/><path d="M13 22H7a5 5 0 1 1 4.9-6H13a3 3 0 0 1 0 6Z"/></svg></span>
-        <h3>Adapts to the weather.</h3>
-        <p>Adjusts watering to the forecast and the rain.</p>
-      </div>
-      <div class="riego-card fu">
-        <span class="riego-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--gold-soft)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.69s-5 5.36-5 9.19a5 5 0 0 0 10 0c0-3.83-5-9.19-5-9.19Z"/><path d="M12 14v-3"/></svg></span>
-        <h3>Monitors water flow.</h3>
-        <p>Alerts you if it detects abnormal consumption.</p>
-      </div>
-      <div class="riego-card fu">
-        <span class="riego-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--gold-soft)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg></span>
-        <h3>From your phone.</h3>
-        <p>Status and alerts even when you are not in Mallorca.</p>
-      </div>
-    </div>
-    <a href="#contacto" class="btn btn-gold" data-riego-cta>I want smart irrigation in my garden</a>
   </div>
 </section>
 
