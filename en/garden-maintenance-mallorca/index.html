@@ -447,7 +447,11 @@ img { max-width:100%; height:auto; display:block; }
 .hero-btns { display:flex; flex-wrap:wrap; gap:14px; align-items:stretch; }
 .hero-btns .btn { text-align:center; justify-content:center; }
 #riego-inteligente { scroll-margin-top:90px; }
-.que-incluye .two-col { align-items:start; }
+.que-incluye .lead-center { margin-bottom:44px; max-width:760px; }
+.que-incluye .two-col { align-items:stretch; }
+.riego-s { display:flex; flex-direction:column; }
+.riego-s .wrap { flex:1; display:flex; flex-direction:column; }
+.riego-grid { flex:1; grid-template-rows:repeat(3,1fr); }
 .como-s { background:var(--paper-soft); padding-top:0; }
 .como-s .step-img { margin-top:0; }
 @media (max-width:968px) { .como-s { padding-top:10px; } }
@@ -1051,11 +1055,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- QUÉ INCLUYE / PARA QUIÉN -->
 <section class="section que-incluye" id="incluye">
   <div class="wrap">
+    <h2 class="h2-center">What <span class="it">garden maintenance</span> in Mallorca includes</h2>
+    <p class="lead-center">Every garden has its own needs depending on the type of plants, the size of the space and the time of year. The maintenance plan is defined during the first free technical visit and is adapted over time.</p>
     <div class="two-col">
 
       <div class="col-block">
-        <h2>What <span class="it">garden maintenance</span> in Mallorca includes</h2>
-        <p>Every garden has its own needs depending on the type of plants, the size of the space and the time of year. The maintenance plan is defined during the first free technical visit and is adapted over time.</p>
         <div class="incluye-grid">
           <div class="incluye-card fu">
             <span class="incluye-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg></span>
